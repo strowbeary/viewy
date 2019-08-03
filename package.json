@@ -1,0 +1,27 @@
+{
+  "name": "uikit",
+  "version": "1.0.0",
+  "description": "UI kit that use lighter html as template renderer",
+  "module": "src/index.js",
+  "main": "lib/index.js",
+  "files": [
+    "src",
+    "lib"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "prepare": "npm run build",
+    "dev": "/usr/local/Cellar/node/12.4.0/bin/live-server --port=5432 --no-browser -V --watch=./src --mount=/:./src"
+  },
+  "author": "Rémi Caillot <remicaillot5@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lighterhtml": "^0.16.2"
+  },
+  "devDependencies": {
+    "rollup": "^1.18.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}
