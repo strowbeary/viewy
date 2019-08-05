@@ -1,3 +1,4 @@
+import "./Theme/index.scss";
 export {Button, UIButton} from "./Components/Button";
 export {LabelTextField, UILabelTextField} from "./Components/LabelTextField";
 export {Segment, UISegment} from "./Components/Segment";
