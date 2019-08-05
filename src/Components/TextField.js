@@ -3,7 +3,7 @@ import {html} from "lighterhtml";
 import {bind_style} from "../utils/bind_style.util";
 
 export class UITextField extends UIView {
-    specific_style = {};
+    view_style = {};
     constructor (name, type = "text", placeholder = "", formater) {
         super();
         this.name = name;
@@ -13,13 +13,13 @@ export class UITextField extends UIView {
     }
 
     margin(top, right, bottom, left) {
-        this.specific_style.margin = `${top}px ${right}px ${bottom}px ${left}px`;
+        this.view_style.margin = `${top}px ${right}px ${bottom}px ${left}px`;
         return this;
     }
 
     render () {
         return html`
-            <input class="text_field" style="${bind_style(this.specific_style)}" type="${this.type}" name="${this.name}" placeholder="${this.placeholder}"/>
+            <input class="text_field" style="${bind_style(this.view_style)}" type="${this.type}" name="${this.name}" placeholder="${this.placeholder}"/>
         `;
     }
 }

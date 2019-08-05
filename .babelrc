@@ -3,26 +3,6 @@
     ["@babel/preset-env"]
   ],
   "plugins": [
-    "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-syntax-dynamic-import",
-    [
-      "@babel/plugin-transform-runtime",
-      {
-        "regenerator": true
-      }
-    ],
-    [
-      "template-html-minifier",
-      {
-        "modules": {
-          "lighterhtml": [
-            "html"
-          ]
-        },
-        "htmlMinifier": {
-          "collapseWhitespace": true
-        }
-      }
-    ]
+    "@babel/plugin-proposal-class-properties"
   ]
 }

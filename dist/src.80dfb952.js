@@ -117,179 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js":[function(require,module,exports) {
-function _taggedTemplateLiteral(strings, raw) {
-  if (!raw) {
-    raw = strings.slice(0);
-  }
-
-  return Object.freeze(Object.defineProperties(strings, {
-    raw: {
-      value: Object.freeze(raw)
-    }
-  }));
-}
-
-module.exports = _taggedTemplateLiteral;
-},{}],"../../node_modules/@babel/runtime/helpers/classCallCheck.js":[function(require,module,exports) {
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
-},{}],"../../node_modules/@babel/runtime/helpers/createClass.js":[function(require,module,exports) {
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-},{}],"../../node_modules/@babel/runtime/helpers/typeof.js":[function(require,module,exports) {
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-},{}],"../../node_modules/@babel/runtime/helpers/assertThisInitialized.js":[function(require,module,exports) {
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-module.exports = _assertThisInitialized;
-},{}],"../../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":[function(require,module,exports) {
-var _typeof = require("../helpers/typeof");
-
-var assertThisInitialized = require("./assertThisInitialized");
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return assertThisInitialized(self);
-}
-
-module.exports = _possibleConstructorReturn;
-},{"../helpers/typeof":"../../node_modules/@babel/runtime/helpers/typeof.js","./assertThisInitialized":"../../node_modules/@babel/runtime/helpers/assertThisInitialized.js"}],"../../node_modules/@babel/runtime/helpers/getPrototypeOf.js":[function(require,module,exports) {
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-},{}],"../../node_modules/@babel/runtime/helpers/setPrototypeOf.js":[function(require,module,exports) {
-function _setPrototypeOf(o, p) {
-  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-module.exports = _setPrototypeOf;
-},{}],"../../node_modules/@babel/runtime/helpers/inherits.js":[function(require,module,exports) {
-var setPrototypeOf = require("./setPrototypeOf");
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
-}
-
-module.exports = _inherits;
-},{"./setPrototypeOf":"../../node_modules/@babel/runtime/helpers/setPrototypeOf.js"}],"../../node_modules/@babel/runtime/helpers/defineProperty.js":[function(require,module,exports) {
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-module.exports = _defineProperty;
-},{}],"../../node_modules/@babel/runtime/helpers/construct.js":[function(require,module,exports) {
-var setPrototypeOf = require("./setPrototypeOf");
-
-function isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
-
-  try {
-    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-function _construct(Parent, args, Class) {
-  if (isNativeReflectConstruct()) {
-    module.exports = _construct = Reflect.construct;
-  } else {
-    module.exports = _construct = function _construct(Parent, args, Class) {
-      var a = [null];
-      a.push.apply(a, args);
-      var Constructor = Function.bind.apply(Parent, a);
-      var instance = new Constructor();
-      if (Class) setPrototypeOf(instance, Class.prototype);
-      return instance;
-    };
-  }
-
-  return _construct.apply(null, arguments);
-}
-
-module.exports = _construct;
-},{"./setPrototypeOf":"../../node_modules/@babel/runtime/helpers/setPrototypeOf.js"}],"../../node_modules/@ungap/weakmap/esm/index.js":[function(require,module,exports) {
+})({"../../node_modules/@ungap/weakmap/esm/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2118,43 +1946,7 @@ function Hole(type, args) {
   this.type = type;
   this.args = args;
 }
-},{"@ungap/weakmap":"../../node_modules/@ungap/weakmap/esm/index.js","@ungap/template-tag-arguments":"../../node_modules/@ungap/template-tag-arguments/esm/index.js","./shared.js":"../../node_modules/lighterhtml/esm/shared.js","./tagger.js":"../../node_modules/lighterhtml/esm/tagger.js"}],"../../node_modules/@babel/runtime/helpers/arrayWithoutHoles.js":[function(require,module,exports) {
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
-
-    return arr2;
-  }
-}
-
-module.exports = _arrayWithoutHoles;
-},{}],"../../node_modules/@babel/runtime/helpers/iterableToArray.js":[function(require,module,exports) {
-function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
-}
-
-module.exports = _iterableToArray;
-},{}],"../../node_modules/@babel/runtime/helpers/nonIterableSpread.js":[function(require,module,exports) {
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
-}
-
-module.exports = _nonIterableSpread;
-},{}],"../../node_modules/@babel/runtime/helpers/toConsumableArray.js":[function(require,module,exports) {
-var arrayWithoutHoles = require("./arrayWithoutHoles");
-
-var iterableToArray = require("./iterableToArray");
-
-var nonIterableSpread = require("./nonIterableSpread");
-
-function _toConsumableArray(arr) {
-  return arrayWithoutHoles(arr) || iterableToArray(arr) || nonIterableSpread();
-}
-
-module.exports = _toConsumableArray;
-},{"./arrayWithoutHoles":"../../node_modules/@babel/runtime/helpers/arrayWithoutHoles.js","./iterableToArray":"../../node_modules/@babel/runtime/helpers/iterableToArray.js","./nonIterableSpread":"../../node_modules/@babel/runtime/helpers/nonIterableSpread.js"}],"../utils/bind_class.util.js":[function(require,module,exports) {
+},{"@ungap/weakmap":"../../node_modules/@ungap/weakmap/esm/index.js","@ungap/template-tag-arguments":"../../node_modules/@ungap/template-tag-arguments/esm/index.js","./shared.js":"../../node_modules/lighterhtml/esm/shared.js","./tagger.js":"../../node_modules/lighterhtml/esm/tagger.js"}],"../utils/bind_class.util.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2162,68 +1954,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.bind_class = bind_class;
 
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function bind_class(classes, static_class) {
-  return [].concat((0, _toConsumableArray2.default)(Object.keys(classes).filter(function (classname) {
-    return classes[classname];
-  })), [static_class]).join(" ");
+  return [...Object.keys(classes).filter(classname => classes[classname]), static_class].join(" ");
 }
-},{"@babel/runtime/helpers/toConsumableArray":"../../node_modules/@babel/runtime/helpers/toConsumableArray.js"}],"../../node_modules/@babel/runtime/helpers/arrayWithHoles.js":[function(require,module,exports) {
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-module.exports = _arrayWithHoles;
-},{}],"../../node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":[function(require,module,exports) {
-function _iterableToArrayLimit(arr, i) {
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-module.exports = _iterableToArrayLimit;
-},{}],"../../node_modules/@babel/runtime/helpers/nonIterableRest.js":[function(require,module,exports) {
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
-}
-
-module.exports = _nonIterableRest;
-},{}],"../../node_modules/@babel/runtime/helpers/slicedToArray.js":[function(require,module,exports) {
-var arrayWithHoles = require("./arrayWithHoles");
-
-var iterableToArrayLimit = require("./iterableToArrayLimit");
-
-var nonIterableRest = require("./nonIterableRest");
-
-function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || nonIterableRest();
-}
-
-module.exports = _slicedToArray;
-},{"./arrayWithHoles":"../../node_modules/@babel/runtime/helpers/arrayWithHoles.js","./iterableToArrayLimit":"../../node_modules/@babel/runtime/helpers/iterableToArrayLimit.js","./nonIterableRest":"../../node_modules/@babel/runtime/helpers/nonIterableRest.js"}],"../utils/bind_style.util.js":[function(require,module,exports) {
+},{}],"../utils/bind_style.util.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2231,23 +1965,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.bind_style = bind_style;
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function bind_style(style_object) {
-  return Object.entries(style_object).reduce(function (styleString, _ref) {
-    var _ref2 = (0, _slicedToArray2.default)(_ref, 2),
-        propName = _ref2[0],
-        propValue = _ref2[1];
-
-    propName = propName.replace(/([A-Z])/g, function (matches) {
-      return "-".concat(matches[0].toLowerCase());
-    });
-    return "".concat(styleString).concat(propName, ":").concat(propValue, ";");
+  return Object.entries(style_object).reduce((styleString, [propName, propValue]) => {
+    propName = propName.replace(/([A-Z])/g, matches => `-${matches[0].toLowerCase()}`);
+    return `${styleString}${propName}:${propValue};`;
   }, '');
 }
-},{"@babel/runtime/helpers/slicedToArray":"../../node_modules/@babel/runtime/helpers/slicedToArray.js"}],"../Components/View.js":[function(require,module,exports) {
+},{}],"../Components/View.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2256,99 +1980,65 @@ Object.defineProperty(exports, "__esModule", {
 exports.View = View;
 exports.UIView = void 0;
 
-var _construct2 = _interopRequireDefault(require("@babel/runtime/helpers/construct"));
-
-var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
 var _lighterhtml = require("lighterhtml");
 
 var _bind_classUtil = require("../utils/bind_class.util.js");
 
 var _bind_style = require("../utils/bind_style.util");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["<div class=\"", "\" style=\"", "\">", "</div>"]);
+class UIView {
+  constructor(...children) {
+    _defineProperty(this, "class_list", {});
 
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-var UIView =
-/*#__PURE__*/
-function () {
-  function UIView() {
-    (0, _classCallCheck2.default)(this, UIView);
-    (0, _defineProperty2.default)(this, "class_list", {});
-    (0, _defineProperty2.default)(this, "specific_style", {});
-
-    for (var _len = arguments.length, children = new Array(_len), _key = 0; _key < _len; _key++) {
-      children[_key] = arguments[_key];
-    }
+    _defineProperty(this, "view_style", {});
 
     this.children = children;
   }
 
-  (0, _createClass2.default)(UIView, [{
-    key: "transform",
-    value: function transform() {
-      return this;
-    }
-  }, {
-    key: "add_class",
-    value: function add_class(class_name) {
-      this.class_list[class_name] = true;
-      return this;
-    }
-  }, {
-    key: "remove_class",
-    value: function remove_class(class_name) {
-      this.class_list[class_name] = false;
-      return this;
-    }
-  }, {
-    key: "padding",
-    value: function padding(top, right, bottom, left) {
-      this.specific_style.padding = "".concat(top, "px ").concat(right, "px ").concat(bottom, "px ").concat(left, "px");
-      return this;
-    }
-  }, {
-    key: "margin",
-    value: function margin(top, right, bottom, left) {
-      this.specific_style.margin = "".concat(top, "px ").concat(right, "px ").concat(bottom, "px ").concat(left, "px");
-      return this;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return (0, _lighterhtml.html)(_templateObject(), (0, _bind_classUtil.bind_class)(this.class_list, 'view'), (0, _bind_style.bind_style)(this.specific_style), this.children.map(function (c) {
-        return c.render();
-      }));
-    }
-  }]);
-  return UIView;
-}();
+  transform() {
+    return this;
+  }
+
+  add_class(class_name) {
+    this.class_list[class_name] = true;
+    return this;
+  }
+
+  remove_class(class_name) {
+    this.class_list[class_name] = false;
+    return this;
+  }
+
+  padding(top, right, bottom, left) {
+    this.view_style.padding = `${top}px ${right}px ${bottom}px ${left}px`;
+    return this;
+  }
+
+  margin(top, right, bottom, left) {
+    this.view_style.margin = `${top}px ${right}px ${bottom}px ${left}px`;
+    return this;
+  }
+
+  render() {
+    return _lighterhtml.html`
+            <div 
+                class=${(0, _bind_classUtil.bind_class)(this.class_list, 'view')}
+                style="${(0, _bind_style.bind_style)(this.view_style)}">
+                ${this.children.map(c => c.render())}
+            </div>
+        `;
+  }
+
+}
 
 exports.UIView = UIView;
 
-function View() {
-  for (var _len2 = arguments.length, children = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-    children[_key2] = arguments[_key2];
-  }
-
-  return (0, _construct2.default)(UIView, children);
+function View(...children) {
+  return new UIView(...children);
 }
-},{"@babel/runtime/helpers/construct":"../../node_modules/@babel/runtime/helpers/construct.js","@babel/runtime/helpers/taggedTemplateLiteral":"../../node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","@babel/runtime/helpers/classCallCheck":"../../node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"../../node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/defineProperty":"../../node_modules/@babel/runtime/helpers/defineProperty.js","lighterhtml":"../../node_modules/lighterhtml/esm/index.js","../utils/bind_class.util.js":"../utils/bind_class.util.js","../utils/bind_style.util":"../utils/bind_style.util.js"}],"../Components/Button.js":[function(require,module,exports) {
+},{"lighterhtml":"../../node_modules/lighterhtml/esm/index.js","../utils/bind_class.util.js":"../utils/bind_class.util.js","../utils/bind_style.util":"../utils/bind_style.util.js"}],"../Components/Button.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2357,79 +2047,42 @@ Object.defineProperty(exports, "__esModule", {
 exports.Button = Button;
 exports.UIButton = void 0;
 
-var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
 var _View = require("./View");
 
 var _lighterhtml = require("lighterhtml");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["<button onclick=\"", "\">", "</button>"]);
+class UIButton extends _View.UIView {
+  constructor(label) {
+    super();
 
-  _templateObject = function _templateObject() {
-    return data;
-  };
+    _defineProperty(this, "action", () => {});
 
-  return data;
-}
+    _defineProperty(this, "label", "");
 
-var UIButton =
-/*#__PURE__*/
-function (_UIView) {
-  (0, _inherits2.default)(UIButton, _UIView);
-
-  function UIButton(label) {
-    var _this;
-
-    (0, _classCallCheck2.default)(this, UIButton);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(UIButton).call(this));
-    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "action", function () {});
-    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "label", "");
-    _this.label = label;
-    return _this;
+    this.label = label;
   }
 
-  (0, _createClass2.default)(UIButton, [{
-    key: "set_action",
-    value: function set_action(action) {
-      this.action = action;
-      return this;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
+  set_action(action) {
+    this.action = action;
+    return this;
+  }
 
-      return (0, _lighterhtml.html)(_templateObject(), function () {
-        return _this2.action();
-      }, this.label);
-    }
-  }]);
-  return UIButton;
-}(_View.UIView);
+  render() {
+    return _lighterhtml.html`
+            <button onclick=${() => this.action()}>${this.label}</button>
+        `;
+  }
+
+}
 
 exports.UIButton = UIButton;
 
 function Button(label) {
   return new UIButton(label);
 }
-},{"@babel/runtime/helpers/taggedTemplateLiteral":"../../node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","@babel/runtime/helpers/classCallCheck":"../../node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"../../node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"../../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"../../node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/assertThisInitialized":"../../node_modules/@babel/runtime/helpers/assertThisInitialized.js","@babel/runtime/helpers/inherits":"../../node_modules/@babel/runtime/helpers/inherits.js","@babel/runtime/helpers/defineProperty":"../../node_modules/@babel/runtime/helpers/defineProperty.js","./View":"../Components/View.js","lighterhtml":"../../node_modules/lighterhtml/esm/index.js"}],"../Components/Stack.js":[function(require,module,exports) {
+},{"./View":"../Components/View.js","lighterhtml":"../../node_modules/lighterhtml/esm/index.js"}],"../Components/Stack.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2439,118 +2092,44 @@ exports.HStack = HStack;
 exports.VStack = VStack;
 exports.UIVerticalStack = exports.UIHorizontalStack = void 0;
 
-var _construct2 = _interopRequireDefault(require("@babel/runtime/helpers/construct"));
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf5 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _View = require("./View");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var UIStack =
-/*#__PURE__*/
-function (_UIView) {
-  (0, _inherits2.default)(UIStack, _UIView);
-
-  function UIStack() {
-    var _getPrototypeOf2;
-
-    var _this;
-
-    (0, _classCallCheck2.default)(this, UIStack);
-
-    for (var _len = arguments.length, children = new Array(_len), _key = 0; _key < _len; _key++) {
-      children[_key] = arguments[_key];
-    }
-
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf5.default)(UIStack)).call.apply(_getPrototypeOf2, [this].concat(children)));
-
-    _this.add_class("stack");
-
-    return _this;
+class UIStack extends _View.UIView {
+  constructor(...children) {
+    super(...children);
+    this.add_class("stack");
   }
 
-  return UIStack;
-}(_View.UIView);
+}
 
-var UIHorizontalStack =
-/*#__PURE__*/
-function (_UIStack) {
-  (0, _inherits2.default)(UIHorizontalStack, _UIStack);
-
-  function UIHorizontalStack() {
-    var _getPrototypeOf3;
-
-    var _this2;
-
-    (0, _classCallCheck2.default)(this, UIHorizontalStack);
-
-    for (var _len2 = arguments.length, children = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-      children[_key2] = arguments[_key2];
-    }
-
-    _this2 = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf3 = (0, _getPrototypeOf5.default)(UIHorizontalStack)).call.apply(_getPrototypeOf3, [this].concat(children)));
-
-    _this2.add_class("horizontal");
-
-    return _this2;
+class UIHorizontalStack extends UIStack {
+  constructor(...children) {
+    super(...children);
+    this.add_class("horizontal");
   }
 
-  return UIHorizontalStack;
-}(UIStack);
+}
 
 exports.UIHorizontalStack = UIHorizontalStack;
 
-var UIVerticalStack =
-/*#__PURE__*/
-function (_UIStack2) {
-  (0, _inherits2.default)(UIVerticalStack, _UIStack2);
-
-  function UIVerticalStack() {
-    var _getPrototypeOf4;
-
-    var _this3;
-
-    (0, _classCallCheck2.default)(this, UIVerticalStack);
-
-    for (var _len3 = arguments.length, children = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
-      children[_key3] = arguments[_key3];
-    }
-
-    _this3 = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf4 = (0, _getPrototypeOf5.default)(UIVerticalStack)).call.apply(_getPrototypeOf4, [this].concat(children)));
-
-    _this3.add_class("vertical");
-
-    return _this3;
+class UIVerticalStack extends UIStack {
+  constructor(...children) {
+    super(...children);
+    this.add_class("vertical");
   }
 
-  return UIVerticalStack;
-}(UIStack);
+}
 
 exports.UIVerticalStack = UIVerticalStack;
 
-function HStack() {
-  for (var _len4 = arguments.length, children = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {
-    children[_key4] = arguments[_key4];
-  }
-
-  return (0, _construct2.default)(UIHorizontalStack, children);
+function HStack(...children) {
+  return new UIHorizontalStack(...children);
 }
 
-function VStack() {
-  for (var _len5 = arguments.length, children = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {
-    children[_key5] = arguments[_key5];
-  }
-
-  return (0, _construct2.default)(UIVerticalStack, children);
+function VStack(...children) {
+  return new UIVerticalStack(...children);
 }
-},{"@babel/runtime/helpers/construct":"../../node_modules/@babel/runtime/helpers/construct.js","@babel/runtime/helpers/classCallCheck":"../../node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/possibleConstructorReturn":"../../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"../../node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"../../node_modules/@babel/runtime/helpers/inherits.js","./View":"../Components/View.js"}],"../Components/Text.js":[function(require,module,exports) {
+},{"./View":"../Components/View.js"}],"../Components/Text.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2559,29 +2138,15 @@ Object.defineProperty(exports, "__esModule", {
 exports.Text = Text;
 exports.UIText = exports.TEXT_STYLE = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
 var _lighterhtml = require("lighterhtml");
 
 var _bind_class = require("../utils/bind_class.util");
 
 var _View = require("./View");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var TEXT_STYLE = {
+const TEXT_STYLE = {
   large_title: "large_title",
   subheadline: "subheadline",
   footnote: "footnote",
@@ -2590,78 +2155,63 @@ var TEXT_STYLE = {
 };
 exports.TEXT_STYLE = TEXT_STYLE;
 
-var UIText =
-/*#__PURE__*/
-function (_UIView) {
-  (0, _inherits2.default)(UIText, _UIView);
-
-  function UIText(value, style) {
-    var _this;
-
-    (0, _classCallCheck2.default)(this, UIText);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(UIText).call(this, {
-      render: function render() {
+class UIText extends _View.UIView {
+  constructor(value, style) {
+    super({
+      render() {
         return value;
       }
-    }));
-    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "is_uppercase", false);
-    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "is_bold", false);
-    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "style", TEXT_STYLE.body);
-    _this.value = value;
-    _this.style = style;
 
-    _this.add_class("text");
+    });
 
-    _this.add_class(style);
+    _defineProperty(this, "is_uppercase", false);
 
-    return _this;
+    _defineProperty(this, "is_bold", false);
+
+    _defineProperty(this, "style", TEXT_STYLE.body);
+
+    this.value = value;
+    this.style = style;
+    this.add_class("text");
+    this.add_class(style);
   }
 
-  (0, _createClass2.default)(UIText, [{
-    key: "uppercase",
-    value: function uppercase() {
-      this.add_class("uppercase");
-      return this;
-    }
-  }, {
-    key: "bold",
-    value: function bold() {
-      this.add_class("bold");
-      return this;
-    }
-  }, {
-    key: "underline",
-    value: function underline() {
-      this.add_class("underline");
-      return this;
-    }
-  }, {
-    key: "italic",
-    value: function italic() {
-      this.add_class("italic");
-      return this;
-    }
-  }, {
-    key: "size",
-    value: function size(value) {
-      return this;
-    }
-  }, {
-    key: "font",
-    value: function font(font_stack) {
-      return this;
-    }
-  }]);
-  return UIText;
-}(_View.UIView);
+  uppercase() {
+    this.add_class("uppercase");
+    return this;
+  }
+
+  bold() {
+    this.add_class("bold");
+    return this;
+  }
+
+  underline() {
+    this.add_class("underline");
+    return this;
+  }
+
+  italic() {
+    this.add_class("italic");
+    return this;
+  }
+
+  size(value) {
+    return this;
+  }
+
+  font(font_stack) {
+    return this;
+  }
+
+}
 
 exports.UIText = UIText;
 
-function Text(value) {
-  var style = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : TEXT_STYLE.body;
+function Text(value, style = TEXT_STYLE.body) {
   return new UIText(value, style);
 }
-},{"@babel/runtime/helpers/classCallCheck":"../../node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"../../node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"../../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"../../node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/assertThisInitialized":"../../node_modules/@babel/runtime/helpers/assertThisInitialized.js","@babel/runtime/helpers/inherits":"../../node_modules/@babel/runtime/helpers/inherits.js","@babel/runtime/helpers/defineProperty":"../../node_modules/@babel/runtime/helpers/defineProperty.js","lighterhtml":"../../node_modules/lighterhtml/esm/index.js","../utils/bind_class.util":"../utils/bind_class.util.js","./View":"../Components/View.js"}],"../Components/TextField.js":[function(require,module,exports) {
+},{"lighterhtml":"../../node_modules/lighterhtml/esm/index.js","../utils/bind_class.util":"../utils/bind_class.util.js","./View":"../Components/View.js"}],"../Components/TextField.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2670,85 +2220,45 @@ Object.defineProperty(exports, "__esModule", {
 exports.TextField = TextField;
 exports.UITextField = void 0;
 
-var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
 var _View = require("./View");
 
 var _lighterhtml = require("lighterhtml");
 
 var _bind_style = require("../utils/bind_style.util");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["<input class=\"text_field\" style=\"", "\" type=\"", "\" name=\"", "\" placeholder=\"", "\">"]);
+class UITextField extends _View.UIView {
+  constructor(name, type = "text", placeholder = "", formater) {
+    super();
 
-  _templateObject = function _templateObject() {
-    return data;
-  };
+    _defineProperty(this, "view_style", {});
 
-  return data;
-}
-
-var UITextField =
-/*#__PURE__*/
-function (_UIView) {
-  (0, _inherits2.default)(UITextField, _UIView);
-
-  function UITextField(name) {
-    var _this;
-
-    var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "text";
-    var placeholder = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "";
-    var formater = arguments.length > 3 ? arguments[3] : undefined;
-    (0, _classCallCheck2.default)(this, UITextField);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(UITextField).call(this));
-    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "specific_style", {});
-    _this.name = name;
-    _this.type = type;
-    _this.placeholder = placeholder;
-    _this.formater = formater;
-    return _this;
+    this.name = name;
+    this.type = type;
+    this.placeholder = placeholder;
+    this.formater = formater;
   }
 
-  (0, _createClass2.default)(UITextField, [{
-    key: "margin",
-    value: function margin(top, right, bottom, left) {
-      this.specific_style.margin = "".concat(top, "px ").concat(right, "px ").concat(bottom, "px ").concat(left, "px");
-      return this;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return (0, _lighterhtml.html)(_templateObject(), (0, _bind_style.bind_style)(this.specific_style), this.type, this.name, this.placeholder);
-    }
-  }]);
-  return UITextField;
-}(_View.UIView);
+  margin(top, right, bottom, left) {
+    this.view_style.margin = `${top}px ${right}px ${bottom}px ${left}px`;
+    return this;
+  }
+
+  render() {
+    return _lighterhtml.html`
+            <input class="text_field" style="${(0, _bind_style.bind_style)(this.view_style)}" type="${this.type}" name="${this.name}" placeholder="${this.placeholder}"/>
+        `;
+  }
+
+}
 
 exports.UITextField = UITextField;
 
-function TextField(name) {
-  var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "text";
-  var placeholder = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "";
-  var formater = arguments.length > 3 ? arguments[3] : undefined;
+function TextField(name, type = "text", placeholder = "", formater) {
   return new UITextField(name, type, placeholder, formater);
 }
-},{"@babel/runtime/helpers/taggedTemplateLiteral":"../../node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","@babel/runtime/helpers/classCallCheck":"../../node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"../../node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"../../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"../../node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/assertThisInitialized":"../../node_modules/@babel/runtime/helpers/assertThisInitialized.js","@babel/runtime/helpers/inherits":"../../node_modules/@babel/runtime/helpers/inherits.js","@babel/runtime/helpers/defineProperty":"../../node_modules/@babel/runtime/helpers/defineProperty.js","./View":"../Components/View.js","lighterhtml":"../../node_modules/lighterhtml/esm/index.js","../utils/bind_style.util":"../utils/bind_style.util.js"}],"../Components/LabelTextField.js":[function(require,module,exports) {
+},{"./View":"../Components/View.js","lighterhtml":"../../node_modules/lighterhtml/esm/index.js","../utils/bind_style.util":"../utils/bind_style.util.js"}],"../Components/LabelTextField.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2757,49 +2267,30 @@ Object.defineProperty(exports, "__esModule", {
 exports.LabelTextField = LabelTextField;
 exports.UILabelTextField = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _Stack = require("./Stack");
 
 var _Text = require("./Text");
 
 var _TextField = require("./TextField");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var UILabelTextField =
-/*#__PURE__*/
-function (_UIVerticalStack) {
-  (0, _inherits2.default)(UILabelTextField, _UIVerticalStack);
-
-  function UILabelTextField(label, name, type, placeholder, formater) {
-    var _this;
-
-    (0, _classCallCheck2.default)(this, UILabelTextField);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(UILabelTextField).call(this, (0, _Text.Text)(label, _Text.TEXT_STYLE.label), (0, _TextField.TextField)(name, type, placeholder, formater).margin(8, 0, 0, 0)));
-    _this.label = label;
-    _this.name = name;
-    _this.type = type;
-    _this.placeholder = placeholder;
-    _this.formater = formater;
-    return _this;
+class UILabelTextField extends _Stack.UIVerticalStack {
+  constructor(label, name, type, placeholder, formater) {
+    super((0, _Text.Text)(label, _Text.TEXT_STYLE.label), (0, _TextField.TextField)(name, type, placeholder, formater).margin(8, 0, 0, 0));
+    this.label = label;
+    this.name = name;
+    this.type = type;
+    this.placeholder = placeholder;
+    this.formater = formater;
   }
 
-  return UILabelTextField;
-}(_Stack.UIVerticalStack);
+}
 
 exports.UILabelTextField = UILabelTextField;
 
 function LabelTextField(label, name, type, placeholder, formater) {
   return new UILabelTextField(label, name, type, placeholder, formater);
 }
-},{"@babel/runtime/helpers/classCallCheck":"../../node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/possibleConstructorReturn":"../../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"../../node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"../../node_modules/@babel/runtime/helpers/inherits.js","./Stack":"../Components/Stack.js","./Text":"../Components/Text.js","./TextField":"../Components/TextField.js"}],"preview.js":[function(require,module,exports) {
+},{"./Stack":"../Components/Stack.js","./Text":"../Components/Text.js","./TextField":"../Components/TextField.js"}],"preview.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2811,16 +2302,10 @@ var _index = require("../index");
 
 var _lighterhtml = require("lighterhtml");
 
-var test_view = (0, _index.View)((0, _index.VStack)((0, _index.HStack)((0, _index.Text)("Book my ticket", _index.TEXT_STYLE.large_title), (0, _index.Button)("Hello").set_action(function () {
-  return console.log("button_click");
-})), (0, _index.Segment)([["a_value", (0, _index.Text)("A", _index.TEXT_STYLE.label)], ["b_value", (0, _index.Text)("B", _index.TEXT_STYLE.label)], ["c_value", (0, _index.Text)("C", _index.TEXT_STYLE.label)], ["d_value", (0, _index.Text)("D", _index.TEXT_STYLE.label)]]).margin(8, 0, 8, 0).set_default_element(2).set_action(function (selected_value) {
-  return console.log(selected_value);
-}), (0, _index.TextField)("test", "text", "Test input").margin(8, 0, 8, 0), (0, _index.LabelTextField)("Label", "test", "text", "Test input")).margin(8, 8, 8, 8));
+const test_view = (0, _index.View)((0, _index.VStack)((0, _index.HStack)((0, _index.Text)("Book my ticket", _index.TEXT_STYLE.large_title), (0, _index.Button)("Hello").set_action(() => console.log("button_click"))), (0, _index.Segment)([["a_value", (0, _index.Text)("A", _index.TEXT_STYLE.label)], ["b_value", (0, _index.Text)("B", _index.TEXT_STYLE.label)], ["c_value", (0, _index.Text)("C", _index.TEXT_STYLE.label)], ["d_value", (0, _index.Text)("D", _index.TEXT_STYLE.label)]]).margin(8, 0, 8, 0).set_default_element(2).set_action(selected_value => console.log(selected_value)), (0, _index.TextField)("test", "text", "Test input").margin(8, 0, 8, 0), (0, _index.LabelTextField)("Label", "test", "text", "Test input")).margin(8, 8, 8, 8));
 
 function need_update() {
-  (0, _lighterhtml.render)(document.body, function () {
-    return test_view.render();
-  });
+  (0, _lighterhtml.render)(document.body, () => test_view.render());
 }
 
 window.addEventListener("load", need_update);
@@ -2833,26 +2318,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.Segment = Segment;
 exports.UISegment = void 0;
 
-var _construct2 = _interopRequireDefault(require("@babel/runtime/helpers/construct"));
-
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
-var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
 var _View = require("./View");
 
 var _bind_classUtil = require("../utils/bind_class.util.js");
@@ -2863,98 +2328,68 @@ var _bind_style = require("../utils/bind_style.util");
 
 var _preview = require("../preview/preview");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _templateObject2() {
-  var data = (0, _taggedTemplateLiteral2.default)(["<div class=\"", "\" onclick=\"", "\">", "</div>"]);
+class UISegment extends _View.UIView {
+  constructor(items) {
+    super();
 
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
+    _defineProperty(this, "action", () => {});
 
-  return data;
-}
+    _defineProperty(this, "selected_item", 0);
 
-function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["<div class=\"segment\" style=\"", "\">", "</div>"]);
+    _defineProperty(this, "view_style", {});
 
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-var UISegment =
-/*#__PURE__*/
-function (_UIView) {
-  (0, _inherits2.default)(UISegment, _UIView);
-
-  function UISegment(items) {
-    var _this;
-
-    (0, _classCallCheck2.default)(this, UISegment);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(UISegment).call(this));
-    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "action", function () {});
-    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "selected_item", 0);
-    (0, _defineProperty2.default)((0, _assertThisInitialized2.default)(_this), "specific_style", {});
-    _this.items = items;
-    return _this;
+    this.items = items;
   }
 
-  (0, _createClass2.default)(UISegment, [{
-    key: "set_action",
-    value: function set_action(action) {
-      this.action = action;
-      return this;
-    }
-  }, {
-    key: "set_default_element",
-    value: function set_default_element(index) {
-      this.selected_item = index;
-      return this;
-    }
-  }, {
-    key: "margin",
-    value: function margin(top, right, bottom, left) {
-      this.specific_style.margin = "".concat(top, "px ").concat(right, "px ").concat(bottom, "px ").concat(left, "px");
-      return this;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
+  set_action(action) {
+    this.action = action;
+    return this;
+  }
 
-      return (0, _lighterhtml.html)(_templateObject(), (0, _bind_style.bind_style)(this.specific_style), this.items.map(function (_ref, i) {
-        var _ref2 = (0, _slicedToArray2.default)(_ref, 2),
-            value = _ref2[0],
-            view = _ref2[1];
+  set_default_element(index) {
+    this.selected_item = index;
+    return this;
+  }
 
-        return (0, _lighterhtml.html)(_templateObject2(), (0, _bind_classUtil.bind_class)({
-          selected: i === _this2.selected_item
-        }, 'item'), function () {
-          _this2.selected_item = i;
+  margin(top, right, bottom, left) {
+    this.view_style.margin = `${top}px ${right}px ${bottom}px ${left}px`;
+    return this;
+  }
 
-          _this2.action(value);
+  render() {
+    return _lighterhtml.html`
+            <div 
+                class="segment"
+                style="${(0, _bind_style.bind_style)(this.view_style)}"
+            >
+                ${this.items.map(([value, view], i) => _lighterhtml.html`
+                    <div 
+                        class="${(0, _bind_classUtil.bind_class)({
+      selected: i === this.selected_item
+    }, 'item')}" 
+                        onclick="${() => {
+      this.selected_item = i;
+      this.action(value);
+      (0, _preview.need_update)();
+    }}"
+                    >
+                        ${view.render()}
+                    </div>
+                `)}
+            </div>
+        `;
+  }
 
-          (0, _preview.need_update)();
-        }, view.render());
-      }));
-    }
-  }]);
-  return UISegment;
-}(_View.UIView);
+}
 
 exports.UISegment = UISegment;
 
-function Segment() {
-  for (var _len = arguments.length, items = new Array(_len), _key = 0; _key < _len; _key++) {
-    items[_key] = arguments[_key];
-  }
-
-  return (0, _construct2.default)(UISegment, items);
+function Segment(...items) {
+  return new UISegment(...items);
 }
-},{"@babel/runtime/helpers/construct":"../../node_modules/@babel/runtime/helpers/construct.js","@babel/runtime/helpers/slicedToArray":"../../node_modules/@babel/runtime/helpers/slicedToArray.js","@babel/runtime/helpers/taggedTemplateLiteral":"../../node_modules/@babel/runtime/helpers/taggedTemplateLiteral.js","@babel/runtime/helpers/classCallCheck":"../../node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"../../node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/possibleConstructorReturn":"../../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"../../node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/assertThisInitialized":"../../node_modules/@babel/runtime/helpers/assertThisInitialized.js","@babel/runtime/helpers/inherits":"../../node_modules/@babel/runtime/helpers/inherits.js","@babel/runtime/helpers/defineProperty":"../../node_modules/@babel/runtime/helpers/defineProperty.js","./View":"../Components/View.js","../utils/bind_class.util.js":"../utils/bind_class.util.js","lighterhtml":"../../node_modules/lighterhtml/esm/index.js","../utils/bind_style.util":"../utils/bind_style.util.js","../preview/preview":"preview.js"}],"../Navigation/NavigationView.js":[function(require,module,exports) {
+},{"./View":"../Components/View.js","../utils/bind_class.util.js":"../utils/bind_class.util.js","lighterhtml":"../../node_modules/lighterhtml/esm/index.js","../utils/bind_style.util":"../utils/bind_style.util.js","../preview/preview":"preview.js"}],"../Navigation/NavigationView.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2963,54 +2398,22 @@ Object.defineProperty(exports, "__esModule", {
 exports.NavigationView = NavigationView;
 exports.UINavigationView = void 0;
 
-var _construct2 = _interopRequireDefault(require("@babel/runtime/helpers/construct"));
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _View = require("../Components/View");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var UINavigationView =
-/*#__PURE__*/
-function (_UIView) {
-  (0, _inherits2.default)(UINavigationView, _UIView);
-
-  function UINavigationView(path) {
-    var _getPrototypeOf2;
-
-    var _this;
-
-    (0, _classCallCheck2.default)(this, UINavigationView);
-
-    for (var _len = arguments.length, children = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      children[_key - 1] = arguments[_key];
-    }
-
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(UINavigationView)).call.apply(_getPrototypeOf2, [this].concat(children)));
+class UINavigationView extends _View.UIView {
+  constructor(path, ...children) {
+    super(...children);
     console.log("PATH", path);
-    return _this;
   }
 
-  return UINavigationView;
-}(_View.UIView);
+}
 
 exports.UINavigationView = UINavigationView;
 
-function NavigationView() {
-  for (var _len2 = arguments.length, children = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-    children[_key2] = arguments[_key2];
-  }
-
-  return (0, _construct2.default)(UINavigationView, ['/'].concat(children));
+function NavigationView(...children) {
+  return new UINavigationView('/', ...children);
 }
-},{"@babel/runtime/helpers/construct":"../../node_modules/@babel/runtime/helpers/construct.js","@babel/runtime/helpers/classCallCheck":"../../node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/possibleConstructorReturn":"../../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"../../node_modules/@babel/runtime/helpers/getPrototypeOf.js","@babel/runtime/helpers/inherits":"../../node_modules/@babel/runtime/helpers/inherits.js","../Components/View":"../Components/View.js"}],"../index.js":[function(require,module,exports) {
+},{"../Components/View":"../Components/View.js"}],"../index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3174,7 +2577,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56727" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56875" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -8,7 +8,7 @@ export class UISegment extends UIView {
     action = () => {};
     selected_item = 0;
 
-    specific_style = {};
+    view_style = {};
 
     constructor (items) {
         super();
@@ -27,7 +27,7 @@ export class UISegment extends UIView {
 
 
     margin(top, right, bottom, left) {
-        this.specific_style.margin = `${top}px ${right}px ${bottom}px ${left}px`;
+        this.view_style.margin = `${top}px ${right}px ${bottom}px ${left}px`;
         return this;
     }
 
@@ -35,7 +35,7 @@ export class UISegment extends UIView {
         return html`
             <div 
                 class="segment"
-                style="${bind_style(this.specific_style)}"
+                style="${bind_style(this.view_style)}"
             >
                 ${this.items.map(([value, view], i) => html`
                     <div 

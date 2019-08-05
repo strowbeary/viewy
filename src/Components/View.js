@@ -4,7 +4,7 @@ import {bind_style} from "../utils/bind_style.util";
 
 export class UIView {
     class_list = {};
-    specific_style = {};
+    view_style = {};
 
     constructor(...children) {
         this.children = children;
@@ -21,18 +21,18 @@ export class UIView {
         return this;
     }
     padding(top, right, bottom, left) {
-        this.specific_style.padding = `${top}px ${right}px ${bottom}px ${left}px`;
+        this.view_style.padding = `${top}px ${right}px ${bottom}px ${left}px`;
         return this;
     }
     margin(top, right, bottom, left) {
-        this.specific_style.margin = `${top}px ${right}px ${bottom}px ${left}px`;
+        this.view_style.margin = `${top}px ${right}px ${bottom}px ${left}px`;
         return this;
     }
     render() {
         return html`
             <div 
                 class=${bind_class(this.class_list, 'view')}
-                style="${bind_style(this.specific_style)}">
+                style="${bind_style(this.view_style)}">
                 ${this.children.map(c => c.render())}
             </div>
         `;

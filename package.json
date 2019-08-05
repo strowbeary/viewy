@@ -16,9 +16,7 @@
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
   "license": "MIT",
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
+    "last 1 firefox versions"
   ],
   "dependencies": {
     "lighterhtml": "^0.16.2"
