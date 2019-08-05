@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/util-deprecate/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/util-deprecate/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Segment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Navigation/NavigationView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navigation/NavigationView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Navigation/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navigation/Router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preview/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preview/preview.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -93,8 +96,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -112,7 +115,7 @@
       <workItem from="1564828569198" duration="53000" />
       <workItem from="1564828711294" duration="14030000" />
       <workItem from="1564925186325" duration="935000" />
-      <workItem from="1564990439842" duration="14314000" />
+      <workItem from="1564990439842" duration="15037000" />
     </task>
     <servers />
   </component>

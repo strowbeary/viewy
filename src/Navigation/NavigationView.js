@@ -1,9 +1,10 @@
 import {UIView} from "../Components/View";
+import * as Router from "./Router";
 
 export class UINavigationView extends UIView {
     constructor (path, ...children) {
         super(...children);
-        console.log("PATH", path);
+        Router.add_page(path, this);
     }
 }
 

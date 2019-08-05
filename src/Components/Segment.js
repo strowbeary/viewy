@@ -2,7 +2,7 @@ import {UIView} from "./View";
 import {bind_class} from "../utils/bind_class.util.js";
 import {html} from "lighterhtml";
 import {bind_style} from "../utils/bind_style.util";
-import {need_update} from "../preview/preview";
+import {need_update} from "../index";
 
 export class UISegment extends UIView {
     action = () => {};
