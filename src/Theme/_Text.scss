@@ -1,0 +1,21 @@
+.text {
+    font-family: Inter, sans-serif;
+
+    &.uppercase {
+        text-transform: uppercase;
+    }
+
+    &.label {
+        font-weight: 600;
+        font-size: 1.4rem;
+    }
+
+    &.body {
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+    &.large_title {
+        font-size: 2.8rem;
+        font-weight: 800;
+    }
+}

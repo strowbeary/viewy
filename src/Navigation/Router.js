@@ -1,5 +1,5 @@
 import {html} from "lighterhtml";
-import Stack from "../Layouts/Stack";
+import Stack from "../Components/Layouts/Stack";
 
 export function NavigationManager() {
 
