@@ -1,13 +1,12 @@
-import {html} from "//unpkg.com/lighterhtml?module";
+import {UIView} from "../Components/View";
+
+export class UINavigationView extends UIView {
+    constructor (path, ...children) {
+        super(...children);
+        console.log("PATH", path);
+    }
+}
 
 export function NavigationView(...children) {
-    return {
-        render() {
-            return html`
-                <div class="navigation_view">
-                    ${children.map(c => c.render())}
-                </div>
-            `;
-        }
-    }
+    return new UINavigationView('/', ...children);
 }

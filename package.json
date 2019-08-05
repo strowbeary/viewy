@@ -11,17 +11,30 @@
   "scripts": {
     "build": "rollup -c",
     "prepare": "npm run build",
-    "dev": "live-server --port=5432 --no-browser -V --watch=./src --mount=/:./src"
+    "dev": "parcel src/preview/index.html"
   },
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
   "license": "MIT",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "dependencies": {
     "lighterhtml": "^0.16.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-plugin-template-html-minifier": "^3.1.0",
+    "live-server": "^1.2.1",
+    "parcel-bundler": "^1.12.3",
     "rollup": "^1.18.0",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-terser": "^5.1.1",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.1"
   }
 }
