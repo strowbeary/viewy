@@ -27,7 +27,6 @@ export class UITextView extends UIView {
 
         this.is_uppercase = false;
         this.is_bold = false;
-        this.style = TEXT_STYLE.body;
     }
 
     uppercase() {

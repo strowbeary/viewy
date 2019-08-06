@@ -3,13 +3,10 @@
 
     &.vertical {
         flex-direction: column;
-        height: 100%;
     }
 
     &.horizontal {
         flex-direction: row;
-        &>* {
-            width: 100%;
-        }
+        align-items: center;
     }
 }

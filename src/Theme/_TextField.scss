@@ -1,7 +1,11 @@
 .text_field {
     padding: 12px 16px;
-    border: none;
     background: #f7f7f7;
     border-radius: 8px;
     font-size: 1.4rem;
+    border: 2px solid transparent;
+
+    &:focus {
+        border: 2px solid #4a6dff;
+    }
 }

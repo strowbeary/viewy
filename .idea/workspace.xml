@@ -2,34 +2,119 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Image.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/List.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Theme/_Grid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Theme/_Image.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Theme/_View.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Tag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Theme/_List.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/rollup" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/rollup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/code-frame/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/code-frame/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-module-imports/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/helper-module-imports/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/highlight/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/highlight/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/@babel/types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/types/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/estree/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/estree/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/resolve/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/resolve/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/create-content/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/create-content/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/essential-map/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/essential-map/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/import-node/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/import-node/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-literal/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/template-literal/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-tag-arguments/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/template-tag-arguments/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/trim/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/trim/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/weakmap/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/weakmap/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/dist/acorn.mjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/dist/bin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/acorn/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ansi-styles/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-styles/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/buffer-from/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/buffer-from/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/builtin-modules/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/builtin-modules/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/chalk/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chalk/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-convert/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-name/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-name/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/commander/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/commander/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/core-util-is/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/core-util-is/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/domconstants/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domconstants/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/domdiff/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domdiff/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/domsanitizer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domsanitizer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domtagger/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/escape-string-regexp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/escape-string-regexp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/estree-walker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/estree-walker/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/esutils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/esutils/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/has-flag/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/has-flag/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-style/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hyperhtml-style/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-wire/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hyperhtml-wire/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/inherits/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/inherits/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-module/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-module/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/isarray/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/isarray/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jest-worker/node_modules/supports-color/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/jest-worker/node_modules/supports-color/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/jest-worker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/jest-worker/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/js-tokens/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-tokens/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/lighterhtml/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/lodash/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/lodash/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/merge-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/merge-stream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/path-parse/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/path-parse/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/process-nextick-args/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/process-nextick-args/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/readable-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/readable-stream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resolve/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/resolve/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup-plugin-babel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup-plugin-babel/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup-plugin-node-resolve/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup-plugin-node-resolve/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup-plugin-terser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup-plugin-terser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup-pluginutils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup-pluginutils/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup/bin/rollup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup/dist/rollup.browser.es.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup/dist/rollup.browser.es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup/dist/rollup.browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup/dist/rollup.browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup/dist/rollup.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup/dist/rollup.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup/dist/rollup.es.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup/dist/rollup.es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup/dist/rollup.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup/dist/rollup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/rollup/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/safe-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/safe-buffer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serialize-javascript/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serialize-javascript/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map-support/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map-support/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.debug.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.debug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/source-map-consumer.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map/lib/source-map-consumer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/source-map-generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map/lib/source-map-generator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/source-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map/lib/source-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map/lib/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map/lib/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/source-map/source-map.d.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/string_decoder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/string_decoder/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Grid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/LabelTextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Segment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Stack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/supports-color/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/supports-color/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/PATRONS.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/PATRONS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/bin/uglifyjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/bin/uglifyjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/dist/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/dist/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/dist/bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/dist/bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/dist/bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/dist/bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/dist/bundle.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/tools/domprops.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/tools/domprops.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/tools/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/tools/node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/tools/props.html" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/tools/props.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/terser/tools/terser.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/tools/terser.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/to-fast-properties/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/to-fast-properties/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/util-deprecate/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/util-deprecate/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Navigation/NavigationView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navigation/NavigationView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Navigation/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navigation/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_Button.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_Button.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_Stack.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_Stack.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_Text.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_Text.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/index.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/index.scssc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theme/_Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/_Stack.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_Stack.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/_Text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_Text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/_TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_TextField.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theme/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theme/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/index.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theme/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/index.scss" afterDir="false" />
