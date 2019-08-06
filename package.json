@@ -14,8 +14,38 @@
   },
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
   "license": "MIT",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-syntax-dynamic-import",
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+      ],
+      [
+        "template-html-minifier",
+        {
+          "modules": {
+            "lighterhtml": [
+              "html"
+            ]
+          },
+          "htmlMinifier": {
+            "collapseWhitespace": true
+          }
+        }
+      ]
+    ]
+  },
   "browserslist": [
-    "last 1 firefox versions"
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
   ],
   "dependencies": {
     "lighterhtml": "^0.16.2"

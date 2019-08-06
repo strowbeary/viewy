@@ -1,13 +1,13 @@
 import {UIView} from "./View";
 import {html} from "lighterhtml";
 
-export class UIButton extends UIView{
-    action = () => {};
-    label = "";
+export class UIButtonView extends UIView{
+
 
     constructor (label) {
         super();
         this.label = label;
+        this.action = () => {};
     }
 
     set_action(action) {
@@ -23,5 +23,5 @@ export class UIButton extends UIView{
 }
 
 export function Button(label) {
-    return new UIButton(label);
+    return new UIButtonView(label);
 }

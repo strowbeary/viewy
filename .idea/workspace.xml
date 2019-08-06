@@ -2,13 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/List.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Theme/_Grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Theme/_Image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Theme/_View.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/util-deprecate/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/util-deprecate/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-module-imports/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/helper-module-imports/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@babel/types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/types/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/core-util-is/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/core-util-is/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/inherits/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/inherits/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/isarray/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/isarray/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/process-nextick-args/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/process-nextick-args/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/readable-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/readable-stream/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/safe-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/safe-buffer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/string_decoder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/string_decoder/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/LabelTextField.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Segment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Stack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Navigation/NavigationView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navigation/NavigationView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Navigation/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navigation/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/_Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,7 +139,7 @@
       <workItem from="1564828569198" duration="53000" />
       <workItem from="1564828711294" duration="14030000" />
       <workItem from="1564925186325" duration="935000" />
-      <workItem from="1564990439842" duration="15037000" />
+      <workItem from="1564990439842" duration="22955000" />
     </task>
     <servers />
   </component>

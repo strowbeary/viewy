@@ -4,10 +4,12 @@
 @import "Segment";
 @import "NavigationView";
 @import "TextField";
+@import "View";
+@import "Grid";
+@import "Image";
 
 html { font-size: 62.5%; } /* =10px */
 body {
     margin: 0;
     font-size: 1.4rem;
-    min-height: 100vh;
 } /* =14px */

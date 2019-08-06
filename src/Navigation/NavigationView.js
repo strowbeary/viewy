@@ -8,6 +8,6 @@ export class UINavigationView extends UIView {
     }
 }
 
-export function NavigationView(...children) {
+export function NavigationView(path, ...children) {
     return new UINavigationView('/', ...children);
 }

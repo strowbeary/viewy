@@ -7,14 +7,14 @@ class UIStack extends UIView {
     }
 }
 
-export class UIHorizontalStack extends UIStack {
+export class UIHStackView extends UIStack {
     constructor (...children) {
         super(...children);
         this.add_class("horizontal")
     }
 }
 
-export class UIVerticalStack extends UIStack {
+export class UIVStackView extends UIStack {
     constructor (...children) {
         super(...children);
         this.add_class("vertical")
@@ -22,9 +22,9 @@ export class UIVerticalStack extends UIStack {
 }
 
 export function HStack(...children) {
-    return new UIHorizontalStack(...children);
+    return new UIHStackView(...children);
 }
 
 export function VStack(...children) {
-    return new UIVerticalStack(...children);
+    return new UIVStackView(...children);
 }

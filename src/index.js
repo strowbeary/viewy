@@ -1,14 +1,11 @@
-import {render} from "lighterhtml";
-
-export {Button, UIButton} from "./Components/Button";
-export {LabelTextField, UILabelTextField} from "./Components/LabelTextField";
-export {Segment, UISegment} from "./Components/Segment";
-export {VStack, HStack, UIVerticalStack, UIHorizontalStack} from "./Components/Stack";
-export {Text, UIText, TEXT_STYLE} from "./Components/Text";
-export {TextField, UITextField} from "./Components/TextField";
+export {Button, UIButtonView} from "./Components/Button";
+export {LabelTextField, UILabelTextFieldView} from "./Components/LabelTextField";
+export {Segment, UISegmentView} from "./Components/Segment";
+export {VStack, HStack, UIVStackView, UIHStackView} from "./Components/Stack";
+export {Text, UITextView, TEXT_STYLE} from "./Components/Text";
+export {TextField, UITextFieldView} from "./Components/TextField";
 export {View, UIView} from "./Components/View";
 export {NavigationView, UINavigationView} from "./Navigation/NavigationView";
-
-export function need_update () {
-    render(document.body, () => Router.mount());
-}
+export {need_update} from "./Navigation/Router";
+export {Grid, UIGridView} from "./Components/Grid";
+export {Image, UIImageView} from "./Components/Image";

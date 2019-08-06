@@ -1,8 +1,8 @@
-import {UIVerticalStack} from "./Stack";
+import {UIVStackView} from "./Stack";
 import {Text, TEXT_STYLE} from "./Text";
 import {TextField} from "./TextField";
 
-export class UILabelTextField extends UIVerticalStack {
+export class UILabelTextFieldView extends UIVStackView {
     constructor (label, name, type, placeholder, formater) {
         super(
             Text(label, TEXT_STYLE.label),
@@ -18,5 +18,5 @@ export class UILabelTextField extends UIVerticalStack {
 }
 
 export function LabelTextField(label, name, type, placeholder, formater) {
-    return new UILabelTextField(label, name, type, placeholder, formater);
+    return new UILabelTextFieldView(label, name, type, placeholder, formater);
 }

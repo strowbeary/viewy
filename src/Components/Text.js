@@ -10,11 +10,9 @@ export const TEXT_STYLE = {
     label: "label"
 };
 
-export class UIText extends UIView {
+export class UITextView extends UIView {
 
-    is_uppercase = false;
-    is_bold = false;
-    style = TEXT_STYLE.body;
+
 
     constructor (value, style) {
         super({
@@ -26,6 +24,10 @@ export class UIText extends UIView {
         this.style = style;
         this.add_class("text");
         this.add_class(style);
+
+        this.is_uppercase = false;
+        this.is_bold = false;
+        this.style = TEXT_STYLE.body;
     }
 
     uppercase() {
@@ -55,5 +57,5 @@ export class UIText extends UIView {
 
 
 export function Text(value, style = TEXT_STYLE.body) {
-    return new UIText(value, style);
+    return new UITextView(value, style);
 }
