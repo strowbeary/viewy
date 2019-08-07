@@ -1,13 +1,17 @@
 import {UIView} from "../Components/View";
 import * as Router from "./Router";
 
-export class UINavigationView extends UIView {
-    constructor (path, ...children) {
-        super(...children);
+export class UINavigationView {
+    constructor (path, view) {
         Router.add_page(path, this);
+        this.view = view;
+    }
+
+    render() {
+        return this.view().render();
     }
 }
 
-export function NavigationView(path, ...children) {
-    return new UINavigationView('/', ...children);
+export function NavigationView(path, view) {
+    return new UINavigationView('/', view);
 }

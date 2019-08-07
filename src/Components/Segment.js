@@ -22,8 +22,10 @@ export class UISegmentView extends UIView {
         return this;
     }
 
-    set_default_element (index) {
-        this.selected_item = index;
+    select(item_value) {
+        this.selected_item = this.items.findIndex(([value]) => {
+            return value === item_value;
+        });
         return this;
     }
     padding() {

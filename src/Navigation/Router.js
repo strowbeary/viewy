@@ -11,5 +11,6 @@ export function mount() {
 }
 
 export function need_update () {
+    console.log("UPDATE");
     render(document.body, () => mount());
 }

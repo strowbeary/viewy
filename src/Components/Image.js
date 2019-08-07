@@ -9,17 +9,6 @@ export class UIImageView extends UIView {
         this.src = src;
     }
 
-    render() {
-        return html`
-            <img 
-                class=${bind_class(this.class_list, 'image')}
-                style="${bind_style(this.view_style)}" 
-                src="${this.src}" 
-                alt=""
-            >
-        `;
-    }
-
     corner_radius(...[top_left, top_right, bottom_right, bottom_left]) {
         if (
             typeof top_left === "number" &&
@@ -41,6 +30,16 @@ export class UIImageView extends UIView {
         return this;
     }
 
+    render() {
+        return html`
+            <img 
+                class=${bind_class(this.class_list, 'image')}
+                style="${bind_style(this.view_style)}" 
+                src="${this.src}" 
+                alt=""
+            >
+        `;
+    }
 }
 
 export function Image(src) {
