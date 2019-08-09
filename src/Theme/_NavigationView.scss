@@ -1,3 +1,15 @@
 .navigation_view {
     display: contents;
+
+    .header {
+        border-bottom: 1px solid #e9e9e9;
+        background: #f9f9f9;
+        padding: 16px;
+    }
+
+    button {
+        padding: 0;
+        background: none;
+        color: #4a6dff;
+    }
 }

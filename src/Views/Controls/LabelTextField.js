@@ -1,4 +1,4 @@
-import {UIVStackView} from "./Stack";
+import {UIVStackView} from "../Layouts/Stack";
 import {Text, TEXT_STYLE} from "./Text";
 import {TextField} from "./TextField";
 

@@ -1,7 +1,7 @@
 import {UIView, View} from "./View";
 import {html} from "lighterhtml";
-import {bind_class} from "../utils/bind_class.util";
-import {bind_style} from "../utils/bind_style.util";
+import {bind_class} from "../../utils/bind_class.util";
+import {bind_style} from "../../utils/bind_style.util";
 
 export class UIListView extends UIView {
     constructor (items, cell_view_builder = () => ListRow()) {

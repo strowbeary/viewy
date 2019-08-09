@@ -1,7 +1,7 @@
-import {UIView} from "./View";
+import {UIView} from "../Layouts/View";
 import {html} from "lighterhtml";
-import {bind_class} from "../utils/bind_class.util";
-import {bind_style} from "../utils/bind_style.util";
+import {bind_class} from "../../utils/bind_class.util";
+import {bind_style} from "../../utils/bind_style.util";
 
 export class UIImageView extends UIView {
     constructor (src) {

@@ -1,8 +1,8 @@
-import {UIView} from "./View";
-import {bind_class} from "../utils/bind_class.util";
+import {UIView} from "../Layouts/View";
+import {bind_class} from "../../utils/bind_class.util";
 import {html} from "lighterhtml";
-import {bind_style} from "../utils/bind_style.util";
-import {need_update} from "../Navigation/Router";
+import {bind_style} from "../../utils/bind_style.util";
+import {need_update} from "../../Router";
 
 export class UISegmentView extends UIView {
 
