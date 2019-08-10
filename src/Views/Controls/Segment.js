@@ -2,7 +2,7 @@ import {UIView} from "../Layouts/View";
 import {bind_class} from "../../utils/bind_class.util";
 import {html} from "lighterhtml";
 import {bind_style} from "../../utils/bind_style.util";
-import {need_update} from "../../Router";
+import navigation_manager from "../../NavigationManager";
 
 export class UISegmentView extends UIView {
 
@@ -46,7 +46,7 @@ export class UISegmentView extends UIView {
                         onclick="${() => {
             this.selected_item = i;
             this.action(value);
-            need_update();
+            navigation_manager.render();
         }}"
                     >
                         ${view.render()}

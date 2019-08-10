@@ -67,7 +67,7 @@ export class UIView {
             <div 
                 class=${bind_class(this.class_list, 'view')}
                 style="${bind_style(this.view_style)}">
-                ${this.children.map(c => c.render())}
+                ${this.children.map(child => child.render())}
             </div>
         `;
     }

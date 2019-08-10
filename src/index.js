@@ -1,3 +1,4 @@
+import "./NavigationManager";
 export {Button, UIButtonView} from "./Views/Controls/Button";
 export {LabelTextField, UILabelTextFieldView} from "./Views/Controls/LabelTextField";
 export {Segment, UISegmentView} from "./Views/Controls/Segment";
@@ -6,8 +7,8 @@ export {Text, UITextView, TEXT_STYLE} from "./Views/Controls/Text";
 export {TextField, UITextFieldView} from "./Views/Controls/TextField";
 export {View, UIView} from "./Views/Layouts/View";
 export {NavigationView, UINavigationView} from "./Views/Layouts/NavigationView";
-export {need_update} from "./Router";
 export {Grid, UIGridView} from "./Views/Layouts/Grid";
 export {Image, UIImageView} from "./Views/Controls/Image";
 export {List, UIListView, UIListRow} from "./Views/Layouts/List";
 export {Tag, UITagView} from "./Views/Controls/Tag";
+export {UiIconView, Icon} from "./Views/Controls/Icon";

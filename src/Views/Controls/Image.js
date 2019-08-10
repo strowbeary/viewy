@@ -30,6 +30,12 @@ export class UIImageView extends UIView {
         return this;
     }
 
+    size(width, height) {
+        this.view_style.width = width + "px";
+        this.view_style.height = height + "px";
+        return this;
+    }
+
     render() {
         return html`
             <img 

@@ -2,28 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Views/Controls/Icon.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Views/Layouts/NavigationView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Theme/_Icon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Layouts/Grid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/LabelTextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Layouts/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Segment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Layouts/Stack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Tag.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Tag.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/TextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Layouts/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Navigation/NavigationView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Navigation/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/NavigationManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theme/_Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_Button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theme/_List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_List.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theme/_NavigationView.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_NavigationView.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_TextField.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theme/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theme/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/index.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Segment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/Layouts/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Layouts/Grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/Layouts/NavigationView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Layouts/NavigationView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/Layouts/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Layouts/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/navigation/svg/production/ic_chevron_left_18px.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/navigation/svg/production/ic_chevron_left_18px.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -62,7 +60,7 @@
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -132,7 +130,11 @@
       <workItem from="1564828711294" duration="14030000" />
       <workItem from="1564925186325" duration="935000" />
       <workItem from="1564990439842" duration="22955000" />
-      <workItem from="1565345742272" duration="4409000" />
+      <workItem from="1565345742272" duration="5765000" />
+      <workItem from="1565358254818" duration="65000" />
+      <workItem from="1565358366757" duration="37000" />
+      <workItem from="1565358419347" duration="119000" />
+      <workItem from="1565358554219" duration="7001000" />
     </task>
     <servers />
   </component>

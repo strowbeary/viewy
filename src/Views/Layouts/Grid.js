@@ -33,6 +33,10 @@ export class UIGridView extends UIView {
         this.view_style.gridTemplateRows = schema;
         return this;
     }
+    align_items(alignment) {
+        this.view_style.alignItems = alignment;
+        return this;
+    }
 }
 
 export function Grid (...children) {
