@@ -1,9 +1,19 @@
-import {UIView} from "./View";
+import {UIView} from "../View";
 
 class UIStack extends UIView {
     constructor (...children) {
         super(...children);
         this.add_class("stack");
+    }
+
+    align_items(alignment) {
+        this.view_style.alignItems = alignment;
+        return this;
+    }
+
+    justify_content(justification) {
+        this.view_style.justifyContent = justification;
+        return this;
     }
 }
 

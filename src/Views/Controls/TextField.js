@@ -1,4 +1,4 @@
-import {UIView} from "../Layouts/View";
+import {UIView} from "../View";
 import {html} from "lighterhtml";
 import {bind_style} from "../../utils/bind_style.util";
 

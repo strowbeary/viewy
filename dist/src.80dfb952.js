@@ -2548,7 +2548,7 @@ var _TextField = require("./Components/TextField");
 
 var _View = require("./Components/View");
 
-var _NavigationView = require("./Navigation/NavigationView");
+var _NavigationView = require("./Navigation/NavigationBarView");
 },{"./Components/Button":"../Components/Button.js","./Components/LabelTextField":"../Components/LabelTextField.js","./Components/Segment":"../Components/Segment.js","./Components/Stack":"../Components/Stack.js","./Components/Text":"../Components/Text.js","./Components/TextField":"../Components/TextField.js","./Components/View":"../Components/View.js","./Navigation/NavigationView":"../Navigation/NavigationView.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

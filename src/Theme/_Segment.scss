@@ -5,7 +5,7 @@
     user-select: none;
     display: flex;
     -webkit-touch-action: none;
-    border: 1px solid #4a6dff;
+    border: 2px solid #4a6dff;
 
     .item {
         flex-grow: 1;
@@ -17,7 +17,7 @@
         justify-content: center;
         color: #4a6dff;
         padding: 8px 32px;
-        border-right: 1px solid #4a6dff;
+        border-right: 2px solid #4a6dff;
 
         &:last-of-type {
             border-right: none;

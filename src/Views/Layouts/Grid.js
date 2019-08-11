@@ -1,4 +1,4 @@
-import {UIView} from "./View";
+import {UIView} from "../View";
 
 export class UIGridView extends UIView {
     constructor (...children) {

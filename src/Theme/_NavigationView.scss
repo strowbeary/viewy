@@ -1,26 +1,36 @@
-.navigation_view {
-        height: 100vh;
-    .header {
-        border-bottom: 1px solid #e9e9e9;
-        background: #f9f9f9;
-        padding: 16px;
 
-        button {
+.navigation_bar {
+    border-bottom: 1px solid #e9e9e9;
+    background: #f9f9f9;
+    padding: 16px;
+
+    button {
+        background: none;
+        color: #4a6dff;
+        padding: 0;
+
+        &:hover {
+            color: #5887ff;
+        }
+
+        &.button_back {
             padding: 0;
-            background: none;
-            color: #4a6dff;
+            .icon svg {
+                margin-right: -8px;
+                margin-left: -8px;
+            }
 
-            &.button_back {
-                padding: 0;
-                .icon svg {
-                    margin-right: -8px;
-                    margin-left: -8px;
-                }
+            &:hover {
+                background: none;
+            }
+            &.supplemented::after {
+                content: "";
+                background: #a9a9a9;
+                width: 4px;
+                height: 4px;
+                margin-left: 24px;
+                border-radius: 4px;
             }
         }
-    }
-    .main {
-        height: 100%;
-        overflow: auto;
     }
 }

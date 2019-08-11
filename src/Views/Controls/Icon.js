@@ -1,9 +1,9 @@
 import icons from "../../assets/icons/*/svg/production/*.svg";
 import {html, svg} from "lighterhtml";
-import navigation_manager from "../../NavigationManager";
+import navigation_controller from "../../Controllers/NavigationController";
 import {bind_class} from "../../utils/bind_class.util";
 import {bind_style} from "../../utils/bind_style.util";
-import {UIView} from "../Layouts/View";
+import {UIView} from "../View";
 
 export class UiIconView extends UIView {
     constructor (icon_name) {

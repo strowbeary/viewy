@@ -1,6 +1,6 @@
 import {html} from "lighterhtml";
 import {bind_class} from "../../utils/bind_class.util";
-import {UIView} from "../Layouts/View";
+import {UIView} from "../View";
 
 export const TEXT_STYLE = {
     large_title: "large_title",

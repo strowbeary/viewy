@@ -2975,7 +2975,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.need_update = need_update;
 
-var _NavigationView = require("./Navigation/NavigationView");
+var _NavigationView = require("./Navigation/NavigationBarView");
 
 var _Stack = _interopRequireDefault(require("./Components/V2/Stack"));
 
