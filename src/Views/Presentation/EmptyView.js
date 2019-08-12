@@ -1,9 +1,10 @@
 import {html} from "lighterhtml";
+import {UIView} from "../View";
 
 export function EmptyView () {
-    return new class {
+    return new class extends UIView{
         render() {
-            return html``;
+            return html`<div/>`;
         }
     }();
 }

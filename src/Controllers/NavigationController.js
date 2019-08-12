@@ -8,16 +8,19 @@ export class UINavigationControllerView extends UIView {
         this.view_stack = [];
         this.navigation_bar =  NavigationBar();
         window.addEventListener("popstate", e => {
+            this.view_stack.pop();
+            this.navigation_bar.set_title(this.view_stack[history.state.view_stack_id].title);
             render_controller.render();
         })
     }
 
-    navigate(navigation_view, forced_path) {
+    navigate(navigation_view, state, forced_path) {
+        navigation_view.set_state(state);
         this.view_stack.push(navigation_view);
         this.navigation_bar.set_title(navigation_view.title);
         history.pushState({
             view_stack_id: this.view_stack.length - 1
-        }, navigation_view.title, forced_path ? forced_path : navigation_view.title.toLowerCase().replace(' ', '-'));
+        }, navigation_view.title, "/" + this.view_stack.slice(1).map(view => view.title.toLowerCase().replace(' ', '-')).join('/'));
         render_controller.render();
 
     }
@@ -33,6 +36,5 @@ export class UINavigationControllerView extends UIView {
     }
 }
 
-export function NavigationController() {
-    return new UINavigationControllerView();
-}
+
+export const navigation_controller = new UINavigationControllerView();

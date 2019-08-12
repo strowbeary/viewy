@@ -62,6 +62,28 @@ export class UIView {
         return this;
     }
 
+    margin_top(value) {
+        this.view_style.marginTop = value + "px";
+        return this;
+    }
+
+
+    margin_right(value) {
+        this.view_style.marginRight = value + "px";
+        return this;
+    }
+
+
+    margin_bottom(value) {
+        this.view_style.marginBottom= value + "px";
+        return this;
+    }
+
+
+    margin_left(value) {
+        this.view_style.marginLeft = value + "px";
+        return this;
+    }
     render () {
         return html`
             <div 

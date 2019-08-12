@@ -8,6 +8,7 @@ export class UIListView extends UIView {
         super();
         this.children = items.map(item => ListRow(
             cell_view_builder(item)
+                .padding(8, 16)
         ));
         this.add_class("list")
     }

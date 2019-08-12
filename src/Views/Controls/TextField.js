@@ -18,14 +18,19 @@ export class UITextFieldView extends UIView {
         return this;
     }
 
+    set_value(value) {
+        this.value = value;
+        return this;
+    }
+
     render () {
         if(this.type !== "textarea") {
             return html`
-                <input class="text_field" style="${bind_style(this.view_style)}" type="${this.type}" name="${this.name}" placeholder="${this.placeholder}"/>
+                <input class="text_field" value="${this.value}" style="${bind_style(this.view_style)}" type="${this.type}" name="${this.name}" placeholder="${this.placeholder}"/>
             `;
         } else {
             return html`
-                <textarea class="text_field" style="${bind_style(this.view_style)}" name="${this.name}" placeholder="${this.placeholder}"/>
+                <textarea class="text_field" style="${bind_style(this.view_style)}" name="${this.name}" placeholder="${this.placeholder}">${this.value}</textarea>
             `;
         }
     }

@@ -30,7 +30,10 @@ export class UIButtonView extends UIView{
             <button  
                 class=${bind_class(this.class_list, 'view')}
                 style="${bind_style(this.view_style)}"
-                onclick=${() => this.action()}
+                onclick=${e => {
+                    e.stopPropagation();
+                    this.action();
+                }}
             >
                 ${this.icon.render()}
                 ${this.label}

@@ -2,49 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controllers/NavigationController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/RenderController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Theme/_Loader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Theme/_NavigationButton.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Theme/_ViewManager.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Views/Navigation/NavigationBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Views/Navigation/NavigationButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Views/Navigation/NavigationView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Views/Presentation/ConditionalContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Views/Presentation/EmptyView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Views/Presentation/Loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Views/Presentation/UpdatableView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/loader.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src.80dfb952.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src.80dfb952.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src.e31bb0bc.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/src.e31bb0bc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NavigationManager.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_Button.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_Button.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_List.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_List.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_NavigationView.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_NavigationView.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_Segment.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_Segment.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_TextField.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/_TextField.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/index.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/.sass-cache/c0cd107dc6eeed5ba603a1dffbfd37b94ee9f53b/index.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/NavigationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/NavigationController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/_List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_List.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Theme/_NavigationButton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_NavigationButton.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theme/_NavigationView.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_NavigationView.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_Segment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/_Segment.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/index.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theme/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Views/Controls/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Icon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Segment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/Controls/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/LabelTextField.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Views/Controls/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Controls/TextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Layouts/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Layouts/Grid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Views/Layouts/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Layouts/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Layouts/NavigationView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Layouts/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Layouts/Stack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Layouts/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/Navigation/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Navigation/NavigationBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/Navigation/NavigationButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Navigation/NavigationButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/Navigation/NavigationView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Navigation/NavigationView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/Presentation/EmptyView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/Presentation/EmptyView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Views/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Views/View.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +133,7 @@
       <workItem from="1565358554219" duration="7103000" />
       <workItem from="1565460993386" duration="3446000" />
       <workItem from="1565465047787" duration="8521000" />
-      <workItem from="1565508307391" duration="6983000" />
+      <workItem from="1565508307391" duration="16857000" />
     </task>
     <servers />
   </component>
