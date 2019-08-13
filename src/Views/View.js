@@ -1,100 +1,54 @@
 import {html} from "lighterhtml";
 import {bind_class} from "../utils/bind_class.util";
 import {bind_style} from "../utils/bind_style.util";
+import {box_arguments_behavior} from "../utils/box_arguments_behavior.util";
 
-export class UIView {
-    constructor (...children) {
-        this.children = children;
-        this.class_list = {};
-        this.view_style = {};
-    }
 
-    transform () {
+export const View = (...children) => ({
+    children,
+    classList: {},
+    view_style: {},
+    addClass(className) {
+        this.classList[className] = true;
         return this;
-    }
-
-    add_class (class_name) {
-        this.class_list[class_name] = true;
+    },
+    removeClass(className) {
+        this.classList[className] = false;
         return this;
-    }
-
-    remove_class (class_name) {
-        this.class_list[class_name] = false;
+    },
+    padding(top = 0, right, bottom, left) {
+        const [t, b, l, r] = box_arguments_behavior([top, bottom, left, right]);
+        this.view_style.padding = `${t}px ${b}px ${l}px ${r}px`;
         return this;
-    }
-
-    padding (top = 0, right, bottom, left) {
-
-        if (
-            typeof top === "number" &&
-            typeof right === "number" &&
-            typeof bottom === "undefined" &&
-            typeof left === "undefined"
-        ) {
-            bottom = top;
-            left = right;
-        } else if (typeof right === "undefined" && typeof bottom === "undefined" && typeof left === "undefined") {
-            bottom = top;
-            right = top;
-            left = top;
-        }
-
-        this.view_style.padding = `${top}px ${right}px ${bottom}px ${left}px`;
+    },
+    margin(top = 0, right, bottom, left) {
+        const [t, b, l, r] = box_arguments_behavior([top, bottom, left, right]);
+        this.view_style.margin = `${t}px ${b}px ${l}px ${r}px`;
         return this;
-    }
-
-    margin (top = 0, right, bottom, left) {
-        if (
-            typeof top === "number" &&
-            typeof right === "number" &&
-            typeof bottom === "undefined" &&
-            typeof left === "undefined"
-        ) {
-            bottom = top;
-            left = right;
-        } else if (typeof right === "undefined" && typeof bottom === "undefined" && typeof left === "undefined") {
-            bottom = top;
-            right = top;
-            left = top;
-        }
-
-        this.view_style.margin = `${top}px ${right}px ${bottom}px ${left}px`;
-        return this;
-    }
-
-    margin_top(value) {
+    },
+    marginTop(value) {
         this.view_style.marginTop = value + "px";
         return this;
-    }
-
-
-    margin_right(value) {
+    },
+    marginRight(value) {
         this.view_style.marginRight = value + "px";
         return this;
-    }
-
-
-    margin_bottom(value) {
+    },
+    marginBottom(value) {
         this.view_style.marginBottom= value + "px";
         return this;
-    }
-
-
-    margin_left(value) {
+    },
+    marginLeft(value) {
         this.view_style.marginLeft = value + "px";
         return this;
-    }
+    },
     render () {
         return html`
             <div 
-                class=${bind_class(this.class_list, 'view')}
+                class=${bind_class(this.classList, 'view')}
                 style="${bind_style(this.view_style)}">
                 ${this.children.map(child => child.render())}
             </div>
         `;
     }
-}
-
-export function View (...children) {
-    return new UIView(...children);
-}
+});

@@ -1,36 +1,28 @@
-import {UIView, View} from "../View";
+import {View} from "../View";
+import {EmptyView} from "../..";
 
-export class UINavigationView extends UIView {
-    constructor (view_builder) {
-        super();
-        this._title = "";
-        this.view_builder = view_builder;
-        this.state = {};
-    }
-
-    get title () {
+export const NavigationView = (view_builder) => ({
+    _title: "",
+    state: {},
+    setTitle(title) {
+        this._title = title;
+        return this;
+    },
+    get title() {
         if (typeof this._title === "function") {
             return this._title(this.state);
         } else {
             return this._title;
         }
-    }
-
-    set_title (text) {
-        this._title = text;
-        return this;
-    }
-
-    set_state (state) {
+    },
+    setState(state) {
         this.state = state;
         return this;
+    },
+    get children() {
+        console.log(view_builder(this.state));
+        return [
+            view_builder(this.state)
+        ]
     }
-
-    render () {
-        return View(this.view_builder(this.state)).render()
-    }
-}
-
-export function NavigationView (...children) {
-    return new UINavigationView(...children);
-}
+});

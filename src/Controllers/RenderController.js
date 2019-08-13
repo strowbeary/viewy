@@ -3,29 +3,26 @@ import {render} from "lighterhtml";
 import {VStack} from "../Views/Layouts/Stack";
 import {Text, TEXT_STYLE} from "../Views/Controls/Text";
 
-class RenderController {
-    constructor () {
-        this.current_view = VStack(
-            Loader(),
-            Text("Your app is starting", TEXT_STYLE.footnote)
-                .margin(16, 0, 0, 0)
-        )
-            .align_items("center")
-            .justify_content("center");
-        this.current_view.view_style.height = "100vh";
-    }
-
-    set_current_view(view) {
-        this.current_view = view;
+const RenderController = () => ({
+    currentView: VStack(
+        Loader(),
+        Text("Your app is starting", TEXT_STYLE.footnote)
+            .marginTop(16)
+    )
+        .alignItems("center")
+        .justifyContent("center")
+        .addClass("loading_screen"),
+    setCurrentView(view) {
+        console.log(view);
+        this.currentView = view;
         this.render();
-    }
-
+    },
     render() {
-        render(document.body, () => this.current_view.render());
+        render(document.body, () => this.currentView.render());
     }
-}
+});
 
-export const render_controller = new RenderController();
+export const render_controller = RenderController();
 
 window.addEventListener("load", () => render_controller.render());
 

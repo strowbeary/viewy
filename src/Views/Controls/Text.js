@@ -1,6 +1,4 @@
-import {html} from "lighterhtml";
-import {bind_class} from "../../utils/bind_class.util";
-import {UIView} from "../View";
+import {View} from "../View";
 
 export const TEXT_STYLE = {
     large_title: "large_title",
@@ -10,51 +8,37 @@ export const TEXT_STYLE = {
     label: "label"
 };
 
-export class UITextView extends UIView {
-
-
-
-    constructor (value, style) {
-        super({
-            render() {
-                return value;
-            }
-        });
-        this.value = value;
-        this.style = style;
-        this.add_class("text");
-        this.add_class(style);
-
-        this.is_uppercase = false;
-        this.is_bold = false;
-    }
-
+export const Text = (value, style) => ({
+    ...View()
+        .addClass("text")
+        .addClass(style),
     uppercase() {
-        this.add_class("uppercase");
+        this.addClass("uppercase");
         return this;
-    }
+    },
     bold() {
-        this.add_class("bold");
+        this.addClass("bold");
         return this;
-    }
+    },
     underline() {
-        this.add_class("underline");
+        this.addClass("underline");
         return this;
-    }
+    },
     italic() {
-        this.add_class("italic");
+        this.addClass("italic");
         return this;
-    }
+    },
     size(value) {
+        this.view_style.fontSize = value + "px";
         return this;
-    }
-
-    font(font_stack) {
+    },
+    font(fontStack) {
+        this.view_style.fontFamily = fontStack;
         return this;
-    }
-}
-
-
-export function Text(value, style = TEXT_STYLE.body) {
-    return new UITextView(value, style);
-}
+    },
+    children: [{
+        render() {
+            return value
+        }
+    }]
+});

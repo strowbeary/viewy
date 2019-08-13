@@ -1,34 +1,20 @@
-import {UIView} from "../View";
+import {View} from "../View";
 import {html} from "lighterhtml";
 import {bind_class} from "../../utils/bind_class.util";
 import {bind_style} from "../../utils/bind_style.util";
-import {Icon} from "./Icon";
+import {EmptyView} from "../..";
 
-export class UIButtonView extends UIView{
-    constructor (label) {
-        super();
-        this.label = label;
-        this.action = () => {};
-        this.icon = {
-            render() {return html``}
-        };
-    }
-
-    set_action(action) {
-        this.action = action;
-        return this;
-    }
-
-    set_icon(icon) {
+export const Button = (label = () => {}, action = () => {}) => ({
+    ...View(),
+    icon: EmptyView(),
+    setIcon(icon) {
         this.icon = icon;
-        this.add_class("icon_button");
         return this;
-    }
-
-    render() {
+    },
+    render () {
         return html`
             <button  
-                class=${bind_class(this.class_list, 'view')}
+                class=${bind_class(this.class_list)}
                 style="${bind_style(this.view_style)}"
                 onclick=${e => {
                     e.stopPropagation();
@@ -40,8 +26,5 @@ export class UIButtonView extends UIView{
             </button>
         `;
     }
-}
 
-export function Button(label) {
-    return new UIButtonView(label);
-}
+});

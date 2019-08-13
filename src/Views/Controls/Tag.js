@@ -1,12 +1,6 @@
-import {TEXT_STYLE, UITextView} from "./Text";
+import {TEXT_STYLE, Text} from "./Text";
 
-export class UITagView extends UITextView {
-    constructor (value) {
-        super(value, TEXT_STYLE.label);
-        this.add_class("tag");
-    }
-}
-
-export function Tag (value) {
-    return new UITagView(value);
-}
+export const Tag = (value) => ({
+    ...Text(value, TEXT_STYLE.label)
+        .addClass("tag")
+});

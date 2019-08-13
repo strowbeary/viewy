@@ -1,41 +1,23 @@
-import {UIView} from "../View";
+import {View} from "../View";
 import {html} from "lighterhtml";
 import {bind_style} from "../../utils/bind_style.util";
 
-export class UITextFieldView extends UIView {
-
-    constructor (name, type = "text", placeholder = "", formater) {
-        super();
-        this.name = name;
-        this.type = type;
-        this.placeholder = placeholder;
-        this.formater = formater;
-        this.view_style = {};
-    }
-
-    margin(top, right, bottom, left) {
-        this.view_style.margin = `${top}px ${right}px ${bottom}px ${left}px`;
-        return this;
-    }
-
-    set_value(value) {
+export const TextField = (name, type = "text", placeholder = "", formater) => ({
+    ...View(),
+    value: "",
+    setValue(value) {
         this.value = value;
         return this;
-    }
-
+    },
     render () {
-        if(this.type !== "textarea") {
+        if(type !== "textarea") {
             return html`
-                <input class="text_field" value="${this.value}" style="${bind_style(this.view_style)}" type="${this.type}" name="${this.name}" placeholder="${this.placeholder}"/>
+                <input class="text_field" value="${this.value}" style="${bind_style(this.view_style)}" type="${type}" name="${name}" placeholder="${placeholder}"/>
             `;
         } else {
             return html`
-                <textarea class="text_field" style="${bind_style(this.view_style)}" name="${this.name}" placeholder="${this.placeholder}">${this.value}</textarea>
+                <textarea class="text_field" style="${bind_style(this.view_style)}" name="${name}" placeholder="${placeholder}">${this.value}</textarea>
             `;
         }
     }
-}
-
-export function TextField(name, type = "text", placeholder = "", formater) {
-    return new UITextFieldView(name, type, placeholder, formater);
-}
+});
