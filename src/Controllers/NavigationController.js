@@ -1,5 +1,5 @@
-import {View} from "../Views/View";
-import {NavigationBar} from "../Views/Navigation/NavigationBar";
+import {View} from "../Components/View";
+import {NavigationBar} from "../Components/Navigation/NavigationBar";
 import {render_controller} from "./RenderController";
 export const NavigationController = () => ({
     ...View().addClass("navigation_view"),
@@ -11,19 +11,28 @@ export const NavigationController = () => ({
         render_controller.render();
     },
     navigate(navigation_view, state) {
-        navigation_view.setState(state);
-        this.viewStack.push(navigation_view);
-        this.navigationBar.setTitle(navigation_view.title);
-        history.pushState({
-                view_stack_id: this.viewStack.length - 1
-            },
-            navigation_view.title,
-            "/" + this.viewStack
-                .slice(1)
-                .map(view => view.title.toLowerCase().replace(' ', '-'))
-                .join('/')
-        );
-        render_controller.render();
+        try{
+            navigation_view.setState(state);
+            this.viewStack.push(navigation_view);
+            history.pushState({
+                    view_stack_id: this.viewStack.length - 1
+                },
+                navigation_view.title,
+                "/" + this.viewStack
+                    .slice(1)
+                    .map(view => view.title.toLowerCase().replace(' ', '-'))
+                    .join('/')
+            );
+            this.navigationBar.updateOnNavigation(
+                navigation_view.title,
+                this.viewStack[history.state.view_stack_id - 1].title
+            );
+            render_controller.render();
+        } catch (e) {
+            console.error(e);
+        }
+
+
     },
     get children() {
         return [

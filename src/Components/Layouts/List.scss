@@ -1,0 +1,19 @@
+.list {
+    .list_row {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 16px;
+            right: 0;
+            height: 1px;
+            background: var(--color-border);
+        }
+
+        &:hover {
+            background: var(--color-hover);
+        }
+    }
+}

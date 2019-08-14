@@ -1,9 +1,10 @@
-import {Loader} from "../Views/Presentation/Loader";
+import {Loader} from "../Components/Controls/Loader";
 import {render} from "lighterhtml";
-import {VStack} from "../Views/Layouts/Stack";
-import {Text, TEXT_STYLE} from "../Views/Controls/Text";
+import {VStack} from "../Components/Layouts/Stack";
+import {Text, TEXT_STYLE} from "../Components/Controls/Text";
 
 const RenderController = () => ({
+    theme: "light",
     currentView: VStack(
         Loader(),
         Text("Your app is starting", TEXT_STYLE.footnote)
@@ -12,17 +13,28 @@ const RenderController = () => ({
         .alignItems("center")
         .justifyContent("center")
         .addClass("loading_screen"),
-    setCurrentView(view) {
+    setCurrentView (view) {
         console.log(view);
         this.currentView = view;
         this.render();
     },
-    render() {
+    setTheme (variant) {
+        if (variant !== "light" && variant !== "dark") throw Error("Theme is either light or dark");
+        this.theme = variant;
+        return this;
+    },
+    render () {
         render(document.body, () => this.currentView.render());
+        (this.theme === "light" ? () => {
+            document.body.classList.remove("dark");
+            document.body.classList.add("light");
+        } : () => {
+            document.body.classList.remove("light");
+            document.body.classList.add("dark");
+        })();
     }
 });
 
 export const render_controller = RenderController();
 
-window.addEventListener("load", () => render_controller.render());
 

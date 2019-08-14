@@ -1,4 +1,4 @@
-export function box_arguments_behavior([top, bottom, left, right]) {
+export function box_arguments_behavior([top, right, bottom, left]) {
     if (
         typeof top === "number" &&
         typeof right === "number" &&
@@ -12,5 +12,5 @@ export function box_arguments_behavior([top, bottom, left, right]) {
         right = top;
         left = top;
     }
-    return [top, bottom, left, right];
+    return [top, right, bottom, left];
 }
