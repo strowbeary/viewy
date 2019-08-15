@@ -1,28 +1,21 @@
 import {View} from "../View";
+import {EmptyView} from "../Presentation/EmptyView";
 import "./NavigationView.scss"
-export const NavigationView = (view_builder) => ({
-    ...View(),
-    _title: "",
-    state: {},
-    setTitle(title) {
-        this._title = title;
-        return this;
-    },
-    get title() {
-        if (typeof this._title === "function") {
-            return this._title(this.state);
-        } else {
-            return this._title;
-        }
-    },
-    setState(state) {
-        this.state = state;
-        return this;
-    },
-    get children() {
-        console.log(view_builder(this.state));
-        return [
-            view_builder(this.state)
-        ]
-    }
-});
+
+export const NavigationView =
+    (title, {leftItem = EmptyView(), rightItem = EmptyView()}, view_builder) => (
+        (navigationBar, state) => ({
+            ...View(),
+            state,
+            title: (typeof title === "string") ? title : title(state),
+            navigationBar,
+            leftItem,
+            rightItem,
+            get children () {
+                return [
+                    view_builder(this.state)
+                ]
+            }
+        })
+    );
+

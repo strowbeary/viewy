@@ -7,12 +7,16 @@ export const NavigationController = () => ({
     navigationBar: NavigationBar(),
     onPopState() {
         this.viewStack.pop();
-        this.navigationBar.setTitle(this.viewStack[history.state.view_stack_id].title);
+        console.log(history.state.view_stack_id, this.viewStack);
+        this.navigationBar.title  = this.viewStack[history.state.view_stack_id].title;
         render_controller.render();
     },
     navigate(navigation_view, state) {
+        navigation_view = navigation_view(this.navigationBar, state);
+        this.navigationBar.title = navigation_view.title;
+        this.navigationBar.leftItem = navigation_view.leftItem;
+        this.navigationBar.rightItem = navigation_view.rightItem;
         try{
-            navigation_view.setState(state);
             this.viewStack.push(navigation_view);
             history.pushState({
                     view_stack_id: this.viewStack.length - 1
@@ -22,10 +26,6 @@ export const NavigationController = () => ({
                     .slice(1)
                     .map(view => view.title.toLowerCase().replace(' ', '-'))
                     .join('/')
-            );
-            this.navigationBar.updateOnNavigation(
-                navigation_view.title,
-                this.viewStack[history.state.view_stack_id - 1].title
             );
             render_controller.render();
         } catch (e) {
@@ -45,5 +45,5 @@ export const NavigationController = () => ({
 
 export const navigation_controller = NavigationController();
 
-window.addEventListener("onpopstate", () => navigation_controller.onPopState());
+window.addEventListener("popstate", () => navigation_controller.onPopState());
 

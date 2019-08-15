@@ -2,126 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Controls/Tag.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Theme.db0a303d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Theme.db0a303d.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Theme.db0a303d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Theme.db0a303d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Theme.f7e3774c.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Theme.f7e3774c.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Theme.f7e3774c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Theme.f7e3774c.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src.80dfb952.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src.80dfb952.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src.e31bb0bc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/src.e31bb0bc.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/code-frame/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/code-frame/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/helper-module-imports/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/helper-module-imports/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/highlight/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/highlight/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/types/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/estree/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/estree/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/node/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/node/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/resolve/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@types/resolve/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/create-content/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/create-content/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/essential-map/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/essential-map/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/import-node/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/import-node/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-literal/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/template-literal/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-tag-arguments/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/template-tag-arguments/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/trim/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/trim/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/weakmap/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/weakmap/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/acorn/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/acorn/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ansi-styles/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-styles/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/buffer-from/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/buffer-from/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/builtin-modules/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/builtin-modules/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chalk/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/color-convert/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-convert/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/color-name/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-name/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/commander/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/commander/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/core-util-is/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/core-util-is/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domconstants/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domconstants/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domdiff/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domdiff/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domsanitizer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domsanitizer/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domtagger/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/escape-string-regexp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/escape-string-regexp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/estree-walker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/estree-walker/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/esutils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/esutils/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/has-flag/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/has-flag/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-style/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hyperhtml-style/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-wire/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/hyperhtml-wire/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/inherits/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/inherits/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/is-module/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-module/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/isarray/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/isarray/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jest-worker/node_modules/supports-color/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/jest-worker/node_modules/supports-color/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jest-worker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/jest-worker/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/js-tokens/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-tokens/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/lighterhtml/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lodash/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/lodash/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/merge-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/merge-stream/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/path-parse/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/path-parse/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/process-nextick-args/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/process-nextick-args/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/readable-stream/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/readable-stream/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/resolve/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/resolve/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/rollup-plugin-babel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup-plugin-babel/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/rollup-plugin-node-resolve/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup-plugin-node-resolve/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/rollup-plugin-terser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup-plugin-terser/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/rollup-pluginutils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup-pluginutils/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/rollup/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rollup/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/safe-buffer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/safe-buffer/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/serialize-javascript/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serialize-javascript/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map-support/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map-support/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/source-map/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/source-map/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/string_decoder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/string_decoder/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/supports-color/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/supports-color/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/terser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/terser/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/to-fast-properties/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/to-fast-properties/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/util-deprecate/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/util-deprecate/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Navigation/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Navigation/NavigationView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/NavigationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/NavigationController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/RenderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/RenderController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_Grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/Grid.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_Icon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Icon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_Image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Image.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/List.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_Loader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Loader.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_NavigationButton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationButton.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_NavigationView.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_Segment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Segment.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_Stack.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/Stack.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_Text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Text.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/TextField.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_View.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/_ViewManager.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationView.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/index.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Icon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Controls/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/LabelTextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Segment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Tag.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Tag.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Controls/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Controls/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/TextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Layouts/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/Grid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Layouts/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Layouts/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/Stack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Navigation/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Navigation/NavigationButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Navigation/NavigationView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Presentation/ConditionalContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Presentation/ConditionalContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Presentation/EmptyView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Presentation/EmptyView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Presentation/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Loader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/Presentation/UpdatableView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Presentation/UpdatableView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Views/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/icons" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/navigation/svg/production/ic_chevron_left_18px.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/navigation/svg/production/ic_chevron_left_18px.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/icons/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/box_arguments_behavior.util.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/box_arguments_behavior.util.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
