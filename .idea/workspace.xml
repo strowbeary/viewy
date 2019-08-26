@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test_project/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_project/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_project/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Navigation/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Navigation/NavigationView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/NavigationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/NavigationController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Icon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/icons" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/navigation/svg/production/ic_chevron_left_18px.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/navigation/svg/production/ic_chevron_left_18px.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/icons/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,17 +50,17 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/Views" />
-      <recent name="$PROJECT_DIR$/src/Views/Navigation" />
-      <recent name="$PROJECT_DIR$/src/Views/Controls" />
-      <recent name="$PROJECT_DIR$/src/Views/Layouts" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test_project" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Views" />
+      <recent name="$PROJECT_DIR$/src/Views/Navigation" />
+      <recent name="$PROJECT_DIR$/src/Views/Controls" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -74,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.test_project:dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -95,8 +96,30 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test_project:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test_project:build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_project:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test_project:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test_project:dev" />
+        <item itemvalue="npm.test_project:build" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
       </list>
@@ -126,6 +149,8 @@
       <workItem from="1565465047787" duration="8521000" />
       <workItem from="1565508307391" duration="16857000" />
       <workItem from="1565707036164" duration="9244000" />
+      <workItem from="1565873315983" duration="563000" />
+      <workItem from="1565874320250" duration="3330000" />
     </task>
     <servers />
   </component>

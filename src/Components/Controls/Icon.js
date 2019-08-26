@@ -3,7 +3,7 @@ import icon from "../../assets/icons/navigation/svg/production/ic_chevron_right_
 import {View} from "../View";
 import {html} from "lighterhtml";
 import {AsyncView} from "../Presentation/AsyncView";
-console.log(AsyncView);
+
 export const Icon = (iconName) => ({
     ...View().addClass("icon"),
     size: 24,

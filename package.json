@@ -9,9 +9,15 @@
     "lib"
   ],
   "scripts": {
-    "build": "rollup -c",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "lib:build": "rollup -c",
+    "test_project:dev": "NODE_ENV=developement parcel serve test_project/index.html --no-autoinstall",
+    "test_project:build": "rm -rf ./dist-test-project; NODE_ENV=production parcel build ./test_project/index.html --no-source-maps --experimental-scope-hoisting  --public-url ./"
   },
+  "alias": {
+    "UIKit": "./src"
+  },
+
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
   "license": "MIT",
   "babel": {
@@ -43,9 +49,7 @@
     ]
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
+    "Firefox > 60"
   ],
   "dependencies": {
     "lighterhtml": "^0.16.2"
@@ -67,6 +71,8 @@
     "rollup-plugin-scss": "^1.0.2",
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-terser": "^5.1.1",
-    "sass": "^1.22.9"
+    "sass": "^1.22.9",
+    "babel-preset-env": "^1.7.0",
+    "parcel-plugin-compress": "^1.0.10"
   }
 }
