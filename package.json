@@ -10,14 +10,13 @@
   ],
   "scripts": {
     "prepare": "npm run build",
-    "lib:build": "rollup -c",
+    "build": "rollup -c",
     "test_project:dev": "NODE_ENV=developement parcel serve test_project/index.html --no-autoinstall",
     "test_project:build": "rm -rf ./dist-test-project; NODE_ENV=production parcel build ./test_project/index.html --no-source-maps --experimental-scope-hoisting  --public-url ./"
   },
   "alias": {
     "UIKit": "./src"
   },
-
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
   "license": "MIT",
   "babel": {
@@ -52,7 +51,8 @@
     "Firefox > 60"
   ],
   "dependencies": {
-    "lighterhtml": "^0.16.2"
+    "lighterhtml": "^0.16.2",
+    "lightrouter": "^0.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

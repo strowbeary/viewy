@@ -2893,40 +2893,13 @@ var _View = require("../Components/View");
 
 var _NavigationBar = require("../Components/Navigation/NavigationBar");
 
-var _RenderController = require("./RenderController");
-
-const NavigationController = () => ({ ...(0, _View.View)().addClass("navigation_view"),
-  viewStack: [],
+const NavigationController = routes => ({ ...(0, _View.View)().addClass("navigation_view"),
   navigationBar: (0, _NavigationBar.NavigationBar)(),
 
-  onPopState() {
-    this.viewStack.pop();
-    console.log(history.state.view_stack_id, this.viewStack);
-    this.navigationBar.title = this.viewStack[history.state.view_stack_id].title;
-
-    _RenderController.render_controller.render();
-  },
-
-  navigate(navigation_view, state) {
-    navigation_view = navigation_view(this.navigationBar, state);
-    this.navigationBar.title = navigation_view.title;
-    this.navigationBar.leftItem = navigation_view.leftItem;
-    this.navigationBar.rightItem = navigation_view.rightItem;
-
-    try {
-      this.viewStack.push(navigation_view);
-      history.pushState({
-        view_stack_id: this.viewStack.length - 1
-      }, navigation_view.title, "/" + this.viewStack.slice(1).map(view => view.title.toLowerCase().replace(' ', '-')).join('/'));
-
-      _RenderController.render_controller.render();
-    } catch (e) {
-      console.error(e);
-    }
-  },
+  setRoutes(routes) {},
 
   get children() {
-    return [this.navigationBar, this.viewStack[history.state.view_stack_id].addClass("main")];
+    return [this.navigationBar];
   }
 
 });
@@ -2934,8 +2907,7 @@ const NavigationController = () => ({ ...(0, _View.View)().addClass("navigation_
 exports.NavigationController = NavigationController;
 const navigation_controller = NavigationController();
 exports.navigation_controller = navigation_controller;
-window.addEventListener("popstate", () => navigation_controller.onPopState());
-},{"../Components/View":"../src/Components/View.js","../Components/Navigation/NavigationBar":"../src/Components/Navigation/NavigationBar.js","./RenderController":"../src/Controllers/RenderController.js"}],"../src/Components/Navigation/NavigationButton.scss":[function(require,module,exports) {
+},{"../Components/View":"../src/Components/View.js","../Components/Navigation/NavigationBar":"../src/Components/Navigation/NavigationBar.js"}],"../src/Components/Navigation/NavigationButton.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -3303,7 +3275,7 @@ var _default = (0, _UIKit.NavigationView)(state => state.name, {}, state => (0, 
 }, (0, _UIKit.Text)(state.email, _UIKit.TEXT_STYLE.large_title)).marginTop(16)).alignItems("center").margin(16));
 
 exports.default = _default;
-},{"./EmailEditionView":"views/EmailEditionView.js","UIKit":"../src/index.js"}],"views/TestView.js":[function(require,module,exports) {
+},{"./EmailEditionView":"views/EmailEditionView.js","UIKit":"../src/index.js"}],"views/ContactListView.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3556,13 +3528,21 @@ module.exports = [{
 
 var _UIKit = require("UIKit");
 
-var _TestView = _interopRequireDefault(require("./views/TestView"));
+var _ContactListView = _interopRequireDefault(require("./views/ContactListView"));
 
 var _users = _interopRequireDefault(require("./users"));
 
+var _ContactDetailView = _interopRequireDefault(require("./views/ContactDetailView"));
+
+var _EmailEditionView = _interopRequireDefault(require("./views/EmailEditionView"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_UIKit.navigation_controller.navigate(_TestView.default, _users.default);
+_UIKit.navigation_controller.setRoutes({
+  "/": _ContactListView.default,
+  "/contact-<uid>": _ContactDetailView.default,
+  "/contact-<uid>/write": _EmailEditionView.default
+});
 
 _UIKit.render_controller.setCurrentView(_UIKit.navigation_controller);
 
@@ -3573,7 +3553,7 @@ if (module.hot) {
     _UIKit.render_controller.render();
   });
 }
-},{"UIKit":"../src/index.js","./views/TestView":"views/TestView.js","./users":"users.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"UIKit":"../src/index.js","./views/ContactListView":"views/ContactListView.js","./users":"users.json","./views/ContactDetailView":"views/ContactDetailView.js","./views/EmailEditionView":"views/EmailEditionView.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -3601,7 +3581,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42911" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56533" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
