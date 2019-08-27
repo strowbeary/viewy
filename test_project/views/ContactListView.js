@@ -11,9 +11,8 @@ import {
     TEXT_STYLE,
     VStack
 } from "UIKit";
-import ContactDetailView from "./ContactDetailView";
 
-export default NavigationView(
+export default (users) => NavigationView(
     "Contacts",
     {
         rightItem: Segment(
@@ -23,13 +22,8 @@ export default NavigationView(
         )
             .select(render_controller.theme)
     },
-    state =>
-    List(state, item =>
-        NavigationButton(
-            {
-                destination: ContactDetailView,
-                state: item
-            },
+    () => List(users, item =>
+        NavigationButton(`/contact/${item.id}`,
             Grid({
                 img: Image("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg")
                     .cornerRadius(16)

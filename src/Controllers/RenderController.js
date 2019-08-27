@@ -2,17 +2,11 @@ import {Loader} from "../Components/Controls/Loader";
 import {render} from "lighterhtml";
 import {VStack} from "../Components/Layouts/Stack";
 import {Text, TEXT_STYLE} from "../Components/Controls/Text";
+import LoadingScreen from "../Components/Presentation/LoadingScreen";
 
 const RenderController = () => ({
     theme: "light",
-    currentView: VStack(
-        Loader(),
-        Text("Your app is starting", TEXT_STYLE.footnote)
-            .marginTop(16)
-    )
-        .alignItems("center")
-        .justifyContent("center")
-        .addClass("loading_screen"),
+    currentView: LoadingScreen(),
     setCurrentView (view) {
         console.log(view);
         this.currentView = view;
@@ -24,14 +18,18 @@ const RenderController = () => ({
         return this;
     },
     render () {
-        render(document.body, () => this.currentView.render());
-        (this.theme === "light" ? () => {
-            document.body.classList.remove("dark");
-            document.body.classList.add("light");
-        } : () => {
-            document.body.classList.remove("light");
-            document.body.classList.add("dark");
-        })();
+        try {
+            render(document.body, () => this.currentView.render());
+            (this.theme === "light" ? () => {
+                document.body.classList.remove("dark");
+                document.body.classList.add("light");
+            } : () => {
+                document.body.classList.remove("light");
+                document.body.classList.add("dark");
+            })();
+        } catch (e) {
+            console.error(e);
+        }
     }
 });
 

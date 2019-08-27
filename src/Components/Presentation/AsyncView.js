@@ -3,13 +3,15 @@ import {View} from "../View";
 import {render_controller} from "../..";
 
 export const AsyncView = (promise) => {
-    let ref = {current: null};
     let content = EmptyView();
     (async () => {
         content = await promise();
+        render_controller.render();
     })();
     return {
         ...View(),
-        children: [content]
+        children: [
+            content
+        ]
     }
 };

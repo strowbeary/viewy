@@ -5,14 +5,14 @@ import {
     Grid
 } from "UIKit";
 
-export default NavigationView(
+export default (user) => NavigationView(
     "Write an email",
     {},
-    state => Grid(
+    () => Grid(
         LabelTextField("Recipient", "destination", "email", "someone@domain.com")
-            .setValue(state.email),
+            .setValue(user.email),
         TextField("mail_body", "textarea", "Type your message...")
     )
-    .gap(16)
-    .margin(16)
+        .gap(16)
+        .margin(16)
 );

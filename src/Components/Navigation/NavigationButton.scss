@@ -4,4 +4,7 @@
     grid-gap: 16px;
     align-items: center;
     cursor: pointer;
+    &:hover {
+        background: var(--color-hover);
+    }
 }

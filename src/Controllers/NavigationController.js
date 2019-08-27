@@ -1,28 +1,54 @@
 import {View} from "../Components/View";
+import {Text} from "../Components/Controls/Text";
 import {NavigationBar} from "../Components/Navigation/NavigationBar";
-import LightRouter from "lightrouter";
+import rlite from "rlite-router";
+import LoadingScreen from "../Components/Presentation/LoadingScreen";
+import {render_controller} from "./RenderController";
 
 
-
-export const NavigationController = (routes) => {
-
+export const NavigationController = () => {
     return {
-        ...View().addClass("navigation_view"),
-        navigationBar: NavigationBar(),
-        setRoutes(routes) {
-            const router = new LightRouter({
-                type: 'path',             // Default routing type
-                pathRoot: '/',  // Base path for your app
-                routes
-            });
-            router.run();
+        ...View().addClass("navigation_controller"),
+        currentView: View(
+            Text("Page not found")
+        ),
+        appName: "App name",
+        resolveRoute () {
+            return LoadingScreen();
         },
-        get children() {
+        setAppName(name) {
+            this.appName = name;
+            return this;
+        },
+        setRoutes (routes) {
+            this.resolveRoute = rlite(
+                () => View(
+                    Text("Page not found")
+                ),
+                routes
+            );
+            this.navigate(location.pathname);
+
+            window.addEventListener("popstate", () => {
+                this.currentView = this.resolveRoute(location.pathname);
+                document.title = this.appName + " • " + this.currentView.title;
+                render_controller.render();
+            });
+            return this;
+        },
+        navigate(path) {
+            history.pushState({}, "", path);
+            this.currentView = this.resolveRoute(path);
+            document.title = this.appName + " • " + this.currentView.title;
+            render_controller.render();
+        },
+        get children () {
             return [
-                this.navigationBar,
+                this.currentView
             ];
         }
     };
 };
+
 
 export const navigation_controller = NavigationController();

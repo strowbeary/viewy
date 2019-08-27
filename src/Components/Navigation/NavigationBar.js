@@ -1,22 +1,16 @@
 import {Grid} from "../Layouts/Grid";
-import {Button} from "../Controls/Button";
 import {Text, TEXT_STYLE} from "../Controls/Text";
-import {Icon} from "../Controls/Icon";
 import {EmptyView} from "../Presentation/EmptyView";
-import {UpdatableView} from "../Presentation/UpdatableView";
 import {HStack} from "../Layouts/Stack";
 import {View} from "../View";
 import "./NavigationBar.scss"
-import {render_controller, Segment, } from "../..";
+import {Button, Icon} from "../..";
 
-export const NavigationBar = () => ({
+export const NavigationBar = (currentNavigationView) => ({
     ...View().addClass("navigation_bar"),
-    title: "View title",
     backButtonLabel: "Back",
-    leftItem: EmptyView(),
-    rightItem: EmptyView(),
     _getBackButton () {
-        if (history.state.view_stack_id > 0) {
+        if (location.pathname !== "/") {
             return Button(
                 this.backButtonLabel,
                 () => history.back())
@@ -34,10 +28,10 @@ export const NavigationBar = () => ({
             Grid({
                 left_item: HStack(
                     this._getBackButton(),
-                    this.leftItem
+                    currentNavigationView.leftItem
                 ),
-                right_item: this.rightItem,
-                title: Text(this.title, TEXT_STYLE.large_title)
+                right_item: currentNavigationView.rightItem,
+                title: Text(currentNavigationView.title, TEXT_STYLE.large_title)
             })
                 .gap(8, 24)
                 .areas(`"left_item . right_item" "title title title"`)
