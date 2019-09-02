@@ -8,6 +8,9 @@ export const View = (...children) => ({
     children,
     classList: {},
     viewStyle: {},
+    get isEmptyView() {
+        return false
+    },
     addClass(className) {
         this.classList[className] = true;
         return this;

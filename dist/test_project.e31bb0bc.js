@@ -2091,6 +2091,10 @@ const View = (...children) => ({
   classList: {},
   viewStyle: {},
 
+  get isEmptyView() {
+    return false;
+  },
+
   addClass(className) {
     this.classList[className] = true;
     return this;
@@ -2245,7 +2249,11 @@ var _View = require("../View");
 const EmptyView = () => ({ ...(0, _View.View)(),
 
   render() {
-    return _lighterhtml.html`<div>`;
+    return _lighterhtml.html``;
+  },
+
+  get isEmptyView() {
+    return true;
   }
 
 });
@@ -2302,38 +2310,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/Components/Presentation/AsyncView.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.AsyncView = void 0;
-
-var _EmptyView = require("./EmptyView");
-
-var _View = require("../View");
-
-var _ = require("../..");
-
-const AsyncView = promise => {
-  let content = (0, _EmptyView.EmptyView)();
-
-  (async () => {
-    content = await promise();
-
-    _.render_controller.render();
-  })();
-
-  return { ...(0, _View.View)(),
-    children: [content]
-  };
-};
-
-exports.AsyncView = AsyncView;
-},{"./EmptyView":"../src/Components/Presentation/EmptyView.js","../View":"../src/Components/View.js","../..":"../src/index.js"}],"../src/assets/icons/navigation/svg/production/ic_chevron_right_24px.svg":[function(require,module,exports) {
-module.exports = "/ic_chevron_right_24px.5ddcb80e.svg";
-},{}],"../src/Components/Controls/Icon.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/Components/Controls/Icon.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2344,14 +2321,6 @@ exports.Icon = void 0;
 require("./Icon.scss");
 
 var _View = require("../View");
-
-var _lighterhtml = require("lighterhtml");
-
-var _AsyncView = require("../Presentation/AsyncView");
-
-var _ic_chevron_right_24px = _interopRequireDefault(require("../../assets/icons/navigation/svg/production/ic_chevron_right_24px.svg"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Icon = iconPath => ({ ...(0, _View.View)().addClass("icon"),
   size: 24,
@@ -2371,30 +2340,12 @@ const Icon = iconPath => ({ ...(0, _View.View)().addClass("icon"),
     }
 
     return this;
-  },
-
-  async fetchIcon() {
-    const res = await fetch(_ic_chevron_right_24px.default);
-    const svgContent = await res.text();
-    return { ...(0, _View.View)(),
-
-      render() {
-        return _lighterhtml.html`${{
-          html: svgContent
-        }}`;
-      }
-
-    };
-  },
-
-  get children() {
-    return [(0, _AsyncView.AsyncView)(this.fetchIcon)];
   }
 
 });
 
 exports.Icon = Icon;
-},{"./Icon.scss":"../src/Components/Controls/Icon.scss","../View":"../src/Components/View.js","lighterhtml":"../node_modules/lighterhtml/esm/index.js","../Presentation/AsyncView":"../src/Components/Presentation/AsyncView.js","../../assets/icons/navigation/svg/production/ic_chevron_right_24px.svg":"../src/assets/icons/navigation/svg/production/ic_chevron_right_24px.svg"}],"../src/Components/Controls/Image.scss":[function(require,module,exports) {
+},{"./Icon.scss":"../src/Components/Controls/Icon.scss","../View":"../src/Components/View.js"}],"../src/Components/Controls/Image.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -2462,7 +2413,7 @@ var _View = require("../View");
 
 require("./Stack.scss");
 
-const Stack = () => ({ ...(0, _View.View)().addClass("stack"),
+const Stack = children => ({ ...(0, _View.View)().addClass("stack"),
 
   alignItems(alignment) {
     this.viewStyle.alignItems = alignment;
@@ -2472,21 +2423,18 @@ const Stack = () => ({ ...(0, _View.View)().addClass("stack"),
   justifyContent(justification) {
     this.viewStyle.justifyContent = justification;
     return this;
-  }
+  },
 
+  children
 });
 
 exports.Stack = Stack;
 
-const HStack = (...children) => ({ ...Stack().addClass("horizontal"),
-  children
-});
+const HStack = (...children) => Stack(children).addClass("horizontal");
 
 exports.HStack = HStack;
 
-const VStack = (...children) => ({ ...Stack().addClass("vertical"),
-  children
-});
+const VStack = (...children) => Stack(children).addClass("vertical");
 
 exports.VStack = VStack;
 },{"../View":"../src/Components/View.js","./Stack.scss":"../src/Components/Layouts/Stack.scss"}],"../src/Components/Controls/TextField.scss":[function(require,module,exports) {
@@ -2610,54 +2558,43 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.render_controller = void 0;
 
-var _Loader = require("../Components/Controls/Loader");
-
 var _lighterhtml = require("lighterhtml");
-
-var _Stack = require("../Components/Layouts/Stack");
-
-var _Text = require("../Components/Controls/Text");
 
 var _LoadingScreen = _interopRequireDefault(require("../Components/Presentation/LoadingScreen"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const RenderController = () => ({
-  theme: "light",
+  theme: "dark",
   currentView: (0, _LoadingScreen.default)(),
 
   setCurrentView(view) {
-    console.log(view);
     this.currentView = view;
     this.render();
   },
 
   setTheme(variant) {
-    if (variant !== "light" && variant !== "dark") throw Error("Theme is either light or dark");
+    if (variant !== "light" && variant !== "dark") throw Error("variant parameter must be either light or dark");
     this.theme = variant;
     return this;
   },
 
   render() {
-    try {
-      (0, _lighterhtml.render)(document.body, () => this.currentView.render());
-      (this.theme === "light" ? () => {
-        document.body.classList.remove("dark");
-        document.body.classList.add("light");
-      } : () => {
-        document.body.classList.remove("light");
-        document.body.classList.add("dark");
-      })();
-    } catch (e) {
-      console.error(e);
-    }
+    (this.theme === "light" ? () => {
+      this.currentView.removeClass("dark");
+      this.currentView.addClass("light");
+    } : () => {
+      this.currentView.removeClass("light");
+      this.currentView.addClass("dark");
+    })();
+    (0, _lighterhtml.render)(document.body, () => this.currentView.render());
   }
 
 });
 
 const render_controller = RenderController();
 exports.render_controller = render_controller;
-},{"../Components/Controls/Loader":"../src/Components/Controls/Loader.js","lighterhtml":"../node_modules/lighterhtml/esm/index.js","../Components/Layouts/Stack":"../src/Components/Layouts/Stack.js","../Components/Controls/Text":"../src/Components/Controls/Text.js","../Components/Presentation/LoadingScreen":"../src/Components/Presentation/LoadingScreen.js"}],"../src/Components/Controls/Segment.scss":[function(require,module,exports) {
+},{"lighterhtml":"../node_modules/lighterhtml/esm/index.js","../Components/Presentation/LoadingScreen":"../src/Components/Presentation/LoadingScreen.js"}],"../src/Components/Controls/Segment.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -2680,7 +2617,9 @@ const Segment = (action = () => {}, ...items) => ({ ...(0, _View.View)().addClas
   selectedItem: 0,
 
   select(itemValue) {
-    this.selectedItem = items.findIndex(([value]) => {
+    this.selectedItem = items.findIndex(({
+      value
+    }) => {
       return value === itemValue;
     });
     return this;
@@ -2693,12 +2632,15 @@ const Segment = (action = () => {}, ...items) => ({ ...(0, _View.View)().addClas
   get children() {
     const select = i => this.select(i);
 
-    return items.map(([value, view], i) => ({ ...(0, _View.View)(),
+    return items.map(({
+      value,
+      label
+    }, i) => ({ ...(0, _View.View)(),
       classList: {
         item: true,
         selected: i === this.selectedItem
       },
-      children: [view],
+      children: [label],
 
       onclick(e) {
         select(value);
@@ -2713,27 +2655,7 @@ const Segment = (action = () => {}, ...items) => ({ ...(0, _View.View)().addClas
 });
 
 exports.Segment = Segment;
-},{"../View":"../src/Components/View.js","../../Controllers/RenderController":"../src/Controllers/RenderController.js","./Segment.scss":"../src/Components/Controls/Segment.scss"}],"../src/Components/Presentation/UpdatableView.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.UpdatableView = void 0;
-
-var _View = require("../View");
-
-const UpdatableView = (viewBuilder, persistent_id = Math.random().toString(36).substring(7)) => ({ ...(0, _View.View)(),
-  persistent_id,
-
-  render() {
-    return viewBuilder(persistent_id).render();
-  }
-
-});
-
-exports.UpdatableView = UpdatableView;
-},{"../View":"../src/Components/View.js"}],"../src/Components/Presentation/ConditionalContent.js":[function(require,module,exports) {
+},{"../View":"../src/Components/View.js","../../Controllers/RenderController":"../src/Controllers/RenderController.js","./Segment.scss":"../src/Components/Controls/Segment.scss"}],"../src/Components/Presentation/ConditionalContent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3240,18 +3162,6 @@ Object.keys(_TextField).forEach(function (key) {
   });
 });
 
-var _UpdatableView = require("./Components/Presentation/UpdatableView");
-
-Object.keys(_UpdatableView).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _UpdatableView[key];
-    }
-  });
-});
-
 var _ConditionalContent = require("./Components/Presentation/ConditionalContent");
 
 Object.keys(_ConditionalContent).forEach(function (key) {
@@ -3395,7 +3305,7 @@ Object.keys(_NavigationController).forEach(function (key) {
     }
   });
 });
-},{"./index.scss":"../src/index.scss","./Components/Controls/Tag":"../src/Components/Controls/Tag.js","./Components/Controls/Button":"../src/Components/Controls/Button.js","./Components/Controls/Icon":"../src/Components/Controls/Icon.js","./Components/Controls/Image":"../src/Components/Controls/Image.js","./Components/Controls/LabelTextField":"../src/Components/Controls/LabelTextField.js","./Components/Controls/Segment":"../src/Components/Controls/Segment.js","./Components/Controls/Text":"../src/Components/Controls/Text.js","./Components/Controls/TextField":"../src/Components/Controls/TextField.js","./Components/Presentation/UpdatableView":"../src/Components/Presentation/UpdatableView.js","./Components/Presentation/ConditionalContent":"../src/Components/Presentation/ConditionalContent.js","./Components/Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","./Components/Controls/Loader":"../src/Components/Controls/Loader.js","./Components/Layouts/List":"../src/Components/Layouts/List.js","./Components/Layouts/Stack":"../src/Components/Layouts/Stack.js","./Components/Layouts/Grid":"../src/Components/Layouts/Grid.js","./Components/Navigation/NavigationBar":"../src/Components/Navigation/NavigationBar.js","./Components/Navigation/NavigationButton":"../src/Components/Navigation/NavigationButton.js","./Components/Navigation/NavigationView":"../src/Components/Navigation/NavigationView.js","./Components/View":"../src/Components/View.js","./Controllers/RenderController":"../src/Controllers/RenderController.js","./Controllers/NavigationController":"../src/Controllers/NavigationController.js"}],"views/ContactListView.js":[function(require,module,exports) {
+},{"./index.scss":"../src/index.scss","./Components/Controls/Tag":"../src/Components/Controls/Tag.js","./Components/Controls/Button":"../src/Components/Controls/Button.js","./Components/Controls/Icon":"../src/Components/Controls/Icon.js","./Components/Controls/Image":"../src/Components/Controls/Image.js","./Components/Controls/LabelTextField":"../src/Components/Controls/LabelTextField.js","./Components/Controls/Segment":"../src/Components/Controls/Segment.js","./Components/Controls/Text":"../src/Components/Controls/Text.js","./Components/Controls/TextField":"../src/Components/Controls/TextField.js","./Components/Presentation/ConditionalContent":"../src/Components/Presentation/ConditionalContent.js","./Components/Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","./Components/Controls/Loader":"../src/Components/Controls/Loader.js","./Components/Layouts/List":"../src/Components/Layouts/List.js","./Components/Layouts/Stack":"../src/Components/Layouts/Stack.js","./Components/Layouts/Grid":"../src/Components/Layouts/Grid.js","./Components/Navigation/NavigationBar":"../src/Components/Navigation/NavigationBar.js","./Components/Navigation/NavigationButton":"../src/Components/Navigation/NavigationButton.js","./Components/Navigation/NavigationView":"../src/Components/Navigation/NavigationView.js","./Components/View":"../src/Components/View.js","./Controllers/RenderController":"../src/Controllers/RenderController.js","./Controllers/NavigationController":"../src/Controllers/NavigationController.js"}],"views/ContactListView.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3405,13 +3315,21 @@ exports.default = void 0;
 
 var _UIKit = require("UIKit");
 
-var _default = users => (0, _UIKit.NavigationView)("Contacts", {
-  rightItem: (0, _UIKit.Segment)(value => _UIKit.render_controller.setTheme(value), ["dark", (0, _UIKit.Text)("Dark", _UIKit.TEXT_STYLE.label)], ["light", (0, _UIKit.Text)("Light", _UIKit.TEXT_STYLE.label)]).select(_UIKit.render_controller.theme)
-}, () => (0, _UIKit.List)(users, item => (0, _UIKit.NavigationButton)(`/contact/${item.id}`, (0, _UIKit.Grid)({
+const ContactRow = item => (0, _UIKit.NavigationButton)(`/contact/${item.id}`, (0, _UIKit.Grid)({
   img: (0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(16).size(32, 32),
   text: (0, _UIKit.VStack)((0, _UIKit.Text)(item.name, _UIKit.TEXT_STYLE.label), (0, _UIKit.Text)(item.email, _UIKit.TEXT_STYLE.subheadline)),
   action: (0, _UIKit.Button)("Delete")
-}).columns("auto auto 1fr auto").areas(`"img text . action"`).alignItems("center").gap(12))));
+}).columns("auto auto 1fr auto").areas(`"img text . action"`).alignItems("center").gap(12));
+
+var _default = users => (0, _UIKit.NavigationView)("Contacts", {
+  rightItem: (0, _UIKit.Segment)(value => _UIKit.render_controller.setTheme(value), {
+    value: "dark",
+    label: (0, _UIKit.Text)("Dark", _UIKit.TEXT_STYLE.label)
+  }, {
+    value: "light",
+    label: (0, _UIKit.Text)("Light", _UIKit.TEXT_STYLE.label)
+  }).select(_UIKit.render_controller.theme)
+}, () => (0, _UIKit.List)(users, ContactRow));
 
 exports.default = _default;
 },{"UIKit":"../src/index.js"}],"views/ContactDetailView.js":[function(require,module,exports) {
@@ -3677,25 +3595,9 @@ var _users = _interopRequireDefault(require("./users"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_UIKit.navigation_controller.setAppName("Courrier").setRoutes({
-  "/": () => (0, _ContactListView.default)(_users.default),
-  "/contact/:uid": ({
-    uid
-  }) => (0, _ContactDetailView.default)(_users.default.find(user => user.id === parseInt(uid))),
-  "/contact/:uid/write": ({
-    uid
-  }) => (0, _EmailEditionView.default)(_users.default.find(user => user.id === parseInt(uid)))
-});
-
-_UIKit.render_controller.setCurrentView(_UIKit.navigation_controller);
-
 window.addEventListener("load", () => _UIKit.render_controller.render());
 
-if (module.hot) {
-  module.hot.accept(function () {
-    _UIKit.render_controller.render();
-  });
-}
+_UIKit.render_controller.setCurrentView((0, _ContactListView.default)(_users.default));
 },{"UIKit":"../src/index.js","./views/ContactListView":"views/ContactListView.js","./views/ContactDetailView":"views/ContactDetailView.js","./views/EmailEditionView":"views/EmailEditionView.js","./users":"users.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -3724,7 +3626,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56284" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51999" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

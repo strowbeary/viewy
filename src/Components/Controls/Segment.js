@@ -6,7 +6,7 @@ export const Segment = (action = () => {}, ...items) => ({
     ...View().addClass("segment"),
     selectedItem: 0,
     select (itemValue) {
-        this.selectedItem = items.findIndex(([value]) => {
+        this.selectedItem = items.findIndex(({value}) => {
             return value === itemValue;
         });
         return this;
@@ -16,13 +16,13 @@ export const Segment = (action = () => {}, ...items) => ({
     },
     get children () {
         const select = (i) => this.select(i);
-        return items.map(([value, view], i) => ({
+        return items.map(({value, label}, i) => ({
             ...View(),
             classList: {
                 item: true,
                 selected: i === this.selectedItem
             },
-            children: [view],
+            children: [label],
             onclick (e) {
                 select(value);
                 action(value);

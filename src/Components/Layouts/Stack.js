@@ -1,6 +1,6 @@
 import {View} from "../View";
 import "./Stack.scss";
-export const Stack = () => ({
+export const Stack = (children) => ({
     ...View().addClass("stack"),
     alignItems(alignment) {
         this.viewStyle.alignItems = alignment;
@@ -9,14 +9,9 @@ export const Stack = () => ({
     justifyContent(justification) {
         this.viewStyle.justifyContent = justification;
         return this;
-    }
+    },
+    children
 });
 
-export const HStack = (...children) => ({
-    ...Stack().addClass("horizontal"),
-    children
-});
-export const VStack = (...children) => ({
-    ...Stack().addClass("vertical"),
-    children
-});
+export const HStack = (...children) => Stack(children).addClass("horizontal");
+export const VStack = (...children) => Stack(children).addClass("vertical");

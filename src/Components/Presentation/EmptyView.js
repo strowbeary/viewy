@@ -4,6 +4,9 @@ import {View} from "../View";
 export const EmptyView = () => ({
     ...View(),
     render() {
-        return html`<div/>`;
+        return html``;
+    },
+    get isEmptyView() {
+        return true
     }
 });

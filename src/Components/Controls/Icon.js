@@ -1,8 +1,5 @@
 import "./Icon.scss"
 import {View} from "../View";
-import {html} from "lighterhtml";
-import {AsyncView} from "../Presentation/AsyncView";
-import iconUrl from "../../assets/icons/navigation/svg/production/ic_chevron_right_24px.svg";
 
 export const Icon = (iconPath) => ({
     ...View().addClass("icon"),
@@ -18,19 +15,4 @@ export const Icon = (iconPath) => ({
         }
         return this;
     },
-    async fetchIcon() {
-        const res = await fetch(iconUrl);
-        const svgContent = await res.text();
-        return {
-            ...View(),
-            render() {
-                return html`${{html: svgContent}}`
-            }
-        };
-    },
-    get children() {
-        return [
-            AsyncView(this.fetchIcon)
-        ]
-    }
 });

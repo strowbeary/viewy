@@ -11,7 +11,7 @@ body {
   --color-primary-lighter: #5c81ff;
   --color-secondary: #f5414f;
 }
-body.light {
+body .light {
   --background: white;
   --background-raised: #f9f9f9;
   --color-text: #1d1d20;
@@ -23,7 +23,7 @@ body.light {
   --color-warning: #ffd137;
   background: var(--background);
 }
-body.dark {
+body .dark {
   --background: #161616;
   --background-raised: #232323;
   --color-text: #f0f0ff;

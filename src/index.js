@@ -9,7 +9,6 @@ export * from "./Components/Controls/Segment";
 export * from "./Components/Controls/Text";
 export * from "./Components/Controls/TextField";
 
-export * from "./Components/Presentation/UpdatableView"
 export * from "./Components/Presentation/ConditionalContent"
 export * from "./Components/Presentation/EmptyView"
 export * from "./Components/Controls/Loader";

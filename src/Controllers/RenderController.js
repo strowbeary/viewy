@@ -1,35 +1,28 @@
-import {Loader} from "../Components/Controls/Loader";
+
 import {render} from "lighterhtml";
-import {VStack} from "../Components/Layouts/Stack";
-import {Text, TEXT_STYLE} from "../Components/Controls/Text";
 import LoadingScreen from "../Components/Presentation/LoadingScreen";
 
 const RenderController = () => ({
-    theme: "light",
+    theme: "dark",
     currentView: LoadingScreen(),
     setCurrentView (view) {
-        console.log(view);
         this.currentView = view;
         this.render();
     },
     setTheme (variant) {
-        if (variant !== "light" && variant !== "dark") throw Error("Theme is either light or dark");
+        if (variant !== "light" && variant !== "dark") throw Error("variant parameter must be either light or dark");
         this.theme = variant;
         return this;
     },
     render () {
-        try {
-            render(document.body, () => this.currentView.render());
-            (this.theme === "light" ? () => {
-                document.body.classList.remove("dark");
-                document.body.classList.add("light");
-            } : () => {
-                document.body.classList.remove("light");
-                document.body.classList.add("dark");
-            })();
-        } catch (e) {
-            console.error(e);
-        }
+        (this.theme === "light" ? () => {
+            this.currentView.removeClass("dark");
+            this.currentView.addClass("light");
+        } : () => {
+            this.currentView.removeClass("light");
+            this.currentView.addClass("dark");
+        })();
+        render(document.body, () => this.currentView.render());
     }
 });
 
