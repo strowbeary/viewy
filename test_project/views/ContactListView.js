@@ -19,7 +19,7 @@ const ContactRow = (item) => View(
             Text(item.name, TEXT_STYLE.label),
             Text(item.email, TEXT_STYLE.subheadline)
         ),
-        action: Button("Delete")
+        action: Button("Delete", () => {}, "outlined", "red")
     })
         .columns("auto auto 1fr auto")
         .areas(`"img text . action"`)

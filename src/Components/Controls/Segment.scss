@@ -5,7 +5,7 @@
     user-select: none;
     display: flex;
     -webkit-touch-action: none;
-    border: 2px solid #4a6dff;
+    border: 1px solid #4a6dff55;
 
     .item {
         flex-grow: 1;
@@ -16,7 +16,6 @@
         align-items: center;
         justify-content: center;
         padding: 8px 32px;
-        border-right: 2px solid #4a6dff;
         .text {
             color: #4a6dff;
         }
