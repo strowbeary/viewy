@@ -12,7 +12,6 @@ export const Grid = (...children) => ({
     areas (schema) {
         this.children = Array.from(Object.keys(this.children[0]))
             .map(area => {
-                console.log(this.children[0], area);
                 this.children[0][area].viewStyle.gridArea = area;
                 return this.children[0][area];
             });

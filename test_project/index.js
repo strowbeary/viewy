@@ -9,8 +9,6 @@ import ContactDetailView from "./views/ContactDetailView";
 import EmailEditionView from "./views/EmailEditionView";
 import users from "./users";
 
-
-
 window.addEventListener("load", () => {
     navigation_controller
         .setAppName("Courrier")

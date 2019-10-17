@@ -9,6 +9,7 @@ import {Button, Icon} from "../..";
 export const TitleBar = ({title, left_item = View(), right_item = View()}) => ({
     ...View()
         .addClass("navigation_bar"),
+    title,
     get children() {
         return [
             Grid({

@@ -2259,7 +2259,106 @@ const EmptyView = () => ({ ...(0, _View.View)(),
 });
 
 exports.EmptyView = EmptyView;
-},{"lighterhtml":"../node_modules/lighterhtml/esm/index.js","../View":"../src/Components/View.js"}],"../src/Components/Controls/Button.scss":[function(require,module,exports) {
+},{"lighterhtml":"../node_modules/lighterhtml/esm/index.js","../View":"../src/Components/View.js"}],"../src/colors.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.colorToCssVariable = colorToCssVariable;
+exports.colors = void 0;
+const colors = {
+  grey: {
+    100: '#f5f6f6',
+    200: '#d9dcde',
+    300: '#a0a7ac',
+    400: '#5a666e',
+    500: '#384650',
+    600: '#334049',
+    700: '#273037',
+    800: '#181e23',
+    900: '#0d1012'
+  },
+  red: {
+    100: '#ff09391F',
+    200: '#ff09393b',
+    300: '#ff093957',
+    400: '#ff093973',
+    500: '#ff09398f',
+    600: '#ff0939ab',
+    700: '#ff0939c7',
+    800: '#ff0939e3',
+    900: '#ff0939ff'
+  },
+  orange: {
+    100: '#fff9f3',
+    200: '#fde8d3',
+    300: '#f9c591',
+    400: '#f59a3f',
+    500: '#f28518',
+    600: '#dd7a16',
+    700: '#a65c11',
+    800: '#68390b',
+    900: '#361e06'
+  },
+  green: {
+    100: '#f2fcf6',
+    200: '#cff2de',
+    300: '#85dfac',
+    400: '#2bc76e',
+    500: '#00bb50',
+    600: '#00ab49',
+    700: '#008137',
+    800: '#005023',
+    900: '#002a12'
+  },
+  teal: {
+    100: '#f2fdfb',
+    200: '#cff5f0',
+    300: '#85e6d9',
+    400: '#2bd3bd',
+    500: '#00c9af',
+    600: '#00b7a0',
+    700: '#008a78',
+    800: '#00564b',
+    900: '#002d27'
+  },
+  blue: {
+    100: '#eef4fa',
+    200: '#cfe3fb',
+    300: '#85b8f4',
+    400: '#2b83ec',
+    500: '#006ae8',
+    600: '#0061d4',
+    700: '#00499f',
+    800: '#002e64',
+    900: '#001834'
+  },
+  purple: {
+    100: '#f9f7ff',
+    200: '#e7e2ff',
+    300: '#c3b6ff',
+    400: '#9680ff',
+    500: '#8066ff',
+    600: '#755de9',
+    700: '#5846af',
+    800: '#372c6d',
+    900: '#1d1739'
+  }
+};
+exports.colors = colors;
+
+function colorToCssVariable(colorName, rename = false) {
+  const result = {};
+  const tints = Array.from(Object.keys(colors[colorName]));
+  tints.map(tint => {
+    return `--${rename ? colorName : "color"}-${tint}`;
+  }).forEach((variableName, i) => {
+    result[variableName] = colors[colorName][tints[i]];
+  });
+  return result;
+}
+},{}],"../src/Components/Controls/Button.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -2284,9 +2383,11 @@ var _EmptyView = require("../Presentation/EmptyView");
 
 var _Text = require("../Controls/Text");
 
+var _colors = require("../../colors");
+
 require("./Button.scss");
 
-const Button = (label = "Button", action = () => {}) => ({ ...(0, _View.View)(),
+const Button = (label = "Button", action = () => {}, type = "outlined", color = "blue") => ({ ...(0, _View.View)().addClass(type),
   icon: (0, _EmptyView.EmptyView)(),
 
   setIcon(icon) {
@@ -2296,7 +2397,9 @@ const Button = (label = "Button", action = () => {}) => ({ ...(0, _View.View)(),
   },
 
   render() {
-    return _lighterhtml.html`<button class="${(0, _bind_class.bind_class)(this.classList)}" style="${(0, _bind_style.bind_style)(this.viewStyle)}" onclick="${e => {
+    return _lighterhtml.html`<button class="${(0, _bind_class.bind_class)(this.classList)}" style="${(0, _bind_style.bind_style)({ ...this.viewStyle,
+      ...(0, _colors.colorToCssVariable)(color)
+    })}" onclick="${e => {
       e.stopPropagation();
       action();
     }}">${this.icon.render()} ${(0, _Text.Text)(label, _Text.TEXT_STYLE.label).render()}</button>`;
@@ -2305,7 +2408,7 @@ const Button = (label = "Button", action = () => {}) => ({ ...(0, _View.View)(),
 });
 
 exports.Button = Button;
-},{"../View":"../src/Components/View.js","lighterhtml":"../node_modules/lighterhtml/esm/index.js","../../utils/bind_class.util":"../src/utils/bind_class.util.js","../../utils/bind_style.util":"../src/utils/bind_style.util.js","../Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","../Controls/Text":"../src/Components/Controls/Text.js","./Button.scss":"../src/Components/Controls/Button.scss"}],"../src/Components/Controls/Icon.scss":[function(require,module,exports) {
+},{"../View":"../src/Components/View.js","lighterhtml":"../node_modules/lighterhtml/esm/index.js","../../utils/bind_class.util":"../src/utils/bind_class.util.js","../../utils/bind_style.util":"../src/utils/bind_style.util.js","../Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","../Controls/Text":"../src/Components/Controls/Text.js","../../colors":"../src/colors.js","./Button.scss":"../src/Components/Controls/Button.scss"}],"../src/Components/Controls/Icon.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -2679,8 +2782,7 @@ var _EmptyView = require("../Presentation/EmptyView");
 
 require("./List.scss");
 
-const ListRow = (...children) => ({ ...(0, _View.View)(...children).addClass("list_row")
-});
+const ListRow = (...children) => (0, _View.View)(...children).addClass("list_row");
 
 exports.ListRow = ListRow;
 
@@ -2719,7 +2821,6 @@ const Grid = (...children) => ({ ...(0, _Stack.Stack)().removeClass("stack").add
 
   areas(schema) {
     this.children = Array.from(Object.keys(this.children[0])).map(area => {
-      console.log(this.children[0], area);
       this.children[0][area].viewStyle.gridArea = area;
       return this.children[0][area];
     });
@@ -2773,6 +2874,7 @@ const TitleBar = ({
   left_item = (0, _View.View)(),
   right_item = (0, _View.View)()
 }) => ({ ...(0, _View.View)().addClass("navigation_bar"),
+  title,
 
   get children() {
     return [(0, _Grid.Grid)({
@@ -2963,7 +3065,15 @@ const NavigationController = () => {
     navigate(path) {
       history.pushState({}, "", path);
       this.currentView = this.resolveRoute(path);
-      document.title = this.appName + " • " + this.currentView.title;
+
+      const titleBar = function treeCrawler(view) {
+        const titleBar = view.children.find(child => !!child.classList.navigation_bar);
+        console.log(titleBar);
+        if (titleBar) return titleBar;
+      }(this.currentView);
+
+      console.log(titleBar);
+      document.title = this.appName + " • " + titleBar.title;
 
       _RenderController.render_controller.render();
     },
@@ -3215,8 +3325,9 @@ var _UIKit = require("UIKit");
 const ContactRow = item => (0, _UIKit.View)((0, _UIKit.Grid)({
   img: (0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(16).size(32, 32),
   text: (0, _UIKit.VStack)((0, _UIKit.Text)(item.name, _UIKit.TEXT_STYLE.label), (0, _UIKit.Text)(item.email, _UIKit.TEXT_STYLE.subheadline)),
-  action: (0, _UIKit.Button)("Delete")
-}).columns("auto auto 1fr auto").areas(`"img text . action"`).alignItems("center").gap(12));
+  tag: (0, _UIKit.Tag)("Label"),
+  action: (0, _UIKit.Button)("Delete", () => {}, "outlined", "red")
+}).columns("auto auto 1fr auto 1fr auto").areas(`"img text . tag . action"`).alignItems("center").gap(12));
 
 var _default = users => (0, _UIKit.View)((0, _UIKit.TitleBar)({
   title: "Contacts"
@@ -3233,7 +3344,7 @@ exports.default = void 0;
 
 var _UIKit = require("UIKit");
 
-var _default = user => (0, _UIKit.NavigationView)(user.name, {}, () => (0, _UIKit.VStack)((0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(64).size(128, 128), (0, _UIKit.NavigationButton)(`/contact-${user.id}/write`, (0, _UIKit.Text)(user.email, _UIKit.TEXT_STYLE.large_title)).marginTop(16)).alignItems("center").margin(16));
+var _default = user => (0, _UIKit.VStack)((0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(64).size(128, 128), (0, _UIKit.Text)(user.email, _UIKit.TEXT_STYLE.large_title).marginTop(16)).alignItems("center").margin(16);
 
 exports.default = _default;
 },{"UIKit":"../src/index.js"}],"views/EmailEditionView.js":[function(require,module,exports) {
@@ -3246,10 +3357,15 @@ exports.default = void 0;
 
 var _UIKit = require("UIKit");
 
-var _default = user => (0, _UIKit.NavigationView)("Write an email", {}, () => (0, _UIKit.Grid)((0, _UIKit.LabelTextField)("Recipient", "destination", "email", "someone@domain.com").setValue(user.email), (0, _UIKit.TextField)("mail_body", "textarea", "Type your message...")).gap(16).margin(16));
+var _src = require("../../src");
+
+var _default = user => (0, _UIKit.View)((0, _src.TitleBar)({
+  title: "Write email",
+  right_item: (0, _src.Button)("Envoyer", () => {})
+}), (0, _UIKit.Grid)((0, _UIKit.LabelTextField)("Recipient", "destination", "email", "someone@domain.com").setValue(user.email), (0, _UIKit.TextField)("mail_body", "textarea", "Type your message...")).gap(16).margin(16));
 
 exports.default = _default;
-},{"UIKit":"../src/index.js"}],"users.json":[function(require,module,exports) {
+},{"UIKit":"../src/index.js","../../src":"../src/index.js"}],"users.json":[function(require,module,exports) {
 module.exports = [{
   "id": 1,
   "name": "Leanne Graham",
@@ -3486,9 +3602,27 @@ var _users = _interopRequireDefault(require("./users"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-window.addEventListener("load", () => _UIKit.render_controller.render());
+window.addEventListener("load", () => {
+  _UIKit.navigation_controller.setAppName("Courrier").setRoutes({
+    "/": () => (0, _ContactListView.default)(_users.default),
+    "/contact/:uid": ({
+      uid
+    }) => (0, _ContactDetailView.default)(_users.default.find(user => user.id === parseInt(uid))),
+    "/contact/:uid/write": ({
+      uid
+    }) => (0, _EmailEditionView.default)(_users.default.find(user => user.id === parseInt(uid)))
+  });
 
-_UIKit.render_controller.setCurrentView((0, _ContactListView.default)(_users.default));
+  _UIKit.render_controller.setCurrentView(_UIKit.navigation_controller);
+});
+
+if (module.hot) {
+  module.hot.dispose(function () {// le module est sur le point d'être remplacé
+  });
+  module.hot.accept(function () {
+    _UIKit.render_controller.setCurrentView(_UIKit.navigation_controller);
+  });
+}
 },{"UIKit":"../src/index.js","./views/ContactListView":"views/ContactListView.js","./views/ContactDetailView":"views/ContactDetailView.js","./views/EmailEditionView":"views/EmailEditionView.js","./users":"users.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -3517,7 +3651,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51576" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57698" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

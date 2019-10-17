@@ -70,46 +70,68 @@ body {
   font-size: 1.2rem;
 }
 .tag {
-  padding: 4px 8px;
+  padding: 6px 8px;
   background: rgba(74, 109, 255, 0.13);
   color: #4a6dff;
   border-radius: 20px;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  align-self: center;
 }
 button {
   font-size: 1.6rem;
   border: none;
-  border-radius: 8px;
-  background: var(--color-primary);
-  padding: 8px 24px;
+  border-radius: 6px;
+  padding: 8px 16px;
   cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: max-content;
 }
-button .text {
+button.flat {
+  border: none;
+  background: transparent;
+  padding: 8px 12px;
+}
+button.flat .text {
+  color: var(--color-900);
+}
+button.flat:hover {
+  background: var(--color-100);
+}
+button.flat:active {
+  background: var(--color-200);
+}
+button.outlined {
+  background: transparent;
+  border: 1px solid var(--color-border);
+}
+button.outlined .text {
+  color: var(--color-900);
+}
+button.outlined:hover {
+  background: var(--color-100);
+  border: 1px solid var(--color-200);
+}
+button.outlined:active {
+  background: var(--color-200);
+  border: 1px solid var(--color-300);
+}
+button.filled {
+  background: var(--color-900);
+  border: none;
+}
+button.filled .text {
   color: white;
 }
-button:hover {
-  background: var(--color-primary-lighter);
+button.filled:hover {
+  background: var(--color-800);
 }
-button.icon_button {
-  padding: 8px 24px 8px 16px;
-}
-button.icon_button .icon svg {
-  margin-right: 8px;
-}
-button.text {
-  background: none;
-  padding: 0;
-}
-button.text .text {
-  color: var(--color-primary);
-}
-button.text:hover {
-  background: none;
-  color: var(--color-primary-lighter);
+button.filled:active {
+  background: var(--color-900);
 }
 .icon {
   display: contents;
@@ -151,16 +173,17 @@ button.text:hover {
 }
 .text_field {
   padding: 12px 16px;
-  background: #f7f7f7;
+  background: var(--background-raised);
   border-radius: 8px;
   font-size: 1.4rem;
   border: 2px solid transparent;
   resize: vertical;
   font-family: Inter, sans-serif;
   overflow: hidden;
+  color: var(--color-text);
 }
 .text_field:focus {
-  border: 2px solid #4a6dff;
+  border: 2px solid var(--color-primary);
 }
 .loader {
   display: block;
@@ -178,7 +201,7 @@ button.text:hover {
   user-select: none;
   display: flex;
   -webkit-touch-action: none;
-  border: 2px solid #4a6dff;
+  border: 1px solid #4a6dff55;
 }
 .segment .item {
   flex-grow: 1;
@@ -189,7 +212,6 @@ button.text:hover {
   align-items: center;
   justify-content: center;
   padding: 8px 32px;
-  border-right: 2px solid #4a6dff;
 }
 .segment .item .text {
   color: #4a6dff;

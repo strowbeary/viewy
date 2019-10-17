@@ -39,7 +39,13 @@ export const NavigationController = () => {
         navigate(path) {
             history.pushState({}, "", path);
             this.currentView = this.resolveRoute(path);
-            document.title = this.appName + " • " + this.currentView.title;
+            const titleBar = (function treeCrawler (view) {
+                const titleBar =  view.children.find(child => !!child.classList.navigation_bar);
+                console.log(titleBar);
+                if(titleBar) return titleBar;
+            })(this.currentView);
+            console.log(titleBar);
+            document.title = this.appName + " • " + titleBar.title;
             render_controller.render();
         },
         get children () {

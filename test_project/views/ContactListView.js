@@ -8,6 +8,7 @@ import {
     VStack,
     TitleBar,
     View,
+    Tag,
 } from "UIKit";
 
 const ContactRow = (item) => View(
@@ -19,17 +20,18 @@ const ContactRow = (item) => View(
             Text(item.name, TEXT_STYLE.label),
             Text(item.email, TEXT_STYLE.subheadline)
         ),
+        tag: Tag("Label"),
         action: Button("Delete", () => {}, "outlined", "red")
     })
-        .columns("auto auto 1fr auto")
-        .areas(`"img text . action"`)
+        .columns("auto auto 1fr auto 1fr auto")
+        .areas(`"img text . tag . action"`)
         .alignItems("center")
         .gap(12)
 );
 
 export default (users) => View(
     TitleBar({
-        title: "Contacts",
+        title: "Contacts"
     }),
     List(users, ContactRow)
 )

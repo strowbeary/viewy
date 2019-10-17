@@ -2,13 +2,17 @@ import {
     TextField,
     NavigationView,
     LabelTextField,
-    Grid
+    Grid,
+    View
 } from "UIKit";
+import {Button, TitleBar} from "../../src";
 
-export default (user) => NavigationView(
-    "Write an email",
-    {},
-    () => Grid(
+export default (user) => View(
+    TitleBar({
+        title: "Write email",
+        right_item: Button("Envoyer", () => {})
+    }),
+    Grid(
         LabelTextField("Recipient", "destination", "email", "someone@domain.com")
             .setValue(user.email),
         TextField("mail_body", "textarea", "Type your message...")
@@ -16,3 +20,4 @@ export default (user) => NavigationView(
         .gap(16)
         .margin(16)
 );
+
