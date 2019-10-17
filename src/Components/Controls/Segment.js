@@ -1,5 +1,4 @@
 import {View} from "../View";
-import {render_controller} from "../../Controllers/RenderController";
 import "./Segment.scss"
 
 export const Segment = (action = () => {}, ...items) => ({
@@ -26,7 +25,6 @@ export const Segment = (action = () => {}, ...items) => ({
             onclick (e) {
                 select(value);
                 action(value);
-                render_controller.render();
             }
         }))
     }

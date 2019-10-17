@@ -2137,6 +2137,11 @@ const View = (...children) => ({
     return this;
   },
 
+  borderRight(width, style, color) {
+    this.viewStyle.borderRight = `${width}px ${style} ${color}`;
+    return this;
+  },
+
   onclick(e) {},
 
   render() {
@@ -2612,86 +2617,7 @@ const LabelTextField = (label, name, type, placeholder, formater) => ({ ...(0, _
 });
 
 exports.LabelTextField = LabelTextField;
-},{"../Layouts/Stack":"../src/Components/Layouts/Stack.js","./Text":"../src/Components/Controls/Text.js","./TextField":"../src/Components/Controls/TextField.js","../View":"../src/Components/View.js"}],"../src/Components/Controls/Loader.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/Components/Controls/Loader.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Loader = void 0;
-
-var _View = require("../View");
-
-require("./Loader.scss");
-
-var _Icon = require("./Icon");
-
-const Loader = () => {
-  return (0, _Icon.Icon)("../../assets/loader.svg").addClass("loader");
-};
-
-exports.Loader = Loader;
-},{"../View":"../src/Components/View.js","./Loader.scss":"../src/Components/Controls/Loader.scss","./Icon":"../src/Components/Controls/Icon.js"}],"../src/Components/Presentation/LoadingScreen.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _Stack = require("../../Components/Layouts/Stack");
-
-var _Loader = require("../../Components/Controls/Loader");
-
-var _Text = require("../../Components/Controls/Text");
-
-var _default = () => (0, _Stack.VStack)((0, _Loader.Loader)(), (0, _Text.Text)("Your app is starting", _Text.TEXT_STYLE.footnote).marginTop(16)).alignItems("center").justifyContent("center").addClass("loading_screen");
-
-exports.default = _default;
-},{"../../Components/Layouts/Stack":"../src/Components/Layouts/Stack.js","../../Components/Controls/Loader":"../src/Components/Controls/Loader.js","../../Components/Controls/Text":"../src/Components/Controls/Text.js"}],"../src/Controllers/RenderController.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.render_controller = void 0;
-
-var _lighterhtml = require("lighterhtml");
-
-var _LoadingScreen = _interopRequireDefault(require("../Components/Presentation/LoadingScreen"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const RenderController = () => ({
-  theme: "dark",
-  currentView: (0, _LoadingScreen.default)(),
-
-  setCurrentView(view) {
-    this.currentView = view;
-    this.render();
-  },
-
-  setTheme(variant) {
-    if (variant !== "light" && variant !== "dark") throw Error("variant parameter must be either light or dark");
-    this.theme = variant;
-    return this;
-  },
-
-  render() {
-    this.currentView.addClass("rootView");
-    (0, _lighterhtml.render)(document.body, () => this.currentView.render());
-  }
-
-});
-
-const render_controller = RenderController();
-exports.render_controller = render_controller;
-},{"lighterhtml":"../node_modules/lighterhtml/esm/index.js","../Components/Presentation/LoadingScreen":"../src/Components/Presentation/LoadingScreen.js"}],"../src/Components/Controls/Segment.scss":[function(require,module,exports) {
+},{"../Layouts/Stack":"../src/Components/Layouts/Stack.js","./Text":"../src/Components/Controls/Text.js","./TextField":"../src/Components/Controls/TextField.js","../View":"../src/Components/View.js"}],"../src/Components/Controls/Segment.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -2705,8 +2631,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.Segment = void 0;
 
 var _View = require("../View");
-
-var _RenderController = require("../../Controllers/RenderController");
 
 require("./Segment.scss");
 
@@ -2742,8 +2666,6 @@ const Segment = (action = () => {}, ...items) => ({ ...(0, _View.View)().addClas
       onclick(e) {
         select(value);
         action(value);
-
-        _RenderController.render_controller.render();
       }
 
     }));
@@ -2752,18 +2674,49 @@ const Segment = (action = () => {}, ...items) => ({ ...(0, _View.View)().addClas
 });
 
 exports.Segment = Segment;
-},{"../View":"../src/Components/View.js","../../Controllers/RenderController":"../src/Controllers/RenderController.js","./Segment.scss":"../src/Components/Controls/Segment.scss"}],"../src/Components/Presentation/ConditionalContent.js":[function(require,module,exports) {
+},{"../View":"../src/Components/View.js","./Segment.scss":"../src/Components/Controls/Segment.scss"}],"../src/Components/Presentation/ConditionalContent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ConditionalContent = ConditionalContent;
+exports.ConditionalContent = void 0;
 
-function ConditionalContent(expr) {
-  return expr.render();
-}
-},{}],"../src/Components/Layouts/List.scss":[function(require,module,exports) {
+var _EmptyView = require("./EmptyView");
+
+const ConditionalContent = (expr, trueView, falseView = (0, _EmptyView.EmptyView)()) => ({
+  render() {
+    return expr ? trueView : falseView;
+  }
+
+});
+
+exports.ConditionalContent = ConditionalContent;
+},{"./EmptyView":"../src/Components/Presentation/EmptyView.js"}],"../src/Components/Controls/Loader.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/Components/Controls/Loader.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Loader = void 0;
+
+var _View = require("../View");
+
+require("./Loader.scss");
+
+var _Icon = require("./Icon");
+
+const Loader = () => {
+  return (0, _Icon.Icon)("../../assets/loader.svg").addClass("loader");
+};
+
+exports.Loader = Loader;
+},{"../View":"../src/Components/View.js","./Loader.scss":"../src/Components/Controls/Loader.scss","./Icon":"../src/Components/Controls/Icon.js"}],"../src/Components/Layouts/List.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -2859,10 +2812,6 @@ var _Grid = require("../Layouts/Grid");
 
 var _Text = require("../Controls/Text");
 
-var _EmptyView = require("../Presentation/EmptyView");
-
-var _Stack = require("../Layouts/Stack");
-
 var _View = require("../View");
 
 require("./TitleBar.scss");
@@ -2871,8 +2820,9 @@ var _ = require("../..");
 
 const TitleBar = ({
   title,
-  left_item = (0, _View.View)(),
-  right_item = (0, _View.View)()
+  left_item = (0, _.EmptyView)(),
+  right_item = (0, _.EmptyView)(),
+  bottom_item = (0, _.EmptyView)()
 }) => ({ ...(0, _View.View)().addClass("navigation_bar"),
   title,
 
@@ -2880,215 +2830,15 @@ const TitleBar = ({
     return [(0, _Grid.Grid)({
       left_item,
       right_item,
-      title: (0, _Text.Text)(title, _Text.TEXT_STYLE.large_title)
-    }).gap(8, 24).areas(`"left_item . right_item" "title title title"`).columns("auto 1fr auto").rows("36px auto")];
+      title: (0, _Text.Text)(title, _Text.TEXT_STYLE.large_title).addClass("titlebar_title"),
+      bottom_item
+    }).gap(0, 24).areas(`"left_item . right_item" "title title title" "bottom_item bottom_item bottom_item"`).columns("auto 1fr auto").rows("auto auto auto")];
   }
 
 });
 
 exports.TitleBar = TitleBar;
-},{"../Layouts/Grid":"../src/Components/Layouts/Grid.js","../Controls/Text":"../src/Components/Controls/Text.js","../Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","../Layouts/Stack":"../src/Components/Layouts/Stack.js","../View":"../src/Components/View.js","./TitleBar.scss":"../src/Components/Architectural/TitleBar.scss","../..":"../src/index.js"}],"../node_modules/rlite-router/rlite.js":[function(require,module,exports) {
-var define;
-// This library started as an experiment to see how small I could make
-// a functional router. It has since been optimized (and thus grown).
-// The redundancy and inelegance here is for the sake of either size
-// or speed.
-//
-// That's why router params are marked with a single char: `~` and named params are denoted `:`
-(function (root, factory) {
-  var define = root && root.define;
-
-  if (define && define.amd) {
-    define('rlite', [], factory);
-  } else if (typeof module !== 'undefined' && module.exports) {
-    module.exports = factory();
-  } else {
-    root.Rlite = factory();
-  }
-}(this, function () {
-  return function (notFound, routeDefinitions) {
-    var routes = {};
-    var decode = decodeURIComponent;
-
-    init();
-
-    return run;
-
-    function init() {
-      for (var key in routeDefinitions) {
-        add(key, routeDefinitions[key]);
-      }
-    };
-
-    function noop(s) { return s; }
-
-    function sanitize(url) {
-      ~url.indexOf('/?') && (url = url.replace('/?', '?'));
-      url[0] == '/' && (url = url.slice(1));
-      url[url.length - 1] == '/' && (url = url.slice(0, -1));
-
-      return url;
-    }
-
-    // Recursively searches the route tree for a matching route
-    // pieces: an array of url parts, ['users', '1', 'edit']
-    // esc: the function used to url escape values
-    // i: the index of the piece being processed
-    // rules: the route tree
-    // params: the computed route parameters (this is mutated), and is a stack since we don't have fast immutable datatypes
-    //
-    // This attempts to match the most specific route, but may end int a dead-end. We then attempt a less specific
-    // route, following named route parameters. In searching this secondary branch, we need to make sure to clear
-    // any route params that were generated during the search of the dead-end branch.
-    function recurseUrl(pieces, esc, i, rules, params) {
-      if (!rules) {
-        return;
-      }
-
-      if (i >= pieces.length) {
-        var cb = rules['@'];
-        return cb && {
-          cb: cb,
-          params: params.reduce(function(h, kv) { h[kv[0]] = kv[1]; return h; }, {}),
-        };
-      }
-
-      var piece = esc(pieces[i]);
-      var paramLen = params.length;
-      return recurseUrl(pieces, esc, i + 1, rules[piece.toLowerCase()], params)
-        || recurseNamedUrl(pieces, esc, i + 1, rules, ':', piece, params, paramLen)
-        || recurseNamedUrl(pieces, esc, pieces.length, rules, '*', pieces.slice(i).join('/'), params, paramLen);
-    }
-
-    // Recurses for a named route, where the name is looked up via key and associated with val
-    function recurseNamedUrl(pieces, esc, i, rules, key, val, params, paramLen) {
-      params.length = paramLen; // Reset any params generated in the unsuccessful search branch
-      var subRules = rules[key];
-      subRules && params.push([subRules['~'], val]);
-      return recurseUrl(pieces, esc, i, subRules, params);
-    }
-
-    function processQuery(url, ctx, esc) {
-      if (url && ctx.cb) {
-        var hash = url.indexOf('#'),
-            query = (hash < 0 ? url : url.slice(0, hash)).split('&');
-
-        for (var i = 0; i < query.length; ++i) {
-          var nameValue = query[i].split('=');
-
-          ctx.params[nameValue[0]] = esc(nameValue[1]);
-        }
-      }
-
-      return ctx;
-    }
-
-    function lookup(url) {
-      var querySplit = sanitize(url).split('?');
-      var esc = ~url.indexOf('%') ? decode : noop;
-
-      return processQuery(querySplit[1], recurseUrl(querySplit[0].split('/'), esc, 0, routes, []) || {}, esc);
-    }
-
-    function add(route, handler) {
-      var pieces = route.split('/');
-      var rules = routes;
-
-      for (var i = +(route[0] === '/'); i < pieces.length; ++i) {
-        var piece = pieces[i];
-        var name = piece[0] == ':' ? ':' : piece[0] == '*' ? '*' : piece.toLowerCase();
-
-        rules = rules[name] || (rules[name] = {});
-
-        (name == ':' || name == '*') && (rules['~'] = piece.slice(1));
-      }
-
-      rules['@'] = handler;
-    }
-
-    function run(url, arg) {
-      var result = lookup(url);
-
-      return (result.cb || notFound)(result.params, arg, url);
-    };
-  };
-}));
-
-},{}],"../src/Controllers/NavigationController.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.navigation_controller = exports.NavigationController = void 0;
-
-var _View = require("../Components/View");
-
-var _Text = require("../Components/Controls/Text");
-
-var _TitleBar = require("../Components/Architectural/TitleBar");
-
-var _rliteRouter = _interopRequireDefault(require("rlite-router"));
-
-var _LoadingScreen = _interopRequireDefault(require("../Components/Presentation/LoadingScreen"));
-
-var _RenderController = require("./RenderController");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const NavigationController = () => {
-  return { ...(0, _View.View)().addClass("navigation_controller"),
-    currentView: (0, _View.View)((0, _Text.Text)("Page not found")),
-    appName: "App name",
-
-    resolveRoute() {
-      return (0, _LoadingScreen.default)();
-    },
-
-    setAppName(name) {
-      this.appName = name;
-      return this;
-    },
-
-    setRoutes(routes) {
-      this.resolveRoute = (0, _rliteRouter.default)(() => (0, _View.View)((0, _Text.Text)("Page not found")), routes);
-      this.navigate(location.pathname);
-      window.addEventListener("popstate", () => {
-        this.currentView = this.resolveRoute(location.pathname);
-        document.title = this.appName + " • " + this.currentView.title;
-
-        _RenderController.render_controller.render();
-      });
-      return this;
-    },
-
-    navigate(path) {
-      history.pushState({}, "", path);
-      this.currentView = this.resolveRoute(path);
-
-      const titleBar = function treeCrawler(view) {
-        const titleBar = view.children.find(child => !!child.classList.navigation_bar);
-        console.log(titleBar);
-        if (titleBar) return titleBar;
-      }(this.currentView);
-
-      console.log(titleBar);
-      document.title = this.appName + " • " + titleBar.title;
-
-      _RenderController.render_controller.render();
-    },
-
-    get children() {
-      return [this.currentView];
-    }
-
-  };
-};
-
-exports.NavigationController = NavigationController;
-const navigation_controller = NavigationController();
-exports.navigation_controller = navigation_controller;
-},{"../Components/View":"../src/Components/View.js","../Components/Controls/Text":"../src/Components/Controls/Text.js","../Components/Architectural/TitleBar":"../src/Components/Architectural/TitleBar.js","rlite-router":"../node_modules/rlite-router/rlite.js","../Components/Presentation/LoadingScreen":"../src/Components/Presentation/LoadingScreen.js","./RenderController":"../src/Controllers/RenderController.js"}],"../src/index.js":[function(require,module,exports) {
+},{"../Layouts/Grid":"../src/Components/Layouts/Grid.js","../Controls/Text":"../src/Components/Controls/Text.js","../View":"../src/Components/View.js","./TitleBar.scss":"../src/Components/Architectural/TitleBar.scss","../..":"../src/index.js"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3288,53 +3038,7 @@ Object.keys(_View).forEach(function (key) {
     }
   });
 });
-
-var _RenderController = require("./Controllers/RenderController");
-
-Object.keys(_RenderController).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _RenderController[key];
-    }
-  });
-});
-
-var _NavigationController = require("./Controllers/NavigationController");
-
-Object.keys(_NavigationController).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _NavigationController[key];
-    }
-  });
-});
-},{"./index.scss":"../src/index.scss","./Components/Controls/Tag":"../src/Components/Controls/Tag.js","./Components/Controls/Button":"../src/Components/Controls/Button.js","./Components/Controls/Icon":"../src/Components/Controls/Icon.js","./Components/Controls/Image":"../src/Components/Controls/Image.js","./Components/Controls/LabelTextField":"../src/Components/Controls/LabelTextField.js","./Components/Controls/Segment":"../src/Components/Controls/Segment.js","./Components/Controls/Text":"../src/Components/Controls/Text.js","./Components/Controls/TextField":"../src/Components/Controls/TextField.js","./Components/Presentation/ConditionalContent":"../src/Components/Presentation/ConditionalContent.js","./Components/Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","./Components/Controls/Loader":"../src/Components/Controls/Loader.js","./Components/Layouts/List":"../src/Components/Layouts/List.js","./Components/Layouts/Stack":"../src/Components/Layouts/Stack.js","./Components/Layouts/Grid":"../src/Components/Layouts/Grid.js","./Components/Architectural/TitleBar":"../src/Components/Architectural/TitleBar.js","./Components/View":"../src/Components/View.js","./Controllers/RenderController":"../src/Controllers/RenderController.js","./Controllers/NavigationController":"../src/Controllers/NavigationController.js"}],"views/ContactListView.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _UIKit = require("UIKit");
-
-const ContactRow = item => (0, _UIKit.View)((0, _UIKit.Grid)({
-  img: (0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(16).size(32, 32),
-  text: (0, _UIKit.VStack)((0, _UIKit.Text)(item.name, _UIKit.TEXT_STYLE.label), (0, _UIKit.Text)(item.email, _UIKit.TEXT_STYLE.subheadline)),
-  tag: (0, _UIKit.Tag)("Label"),
-  action: (0, _UIKit.Button)("Delete", () => {}, "outlined", "red")
-}).columns("auto auto 1fr auto 1fr auto").areas(`"img text . tag . action"`).alignItems("center").gap(12));
-
-var _default = users => (0, _UIKit.View)((0, _UIKit.TitleBar)({
-  title: "Contacts"
-}), (0, _UIKit.List)(users, ContactRow));
-
-exports.default = _default;
-},{"UIKit":"../src/index.js"}],"views/ContactDetailView.js":[function(require,module,exports) {
+},{"./index.scss":"../src/index.scss","./Components/Controls/Tag":"../src/Components/Controls/Tag.js","./Components/Controls/Button":"../src/Components/Controls/Button.js","./Components/Controls/Icon":"../src/Components/Controls/Icon.js","./Components/Controls/Image":"../src/Components/Controls/Image.js","./Components/Controls/LabelTextField":"../src/Components/Controls/LabelTextField.js","./Components/Controls/Segment":"../src/Components/Controls/Segment.js","./Components/Controls/Text":"../src/Components/Controls/Text.js","./Components/Controls/TextField":"../src/Components/Controls/TextField.js","./Components/Presentation/ConditionalContent":"../src/Components/Presentation/ConditionalContent.js","./Components/Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","./Components/Controls/Loader":"../src/Components/Controls/Loader.js","./Components/Layouts/List":"../src/Components/Layouts/List.js","./Components/Layouts/Stack":"../src/Components/Layouts/Stack.js","./Components/Layouts/Grid":"../src/Components/Layouts/Grid.js","./Components/Architectural/TitleBar":"../src/Components/Architectural/TitleBar.js","./Components/View":"../src/Components/View.js"}],"views/ContactDetailView.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3347,7 +3051,27 @@ var _UIKit = require("UIKit");
 var _default = user => (0, _UIKit.VStack)((0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(64).size(128, 128), (0, _UIKit.Text)(user.email, _UIKit.TEXT_STYLE.large_title).marginTop(16)).alignItems("center").margin(16);
 
 exports.default = _default;
-},{"UIKit":"../src/index.js"}],"views/EmailEditionView.js":[function(require,module,exports) {
+},{"UIKit":"../src/index.js"}],"../src/Components/Layouts/ScrollView.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ScrollView = void 0;
+
+var _View = require("../View");
+
+const ScrollView = (...children) => ({ ...(0, _View.View)(),
+  children,
+  viewStyle: {
+    overflow: "auto",
+    height: "100%",
+    scrollbarWidth: "none"
+  }
+});
+
+exports.ScrollView = ScrollView;
+},{"../View":"../src/Components/View.js"}],"views/ContactListView.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3357,15 +3081,39 @@ exports.default = void 0;
 
 var _UIKit = require("UIKit");
 
+var _ContactDetailView = _interopRequireDefault(require("./ContactDetailView"));
+
+var _index = require("../index");
+
 var _src = require("../../src");
 
-var _default = user => (0, _UIKit.View)((0, _src.TitleBar)({
-  title: "Write email",
-  right_item: (0, _src.Button)("Envoyer", () => {})
-}), (0, _UIKit.Grid)((0, _UIKit.LabelTextField)("Recipient", "destination", "email", "someone@domain.com").setValue(user.email), (0, _UIKit.TextField)("mail_body", "textarea", "Type your message...")).gap(16).margin(16));
+var _ScrollView = require("../../src/Components/Layouts/ScrollView");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+let selectedItem = {
+  email: ""
+};
+
+function openHandler(contact) {
+  selectedItem = contact;
+  (0, _index.need_update)();
+}
+
+const ContactRow = item => (0, _UIKit.View)((0, _UIKit.Grid)({
+  img: (0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(16).size(32, 32),
+  text: (0, _UIKit.VStack)((0, _UIKit.Text)(item.name, _UIKit.TEXT_STYLE.label), (0, _UIKit.Text)(item.email, _UIKit.TEXT_STYLE.subheadline)),
+  tag: (0, _UIKit.Tag)("Label"),
+  action: (0, _UIKit.Button)("Open", () => openHandler(item), "outlined")
+}).columns("auto auto 1fr auto 1fr auto").areas(`"img text . tag . action"`).alignItems("center").gap(12));
+
+var _default = users => (0, _UIKit.Grid)((0, _ScrollView.ScrollView)((0, _UIKit.TitleBar)({
+  title: "Contacts",
+  bottom_item: (0, _src.TextField)("contact_search", "text", "Search a contact").marginTop(16)
+}), (0, _UIKit.List)(users, ContactRow)).borderRight(1, "solid", "var(--color-border)"), (0, _ContactDetailView.default)(selectedItem)).columns("auto 1fr");
 
 exports.default = _default;
-},{"UIKit":"../src/index.js","../../src":"../src/index.js"}],"users.json":[function(require,module,exports) {
+},{"UIKit":"../src/index.js","./ContactDetailView":"views/ContactDetailView.js","../index":"index.js","../../src":"../src/index.js","../../src/Components/Layouts/ScrollView":"../src/Components/Layouts/ScrollView.js"}],"users.json":[function(require,module,exports) {
 module.exports = [{
   "id": 1,
   "name": "Leanne Graham",
@@ -3586,44 +3334,475 @@ module.exports = [{
     "catchPhrase": "Centralized empowering task-force",
     "bs": "target end-to-end models"
   }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
+}, {
+  "id": 10,
+  "name": "Clementina DuBuque",
+  "username": "Moriah.Stanton",
+  "email": "Rey.Padberg@karina.biz",
+  "address": {
+    "street": "Kattie Turnpike",
+    "suite": "Suite 198",
+    "city": "Lebsackbury",
+    "zipcode": "31428-2261",
+    "geo": {
+      "lat": "-38.2386",
+      "lng": "57.2232"
+    }
+  },
+  "phone": "024-648-3804",
+  "website": "ambrose.net",
+  "company": {
+    "name": "Hoeger LLC",
+    "catchPhrase": "Centralized empowering task-force",
+    "bs": "target end-to-end models"
+  }
 }];
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
-var _UIKit = require("UIKit");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.need_update = need_update;
 
 var _ContactListView = _interopRequireDefault(require("./views/ContactListView"));
 
-var _ContactDetailView = _interopRequireDefault(require("./views/ContactDetailView"));
-
-var _EmailEditionView = _interopRequireDefault(require("./views/EmailEditionView"));
-
 var _users = _interopRequireDefault(require("./users"));
+
+var _lighterhtml = require("lighterhtml");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-window.addEventListener("load", () => {
-  _UIKit.navigation_controller.setAppName("Courrier").setRoutes({
-    "/": () => (0, _ContactListView.default)(_users.default),
-    "/contact/:uid": ({
-      uid
-    }) => (0, _ContactDetailView.default)(_users.default.find(user => user.id === parseInt(uid))),
-    "/contact/:uid/write": ({
-      uid
-    }) => (0, _EmailEditionView.default)(_users.default.find(user => user.id === parseInt(uid)))
-  });
+function need_update() {
+  (0, _lighterhtml.render)(document.body, () => (0, _ContactListView.default)(_users.default).addClass("rootView").render());
+}
 
-  _UIKit.render_controller.setCurrentView(_UIKit.navigation_controller);
-});
+window.addEventListener("load", need_update);
 
 if (module.hot) {
   module.hot.dispose(function () {// le module est sur le point d'être remplacé
   });
-  module.hot.accept(function () {
-    _UIKit.render_controller.setCurrentView(_UIKit.navigation_controller);
-  });
+  module.hot.accept(need_update);
 }
-},{"UIKit":"../src/index.js","./views/ContactListView":"views/ContactListView.js","./views/ContactDetailView":"views/ContactDetailView.js","./views/EmailEditionView":"views/EmailEditionView.js","./users":"users.json"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./views/ContactListView":"views/ContactListView.js","./users":"users.json","lighterhtml":"../node_modules/lighterhtml/esm/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -3651,7 +3830,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57698" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38609" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

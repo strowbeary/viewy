@@ -45,8 +45,11 @@ export const View = (...children) => ({
         this.viewStyle.marginLeft = value + "px";
         return this;
     },
+    borderRight(width, style, color) {
+        this.viewStyle.borderRight = `${width}px ${style} ${color}`;
+        return this;
+    },
     onclick(e) {
-
     },
     render () {
         return html`

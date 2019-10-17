@@ -1,3 +1,7 @@
-export function ConditionalContent(expr) {
-    return expr.render();
-}
+import {EmptyView} from "./EmptyView";
+
+export const ConditionalContent = (expr, trueView, falseView = EmptyView()) => ({
+    render() {
+        return expr ? trueView : falseView;
+    }
+});

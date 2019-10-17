@@ -20,6 +20,3 @@ export * from "./Components/Layouts/Grid";
 export * from "./Components/Architectural/TitleBar";
 
 export * from "./Components/View";
-
-export * from "./Controllers/RenderController";
-export * from "./Controllers/NavigationController";

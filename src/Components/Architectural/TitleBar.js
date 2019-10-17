@@ -13,13 +13,13 @@ export const TitleBar = ({title, left_item = EmptyView(), right_item = EmptyView
             Grid({
                 left_item,
                 right_item,
-                title: Text(title, TEXT_STYLE.large_title),
+                title: Text(title, TEXT_STYLE.large_title).addClass("titlebar_title"),
                 bottom_item,
             })
-                .gap(8, 24)
+                .gap(0, 24)
                 .areas(`"left_item . right_item" "title title title" "bottom_item bottom_item bottom_item"`)
                 .columns("auto 1fr auto")
-                .rows("36px auto")
+                .rows("auto auto auto")
 
         ]
     }

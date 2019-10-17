@@ -14,11 +14,12 @@ body {
 @media (prefers-color-scheme: light) {
   body {
     --background: white;
-    --background-raised: #f9f9f9;
+    --background-raised: rgba(0, 0, 0, 0.05);
     --color-text: #1d1d20;
     --color-text-secondary: #454545;
     --color-border: #d1d0d2;
     --color-hover: #ececec;
+    --color-active: #e6e6e6;
     --color-success: #88c459;
     --color-error: #f5414f;
     --color-warning: #ffd137;
@@ -28,11 +29,12 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     --background: #161616;
-    --background-raised: #232323;
+    --background-raised: rgba(255, 255, 255, 0.05);
     --color-text: #f0f0ff;
     --color-text-secondary: #b1b1bc;
     --color-border: #292829;
     --color-hover: #1e1e1e;
+    --color-active: #2a2a2a;
     --color-success: #88c459;
     --color-error: #f5414f;
     --color-warning: #ffd137;
@@ -110,15 +112,15 @@ button.outlined {
   border: 1px solid var(--color-border);
 }
 button.outlined .text {
-  color: var(--color-900);
+  color: var(--color-primary);
 }
 button.outlined:hover {
-  background: var(--color-100);
-  border: 1px solid var(--color-200);
+  background: var(--color-hover);
+  border: 1px solid var(--color-border);
 }
 button.outlined:active {
-  background: var(--color-200);
-  border: 1px solid var(--color-300);
+  background: var(--color-active);
+  border: 1px solid var(--color-border);
 }
 button.filled {
   background: var(--color-900);
@@ -185,15 +187,6 @@ button.filled:active {
 .text_field:focus {
   border: 2px solid var(--color-primary);
 }
-.loader {
-  display: block;
-  position: relative;
-}
-.loader svg {
-  width: 32px;
-  height: 32px;
-  color: var(--color-text);
-}
 .segment {
   border-radius: 4px;
   cursor: pointer;
@@ -228,6 +221,18 @@ button.filled:active {
 .segment .item.selected .text {
   color: white;
 }
+.loader {
+  display: block;
+  position: relative;
+}
+.loader svg {
+  width: 32px;
+  height: 32px;
+  color: var(--color-text);
+}
+.list {
+  overflow: auto;
+}
 .list .list_row {
   position: relative;
 }
@@ -249,7 +254,8 @@ button.filled:active {
   padding: 16px;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
+  backdrop-filter: blur(30px);
 }
 .navigation_bar .button_back {
   padding: 0;
@@ -266,6 +272,9 @@ button.filled:active {
   margin-left: 16px;
   margin-right: 16px;
   border-radius: 4px;
+}
+.navigation_bar .titlebar_title {
+  margin-top: 8px;
 }
 
 /*# sourceMappingURL=/test_project.e31bb0bc.css.map */
