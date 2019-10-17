@@ -3,24 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="662d1a9c-3bce-452e-91c6-b7073cd5ef7b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test_project.e31bb0bc.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test_project.e31bb0bc.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html.br" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html.br" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Tag.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Tag.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/TextField.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/Grid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Navigation/NavigationBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Navigation/NavigationButton.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Navigation/NavigationView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/NavigationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/NavigationController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/NavigationController_old.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test_project/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/test_project/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_project/views/ContactDetailView.js" beforeDir="false" afterPath="$PROJECT_DIR$/test_project/views/ContactDetailView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_project/views/ContactListView.js" beforeDir="false" afterPath="$PROJECT_DIR$/test_project/views/ContactListView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_project/views/EmailEditionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/test_project/views/EmailEditionView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +74,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.test_project:dev">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -130,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test_project:dev" />
         <item itemvalue="npm.test_project:build" />
+        <item itemvalue="npm.test_project:dev" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
       </list>

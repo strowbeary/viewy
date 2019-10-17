@@ -1,12 +1,10 @@
 import {Grid} from "../Layouts/Grid";
 import {Text, TEXT_STYLE} from "../Controls/Text";
-import {EmptyView} from "../Presentation/EmptyView";
-import {HStack} from "../Layouts/Stack";
 import {View} from "../View";
 import "./TitleBar.scss"
-import {Button, Icon} from "../..";
+import {EmptyView} from "../..";
 
-export const TitleBar = ({title, left_item = View(), right_item = View()}) => ({
+export const TitleBar = ({title, left_item = EmptyView(), right_item = EmptyView(), bottom_item = EmptyView()}) => ({
     ...View()
         .addClass("navigation_bar"),
     title,
@@ -15,10 +13,11 @@ export const TitleBar = ({title, left_item = View(), right_item = View()}) => ({
             Grid({
                 left_item,
                 right_item,
-                title: Text(title, TEXT_STYLE.large_title)
+                title: Text(title, TEXT_STYLE.large_title),
+                bottom_item,
             })
                 .gap(8, 24)
-                .areas(`"left_item . right_item" "title title title"`)
+                .areas(`"left_item . right_item" "title title title" "bottom_item bottom_item bottom_item"`)
                 .columns("auto 1fr auto")
                 .rows("36px auto")
 

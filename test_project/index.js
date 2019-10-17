@@ -1,8 +1,6 @@
 import {
     render_controller,
     navigation_controller,
-    NavigationView,
-    Text
 } from "UIKit";
 import ContactListView from "./views/ContactListView";
 import ContactDetailView from "./views/ContactDetailView";
