@@ -11,33 +11,36 @@ body {
   --color-primary-lighter: #5c81ff;
   --color-secondary: #f5414f;
 }
-body .light {
-  --background: white;
-  --background-raised: #f9f9f9;
-  --color-text: #1d1d20;
-  --color-text-secondary: #454545;
-  --color-border: #d1d0d2;
-  --color-hover: #ececec;
-  --color-success: #88c459;
-  --color-error: #f5414f;
-  --color-warning: #ffd137;
-  background: var(--background);
+@media (prefers-color-scheme: light) {
+  body {
+    --background: white;
+    --background-raised: #f9f9f9;
+    --color-text: #1d1d20;
+    --color-text-secondary: #454545;
+    --color-border: #d1d0d2;
+    --color-hover: #ececec;
+    --color-success: #88c459;
+    --color-error: #f5414f;
+    --color-warning: #ffd137;
+    background: var(--background);
+  }
 }
-body .dark {
-  --background: #161616;
-  --background-raised: #232323;
-  --color-text: #f0f0ff;
-  --color-text-secondary: #b1b1bc;
-  --color-border: #292829;
-  --color-hover: #1e1e1e;
-  --color-success: #88c459;
-  --color-error: #f5414f;
-  --color-warning: #ffd137;
-  background: var(--background);
+@media (prefers-color-scheme: dark) {
+  body {
+    --background: #161616;
+    --background-raised: #232323;
+    --color-text: #f0f0ff;
+    --color-text-secondary: #b1b1bc;
+    --color-border: #292829;
+    --color-hover: #1e1e1e;
+    --color-success: #88c459;
+    --color-error: #f5414f;
+    --color-warning: #ffd137;
+    background: var(--background);
+  }
 }
 
-/* =14px */
-.loading_screen {
+.loading_screen, .rootView {
   height: 100vh;
 }
 .view {
@@ -241,32 +244,6 @@ button.text:hover {
   margin-left: 16px;
   margin-right: 16px;
   border-radius: 4px;
-}
-.navigation_button {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-gap: 16px;
-  align-items: center;
-  cursor: pointer;
-}
-.navigation_button:hover {
-  background: var(--color-hover);
-}
-.navigation_view {
-  height: 100vh;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-areas: "sidebar header" "sidebar body";
-  grid-template-rows: auto 1fr;
-  grid-template-columns: auto 1fr;
-}
-.navigation_view .navigation_bar {
-  grid-area: header;
-}
-.navigation_view .main {
-  height: 100%;
-  overflow: auto;
-  grid-area: body;
 }
 
 /*# sourceMappingURL=/test_project.e31bb0bc.css.map */

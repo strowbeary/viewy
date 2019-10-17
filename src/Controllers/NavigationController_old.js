@@ -1,10 +1,10 @@
 import {View} from "../Components/View";
-import {NavigationBar} from "../Components/Navigation/NavigationBar";
+import {TitleBar} from "../Components/Architectural/TitleBar";
 import {render_controller} from "./RenderController";
 export const NavigationController = () => ({
     ...View().addClass("navigation_view"),
     viewStack: [],
-    navigationBar: NavigationBar(),
+    navigationBar: TitleBar(),
     onPopState() {
         this.viewStack.pop();
         console.log(history.state.view_stack_id, this.viewStack);

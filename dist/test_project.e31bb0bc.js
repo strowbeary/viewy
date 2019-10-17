@@ -2580,13 +2580,7 @@ const RenderController = () => ({
   },
 
   render() {
-    (this.theme === "light" ? () => {
-      this.currentView.removeClass("dark");
-      this.currentView.addClass("light");
-    } : () => {
-      this.currentView.removeClass("light");
-      this.currentView.addClass("dark");
-    })();
+    this.currentView.addClass("rootView");
     (0, _lighterhtml.render)(document.body, () => this.currentView.render());
   }
 
@@ -2725,6 +2719,7 @@ const Grid = (...children) => ({ ...(0, _Stack.Stack)().removeClass("stack").add
 
   areas(schema) {
     this.children = Array.from(Object.keys(this.children[0])).map(area => {
+      console.log(this.children[0], area);
       this.children[0][area].viewStyle.gridArea = area;
       return this.children[0][area];
     });
@@ -2746,18 +2741,18 @@ const Grid = (...children) => ({ ...(0, _Stack.Stack)().removeClass("stack").add
 });
 
 exports.Grid = Grid;
-},{"./Stack":"../src/Components/Layouts/Stack.js","./Grid.scss":"../src/Components/Layouts/Grid.scss"}],"../src/Components/Navigation/NavigationBar.scss":[function(require,module,exports) {
+},{"./Stack":"../src/Components/Layouts/Stack.js","./Grid.scss":"../src/Components/Layouts/Grid.scss"}],"../src/Components/Architectural/TitleBar.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/Components/Navigation/NavigationBar.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/Components/Architectural/TitleBar.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.NavigationBar = void 0;
+exports.TitleBar = void 0;
 
 var _Grid = require("../Layouts/Grid");
 
@@ -2769,33 +2764,28 @@ var _Stack = require("../Layouts/Stack");
 
 var _View = require("../View");
 
-require("./NavigationBar.scss");
+require("./TitleBar.scss");
 
 var _ = require("../..");
 
-const NavigationBar = currentNavigationView => ({ ...(0, _View.View)().addClass("navigation_bar"),
-  backButtonLabel: "Back",
-
-  _getBackButton() {
-    if (location.pathname !== "/") {
-      return (0, _.Button)(this.backButtonLabel, () => history.back()).addClass("button_back supplemented text").setIcon((0, _.Icon)("navigation/chevron_left").setSize(36));
-    } else {
-      return (0, _EmptyView.EmptyView)();
-    }
-  },
+const TitleBar = ({
+  title,
+  left_item = (0, _View.View)(),
+  right_item = (0, _View.View)()
+}) => ({ ...(0, _View.View)().addClass("navigation_bar"),
 
   get children() {
     return [(0, _Grid.Grid)({
-      left_item: (0, _Stack.HStack)(this._getBackButton(), currentNavigationView.leftItem),
-      right_item: currentNavigationView.rightItem,
-      title: (0, _Text.Text)(currentNavigationView.title, _Text.TEXT_STYLE.large_title)
+      left_item,
+      right_item,
+      title: (0, _Text.Text)(title, _Text.TEXT_STYLE.large_title)
     }).gap(8, 24).areas(`"left_item . right_item" "title title title"`).columns("auto 1fr auto").rows("36px auto")];
   }
 
 });
 
-exports.NavigationBar = NavigationBar;
-},{"../Layouts/Grid":"../src/Components/Layouts/Grid.js","../Controls/Text":"../src/Components/Controls/Text.js","../Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","../Layouts/Stack":"../src/Components/Layouts/Stack.js","../View":"../src/Components/View.js","./NavigationBar.scss":"../src/Components/Navigation/NavigationBar.scss","../..":"../src/index.js"}],"../node_modules/rlite-router/rlite.js":[function(require,module,exports) {
+exports.TitleBar = TitleBar;
+},{"../Layouts/Grid":"../src/Components/Layouts/Grid.js","../Controls/Text":"../src/Components/Controls/Text.js","../Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","../Layouts/Stack":"../src/Components/Layouts/Stack.js","../View":"../src/Components/View.js","./TitleBar.scss":"../src/Components/Architectural/TitleBar.scss","../..":"../src/index.js"}],"../node_modules/rlite-router/rlite.js":[function(require,module,exports) {
 var define;
 // This library started as an experiment to see how small I could make
 // a functional router. It has since been optimized (and thus grown).
@@ -2934,7 +2924,7 @@ var _View = require("../Components/View");
 
 var _Text = require("../Components/Controls/Text");
 
-var _NavigationBar = require("../Components/Navigation/NavigationBar");
+var _TitleBar = require("../Components/Architectural/TitleBar");
 
 var _rliteRouter = _interopRequireDefault(require("rlite-router"));
 
@@ -2988,76 +2978,7 @@ const NavigationController = () => {
 exports.NavigationController = NavigationController;
 const navigation_controller = NavigationController();
 exports.navigation_controller = navigation_controller;
-},{"../Components/View":"../src/Components/View.js","../Components/Controls/Text":"../src/Components/Controls/Text.js","../Components/Navigation/NavigationBar":"../src/Components/Navigation/NavigationBar.js","rlite-router":"../node_modules/rlite-router/rlite.js","../Components/Presentation/LoadingScreen":"../src/Components/Presentation/LoadingScreen.js","./RenderController":"../src/Controllers/RenderController.js"}],"../src/Components/Navigation/NavigationButton.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/Components/Navigation/NavigationButton.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.NavigationButton = void 0;
-
-var _View = require("../View");
-
-var _Icon = require("../Controls/Icon");
-
-var _NavigationController = require("../../Controllers/NavigationController");
-
-require("./NavigationButton.scss");
-
-const NavigationButton = (path, ...children) => ({ ...(0, _View.View)().addClass("navigation_button"),
-  children,
-
-  onclick(e) {
-    e.stopPropagation();
-
-    _NavigationController.navigation_controller.navigate(path);
-  }
-
-});
-
-exports.NavigationButton = NavigationButton;
-},{"../View":"../src/Components/View.js","../Controls/Icon":"../src/Components/Controls/Icon.js","../../Controllers/NavigationController":"../src/Controllers/NavigationController.js","./NavigationButton.scss":"../src/Components/Navigation/NavigationButton.scss"}],"../src/Components/Navigation/NavigationView.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/Components/Navigation/NavigationView.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.NavigationView = void 0;
-
-var _View = require("../View");
-
-var _EmptyView = require("../Presentation/EmptyView");
-
-require("./NavigationView.scss");
-
-var _NavigationBar = require("./NavigationBar");
-
-const NavigationView = (title, {
-  leftItem = (0, _EmptyView.EmptyView)(),
-  rightItem = (0, _EmptyView.EmptyView)()
-}, view_builder) => ({ ...(0, _View.View)(),
-  title: title,
-  leftItem,
-  rightItem,
-
-  get children() {
-    return [(0, _NavigationBar.NavigationBar)(this), view_builder()];
-  }
-
-});
-
-exports.NavigationView = NavigationView;
-},{"../View":"../src/Components/View.js","../Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","./NavigationView.scss":"../src/Components/Navigation/NavigationView.scss","./NavigationBar":"../src/Components/Navigation/NavigationBar.js"}],"../src/index.js":[function(require,module,exports) {
+},{"../Components/View":"../src/Components/View.js","../Components/Controls/Text":"../src/Components/Controls/Text.js","../Components/Architectural/TitleBar":"../src/Components/Architectural/TitleBar.js","rlite-router":"../node_modules/rlite-router/rlite.js","../Components/Presentation/LoadingScreen":"../src/Components/Presentation/LoadingScreen.js","./RenderController":"../src/Controllers/RenderController.js"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3234,38 +3155,14 @@ Object.keys(_Grid).forEach(function (key) {
   });
 });
 
-var _NavigationBar = require("./Components/Navigation/NavigationBar");
+var _TitleBar = require("./Components/Architectural/TitleBar");
 
-Object.keys(_NavigationBar).forEach(function (key) {
+Object.keys(_TitleBar).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
   Object.defineProperty(exports, key, {
     enumerable: true,
     get: function () {
-      return _NavigationBar[key];
-    }
-  });
-});
-
-var _NavigationButton = require("./Components/Navigation/NavigationButton");
-
-Object.keys(_NavigationButton).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _NavigationButton[key];
-    }
-  });
-});
-
-var _NavigationView = require("./Components/Navigation/NavigationView");
-
-Object.keys(_NavigationView).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _NavigationView[key];
+      return _TitleBar[key];
     }
   });
 });
@@ -3305,7 +3202,7 @@ Object.keys(_NavigationController).forEach(function (key) {
     }
   });
 });
-},{"./index.scss":"../src/index.scss","./Components/Controls/Tag":"../src/Components/Controls/Tag.js","./Components/Controls/Button":"../src/Components/Controls/Button.js","./Components/Controls/Icon":"../src/Components/Controls/Icon.js","./Components/Controls/Image":"../src/Components/Controls/Image.js","./Components/Controls/LabelTextField":"../src/Components/Controls/LabelTextField.js","./Components/Controls/Segment":"../src/Components/Controls/Segment.js","./Components/Controls/Text":"../src/Components/Controls/Text.js","./Components/Controls/TextField":"../src/Components/Controls/TextField.js","./Components/Presentation/ConditionalContent":"../src/Components/Presentation/ConditionalContent.js","./Components/Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","./Components/Controls/Loader":"../src/Components/Controls/Loader.js","./Components/Layouts/List":"../src/Components/Layouts/List.js","./Components/Layouts/Stack":"../src/Components/Layouts/Stack.js","./Components/Layouts/Grid":"../src/Components/Layouts/Grid.js","./Components/Navigation/NavigationBar":"../src/Components/Navigation/NavigationBar.js","./Components/Navigation/NavigationButton":"../src/Components/Navigation/NavigationButton.js","./Components/Navigation/NavigationView":"../src/Components/Navigation/NavigationView.js","./Components/View":"../src/Components/View.js","./Controllers/RenderController":"../src/Controllers/RenderController.js","./Controllers/NavigationController":"../src/Controllers/NavigationController.js"}],"views/ContactListView.js":[function(require,module,exports) {
+},{"./index.scss":"../src/index.scss","./Components/Controls/Tag":"../src/Components/Controls/Tag.js","./Components/Controls/Button":"../src/Components/Controls/Button.js","./Components/Controls/Icon":"../src/Components/Controls/Icon.js","./Components/Controls/Image":"../src/Components/Controls/Image.js","./Components/Controls/LabelTextField":"../src/Components/Controls/LabelTextField.js","./Components/Controls/Segment":"../src/Components/Controls/Segment.js","./Components/Controls/Text":"../src/Components/Controls/Text.js","./Components/Controls/TextField":"../src/Components/Controls/TextField.js","./Components/Presentation/ConditionalContent":"../src/Components/Presentation/ConditionalContent.js","./Components/Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","./Components/Controls/Loader":"../src/Components/Controls/Loader.js","./Components/Layouts/List":"../src/Components/Layouts/List.js","./Components/Layouts/Stack":"../src/Components/Layouts/Stack.js","./Components/Layouts/Grid":"../src/Components/Layouts/Grid.js","./Components/Architectural/TitleBar":"../src/Components/Architectural/TitleBar.js","./Components/View":"../src/Components/View.js","./Controllers/RenderController":"../src/Controllers/RenderController.js","./Controllers/NavigationController":"../src/Controllers/NavigationController.js"}],"views/ContactListView.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3315,21 +3212,15 @@ exports.default = void 0;
 
 var _UIKit = require("UIKit");
 
-const ContactRow = item => (0, _UIKit.NavigationButton)(`/contact/${item.id}`, (0, _UIKit.Grid)({
+const ContactRow = item => (0, _UIKit.View)((0, _UIKit.Grid)({
   img: (0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(16).size(32, 32),
   text: (0, _UIKit.VStack)((0, _UIKit.Text)(item.name, _UIKit.TEXT_STYLE.label), (0, _UIKit.Text)(item.email, _UIKit.TEXT_STYLE.subheadline)),
   action: (0, _UIKit.Button)("Delete")
 }).columns("auto auto 1fr auto").areas(`"img text . action"`).alignItems("center").gap(12));
 
-var _default = users => (0, _UIKit.NavigationView)("Contacts", {
-  rightItem: (0, _UIKit.Segment)(value => _UIKit.render_controller.setTheme(value), {
-    value: "dark",
-    label: (0, _UIKit.Text)("Dark", _UIKit.TEXT_STYLE.label)
-  }, {
-    value: "light",
-    label: (0, _UIKit.Text)("Light", _UIKit.TEXT_STYLE.label)
-  }).select(_UIKit.render_controller.theme)
-}, () => (0, _UIKit.List)(users, ContactRow));
+var _default = users => (0, _UIKit.View)((0, _UIKit.TitleBar)({
+  title: "Contacts"
+}), (0, _UIKit.List)(users, ContactRow));
 
 exports.default = _default;
 },{"UIKit":"../src/index.js"}],"views/ContactDetailView.js":[function(require,module,exports) {
@@ -3626,7 +3517,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51999" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51576" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

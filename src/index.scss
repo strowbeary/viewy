@@ -7,7 +7,7 @@ body {
     --color-primary-lighter: #5c81ff;
     --color-secondary: #f5414f;
 
-    .light {
+    @media (prefers-color-scheme: light) {
         --background: white;
         --background-raised: #f9f9f9;
         --color-text: #1d1d20;
@@ -19,14 +19,11 @@ body {
         --color-warning: #ffd137;
         background: var(--background);
     }
-
-    .dark {
+    @media (prefers-color-scheme: dark) {
         --background: #161616;
         --background-raised: #232323;
-
         --color-text: #f0f0ff;
         --color-text-secondary: #b1b1bc;
-
         --color-border: #292829;
         --color-hover: #1e1e1e;
         --color-success: #88c459;
@@ -34,9 +31,9 @@ body {
         --color-warning: #ffd137;
         background: var(--background);
     }
-} /* =14px */
+}
 
-.loading_screen {
+.loading_screen, .rootView {
     height: 100vh;
 }
 

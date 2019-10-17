@@ -17,9 +17,7 @@ export * from "./Components/Layouts/List";
 export * from "./Components/Layouts/Stack";
 export * from "./Components/Layouts/Grid";
 
-export * from "./Components/Navigation/NavigationBar";
-export * from "./Components/Navigation/NavigationButton";
-export * from "./Components/Navigation/NavigationView";
+export * from "./Components/Architectural/TitleBar";
 
 export * from "./Components/View";
 

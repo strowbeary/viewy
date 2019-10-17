@@ -1,6 +1,6 @@
 import {View} from "../Components/View";
 import {Text} from "../Components/Controls/Text";
-import {NavigationBar} from "../Components/Navigation/NavigationBar";
+import {TitleBar} from "../Components/Architectural/TitleBar";
 import rlite from "rlite-router";
 import LoadingScreen from "../Components/Presentation/LoadingScreen";
 import {render_controller} from "./RenderController";

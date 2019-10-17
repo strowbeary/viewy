@@ -15,13 +15,7 @@ const RenderController = () => ({
         return this;
     },
     render () {
-        (this.theme === "light" ? () => {
-            this.currentView.removeClass("dark");
-            this.currentView.addClass("light");
-        } : () => {
-            this.currentView.removeClass("light");
-            this.currentView.addClass("dark");
-        })();
+        this.currentView.addClass("rootView");
         render(document.body, () => this.currentView.render());
     }
 });
