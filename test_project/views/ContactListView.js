@@ -9,7 +9,9 @@ import {
     Segment,
     Text,
     TEXT_STYLE,
-    VStack
+    VStack,
+    NavigationBar,
+    View
 } from "UIKit";
 
 const ContactRow = (item) => NavigationButton(`/contact/${item.id}`,
@@ -21,7 +23,7 @@ const ContactRow = (item) => NavigationButton(`/contact/${item.id}`,
             Text(item.name, TEXT_STYLE.label),
             Text(item.email, TEXT_STYLE.subheadline)
         ),
-        action: Button("Delete")
+        action: Button("Delete", () => {}, "outlined", "red")
     })
         .columns("auto auto 1fr auto")
         .areas(`"img text . action"`)
@@ -31,19 +33,22 @@ const ContactRow = (item) => NavigationButton(`/contact/${item.id}`,
 
 export default (users) => NavigationView(
     "Contacts",
-    {
-        rightItem: Segment(
-            value => render_controller.setTheme(value),
-            {
-                value: "dark",
-                label: Text("Dark", TEXT_STYLE.label)
-            },
-            {
-                value: "light",
-                label: Text("Light", TEXT_STYLE.label)
-            }
-        )
-            .select(render_controller.theme)
-    },
-    () => List(users, ContactRow)
+    () => View(
+        NavigationBar({
+            title: "Contacts",
+            rightItem: Segment(
+                value => render_controller.setTheme(value),
+                {
+                    value: "dark",
+                    label: Text("Dark", TEXT_STYLE.label)
+                },
+                {
+                    value: "light",
+                    label: Text("Light", TEXT_STYLE.label)
+                }
+            )
+                .select(render_controller.theme)
+        }),
+        List(users, ContactRow)
+    )
 )

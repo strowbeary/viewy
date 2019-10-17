@@ -2,25 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/colors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test_project.e31bb0bc.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test_project.e31bb0bc.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Icon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Segment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/Stack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Presentation/EmptyView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Presentation/EmptyView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Presentation/UpdatableView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Segment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Segment.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Navigation/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Navigation/NavigationButton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationButton.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Navigation/NavigationView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navigation/NavigationView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/RenderController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/RenderController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/icons" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/navigation/svg/production/ic_chevron_left_18px.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/navigation/svg/production/ic_chevron_left_18px.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/icons/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_project/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test_project/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_project/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/test_project/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_project/views/ContactListView.js" beforeDir="false" afterPath="$PROJECT_DIR$/test_project/views/ContactListView.js" afterDir="false" />
     </list>
@@ -63,18 +61,18 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Controllers" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/utils" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test_project" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/Views" />
       <recent name="$PROJECT_DIR$/src/Views/Navigation" />
       <recent name="$PROJECT_DIR$/src/Views/Controls" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Controllers" />
-      <recent name="$PROJECT_DIR$/src/assets" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/utils" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -170,16 +168,18 @@
       <workItem from="1566984932583" duration="2127000" />
       <workItem from="1567157923264" duration="1449000" />
       <workItem from="1567414455297" duration="4355000" />
+      <workItem from="1568139327153" duration="1462000" />
+      <workItem from="1568220329441" duration="2813000" />
+      <workItem from="1568481112873" duration="42000" />
+      <workItem from="1569311170341" duration="7126000" />
+      <workItem from="1570997703615" duration="1404000" />
+      <workItem from="1571162915683" duration="674000" />
+      <workItem from="1571244674604" duration="592000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/../IRIS/node_modules/react-draggable/typings/test.js" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">

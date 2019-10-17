@@ -6,14 +6,16 @@ import {View} from "../View";
 import "./NavigationBar.scss"
 import {Button, Icon} from "../..";
 
-export const NavigationBar = (currentNavigationView) => ({
+export const NavigationBar = ({title = "View title", leftItem = EmptyView(), rightItem = EmptyView()}) => ({
     ...View().addClass("navigation_bar"),
     backButtonLabel: "Back",
     _getBackButton () {
         if (location.pathname !== "/") {
             return Button(
                 this.backButtonLabel,
-                () => history.back())
+                () => history.back(),
+                "flat"
+            )
                 .addClass("button_back supplemented text")
                 .setIcon(
                     Icon("navigation/chevron_left")
@@ -28,10 +30,10 @@ export const NavigationBar = (currentNavigationView) => ({
             Grid({
                 left_item: HStack(
                     this._getBackButton(),
-                    currentNavigationView.leftItem
+                    leftItem
                 ),
-                right_item: currentNavigationView.rightItem,
-                title: Text(currentNavigationView.title, TEXT_STYLE.large_title)
+                right_item: rightItem,
+                title: Text(title, TEXT_STYLE.large_title)
             })
                 .gap(8, 24)
                 .areas(`"left_item . right_item" "title title title"`)

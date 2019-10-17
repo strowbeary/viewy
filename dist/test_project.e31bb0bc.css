@@ -11,7 +11,7 @@ body {
   --color-primary-lighter: #5c81ff;
   --color-secondary: #f5414f;
 }
-body .light {
+body.light {
   --background: white;
   --background-raised: #f9f9f9;
   --color-text: #1d1d20;
@@ -23,7 +23,7 @@ body .light {
   --color-warning: #ffd137;
   background: var(--background);
 }
-body .dark {
+body.dark {
   --background: #161616;
   --background-raised: #232323;
   --color-text: #f0f0ff;
@@ -76,37 +76,45 @@ body .dark {
 button {
   font-size: 1.6rem;
   border: none;
-  border-radius: 8px;
-  background: var(--color-primary);
-  padding: 8px 24px;
+  border-radius: 6px;
+  padding: 8px 16px;
   cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: max-content;
 }
-button .text {
+button.flat {
+  border: none;
+  background: transparent;
+  padding: 8px 12px;
+}
+button.flat .text {
+  color: var(--color-900);
+}
+button.flat:hover {
+  background: var(--color-100);
+}
+button.outlined {
+  background: transparent;
+  border: 1px solid var(--color-border);
+}
+button.outlined .text {
+  color: var(--color-900);
+}
+button.outlined:hover {
+  background: var(--color-100);
+  border: 1px solid var(--color-200);
+}
+button.filled {
+  background: var(--color-900);
+  border: none;
+}
+button.filled .text {
   color: white;
 }
-button:hover {
-  background: var(--color-primary-lighter);
-}
-button.icon_button {
-  padding: 8px 24px 8px 16px;
-}
-button.icon_button .icon svg {
-  margin-right: 8px;
-}
-button.text {
-  background: none;
-  padding: 0;
-}
-button.text .text {
-  color: var(--color-primary);
-}
-button.text:hover {
-  background: none;
-  color: var(--color-primary-lighter);
+button.filled:hover {
+  background: var(--color-800);
 }
 .icon {
   display: contents;
@@ -175,7 +183,7 @@ button.text:hover {
   user-select: none;
   display: flex;
   -webkit-touch-action: none;
-  border: 2px solid #4a6dff;
+  border: 1px solid #4a6dff55;
 }
 .segment .item {
   flex-grow: 1;
@@ -186,7 +194,6 @@ button.text:hover {
   align-items: center;
   justify-content: center;
   padding: 8px 32px;
-  border-right: 2px solid #4a6dff;
 }
 .segment .item .text {
   color: #4a6dff;
@@ -243,10 +250,6 @@ button.text:hover {
   border-radius: 4px;
 }
 .navigation_button {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  grid-gap: 16px;
-  align-items: center;
   cursor: pointer;
 }
 .navigation_button:hover {

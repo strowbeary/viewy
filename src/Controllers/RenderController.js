@@ -3,7 +3,7 @@ import {render} from "lighterhtml";
 import LoadingScreen from "../Components/Presentation/LoadingScreen";
 
 const RenderController = () => ({
-    theme: "dark",
+    theme: "light",
     currentView: LoadingScreen(),
     setCurrentView (view) {
         this.currentView = view;
@@ -16,11 +16,11 @@ const RenderController = () => ({
     },
     render () {
         (this.theme === "light" ? () => {
-            this.currentView.removeClass("dark");
-            this.currentView.addClass("light");
+            document.body.classList.remove("dark");
+            document.body.classList.add("light");
         } : () => {
-            this.currentView.removeClass("light");
-            this.currentView.addClass("dark");
+            document.body.classList.remove("light");
+            document.body.classList.add("dark");
         })();
         render(document.body, () => this.currentView.render());
     }

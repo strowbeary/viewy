@@ -7,7 +7,7 @@ body {
     --color-primary-lighter: #5c81ff;
     --color-secondary: #f5414f;
 
-    .light {
+    &.light {
         --background: white;
         --background-raised: #f9f9f9;
         --color-text: #1d1d20;
@@ -20,7 +20,7 @@ body {
         background: var(--background);
     }
 
-    .dark {
+    &.dark {
         --background: #161616;
         --background-raised: #232323;
 
