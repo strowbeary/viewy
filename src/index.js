@@ -16,6 +16,7 @@ export * from "./Components/Controls/Loader";
 export * from "./Components/Layouts/List";
 export * from "./Components/Layouts/Stack";
 export * from "./Components/Layouts/Grid";
+export * from "./Components/Layouts/ScrollView";
 
 export * from "./Components/Architectural/TitleBar";
 

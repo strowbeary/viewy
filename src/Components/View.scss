@@ -1,3 +1,12 @@
 .view {
     box-sizing: border-box;
+    &.clickable {
+        cursor: pointer;
+        &:hover {
+            background: var(--color-hover);
+        }
+        &:active {
+            background: var(--color-active);
+        }
+    }
 }

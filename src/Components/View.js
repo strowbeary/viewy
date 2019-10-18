@@ -8,6 +8,7 @@ export const View = (...children) => ({
     children,
     classList: {},
     viewStyle: {},
+    eventListener: () => {},
     get isEmptyView() {
         return false
     },
@@ -49,12 +50,19 @@ export const View = (...children) => ({
         this.viewStyle.borderRight = `${width}px ${style} ${color}`;
         return this;
     },
-    onclick(e) {
+    minWidth(value) {
+        this.viewStyle.minWidth = `${value}px`;
+        return this;
+    },
+    onClick(eventListener) {
+        this.addClass("clickable");
+        this.eventListener = eventListener;
+        return this;
     },
     render () {
         return html`
             <div 
-                onclick="${e => this.onclick(e)}"
+                onclick="${e => this.eventListener(e)}"
                 class=${bind_class(this.classList, 'view')}
                 style="${bind_style(this.viewStyle)}">
                 ${this.children.map(child => child.render())}

@@ -2090,6 +2090,7 @@ const View = (...children) => ({
   children,
   classList: {},
   viewStyle: {},
+  eventListener: () => {},
 
   get isEmptyView() {
     return false;
@@ -2142,10 +2143,19 @@ const View = (...children) => ({
     return this;
   },
 
-  onclick(e) {},
+  minWidth(value) {
+    this.viewStyle.minWidth = `${value}px`;
+    return this;
+  },
+
+  onClick(eventListener) {
+    this.addClass("clickable");
+    this.eventListener = eventListener;
+    return this;
+  },
 
   render() {
-    return _lighterhtml.html`<div onclick="${e => this.onclick(e)}" class="${(0, _bind_class.bind_class)(this.classList, 'view')}" style="${(0, _bind_style.bind_style)(this.viewStyle)}">${this.children.map(child => child.render())}</div>`;
+    return _lighterhtml.html`<div onclick="${e => this.eventListener(e)}" class="${(0, _bind_class.bind_class)(this.classList, 'view')}" style="${(0, _bind_style.bind_style)(this.viewStyle)}">${this.children.map(child => child.render())}</div>`;
   }
 
 });
@@ -2795,7 +2805,27 @@ const Grid = (...children) => ({ ...(0, _Stack.Stack)().removeClass("stack").add
 });
 
 exports.Grid = Grid;
-},{"./Stack":"../src/Components/Layouts/Stack.js","./Grid.scss":"../src/Components/Layouts/Grid.scss"}],"../src/Components/Architectural/TitleBar.scss":[function(require,module,exports) {
+},{"./Stack":"../src/Components/Layouts/Stack.js","./Grid.scss":"../src/Components/Layouts/Grid.scss"}],"../src/Components/Layouts/ScrollView.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ScrollView = void 0;
+
+var _View = require("../View");
+
+const ScrollView = (...children) => ({ ...(0, _View.View)(),
+  children,
+  viewStyle: {
+    overflow: "auto",
+    height: "100%",
+    scrollbarWidth: "none"
+  }
+});
+
+exports.ScrollView = ScrollView;
+},{"../View":"../src/Components/View.js"}],"../src/Components/Architectural/TitleBar.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -3015,6 +3045,18 @@ Object.keys(_Grid).forEach(function (key) {
   });
 });
 
+var _ScrollView = require("./Components/Layouts/ScrollView");
+
+Object.keys(_ScrollView).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _ScrollView[key];
+    }
+  });
+});
+
 var _TitleBar = require("./Components/Architectural/TitleBar");
 
 Object.keys(_TitleBar).forEach(function (key) {
@@ -3038,7 +3080,7 @@ Object.keys(_View).forEach(function (key) {
     }
   });
 });
-},{"./index.scss":"../src/index.scss","./Components/Controls/Tag":"../src/Components/Controls/Tag.js","./Components/Controls/Button":"../src/Components/Controls/Button.js","./Components/Controls/Icon":"../src/Components/Controls/Icon.js","./Components/Controls/Image":"../src/Components/Controls/Image.js","./Components/Controls/LabelTextField":"../src/Components/Controls/LabelTextField.js","./Components/Controls/Segment":"../src/Components/Controls/Segment.js","./Components/Controls/Text":"../src/Components/Controls/Text.js","./Components/Controls/TextField":"../src/Components/Controls/TextField.js","./Components/Presentation/ConditionalContent":"../src/Components/Presentation/ConditionalContent.js","./Components/Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","./Components/Controls/Loader":"../src/Components/Controls/Loader.js","./Components/Layouts/List":"../src/Components/Layouts/List.js","./Components/Layouts/Stack":"../src/Components/Layouts/Stack.js","./Components/Layouts/Grid":"../src/Components/Layouts/Grid.js","./Components/Architectural/TitleBar":"../src/Components/Architectural/TitleBar.js","./Components/View":"../src/Components/View.js"}],"views/ContactDetailView.js":[function(require,module,exports) {
+},{"./index.scss":"../src/index.scss","./Components/Controls/Tag":"../src/Components/Controls/Tag.js","./Components/Controls/Button":"../src/Components/Controls/Button.js","./Components/Controls/Icon":"../src/Components/Controls/Icon.js","./Components/Controls/Image":"../src/Components/Controls/Image.js","./Components/Controls/LabelTextField":"../src/Components/Controls/LabelTextField.js","./Components/Controls/Segment":"../src/Components/Controls/Segment.js","./Components/Controls/Text":"../src/Components/Controls/Text.js","./Components/Controls/TextField":"../src/Components/Controls/TextField.js","./Components/Presentation/ConditionalContent":"../src/Components/Presentation/ConditionalContent.js","./Components/Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","./Components/Controls/Loader":"../src/Components/Controls/Loader.js","./Components/Layouts/List":"../src/Components/Layouts/List.js","./Components/Layouts/Stack":"../src/Components/Layouts/Stack.js","./Components/Layouts/Grid":"../src/Components/Layouts/Grid.js","./Components/Layouts/ScrollView":"../src/Components/Layouts/ScrollView.js","./Components/Architectural/TitleBar":"../src/Components/Architectural/TitleBar.js","./Components/View":"../src/Components/View.js"}],"views/ContactDetailView.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3048,30 +3090,15 @@ exports.default = void 0;
 
 var _UIKit = require("UIKit");
 
-var _default = user => (0, _UIKit.VStack)((0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(64).size(128, 128), (0, _UIKit.Text)(user.email, _UIKit.TEXT_STYLE.large_title).marginTop(16)).alignItems("center").margin(16);
+var _src = require("../../src");
+
+var _default = user => user ? (0, _UIKit.ScrollView)((0, _UIKit.TitleBar)({
+  title: user.name ? user.name : '-',
+  right_item: (0, _src.Button)("Edit", () => {}, "flat")
+}), (0, _UIKit.VStack)((0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(64).size(128, 128), (0, _UIKit.Text)(user.email, _UIKit.TEXT_STYLE.large_title).marginTop(16)).alignItems("center").margin(16)) : (0, _UIKit.EmptyView)();
 
 exports.default = _default;
-},{"UIKit":"../src/index.js"}],"../src/Components/Layouts/ScrollView.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.ScrollView = void 0;
-
-var _View = require("../View");
-
-const ScrollView = (...children) => ({ ...(0, _View.View)(),
-  children,
-  viewStyle: {
-    overflow: "auto",
-    height: "100%",
-    scrollbarWidth: "none"
-  }
-});
-
-exports.ScrollView = ScrollView;
-},{"../View":"../src/Components/View.js"}],"views/ContactListView.js":[function(require,module,exports) {
+},{"UIKit":"../src/index.js","../../src":"../src/index.js"}],"views/ContactListView.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3100,17 +3127,15 @@ function openHandler(contact) {
   (0, _index.need_update)();
 }
 
-const ContactRow = item => (0, _UIKit.View)((0, _UIKit.Grid)({
+const ContactRow = item => (0, _UIKit.Grid)({
   img: (0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(16).size(32, 32),
-  text: (0, _UIKit.VStack)((0, _UIKit.Text)(item.name, _UIKit.TEXT_STYLE.label), (0, _UIKit.Text)(item.email, _UIKit.TEXT_STYLE.subheadline)),
-  tag: (0, _UIKit.Tag)("Label"),
-  action: (0, _UIKit.Button)("Open", () => openHandler(item), "outlined")
-}).columns("auto auto 1fr auto 1fr auto").areas(`"img text . tag . action"`).alignItems("center").gap(12));
+  text: (0, _UIKit.VStack)((0, _UIKit.Text)(item.name, _UIKit.TEXT_STYLE.label), (0, _UIKit.Text)(item.email, _UIKit.TEXT_STYLE.subheadline))
+}).columns("auto auto 1fr auto").areas(`"img text . action"`).alignItems("center").gap(12).onClick(() => openHandler(item));
 
 var _default = users => (0, _UIKit.Grid)((0, _ScrollView.ScrollView)((0, _UIKit.TitleBar)({
   title: "Contacts",
   bottom_item: (0, _src.TextField)("contact_search", "text", "Search a contact").marginTop(16)
-}), (0, _UIKit.List)(users, ContactRow)).borderRight(1, "solid", "var(--color-border)"), (0, _ContactDetailView.default)(selectedItem)).columns("auto 1fr");
+}), (0, _UIKit.List)(users, ContactRow)).borderRight(1, "solid", "var(--color-border)").minWidth(400), (0, _ContactDetailView.default)(selectedItem)).columns("auto 1fr");
 
 exports.default = _default;
 },{"UIKit":"../src/index.js","./ContactDetailView":"views/ContactDetailView.js","../index":"index.js","../../src":"../src/index.js","../../src/Components/Layouts/ScrollView":"../src/Components/Layouts/ScrollView.js"}],"users.json":[function(require,module,exports) {
@@ -3830,7 +3855,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38609" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46359" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

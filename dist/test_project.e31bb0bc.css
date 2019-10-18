@@ -48,6 +48,15 @@ body {
 .view {
   box-sizing: border-box;
 }
+.view.clickable {
+  cursor: pointer;
+}
+.view.clickable:hover {
+  background: var(--color-hover);
+}
+.view.clickable:active {
+  background: var(--color-active);
+}
 .text {
   font-family: Inter, sans-serif;
   color: var(--color-text);
@@ -99,13 +108,13 @@ button.flat {
   padding: 8px 12px;
 }
 button.flat .text {
-  color: var(--color-900);
+  color: var(--color-primary);
 }
 button.flat:hover {
-  background: var(--color-100);
+  background: var(--color-hover);
 }
 button.flat:active {
-  background: var(--color-200);
+  background: var(--color-active);
 }
 button.outlined {
   background: transparent;
@@ -174,7 +183,7 @@ button.filled:active {
   align-items: center;
 }
 .text_field {
-  padding: 12px 16px;
+  padding: 8px 16px;
   background: var(--background-raised);
   border-radius: 8px;
   font-size: 1.4rem;
@@ -183,6 +192,7 @@ button.filled:active {
   font-family: Inter, sans-serif;
   overflow: hidden;
   color: var(--color-text);
+  font-weight: 500;
 }
 .text_field:focus {
   border: 2px solid var(--color-primary);

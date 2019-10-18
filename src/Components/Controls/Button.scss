@@ -14,13 +14,13 @@ button {
         background: transparent;
         padding: 8px 12px;
         .text {
-            color: var(--color-900);
+            color: var(--color-primary);
         }
         &:hover {
-            background: var(--color-100);
+            background: var(--color-hover);
         }
         &:active {
-            background: var(--color-200);
+            background: var(--color-active);
         }
     }
 
