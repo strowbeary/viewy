@@ -7,13 +7,9 @@
       <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test_project.e31bb0bc.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/TextField.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/View.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_project/views/ContactDetailView.js" beforeDir="false" afterPath="$PROJECT_DIR$/test_project/views/ContactDetailView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_project/views/ContactListView.js" beforeDir="false" afterPath="$PROJECT_DIR$/test_project/views/ContactListView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_project/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/test_project/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_project/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/test_project/users.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -163,6 +159,8 @@
       <workItem from="1567414455297" duration="4355000" />
       <workItem from="1571230512228" duration="1732000" />
       <workItem from="1571379815061" duration="954000" />
+      <workItem from="1571397857146" duration="12000" />
+      <workItem from="1571397899034" duration="1394000" />
     </task>
     <servers />
   </component>

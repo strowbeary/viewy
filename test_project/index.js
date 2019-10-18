@@ -1,6 +1,6 @@
-import ContactListView from "./views/ContactListView";
 import users from "./users";
 import {render} from "lighterhtml";
+import ContactListView from "./views/ContactListView";
 
 
 export function need_update() {
