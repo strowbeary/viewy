@@ -5,8 +5,7 @@ body {
     /* main colors */
     --color-primary: #2c63f4;
     --color-primary-lighter: #5c81ff;
-    --color-secondary: #f5414f;
-    /*
+    --color-secondary: #00e8f5;
     @media (prefers-color-scheme: light) {
         --background: white;
         --background-raised: rgba(0, 0, 0, 0.05);
@@ -22,29 +21,17 @@ body {
     }
     @media (prefers-color-scheme: dark) {
         --background: #161616;
-        --background-raised: rgba(255, 255, 255, 0.05);
+        --surface: rgba(255, 255, 255, 0.05);
         --color-text: #f0f0ff;
         --color-text-secondary: #b1b1bc;
-        --color-border: #292829;
-        --color-hover: #1e1e1e;
-        --color-active: #2a2a2a;
+        --color-border: rgba(255, 255, 255, 0.05);
+        --color-hover: rgba(255, 255, 255, 0.03);
+        --color-active: rgba(255, 255, 255, 0.05);
         --color-success: #88c459;
         --color-error: #f5414f;
         --color-warning: #ffd137;
         background: var(--background);
     }
-    */
-    --background: #161616;
-    --background-raised: rgba(255, 255, 255, 0.05);
-    --color-text: #f0f0ff;
-    --color-text-secondary: #b1b1bc;
-    --color-border: #292829;
-    --color-hover: #1e1e1e;
-    --color-active: #2a2a2a;
-    --color-success: #88c459;
-    --color-error: #f5414f;
-    --color-warning: #ffd137;
-    background: var(--background);
 }
 
 .loading_screen, .rootView {

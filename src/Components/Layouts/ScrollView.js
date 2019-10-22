@@ -5,7 +5,6 @@ export const ScrollView = (...children) => ({
     children,
     viewStyle: {
         overflow: "auto",
-        height: "100%",
         scrollbarWidth: "none"
     }
 });

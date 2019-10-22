@@ -10,6 +10,13 @@ export const Stack = (children) => ({
         this.viewStyle.justifyContent = justification;
         return this;
     },
+    gap(h, v) {
+        if (typeof h === "number" && typeof v === "undefined") {
+            v = h;
+        }
+        this.viewStyle.gap = `${h}px ${v}px`;
+        return this;
+    },
     children
 });
 

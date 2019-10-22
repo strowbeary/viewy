@@ -2,10 +2,16 @@ import {View} from "../View";
 import "./Text.scss"
 export const TEXT_STYLE = {
     large_title: "large_title",
-    subheadline: "subheadline",
-    footnote: "footnote",
+    title1: "title1",
+    title2: "title2",
+    title3: "title3",
+    headline: "headline",
     body: "body",
-    label: "label"
+    callout: "callout",
+    subhead: "subhead",
+    footnote: "footnote",
+    caption1: "caption1",
+    caption2: "caption2"
 };
 
 export const Text = (value, style) => ({

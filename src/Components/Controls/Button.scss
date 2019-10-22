@@ -8,17 +8,32 @@ button {
     flex-direction: row;
     align-items: center;
     width: max-content;
+    box-sizing: border-box;
+    align-self: center;
+
+    .text {
+        color: var(--color-primary);
+    }
+
+    &.link {
+        padding: 8px 0;
+        border: none;
+        background: transparent;
+        &:hover .text {
+            color: var(--color-primary-lighter);
+        }
+        &:active .text {
+            color: var(--color-primary-lighter);
+        }
+    }
 
     &.flat {
         border: none;
         background: transparent;
-        padding: 8px 12px;
-        .text {
-            color: var(--color-primary);
-        }
         &:hover {
             background: var(--color-hover);
         }
+
         &:active {
             background: var(--color-active);
         }
@@ -27,9 +42,6 @@ button {
     &.outlined {
         background: transparent;
         border: 1px solid var(--color-border);
-        .text {
-            color: var(--color-primary);
-        }
         &:hover {
             background: var(--color-hover);
             border: 1px solid var(--color-border);
@@ -40,18 +52,18 @@ button {
             border: 1px solid var(--color-border);
         }
     }
-
     &.filled{
-        background: var(--color-900);
+        color: white;
+        background: var(--color-primary);
         border: none;
         .text {
             color: white;
         }
         &:hover {
-            background: var(--color-800);
+            background: var(--color-primary-lighter);
         }
         &:active {
-            background: var(--color-900);
+            background: var(--color-primary-lighter);
         }
     }
 }

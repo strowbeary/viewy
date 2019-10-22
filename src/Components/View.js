@@ -54,6 +54,26 @@ export const View = (...children) => ({
         this.viewStyle.minWidth = `${value}px`;
         return this;
     },
+    minHeight(value) {
+        this.viewStyle.minHeight = `${value}px`;
+        return this;
+    },
+    maxWidth(value) {
+        this.viewStyle.maxWidth = `${value}px`;
+        return this;
+    },
+    maxHeight(value) {
+        this.viewStyle.maxHeight = `${value}px`;
+        return this;
+    },
+    width(value) {
+        this.viewStyle.width = `${value}px`;
+        return this;
+    },
+    height(value) {
+        this.viewStyle.height = `${value}px`;
+        return this;
+    },
     onClick(eventListener) {
         this.addClass("clickable");
         this.eventListener = eventListener;

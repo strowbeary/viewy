@@ -2496,106 +2496,7 @@ const EmptyView = () => ({ ...(0, _View.View)(),
 });
 
 exports.EmptyView = EmptyView;
-},{"lighterhtml":"../node_modules/lighterhtml/esm/index.js","../View":"../src/Components/View.js"}],"../src/colors.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.colorToCssVariable = colorToCssVariable;
-exports.colors = void 0;
-const colors = {
-  grey: {
-    100: '#f5f6f6',
-    200: '#d9dcde',
-    300: '#a0a7ac',
-    400: '#5a666e',
-    500: '#384650',
-    600: '#334049',
-    700: '#273037',
-    800: '#181e23',
-    900: '#0d1012'
-  },
-  red: {
-    100: '#ff09391F',
-    200: '#ff09393b',
-    300: '#ff093957',
-    400: '#ff093973',
-    500: '#ff09398f',
-    600: '#ff0939ab',
-    700: '#ff0939c7',
-    800: '#ff0939e3',
-    900: '#ff0939ff'
-  },
-  orange: {
-    100: '#fff9f3',
-    200: '#fde8d3',
-    300: '#f9c591',
-    400: '#f59a3f',
-    500: '#f28518',
-    600: '#dd7a16',
-    700: '#a65c11',
-    800: '#68390b',
-    900: '#361e06'
-  },
-  green: {
-    100: '#f2fcf6',
-    200: '#cff2de',
-    300: '#85dfac',
-    400: '#2bc76e',
-    500: '#00bb50',
-    600: '#00ab49',
-    700: '#008137',
-    800: '#005023',
-    900: '#002a12'
-  },
-  teal: {
-    100: '#f2fdfb',
-    200: '#cff5f0',
-    300: '#85e6d9',
-    400: '#2bd3bd',
-    500: '#00c9af',
-    600: '#00b7a0',
-    700: '#008a78',
-    800: '#00564b',
-    900: '#002d27'
-  },
-  blue: {
-    100: '#eef4fa',
-    200: '#cfe3fb',
-    300: '#85b8f4',
-    400: '#2b83ec',
-    500: '#006ae8',
-    600: '#0061d4',
-    700: '#00499f',
-    800: '#002e64',
-    900: '#001834'
-  },
-  purple: {
-    100: '#f9f7ff',
-    200: '#e7e2ff',
-    300: '#c3b6ff',
-    400: '#9680ff',
-    500: '#8066ff',
-    600: '#755de9',
-    700: '#5846af',
-    800: '#372c6d',
-    900: '#1d1739'
-  }
-};
-exports.colors = colors;
-
-function colorToCssVariable(colorName, rename = false) {
-  const result = {};
-  const tints = Array.from(Object.keys(colors[colorName]));
-  tints.map(tint => {
-    return `--${rename ? colorName : "color"}-${tint}`;
-  }).forEach((variableName, i) => {
-    result[variableName] = colors[colorName][tints[i]];
-  });
-  return result;
-}
-},{}],"../src/Components/Controls/Button.scss":[function(require,module,exports) {
+},{"lighterhtml":"../node_modules/lighterhtml/esm/index.js","../View":"../src/Components/View.js"}],"../src/Components/Controls/Button.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -2620,8 +2521,6 @@ var _EmptyView = require("../Presentation/EmptyView");
 
 var _Text = require("../Controls/Text");
 
-var _colors = require("../../colors");
-
 require("./Button.scss");
 
 const Button = (label = "Button", action = () => {}, type = "outlined", color = "blue") => ({ ...(0, _View.View)().addClass(type),
@@ -2634,8 +2533,7 @@ const Button = (label = "Button", action = () => {}, type = "outlined", color = 
   },
 
   render() {
-    return _lighterhtml.html`<button class="${(0, _bind_class.bind_class)(this.classList)}" style="${(0, _bind_style.bind_style)({ ...this.viewStyle,
-      ...(0, _colors.colorToCssVariable)(color)
+    return _lighterhtml.html`<button class="${(0, _bind_class.bind_class)(this.classList)}" style="${(0, _bind_style.bind_style)({ ...this.viewStyle
     })}" onclick="${e => {
       e.stopPropagation();
       action();
@@ -2645,7 +2543,7 @@ const Button = (label = "Button", action = () => {}, type = "outlined", color = 
 });
 
 exports.Button = Button;
-},{"../View":"../src/Components/View.js","lighterhtml":"../node_modules/lighterhtml/esm/index.js","../../utils/bind_class.util":"../src/utils/bind_class.util.js","../../utils/bind_style.util":"../src/utils/bind_style.util.js","../Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","../Controls/Text":"../src/Components/Controls/Text.js","../../colors":"../src/colors.js","./Button.scss":"../src/Components/Controls/Button.scss"}],"../src/Components/Controls/Icon.scss":[function(require,module,exports) {
+},{"../View":"../src/Components/View.js","lighterhtml":"../node_modules/lighterhtml/esm/index.js","../../utils/bind_class.util":"../src/utils/bind_class.util.js","../../utils/bind_style.util":"../src/utils/bind_style.util.js","../Presentation/EmptyView":"../src/Components/Presentation/EmptyView.js","../Controls/Text":"../src/Components/Controls/Text.js","./Button.scss":"../src/Components/Controls/Button.scss"}],"../src/Components/Controls/Icon.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -2762,6 +2660,15 @@ const Stack = children => ({ ...(0, _View.View)().addClass("stack"),
 
   justifyContent(justification) {
     this.viewStyle.justifyContent = justification;
+    return this;
+  },
+
+  gap(h, v) {
+    if (typeof h === "number" && typeof v === "undefined") {
+      v = h;
+    }
+
+    this.viewStyle.gap = `${h}px ${v}px`;
     return this;
   },
 
@@ -3082,7 +2989,7 @@ const TitleBar = ({
     return [(0, _Grid.Grid)({
       left_item,
       right_item,
-      title: (0, _Text.Text)(title, _Text.TEXT_STYLE.large_title).addClass("titlebar_title"),
+      title: title ? (0, _Text.Text)(title, _Text.TEXT_STYLE.large_title).addClass("titlebar_title") : (0, _.EmptyView)(),
       bottom_item
     }).gap(0, 24).areas(`"left_item . right_item" "title title title" "bottom_item bottom_item bottom_item"`).columns("auto 1fr auto").rows("auto auto auto")];
   }
@@ -3314,10 +3221,9 @@ var _UIKit = require("UIKit");
 
 var _src = require("../../src");
 
-var _default = user => user ? (0, _UIKit.ScrollView)((0, _UIKit.TitleBar)({
-  title: user.name ? user.name : '-',
-  right_item: (0, _src.Button)("Edit", () => {}, "flat")
-}), (0, _UIKit.VStack)((0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(64).size(128, 128), (0, _UIKit.Text)(user.email, _UIKit.TEXT_STYLE.large_title).marginTop(16)).alignItems("center").margin(16)) : (0, _UIKit.EmptyView)();
+var _default = user => (0, _UIKit.ScrollView)((0, _UIKit.TitleBar)({
+  right_item: (0, _UIKit.HStack)((0, _src.Button)("Edit", () => {}, "flat"), (0, _src.Button)("Delete", () => {}, "filled", "red"), (0, _src.Button)("Share", () => {}, "outlined")).gap(8)
+}), (0, _src.VStack)((0, _UIKit.Image)("https://cdn.mgig.fr/2019/06/mg-818a12f0-e85c-4c65-aeef-w1000h562-sc.jpg").cornerRadius(64).size(64, 64), (0, _src.VStack)((0, _UIKit.Text)(user ? user.name : "", _UIKit.TEXT_STYLE.large_title), (0, _UIKit.Text)(user ? user.email : "", _UIKit.TEXT_STYLE.body)).alignItems('center').marginTop(16)).alignItems("center").margin(32));
 
 exports.default = _default;
 },{"UIKit":"../src/index.js","../../src":"../src/index.js"}],"views/ContactListView.js":[function(require,module,exports) {
@@ -3340,9 +3246,7 @@ var _ScrollView = require("../../src/Components/Layouts/ScrollView");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-let selectedItem = {
-  email: ""
-};
+let selectedItem = null;
 
 function openHandler(contact) {
   selectedItem = contact;
@@ -3356,6 +3260,7 @@ const ContactRow = item => (0, _UIKit.Grid)({
 
 var _default = users => (0, _UIKit.Grid)((0, _ScrollView.ScrollView)((0, _UIKit.TitleBar)({
   title: "Contacts",
+  left_item: (0, _src.Button)("Back", () => {}, "link"),
   bottom_item: (0, _src.TextField)("contact_search", "text", "Search a contact").marginTop(16)
 }), (0, _UIKit.List)(users, ContactRow)).borderRight(1, "solid", "var(--color-border)").minWidth(400), (0, _ContactDetailView.default)(selectedItem)).columns("auto 1fr");
 
@@ -3415,7 +3320,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50446" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41833" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

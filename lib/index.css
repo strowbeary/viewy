@@ -10,7 +10,7 @@ body {
     --color-primary: #4D84F4;
     --color-secondary: #f5414f;
     --background: white;
-    --background-raised: #f9f9f9;
+    --surface: #f9f9f9;
     --color-text: #1d1d20;
     --color-text-secondary: #454545;
     --color-border: #d1d0d2;
@@ -24,7 +24,7 @@ body {
     --color-primary: #4D84F4;
     --color-secondary: #f5414f;
     --background: #161616;
-    --background-raised: #1f1f1f;
+    --surface: #1f1f1f;
     --color-text: #f0f0ff;
     --color-text-secondary: #b1b1bc;
     --color-border: #292829;
@@ -173,7 +173,7 @@ button {
 
 .navigation_bar {
   border-bottom: 1px solid var(--color-border);
-  background: var(--background-raised);
+  background: var(--surface);
   padding: 16px;
   position: sticky;
   top: 0;

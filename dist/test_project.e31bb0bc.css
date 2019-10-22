@@ -9,46 +9,37 @@ body {
   /* main colors */
   --color-primary: #2c63f4;
   --color-primary-lighter: #5c81ff;
-  --color-secondary: #f5414f;
-  /*
-  @media (prefers-color-scheme: light) {
-      --background: white;
-      --background-raised: rgba(0, 0, 0, 0.05);
-      --color-text: #1d1d20;
-      --color-text-secondary: #454545;
-      --color-border: #d1d0d2;
-      --color-hover: #ececec;
-      --color-active: #e6e6e6;
-      --color-success: #88c459;
-      --color-error: #f5414f;
-      --color-warning: #ffd137;
-      background: var(--background);
+  --color-secondary: #00e8f5;
+}
+@media (prefers-color-scheme: light) {
+  body {
+    --background: white;
+    --background-raised: rgba(0, 0, 0, 0.05);
+    --color-text: #1d1d20;
+    --color-text-secondary: #454545;
+    --color-border: #d1d0d2;
+    --color-hover: #ececec;
+    --color-active: #e6e6e6;
+    --color-success: #88c459;
+    --color-error: #f5414f;
+    --color-warning: #ffd137;
+    background: var(--background);
   }
-  @media (prefers-color-scheme: dark) {
-      --background: #161616;
-      --background-raised: rgba(255, 255, 255, 0.05);
-      --color-text: #f0f0ff;
-      --color-text-secondary: #b1b1bc;
-      --color-border: #292829;
-      --color-hover: #1e1e1e;
-      --color-active: #2a2a2a;
-      --color-success: #88c459;
-      --color-error: #f5414f;
-      --color-warning: #ffd137;
-      background: var(--background);
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    --background: #161616;
+    --surface: rgba(255, 255, 255, 0.05);
+    --color-text: #f0f0ff;
+    --color-text-secondary: #b1b1bc;
+    --color-border: rgba(255, 255, 255, 0.05);
+    --color-hover: rgba(255, 255, 255, 0.03);
+    --color-active: rgba(255, 255, 255, 0.05);
+    --color-success: #88c459;
+    --color-error: #f5414f;
+    --color-warning: #ffd137;
+    background: var(--background);
   }
-  */
-  --background: #161616;
-  --background-raised: rgba(255, 255, 255, 0.05);
-  --color-text: #f0f0ff;
-  --color-text-secondary: #b1b1bc;
-  --color-border: #292829;
-  --color-hover: #1e1e1e;
-  --color-active: #2a2a2a;
-  --color-success: #88c459;
-  --color-error: #f5414f;
-  --color-warning: #ffd137;
-  background: var(--background);
 }
 
 .loading_screen, .rootView {
@@ -110,14 +101,26 @@ button {
   flex-direction: row;
   align-items: center;
   width: max-content;
+  box-sizing: border-box;
+  align-self: center;
+}
+button .text {
+  color: var(--color-primary);
+}
+button.link {
+  padding: 8px 0;
+  border: none;
+  background: transparent;
+}
+button.link:hover .text {
+  color: var(--color-primary-lighter);
+}
+button.link:active .text {
+  color: var(--color-primary-lighter);
 }
 button.flat {
   border: none;
   background: transparent;
-  padding: 8px 12px;
-}
-button.flat .text {
-  color: var(--color-primary);
 }
 button.flat:hover {
   background: var(--color-hover);
@@ -129,9 +132,6 @@ button.outlined {
   background: transparent;
   border: 1px solid var(--color-border);
 }
-button.outlined .text {
-  color: var(--color-primary);
-}
 button.outlined:hover {
   background: var(--color-hover);
   border: 1px solid var(--color-border);
@@ -141,17 +141,18 @@ button.outlined:active {
   border: 1px solid var(--color-border);
 }
 button.filled {
-  background: var(--color-900);
+  color: white;
+  background: var(--color-primary);
   border: none;
 }
 button.filled .text {
   color: white;
 }
 button.filled:hover {
-  background: var(--color-800);
+  background: var(--color-primary-lighter);
 }
 button.filled:active {
-  background: var(--color-900);
+  background: var(--color-primary-lighter);
 }
 .icon {
   display: contents;
@@ -193,7 +194,7 @@ button.filled:active {
 }
 .text_field {
   padding: 8px 16px;
-  background: var(--background-raised);
+  background: var(--surface);
   border-radius: 8px;
   font-size: 1.4rem;
   border: 2px solid transparent;
@@ -269,12 +270,13 @@ button.filled:active {
 }
 .navigation_bar {
   border-bottom: 1px solid var(--color-border);
-  background: var(--background-raised);
+  background: var(--surface);
   padding: 16px;
   position: sticky;
   top: 0;
   z-index: 10;
   backdrop-filter: blur(30px);
+  box-sizing: border-box;
 }
 .navigation_bar .button_back {
   padding: 0;
