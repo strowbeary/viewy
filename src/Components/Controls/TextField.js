@@ -1,23 +1,31 @@
 import {View} from "../View";
-import {html} from "lighterhtml";
-import {bind_style} from "../../utils/bind_style.util";
-import "./TextField.scss"
-export const TextField = (name, type = "text", placeholder = "", formater) => ({
+import "./TextField.scss";
+export const TextField = (name, type = "text", placeholder = "") => ({
     ...View(),
+    el: document.createElement(type !== "textarea" ? 'input' : 'textarea'),
     value: "",
     setValue(value) {
         this.value = value;
+        this.el.addEventListener("keyup", e => {
+            this.value = e.target.value;
+        });
+        return this;
+    },
+    onChange(cb) {
+        this.el.addEventListener("keyup", cb);
         return this;
     },
     render () {
+        this.el.setAttribute("name", name);
+        this.el.setAttribute("placeholder", placeholder);
+
         if(type !== "textarea") {
-            return html`
-                <input class="text_field" value="${this.value}" style="${bind_style(this.viewStyle)}" type="${type}" name="${name}" placeholder="${placeholder}"/>
-            `;
+            this.el.setAttribute("type", type);
+            this.el.setAttribute("value", this.value);
         } else {
-            return html`
-                <textarea class="text_field" style="${bind_style(this.viewStyle)}" name="${name}" placeholder="${placeholder}">${this.value}</textarea>
-            `;
+            this.el.value = this.value;
         }
+        return this.el;
     }
-});
+})
+    .addClass("text_field");

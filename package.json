@@ -12,6 +12,7 @@
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "domdiff": "^2.1.0",
     "lighterhtml": "^0.16.2"
   },
   "devDependencies": {

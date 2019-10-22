@@ -5,6 +5,7 @@ import {box_arguments_behavior} from "../utils/box_arguments_behavior.util";
 import "./View.scss";
 
 export const View = (...children) => ({
+    el: document.createElement("div"),
     children,
     classList: {},
     viewStyle: {},
@@ -13,11 +14,11 @@ export const View = (...children) => ({
         return false
     },
     addClass(className) {
-        this.classList[className] = true;
+        this.el.classList.add(className);
         return this;
     },
     removeClass(className) {
-        this.classList[className] = false;
+        this.el.classList.remove(className);
         return this;
     },
     padding(top = 0, right, bottom, left) {
@@ -80,13 +81,20 @@ export const View = (...children) => ({
         return this;
     },
     render () {
+        Object.keys(this.viewStyle).forEach(property => {
+            this.el.style[property] = this.viewStyle[property];
+        });
+        this.innerHTML = "";
+        this.el.append(...this.children.map(child => child.render()));
+        return this.el;
+        /*
         return html`
-            <div 
+            <div
                 onclick="${e => this.eventListener(e)}"
                 class=${bind_class(this.classList, 'view')}
                 style="${bind_style(this.viewStyle)}">
                 ${this.children.map(child => child.render())}
             </div>
-        `;
+        `;*/
     }
 });
