@@ -1,23 +1,34 @@
 import {View} from "../View";
-import {html} from "lighterhtml";
+import "./TextField.scss";
 import {bind_style} from "../../utils/bind_style.util";
-import "./TextField.scss"
-export const TextField = (name, type = "text", placeholder = "", formater) => ({
+import {bind_class} from "../../utils/bind_class.util";
+import {elementVoid} from "incremental-dom";
+export const TextField = (name, type = "text", placeholder = "") => ({
     ...View(),
     value: "",
+    onChangeHandler() {},
     setValue(value) {
         this.value = value;
+        this.el.addEventListener("keyup", e => {
+            this.value = e.target.value;
+        });
+        return this;
+    },
+    onChange(cb) {
+        this.onChangeHandler = cb;
         return this;
     },
     render () {
-        if(type !== "textarea") {
-            return html`
-                <input class="text_field" value="${this.value}" style="${bind_style(this.viewStyle)}" type="${type}" name="${name}" placeholder="${placeholder}"/>
-            `;
-        } else {
-            return html`
-                <textarea class="text_field" style="${bind_style(this.viewStyle)}" name="${name}" placeholder="${placeholder}">${this.value}</textarea>
-            `;
-        }
+        const el = elementVoid(
+            type !== "textarea" ? 'input' : 'textarea', null, null,
+            "style", bind_style(this.viewStyle),
+            "class", bind_class(this.classList, 'view'),
+            "name", name,
+            "type", type,
+            "value", value,
+            "placeholder", placeholder,
+            'keyup', this.onChangeHandler
+        );
     }
-});
+})
+    .addClass("text_field");

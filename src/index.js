@@ -21,3 +21,5 @@ export * from "./Components/Layouts/ScrollView";
 export * from "./Components/Architectural/TitleBar";
 
 export * from "./Components/View";
+
+export * from "./render";

@@ -12,7 +12,7 @@
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "lighterhtml": "^0.16.2"
+    "incremental-dom": "^0.6.0"
   },
   "devDependencies": {
     "sass": "^1.22.9"

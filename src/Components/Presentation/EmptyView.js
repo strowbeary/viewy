@@ -1,11 +1,8 @@
-import {html} from "lighterhtml";
 import {View} from "../View";
 
 export const EmptyView = () => ({
     ...View(),
-    render() {
-        return html``;
-    },
+    render() {},
     get isEmptyView() {
         return true
     }

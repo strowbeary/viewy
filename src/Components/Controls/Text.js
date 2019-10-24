@@ -1,5 +1,6 @@
 import {View} from "../View";
 import "./Text.scss"
+import {text} from "incremental-dom";
 export const TEXT_STYLE = {
     large_title: "large_title",
     title1: "title1",
@@ -44,7 +45,7 @@ export const Text = (value, style) => ({
     },
     children: [{
         render() {
-            return value
+            text(value);
         }
     }]
 });

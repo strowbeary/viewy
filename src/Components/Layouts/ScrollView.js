@@ -1,4 +1,5 @@
 import {View} from "../View";
+import "./ScrollView.scss";
 
 export const ScrollView = (...children) => ({
     ...View(),
@@ -7,4 +8,5 @@ export const ScrollView = (...children) => ({
         overflow: "auto",
         scrollbarWidth: "none"
     }
-});
+})
+    .addClass("scrollview");

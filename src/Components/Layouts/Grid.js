@@ -1,7 +1,7 @@
 import {Stack} from "./Stack";
 import "./Grid.scss";
 export const Grid = (...children) => ({
-    ...Stack().removeClass("stack").addClass("grid"),
+    ...Stack(),
     gap(h, v) {
         if (typeof h === "number" && typeof v === "undefined") {
             v = h;
@@ -27,4 +27,6 @@ export const Grid = (...children) => ({
         return this;
     },
     children
-});
+})
+    .removeClass("stack")
+    .addClass("grid");

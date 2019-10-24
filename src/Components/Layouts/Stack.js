@@ -14,7 +14,7 @@ export const Stack = (children) => ({
         if (typeof h === "number" && typeof v === "undefined") {
             v = h;
         }
-        this.viewStyle.gap = `${h}px ${v}px`;
+        this.viewStyle.gridGap = `${h}px ${v}px`;
         return this;
     },
     children
