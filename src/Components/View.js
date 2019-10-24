@@ -1,11 +1,10 @@
-import {html} from "lighterhtml";
-import {bind_class} from "../utils/bind_class.util";
-import {bind_style} from "../utils/bind_style.util";
 import {box_arguments_behavior} from "../utils/box_arguments_behavior.util";
 import "./View.scss";
+import {elementClose, elementOpen} from "incremental-dom";
+import {bind_style} from "../utils/bind_style.util";
+import {bind_class} from "../utils/bind_class.util";
 
 export const View = (...children) => ({
-    el: document.createElement("div"),
     children,
     classList: {},
     viewStyle: {},
@@ -14,11 +13,11 @@ export const View = (...children) => ({
         return false
     },
     addClass(className) {
-        this.el.classList.add(className);
+        this.classList[className] = true;
         return this;
     },
     removeClass(className) {
-        this.el.classList.remove(className);
+        this.classList[className] = false;
         return this;
     },
     padding(top = 0, right, bottom, left) {
@@ -72,7 +71,7 @@ export const View = (...children) => ({
         return this;
     },
     height(value) {
-        this.viewStyle.height = `${value}px`;
+        this.viewStyle.height = `${value}`;
         return this;
     },
     onClick(eventListener) {
@@ -81,20 +80,12 @@ export const View = (...children) => ({
         return this;
     },
     render () {
-        Object.keys(this.viewStyle).forEach(property => {
-            this.el.style[property] = this.viewStyle[property];
-        });
-        this.innerHTML = "";
-        this.el.append(...this.children.map(child => child.render()));
-        return this.el;
-        /*
-        return html`
-            <div
-                onclick="${e => this.eventListener(e)}"
-                class=${bind_class(this.classList, 'view')}
-                style="${bind_style(this.viewStyle)}">
-                ${this.children.map(child => child.render())}
-            </div>
-        `;*/
+        const el = elementOpen(
+            "div", null, null,
+            "style", bind_style(this.viewStyle),
+            "class", bind_class(this.classList, 'view'),
+            'onclick', this.eventListener);
+        this.children.forEach(child => child.render());
+        elementClose("div");
     }
 });

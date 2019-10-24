@@ -1,9 +1,12 @@
 import {View} from "../View";
 import "./TextField.scss";
+import {bind_style} from "../../utils/bind_style.util";
+import {bind_class} from "../../utils/bind_class.util";
+import {elementVoid} from "incremental-dom";
 export const TextField = (name, type = "text", placeholder = "") => ({
     ...View(),
-    el: document.createElement(type !== "textarea" ? 'input' : 'textarea'),
     value: "",
+    onChangeHandler() {},
     setValue(value) {
         this.value = value;
         this.el.addEventListener("keyup", e => {
@@ -12,20 +15,20 @@ export const TextField = (name, type = "text", placeholder = "") => ({
         return this;
     },
     onChange(cb) {
-        this.el.addEventListener("keyup", cb);
+        this.onChangeHandler = cb;
         return this;
     },
     render () {
-        this.el.setAttribute("name", name);
-        this.el.setAttribute("placeholder", placeholder);
-
-        if(type !== "textarea") {
-            this.el.setAttribute("type", type);
-            this.el.setAttribute("value", this.value);
-        } else {
-            this.el.value = this.value;
-        }
-        return this.el;
+        const el = elementVoid(
+            type !== "textarea" ? 'input' : 'textarea', null, null,
+            "style", bind_style(this.viewStyle),
+            "class", bind_class(this.classList, 'view'),
+            "name", name,
+            "type", type,
+            "value", value,
+            "placeholder", placeholder,
+            'keyup', this.onChangeHandler
+        );
     }
 })
     .addClass("text_field");

@@ -22,4 +22,4 @@ export * from "./Components/Architectural/TitleBar";
 
 export * from "./Components/View";
 
-export * from "./render"
+export * from "./render";

@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "domdiff": "^2.1.0",
-    "lighterhtml": "^0.16.2"
+    "incremental-dom": "^0.6.0"
   },
   "devDependencies": {
     "sass": "^1.22.9"
