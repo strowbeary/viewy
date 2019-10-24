@@ -12,7 +12,6 @@
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "domdiff": "^2.1.0",
     "incremental-dom": "^0.6.0"
   },
   "devDependencies": {
