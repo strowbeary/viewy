@@ -27,7 +27,7 @@ export const Button = (label = "Button", action = () => {
             }
         );
         this.icon.render();
-        Text(label, TEXT_STYLE.label).render();
+        Text(label, TEXT_STYLE.button).render();
         elementClose("button");
     }
 

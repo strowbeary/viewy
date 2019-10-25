@@ -37,6 +37,14 @@
         letter-spacing: -0.024rem;
     }
 
+    &.button {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        letter-spacing: 0.024rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
     &.body {
         font-size: 1.5rem;
         line-height: 2rem;

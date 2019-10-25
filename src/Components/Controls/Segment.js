@@ -2,7 +2,8 @@ import {View} from "../View";
 import "./Segment.scss"
 
 export const Segment = (action = () => {}, ...items) => ({
-    ...View().addClass("segment"),
+    ...View()
+        .addClass("segment"),
     selectedItem: 0,
     select (itemValue) {
         this.selectedItem = items.findIndex(({value}) => {

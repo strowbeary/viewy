@@ -7,6 +7,7 @@ export const TEXT_STYLE = {
     title2: "title2",
     title3: "title3",
     headline: "headline",
+    button: "button",
     body: "body",
     callout: "callout",
     subhead: "subhead",
