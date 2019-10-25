@@ -19,6 +19,7 @@ export * from "./Components/Layouts/Grid";
 export * from "./Components/Layouts/ScrollView";
 
 export * from "./Components/Architectural/TitleBar";
+export * from "./Components/Architectural/Card";
 
 export * from "./Components/View";
 

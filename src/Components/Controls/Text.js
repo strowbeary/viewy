@@ -44,6 +44,10 @@ export const Text = (value, style) => ({
         this.viewStyle.fontFamily = fontStack;
         return this;
     },
+    textAlign(alignment) {
+        this.viewStyle.textAlign = alignment;
+        return this;
+    },
     children: [{
         render() {
             text(value);
