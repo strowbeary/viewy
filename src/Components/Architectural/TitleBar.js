@@ -7,7 +7,6 @@ import {EmptyView} from "../..";
 export const TitleBar = ({title, left_item = EmptyView(), right_item = EmptyView(), bottom_item = EmptyView()}) => ({
     ...View()
         .addClass("navigation_bar"),
-    title,
     get children() {
         return [
             Grid({

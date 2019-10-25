@@ -2,118 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Layouts/ScrollView.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/create-content/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/create-content/cjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/create-content/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/create-content/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/create-content/min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/create-content/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/essential-map/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@ungap/essential-map/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/import-node/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/import-node/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/import-node/cjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/import-node/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/import-node/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/import-node/min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/import-node/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-literal/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-literal/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-literal/cjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-literal/eg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-literal/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-literal/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-literal/min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-literal/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-tag-arguments/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-tag-arguments/cjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-tag-arguments/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-tag-arguments/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-tag-arguments/min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/template-tag-arguments/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/trim/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/trim/cjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/trim/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/trim/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/trim/min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/trim/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/weakmap/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/weakmap/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/weakmap/cjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/weakmap/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/weakmap/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/weakmap/min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@ungap/weakmap/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domconstants/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domconstants/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domconstants/cjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domconstants/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domconstants/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domconstants/min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domconstants/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domdiff/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domdiff/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domsanitizer/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domsanitizer/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domsanitizer/cjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domsanitizer/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domsanitizer/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domsanitizer/min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domsanitizer/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/cjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/cjs/walker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/esm/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/esm/walker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domtagger/umd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-style/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-style/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-style/cjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-style/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-style/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-style/min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-style/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-wire/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-wire/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-wire/cjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-wire/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-wire/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-wire/min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/hyperhtml-wire/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/.github/FUNDING.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/cjs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/cjs/shared.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/cjs/tagger.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/esm/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/esm/shared.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/esm/tagger.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/lighterhtml/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Component.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Controls/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/TextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/ScrollView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/ScrollView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/Stack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Presentation/EmptyView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Presentation/EmptyView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/colors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/render.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -274,7 +166,9 @@
       <workItem from="1571561179333" duration="3930000" />
       <workItem from="1571763206436" duration="59000" />
       <workItem from="1571815648522" duration="1204000" />
-      <workItem from="1571938823113" duration="2982000" />
+      <workItem from="1571938823113" duration="4063000" />
+      <workItem from="1571955368945" duration="806000" />
+      <workItem from="1571983924762" duration="911000" />
     </task>
     <servers />
   </component>

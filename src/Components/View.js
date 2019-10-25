@@ -67,7 +67,7 @@ export const View = (...children) => ({
         return this;
     },
     width(value) {
-        this.viewStyle.width = `${value}px`;
+        this.viewStyle.width = `${value}`;
         return this;
     },
     height(value) {

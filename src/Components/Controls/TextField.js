@@ -3,17 +3,9 @@ import "./TextField.scss";
 import {bind_style} from "../../utils/bind_style.util";
 import {bind_class} from "../../utils/bind_class.util";
 import {elementVoid} from "incremental-dom";
-export const TextField = (name, type = "text", placeholder = "") => ({
+export const TextField = (name, value, type = "text", placeholder = "") => ({
     ...View(),
-    value: "",
-    onChangeHandler() {},
-    setValue(value) {
-        this.value = value;
-        this.el.addEventListener("keyup", e => {
-            this.value = e.target.value;
-        });
-        return this;
-    },
+    onChangeHandler: () => {},
     onChange(cb) {
         this.onChangeHandler = cb;
         return this;
@@ -27,7 +19,7 @@ export const TextField = (name, type = "text", placeholder = "") => ({
             "type", type,
             "value", value,
             "placeholder", placeholder,
-            'keyup', this.onChangeHandler
+            "onkeyup", this.onChangeHandler,
         );
     }
 })
