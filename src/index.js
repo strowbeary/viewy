@@ -21,7 +21,7 @@ export * from "./Components/Layouts/ScrollView";
 export * from "./Components/Architectural/TitleBar";
 export * from "./Components/Architectural/Card";
 
+export * from "./Components/Modal";
 export * from "./Components/View";
 
-export modalService from "./services/modalService";
 export * from "./services/render";
