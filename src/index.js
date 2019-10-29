@@ -23,4 +23,5 @@ export * from "./Components/Architectural/Card";
 
 export * from "./Components/View";
 
-export * from "./render";
+export modalService from "./services/modalService";
+export * from "./services/render";

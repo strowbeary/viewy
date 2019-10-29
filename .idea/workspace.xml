@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Architectural/Card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Architectural/Card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/modalService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ressources/colors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/render.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -54,18 +54,18 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test_project" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/Views" />
-      <recent name="$PROJECT_DIR$/src/Views/Navigation" />
-      <recent name="$PROJECT_DIR$/src/Views/Controls" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Controllers" />
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/services" />
+      <recent name="$PROJECT_DIR$/src/ressources" />
+      <recent name="$PROJECT_DIR$/test_project" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -171,6 +171,7 @@
       <workItem from="1571938823113" duration="4063000" />
       <workItem from="1571955368945" duration="806000" />
       <workItem from="1571983924762" duration="911000" />
+      <workItem from="1572351310825" duration="282000" />
     </task>
     <servers />
   </component>

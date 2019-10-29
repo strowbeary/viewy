@@ -1,7 +1,7 @@
 import {View} from "../View";
 import {EmptyView} from "../Presentation/EmptyView";
 import {Text, TEXT_STYLE} from "../Controls/Text";
-import {colorToCssVariable} from "../../colors";
+import {colorToCssVariable} from "../../ressources/colors";
 import "./Button.scss"
 import {elementClose, elementOpen} from "incremental-dom";
 import {bind_style} from "../../utils/bind_style.util";
