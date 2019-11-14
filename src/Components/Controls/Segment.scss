@@ -1,33 +1,41 @@
 .segment {
-    border-radius: 4px;
     cursor: pointer;
     overflow: hidden;
     user-select: none;
     display: flex;
     -webkit-touch-action: none;
-    border: 1px solid #4a6dff55;
 
     .item {
         flex-grow: 1;
         text-align: center;
         color: rgba(25, 39, 51, 0.4);
-        transition: background 150ms, color 150ms;
+        transition: background 150ms, color 150ms, border 150ms;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 8px 32px;
+        border: 1px solid #4a6dff55;
+        border-left: none;
+        border-right: none;
         .text {
             color: #4a6dff;
         }
         &:last-of-type {
-            border-right: none;
+            border-right: 1px solid #4a6dff55;
+            border-radius: 0 4px 4px 0;
+        }
+        &:first-of-type {
+            border-left: 1px solid #4a6dff55;
+            border-radius: 4px 0 0 4px;
         }
 
         &:hover {
+            border-color: #4a6dffaa;
             background: transparentize(#4a6dff, 0.9);
         }
 
         &.selected {
+            border-color: #4a6dff;
             background: #4a6dff;
             .text {
                 color: white;

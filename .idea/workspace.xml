@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Modal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/modalService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Segment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Segment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Segment.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +168,9 @@
       <workItem from="1571938823113" duration="4063000" />
       <workItem from="1571955368945" duration="806000" />
       <workItem from="1571983924762" duration="911000" />
-      <workItem from="1572351310825" duration="3070000" />
+      <workItem from="1572351310825" duration="3144000" />
+      <workItem from="1573573523618" duration="761000" />
+      <workItem from="1573749271388" duration="1051000" />
     </task>
     <servers />
   </component>
