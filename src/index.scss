@@ -8,7 +8,7 @@ body {
     --color-secondary: #00e8f5;
     @media (prefers-color-scheme: light) {
         --background: white;
-        --surface: rgba(0, 0, 0, 0.05);
+        --surface: rgba(0, 0, 0, 0.03);
         --color-text: #1d1d20;
         --color-text-secondary: #454545;
         --color-border: #d1d0d2;
@@ -25,6 +25,7 @@ body {
         --color-text: #f0f0ff;
         --color-text-secondary: #b1b1bc;
         --color-border: rgba(255, 255, 255, 0.05);
+        --color-border-hover: rgba(255, 255, 255, 0.07);
         --color-hover: rgba(255, 255, 255, 0.03);
         --color-active: rgba(255, 255, 255, 0.05);
         --color-success: #88c459;
