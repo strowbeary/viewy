@@ -51,27 +51,27 @@ export const View = (...children) => ({
         return this;
     },
     minWidth(value) {
-        this.viewStyle.minWidth = `${value}px`;
+        this.viewStyle.minWidth = value;
         return this;
     },
     minHeight(value) {
-        this.viewStyle.minHeight = `${value}px`;
+        this.viewStyle.minHeight = value;
         return this;
     },
     maxWidth(value) {
-        this.viewStyle.maxWidth = `${value}px`;
+        this.viewStyle.maxWidth = value;
         return this;
     },
     maxHeight(value) {
-        this.viewStyle.maxHeight = `${value}px`;
+        this.viewStyle.maxHeight = value;
         return this;
     },
     width(value) {
-        this.viewStyle.width = `${value}`;
+        this.viewStyle.width = value;
         return this;
     },
     height(value) {
-        this.viewStyle.height = `${value}`;
+        this.viewStyle.height = value;
         return this;
     },
     onClick(eventListener) {

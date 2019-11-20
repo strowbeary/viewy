@@ -1,3 +1,0 @@
-[submodule "src/assets/icons"]
-	path = src/assets/icons
-	url = git@github.com:google/material-design-icons.git
