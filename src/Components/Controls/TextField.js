@@ -5,7 +5,9 @@ import {bind_class} from "../../utils/bind_class.util";
 import {elementVoid} from "incremental-dom";
 import {autoSize} from "../../utils/autoResizeTextarea.util";
 export const TextField = (name, value, type = "text", placeholder = "") => ({
-    ...View(),
+    ...View()
+        .addClass("text_field")
+        .addClass('type-' + type),
     onChangeHandler: () => {},
     autoSizing: false,
     onChange(cb) {
@@ -37,5 +39,4 @@ export const TextField = (name, value, type = "text", placeholder = "") => ({
             autoSize(el)
         }
     }
-})
-    .addClass("text_field");
+});
