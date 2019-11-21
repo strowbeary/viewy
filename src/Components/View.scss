@@ -1,7 +1,10 @@
 .view {
     box-sizing: border-box;
+    display: block;
     &.clickable {
         cursor: pointer;
+        user-select: none;
+        transition: background 150ms;
         &:hover {
             background: var(--color-hover);
         }

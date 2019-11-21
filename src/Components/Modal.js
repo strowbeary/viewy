@@ -21,15 +21,14 @@ export const Modal = (...children) => ({
     get children() {
         return [
             VStack(
-                View(
-                    ...children
-                ),
+                ...children,
                 HStack(
-                    Button("Close", () => this.hide(), "flat")
+                    Button("Ok", () => this.hide(), "flat")
                 )
+                    .addClass("footer")
                     .justifyContent("flex-end")
             )
-                .gap(16)
+                .minWidth(250)
 
         ]
     },

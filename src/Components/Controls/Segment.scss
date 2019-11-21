@@ -1,9 +1,9 @@
 .segment {
     cursor: pointer;
-    overflow: hidden;
     user-select: none;
     display: flex;
     -webkit-touch-action: none;
+    width: max-content;
 
     .item {
         flex-grow: 1;

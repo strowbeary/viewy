@@ -3,11 +3,18 @@ import "./TextField.scss";
 import {bind_style} from "../../utils/bind_style.util";
 import {bind_class} from "../../utils/bind_class.util";
 import {elementVoid} from "incremental-dom";
+import {autoSize} from "../../utils/autoResizeTextarea.util";
 export const TextField = (name, value, type = "text", placeholder = "") => ({
     ...View(),
     onChangeHandler: () => {},
+    autoSizing: false,
     onChange(cb) {
         this.onChangeHandler = cb;
+        return this;
+    },
+    autoSize() {
+        this.viewStyle.resize = "none";
+        this.autoSizing = true;
         return this;
     },
     render () {
@@ -17,10 +24,18 @@ export const TextField = (name, value, type = "text", placeholder = "") => ({
             "class", bind_class(this.classList, 'view'),
             "name", name,
             "type", type,
-            "value", value,
             "placeholder", placeholder,
             "onkeyup", this.onChangeHandler,
+            "oninput", e => {
+                if(type === "textarea" && this.autoSizing) {
+                    autoSize(e.target)
+                }
+            },
         );
+        el.value = value;
+        if(type === "textarea" && this.autoSizing) {
+            autoSize(el)
+        }
     }
 })
     .addClass("text_field");

@@ -1,7 +1,6 @@
 import {box_arguments_behavior} from "../utils/box_arguments_behavior.util";
 import "./View.scss";
 import {elementClose, elementOpen} from "incremental-dom";
-import {bind_style} from "../utils/bind_style.util";
 import {bind_class} from "../utils/bind_class.util";
 
 export const View = (...children) => ({
@@ -70,6 +69,14 @@ export const View = (...children) => ({
         this.viewStyle.width = `${value}`;
         return this;
     },
+    alignSelf(value) {
+        this.viewStyle.alignSelf = `${value}`;
+        return this;
+    },
+    justifySelf(value) {
+        this.viewStyle.justifySelf = `${value}`;
+        return this;
+    },
     height(value) {
         this.viewStyle.height = `${value}`;
         return this;
@@ -82,7 +89,7 @@ export const View = (...children) => ({
     render () {
         const el = elementOpen(
             "div", null, null,
-            "style", bind_style(this.viewStyle),
+            "style", this.viewStyle,
             "class", bind_class(this.classList, 'view'),
             'onclick', this.eventListener);
         this.children.forEach(child => child.render());

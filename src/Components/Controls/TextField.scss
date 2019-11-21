@@ -1,8 +1,9 @@
+@import "../../utils.scss";
 .text_field {
     padding: 8px 16px;
     background: var(--surface);
     border-radius: 8px;
-    font-size: 1.4rem;
+    font-size: sp(16);
     border: 2px solid transparent;
     resize: vertical;
     font-family: Inter, sans-serif;

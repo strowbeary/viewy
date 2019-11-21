@@ -2,10 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils/autoResizeTextarea.util.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Controls/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/LabelTextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Segment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Controls/Segment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Segment.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Tag.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Tag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Tag.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Tag.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/TextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/TextField.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/List.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/View.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +35,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -33,6 +51,9 @@
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="ITpfrqki" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="1Os6A0KM4XO2EoOK5fJ9Ei2khfH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -77,56 +98,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="RunManager" selected="npm.test_project:dev">
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_project:build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test_project:build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_project:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test_project:dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.test_project:dev" />
-        <item itemvalue="npm.test_project:build" />
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.dev" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />

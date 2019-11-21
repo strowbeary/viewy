@@ -8,14 +8,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--surface-dark);
     .modal-view {
         pointer-events: all;
         max-width: 350px;
         margin: auto;
-        background: rgba(255, 255, 255, 0.2);
+        background: var(--background-raised);
         backdrop-filter: blur(30px);
         border-radius: 16px;
-        padding: 24px;
+        overflow: hidden;
+        .footer {
+            padding: 24px;
+        }
     }
 }

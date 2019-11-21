@@ -9,6 +9,7 @@ button {
     align-items: center;
     width: max-content;
     box-sizing: border-box;
+    transition: background 150ms, color 150ms, border 150ms;
 
     .text {
         color: var(--color-primary);
@@ -59,7 +60,7 @@ button {
             color: white;
         }
         &:hover {
-            background: var(--color-primary-lighter);
+            background: var(--color-primary-light);
         }
         &:active {
             background: var(--color-primary-lighter);

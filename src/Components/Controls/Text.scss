@@ -1,83 +1,98 @@
+@import "../../utils.scss";
+
 .text {
     font-family: Inter, sans-serif;
     color: var(--color-text);
 
-    &.large_title {
-        font-size: 3.2rem;
-        line-height: 3.9rem;
-        font-weight: 800;
-        letter-spacing: 0.011rem;
+    &.large-title {
+        font-size: sp(40);
+        line-height: sp(56);
+        font-weight: var(--fw-bold);
+        letter-spacing: sp(-0.022);
     }
 
-    &.title1 {
-        font-size: 2.6rem;
-        line-height: 3.2rem;
-        font-weight: 700;
-        letter-spacing: 0.013rem;
+    &.h1 {
+        font-size: sp(30);
+        line-height: sp(42);
+        font-weight: var(--fw-normal);
+        letter-spacing: sp(-0.021);
     }
 
-    &.title2 {
-        font-size: 2rem;
-        line-height: 2.5rem;
-        font-weight: 700;
-        letter-spacing: 0.016rem;
+    &.h2 {
+        font-size: sp(20);
+        line-height: sp(28);
+        font-weight: var(--fw-normal);
+        letter-spacing: sp(-0.019);
     }
 
-    &.title3 {
-        font-size: 1.8rem;
-        line-height: 2.3rem;
-        font-weight: 700;
-        letter-spacing: 0.019rem;
+    &.h3 {
+        font-size: sp(18);
+        line-height: sp(25);
+        font-weight: var(--fw-light);
+        letter-spacing: sp(-0.014);
     }
 
     &.headline {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        font-weight: 600;
-        letter-spacing: -0.024rem;
+        font-size: sp(16);
+        line-height: sp(24);
+        font-weight: var(--fw-bold);
+        letter-spacing: sp(-0.013);
+    }
+
+    &.subtitle1 {
+        font-size: sp(16);
+        line-height: sp(22);
+        font-weight: var(--fw-normal);
+        letter-spacing: sp(-0.011);
+    }
+
+    &.subtitle2 {
+        font-size: sp(14);
+        line-height: sp(20);
+        font-weight: var(--fw-normal);
+        letter-spacing: sp(-0.006);
+    }
+
+    &.body1 {
+        font-size: sp(16);
+        line-height: sp(22);
+        letter-spacing: sp(-0.011);
+        font-weight: var(--fw-normal);
+    }
+
+
+    &.body2 {
+        font-size: sp(14);
+        line-height: sp(20);
+        letter-spacing: sp(-0.006);
+        font-weight: var(--fw-normal);
     }
 
     &.button {
-        font-size: 1.4rem;
-        line-height: 2rem;
-        letter-spacing: 0.024rem;
-        font-weight: 600;
+        font-size: sp(14);
+        line-height: sp(20);
+        letter-spacing: sp(0.75);
+        font-weight: var(--fw-medium);
         text-transform: uppercase;
     }
 
-    &.body {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        letter-spacing: -0.024rem;
+    &.label {
+        font-size: sp(14);
+        line-height: sp(20);
+        letter-spacing: sp(-0.006);
+        font-weight: var(--fw-semi-bold);
     }
-
-    &.callout {
-        font-weight: 400;
-        font-size: 1.4rem;
-        line-height: 1.9rem;
-        letter-spacing: -0.020rem;
+    &.overline {
+        font-size: sp(12);
+        line-height: sp(17);
+        letter-spacing: sp(1);
+        font-weight: var(--fw-medium);
+        text-transform: uppercase;
     }
-
-    &.subhead {
-        font-size: 1.3rem;
-        line-height: 1.8rem;
-        letter-spacing: 0.016rem;
-    }
-
-    &.footnote {
-        font-size: 1.2rem;
-        line-height: 1.6rem;
-        letter-spacing: -0.006rem;
-    }
-
-    &.caption1 {
-        font-size: 1.1rem;
-        line-height: 1.3rem;
-    }
-
-    &.caption2 {
-        font-size: 1.1rem;
-        line-height: 1.3rem;
-        letter-spacing: 0.006rem;
+    &.caption {
+        font-size: sp(12);
+        line-height: sp(17);
+        letter-spacing: sp(0);
+        font-weight: var(--fw-normal);
     }
 }

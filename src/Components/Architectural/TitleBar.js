@@ -12,7 +12,7 @@ export const TitleBar = ({title, left_item = EmptyView(), right_item = EmptyView
             Grid({
                 left_item,
                 right_item,
-                title: title ? Text(title, TEXT_STYLE.large_title).addClass("titlebar_title") : EmptyView(),
+                title: title ? Text(title, TEXT_STYLE.largeTitle).addClass("titlebar_title") : EmptyView(),
                 bottom_item,
             })
                 .gap(0, 24)

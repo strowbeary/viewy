@@ -1,5 +1,6 @@
 import {View} from "../View";
 import "./Segment.scss"
+import {TEXT_STYLE, Text} from "./Text";
 
 export const Segment = (action = () => {}, selectedItemValue, ...items) => ({
     ...View()
@@ -18,7 +19,7 @@ export const Segment = (action = () => {}, selectedItemValue, ...items) => ({
                 item: true,
                 selected: value === selectedItemValue
             },
-            children: [label],
+            children: [Text(label, TEXT_STYLE.button)],
         }))
     }
 });

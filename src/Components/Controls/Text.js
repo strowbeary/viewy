@@ -2,21 +2,22 @@ import {View} from "../View";
 import "./Text.scss"
 import {text} from "incremental-dom";
 export const TEXT_STYLE = {
-    large_title: "large_title",
-    title1: "title1",
-    title2: "title2",
-    title3: "title3",
+    largeTitle: "large-title",
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
     headline: "headline",
+    subtitle1: "subtitle1",
+    subtitle2: "subtitle2",
+    body1: "body1",
+    body2: "body2",
     button: "button",
-    body: "body",
-    callout: "callout",
-    subhead: "subhead",
-    footnote: "footnote",
-    caption1: "caption1",
-    caption2: "caption2"
+    label: "label",
+    overline: "overline",
+    caption: "caption"
 };
 
-export const Text = (value, style) => ({
+export const Text = (value, style = TEXT_STYLE.body1) => ({
     ...View()
         .addClass("text")
         .addClass(style),

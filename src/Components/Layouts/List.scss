@@ -2,15 +2,6 @@
     overflow: auto;
     .list_row {
         position: relative;
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 16px;
-            right: 0;
-            height: 1px;
-            background: var(--color-border);
-        }
+        border-bottom: 1px solid var(--color-border);
     }
 }
