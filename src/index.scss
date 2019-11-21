@@ -27,12 +27,14 @@ body {
         --color-border-blue: #0a84ff33;
 
         --background: white;
-        --surface: rgba(0, 0, 0, 0.03);
+        --surface: rgba(0, 0, 0, 0.05);
         --color-text: #1d1d20;
         --color-text-secondary: #454545;
-        --color-border: #d1d0d2;
-        --color-hover: #ececec;
-        --color-active: #e6e6e6;
+        --color-border: rgba(0, 0, 0, 0.05);
+        --color-border-hover: rgba(0, 0, 0, 0.07);
+        --color-hover: rgba(0, 0, 0, 0.03);
+        --color-active: rgba(0, 0, 0, 0.05);
+        --color-shadow: rgba(0, 0, 0, 0.1);
         --color-success: #88c459;
         --color-error: #f5414f;
         --color-warning: #ffd137;
@@ -102,6 +104,7 @@ body {
         --color-border-hover: rgba(255, 255, 255, 0.07);
         --color-hover: rgba(255, 255, 255, 0.03);
         --color-active: rgba(255, 255, 255, 0.05);
+        --color-shadow: rgba(0, 0, 0, 0.1);
         --color-success: #88c459;
         --color-error: #f5414f;
         --color-warning: #ffd137;

@@ -12,7 +12,7 @@
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "incremental-dom": "^0.6.0"
+    "incremental-dom": "^0.7.0"
   },
   "devDependencies": {
     "sass": "^1.22.9"

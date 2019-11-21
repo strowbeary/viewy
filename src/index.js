@@ -25,3 +25,4 @@ export * from "./Components/Modal";
 export * from "./Components/View";
 
 export * from "./services/render";
+export * from "./ressources/colors"

@@ -49,6 +49,10 @@ export const Text = (value, style = TEXT_STYLE.body1) => ({
         this.viewStyle.textAlign = alignment;
         return this;
     },
+    color(color) {
+        this.viewStyle.color = color;
+        return this;
+    },
     children: [{
         render() {
             text(value);
