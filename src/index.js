@@ -20,6 +20,7 @@ export * from "./Components/Layouts/ScrollView";
 
 export * from "./Components/Architectural/TitleBar";
 export * from "./Components/Architectural/Card";
+export * from "./Components/Architectural/Tabs";
 
 export * from "./Components/Modal";
 export * from "./Components/View";

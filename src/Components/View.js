@@ -7,6 +7,8 @@ export const View = (...children) => ({
     children,
     classList: {},
     viewStyle: {},
+    tag: [],
+    viewName: "",
     eventListener: () => {},
     get isEmptyView() {
         return false
@@ -84,6 +86,10 @@ export const View = (...children) => ({
     onClick(eventListener) {
         this.addClass("clickable");
         this.eventListener = eventListener;
+        return this;
+    },
+    name(viewName) {
+        this.viewName = viewName;
         return this;
     },
     render () {
