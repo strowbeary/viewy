@@ -32,7 +32,7 @@ export const LabelTextField = (label, name, value, type, placeholder) => ({
                 Text(label, TEXT_STYLE.label),
                 this.textField.marginTop(4),
                 this.helperMessage ? Text(this.helperMessage, TEXT_STYLE.caption)
-                    .color(colors.grey["300"])
+                    .color("var(--color-text-secondary)")
                     .marginTop(4) : EmptyView()
             )
         ]

@@ -1,5 +1,6 @@
 import { patch } from "incremental-dom";
 
-export function render(node, callback) {
-    patch(node, () => callback().render(), {});
+export async function render(node, callback) {
+    const renderResult = await callback();
+    patch(node, () => renderResult.render(), {});
 }
