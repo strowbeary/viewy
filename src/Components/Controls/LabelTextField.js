@@ -31,7 +31,7 @@ export const LabelTextField = (label, name, value, type, placeholder) => ({
             VStack(
                 Text(label, TEXT_STYLE.label),
                 this.textField.marginTop(8),
-                this.helperMessage ? Text(this.helperMessage, TEXT_STYLE.footnote)
+                this.helperMessage ? Text(this.helperMessage, TEXT_STYLE.caption)
                     .color(colors.grey["300"])
                     .marginTop(4) : EmptyView()
             )

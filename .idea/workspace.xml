@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/autoResizeTextarea.util.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Controls/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/LabelTextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Segment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Segment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Segment.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Tag.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Tag.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Tag.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Tag.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Text.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Controls/Text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/Text.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/TextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/TextField.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Layouts/List.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Modal.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/View.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +47,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UIKit-test-app" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
