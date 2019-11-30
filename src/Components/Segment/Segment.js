@@ -1,6 +1,6 @@
 import {View} from "../View";
 import "./Segment.scss"
-import {TEXT_STYLE, Text} from "./Text";
+import {TEXT_STYLE, Text} from "../Text/Text";
 
 export const Segment = (action = () => {}, selectedItemValue, ...items) => ({
     ...View()

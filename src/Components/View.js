@@ -51,6 +51,10 @@ export const View = (...children) => ({
         this.viewStyle.borderRight = `${width}px ${style} ${color}`;
         return this;
     },
+    borderLeft(width, style, color = "var(--color-border)") {
+        this.viewStyle.borderLeft = `${width}px ${style} ${color}`;
+        return this;
+    },
     minWidth(value) {
         this.viewStyle.minWidth = value;
         return this;
@@ -100,5 +104,6 @@ export const View = (...children) => ({
             'onclick', this.eventListener);
         this.children.forEach(child => child.render());
         elementClose("div");
+        return el;
     }
 });

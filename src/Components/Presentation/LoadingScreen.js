@@ -1,6 +1,6 @@
-import {VStack} from "../../Components/Layouts/Stack";
-import {Loader} from "../../Components/Controls/Loader";
-import {Text, TEXT_STYLE} from "../../Components/Controls/Text";
+import {VStack} from "../Stack/Stack";
+import {Loader} from "../ProgressIndicator/Loader";
+import {Text, TEXT_STYLE} from "../Text/Text";
 
 export default () => VStack(
     Loader(),

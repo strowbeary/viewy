@@ -1,8 +1,8 @@
-import { VStack} from "../Layouts/Stack";
-import {Text, TEXT_STYLE} from "./Text";
+import { VStack} from "../Stack/Stack";
+import {Text, TEXT_STYLE} from "../Text/Text";
 import {TextField} from "./TextField";
 import {View} from "../View";
-import {colors, EmptyView} from "../..";
+import {EmptyView} from "../Presentation/EmptyView";
 
 export const LabelTextField = (label, name, value, type, placeholder) => ({
     ...View(),

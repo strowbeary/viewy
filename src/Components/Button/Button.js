@@ -1,6 +1,6 @@
 import {View} from "../View";
 import {EmptyView} from "../Presentation/EmptyView";
-import {Text, TEXT_STYLE} from "../Controls/Text";
+import {Text, TEXT_STYLE} from "../Text/Text";
 import {colorToCssVariable} from "../../ressources/colors";
 import "./Button.scss"
 import {elementClose, elementOpen} from "incremental-dom";
@@ -33,6 +33,7 @@ export const Button = (
         this.icon.render();
         Text(label, TEXT_STYLE.button).render();
         elementClose("button");
+        return el;
     }
 
 }).addClass(type);

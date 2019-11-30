@@ -1,29 +1,30 @@
 import "./index.scss";
 
-export * from "./Components/Controls/Tag";
-export * from "./Components/Controls/Button";
-export * from "./Components/Controls/Icon";
-export * from "./Components/Controls/Image";
-export * from "./Components/Controls/LabelTextField";
-export * from "./Components/Controls/Segment";
-export * from "./Components/Controls/Text";
-export * from "./Components/Controls/TextField";
+export * from "./Components/Tag/Tag";
+export * from "./Components/Button/Button";
+export * from "./Components/Icon/Icon";
+export * from "./Components/Image/Image";
+export * from "./Components/TextField/LabelTextField";
+export * from "./Components/Segment/Segment";
+export * from "./Components/Text/Text";
+export * from "./Components/TextField/TextField";
 
 export * from "./Components/Presentation/ConditionalContent"
 export * from "./Components/Presentation/EmptyView"
-export * from "./Components/Controls/Loader";
+export * from "./Components/ProgressIndicator/ProgressIndicator";
 
-export * from "./Components/Layouts/List";
-export * from "./Components/Layouts/Stack";
-export * from "./Components/Layouts/Grid";
-export * from "./Components/Layouts/ScrollView";
+export * from "./Components/List/List";
+export * from "./Components/Stack/Stack";
+export * from "./Components/Grid/Grid";
+export * from "./Components/ScrollView/ScrollView";
 
-export * from "./Components/Architectural/TitleBar";
-export * from "./Components/Architectural/Card";
-export * from "./Components/Architectural/Tabs";
+export * from "./Components/TitleBar/TitleBar";
+export * from "./Components/Card/Card";
+export * from "./Components/Tabs/Tabs";
 
-export * from "./Components/Modal";
+export * from "./Components/Dialog/Dialog";
 export * from "./Components/View";
 
-export * from "./services/render";
-export * from "./ressources/colors"
+export * from "./ressources/colors";
+export * from "augmentor";
+export * from "./createApp";

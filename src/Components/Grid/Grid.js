@@ -1,4 +1,4 @@
-import {Stack} from "./Stack";
+import {Stack} from "../Stack/Stack";
 import "./Grid.scss";
 export const Grid = (...children) => ({
     ...Stack(),

@@ -31,6 +31,7 @@ export const Image = (src, alt = "") => ({
             'onclick', this.eventListener
         );
         elementClose("img");
+        return el;
     }
 });
 

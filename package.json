@@ -12,6 +12,7 @@
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "augmentor": "^1.4.0",
     "incremental-dom": "^0.7.0"
   },
   "devDependencies": {

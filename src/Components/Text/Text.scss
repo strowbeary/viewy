@@ -12,8 +12,8 @@
     }
 
     &.h1 {
-        font-size: sp(30);
-        line-height: sp(42);
+        font-size: sp(24);
+        line-height: sp(32);
         font-weight: var(--fw-normal);
         letter-spacing: sp(-0.021);
     }
@@ -94,5 +94,8 @@
         line-height: sp(17);
         letter-spacing: sp(0);
         font-weight: var(--fw-normal);
+    }
+    &.bold {
+        font-weight: var(--fw-bold);
     }
 }

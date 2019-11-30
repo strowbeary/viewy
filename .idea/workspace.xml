@@ -2,14 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/ProgressIndicator/ProgressIndicator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/createApp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/Tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architectural/Tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/Tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architectural/Tabs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Controls/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Controls/LabelTextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card/Card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/Tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Tabs/Tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/Tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Tabs/Tabs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TitleBar/TitleBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architectural/TitleBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TitleBar/TitleBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button/Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Icon/Icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Icon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Icon/Icon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Image/Image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Image/Image.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TextField/LabelTextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Loader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ProgressIndicator/ProgressIndicator.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Segment/Segment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Segment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Segment/Segment.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Tag.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Tag/Tag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Tag.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Tag/Tag.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Text/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/Text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Text/Text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TextField/TextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Controls/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TextField/TextField.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Grid/Grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/Grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Grid/Grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/List/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/List/List.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/ScrollView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ScrollView/ScrollView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/ScrollView.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ScrollView/ScrollView.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Stack/Stack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Layouts/Stack.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Stack/Stack.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Dialog/Dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Dialog/Dialog.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Presentation/AsyncView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Presentation/LoadingScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Presentation/LoadingScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/render.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ressources/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ressources/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/render.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,18 +96,18 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Components/Dialog" />
+      <recent name="$PROJECT_DIR$/src/Components/ScrollView" />
+      <recent name="$PROJECT_DIR$/src/Components/List" />
+      <recent name="$PROJECT_DIR$/src/Components/Grid" />
+      <recent name="$PROJECT_DIR$/src/Components/Tag" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Controllers" />
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/utils" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Components" />
-      <recent name="$PROJECT_DIR$/src/services" />
-      <recent name="$PROJECT_DIR$/src/ressources" />
-      <recent name="$PROJECT_DIR$/test_project" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -131,6 +168,7 @@
       <workItem from="1573749271388" duration="3160000" />
       <workItem from="1574451515124" duration="2489000" />
       <workItem from="1574456952117" duration="4856000" />
+      <workItem from="1574792663420" duration="9932000" />
     </task>
     <servers />
   </component>
@@ -167,6 +205,12 @@
           <url>file://$PROJECT_DIR$/src/Controllers/NavigationController.js</url>
           <line>27</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/Presentation/ConditionalContent.js</url>
+          <line>4</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

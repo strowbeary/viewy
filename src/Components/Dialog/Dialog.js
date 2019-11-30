@@ -1,22 +1,21 @@
 import {elementClose, elementOpen, patch} from "incremental-dom";
-import "./Modal.scss";
-import {HStack, VStack} from "./Layouts/Stack";
-import {Button} from "./Controls/Button";
-import {View} from "./View";
+import "./Dialog.scss";
+import {HStack, VStack} from "../Stack/Stack";
+import {Button} from "../Button/Button";
 
-export const Modal = (...children) => ({
-    get modalWrapper() {
-        let el = document.getElementById("modal-wrapper");
+export const Dialog = (...children) => ({
+    get dialogWrapper() {
+        let el = document.getElementById("dialog-wrapper");
         if(!el) {
-            console.log("modal wrapper creation");
+            console.log("dialog wrapper creation");
             el = document.createElement("div");
-            el.id = "modal-wrapper";
+            el.id = "dialog-wrapper";
             document.body.appendChild(el);
         }
         return el;
     },
     hide() {
-        this.modalWrapper.remove()
+        this.dialogWrapper.remove()
     },
     get children() {
         return [
@@ -33,13 +32,14 @@ export const Modal = (...children) => ({
         ]
     },
     render() {
-        elementOpen("div", null ,["class", "modal-view"]);
+        const el = elementOpen("div", null ,["class", "dialog-view"]);
         this.children.forEach(child => child.render());
         elementClose("div");
+        return el;
     },
 
     show() {
-        console.log(this.modalWrapper);
-        patch(this.modalWrapper, () => this.render(), {});
+        console.log(this.dialogWrapper);
+        patch(this.dialogWrapper, () => this.render(), {});
     }
 });
