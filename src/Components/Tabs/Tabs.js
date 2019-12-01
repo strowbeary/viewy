@@ -8,6 +8,7 @@ export const Tabs = (...tabs) => {
     return {
         ...VStack()
             .addClass("tabs"),
+        currentView: tabs[currentTab],
         get children () {
             return [
                 HStack(
@@ -24,7 +25,6 @@ export const Tabs = (...tabs) => {
                     })
                 )
                     .addClass("tabs-bar"),
-                tabs[currentTab]
             ];
         }
     };
