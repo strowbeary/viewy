@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/createView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Card/Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card/Card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Tabs/Tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Tabs/Tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Tabs/Tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Tabs/Tabs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button/Button.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,17 +40,22 @@
     <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UIKit-test-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../contact" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -127,6 +130,7 @@
       <workItem from="1573749271388" duration="3160000" />
       <workItem from="1574451515124" duration="2489000" />
       <workItem from="1574456952117" duration="4856000" />
+      <workItem from="1575234081949" duration="1935000" />
     </task>
     <servers />
   </component>
@@ -155,6 +159,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/src/assets/icons" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl" timestamp="1575237059499">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1575237059499" />
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1575234278966">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575234278966" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -11,10 +11,10 @@ export const Button = (
     label = "Button",
     action = () => {},
     type = "outlined",
-    color = "blue"
 ) => ({
     ...View(),
     icon: EmptyView(),
+    color: 'blue',
     setIcon (icon) {
         this.icon = icon;
         this.addClass("icon_button");
@@ -23,7 +23,10 @@ export const Button = (
     render () {
         const el = elementOpen(
             "button", null, null,
-            "style", bind_style({...this.viewStyle, ...colorToCssVariable(color)}),
+            "style", bind_style({
+                ...this.viewStyle,
+                ...colorToCssVariable(this.color)
+            }),
             "class", bind_class(this.classList, 'view'),
             "onclick", e => {
                 e.stopPropagation();
