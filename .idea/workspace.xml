@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button/Button.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +129,8 @@
       <workItem from="1574451515124" duration="2489000" />
       <workItem from="1574456952117" duration="4856000" />
       <workItem from="1575234081949" duration="1935000" />
+      <workItem from="1575386786780" duration="3422000" />
+      <workItem from="1575563875138" duration="854000" />
     </task>
     <servers />
   </component>
