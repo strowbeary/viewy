@@ -1,5 +1,5 @@
 import {View} from "../View";
-import {EmptyView} from "../Presentation/EmptyView";
+import {EmptyView} from "../EmptyView";
 import "./List.scss";
 
 export const ListRow = (...children) => View(...children).addClass("list_row");

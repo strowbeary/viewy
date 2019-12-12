@@ -2,7 +2,7 @@ import {Grid} from "../Grid/Grid";
 import {Text, TEXT_STYLE} from "../Text/Text";
 import {View} from "../View";
 import "./TitleBar.scss"
-import {EmptyView} from "../Presentation/EmptyView";
+import {EmptyView} from "../EmptyView";
 
 export const TitleBar = ({title, left_item = EmptyView(), right_item = EmptyView(), bottom_item = EmptyView()}) => ({
     ...View()

@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "augmentor": "^1.4.0",
+    "factory-knows": "^0.1.2",
     "incremental-dom": "^0.7.0"
   },
   "devDependencies": {

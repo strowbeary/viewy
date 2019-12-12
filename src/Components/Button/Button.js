@@ -1,5 +1,5 @@
 import {View} from "../View";
-import {EmptyView} from "../Presentation/EmptyView";
+import {EmptyView} from "../EmptyView";
 import {Text, TEXT_STYLE} from "../Text/Text";
 import {colorToCssVariable} from "../../ressources/colors";
 import "./Button.scss"
