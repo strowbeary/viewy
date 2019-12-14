@@ -1,4 +1,5 @@
-@import "./utils.scss";
+@import "theme/utils";
+@import "theme/tokens";
 
 html {
     text-rendering: optimizeLegibility;

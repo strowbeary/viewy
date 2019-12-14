@@ -2,8 +2,11 @@ import {patch} from "incremental-dom";
 import {augmentor} from "augmentor";
 export const createApp = (elementId, rootView) => {
     const render = augmentor(function () {
-        const renderResult = rootView();
-        patch(document.getElementById(elementId), () => renderResult.render(), {});
+        const renderResult = rootView()
+            .height("100vh");
+        const mountingNode = document.getElementById(elementId);
+        mountingNode.style.height = "100%";
+        patch(mountingNode, () => renderResult.render(), {});
     });
 
     window.addEventListener("load", () => render());

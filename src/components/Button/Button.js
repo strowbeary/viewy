@@ -1,7 +1,6 @@
 import {View} from "../View";
 import {EmptyView} from "../EmptyView";
 import {Text, TEXT_STYLE} from "../Text/Text";
-import {colorToCssVariable} from "../../ressources/colors";
 import "./Button.scss"
 import {elementClose, elementOpen} from "incremental-dom";
 import {bind_style} from "../../utils/bind_style.util";
@@ -25,7 +24,6 @@ export const Button = (
             "button", null, null,
             "style", bind_style({
                 ...this.viewStyle,
-                ...colorToCssVariable(this.color)
             }),
             "class", bind_class(this.classList, 'view'),
             "onclick", e => {

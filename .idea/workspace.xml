@@ -2,19 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/NavigationLink/NavigationLink.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NavigationView/NavigationView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NavigationView/NavigationView.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/RouterMountPoint/RouterMountPoint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressources/SizingScale.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/tokens.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/List/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/List/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Presentation/ConditionalContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Presentation/ConditionalContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Presentation/EmptyView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/EmptyView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TextField/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TextField/LabelTextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TitleBar/TitleBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TitleBar/TitleBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/ic_chevron_right_24px.5ddcb80e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/ic_chevron_right_24px.db455ac2.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/ic_chevron_right_24px.db455ac2.svg.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/ic_chevron_right_24px.db455ac2.svg.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/loader.ffb8a7b9.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.37e69dba.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.37e69dba.js.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.37e69dba.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.63c5d129.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.63c5d129.js.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.63c5d129.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.68ee80b7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.68ee80b7.css.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.68ee80b7.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.9bf7d7b6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.9bf7d7b6.js.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.9bf7d7b6.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.bde550c5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.bde550c5.css.br" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.bde550c5.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/test_project.e31bb0bc.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Card/Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Dialog/Dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog/Dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Dialog/Dialog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog/Dialog.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/EmptyView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EmptyView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Grid/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Grid/Grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Grid/Grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Grid/Grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Icon/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/Icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Icon/Icon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/Icon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Image/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/Image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Image/Image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/Image.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/List/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/List/List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/List.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Presentation/ConditionalContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Presentation/ConditionalContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Presentation/LoadingScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Presentation/LoadingScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ProgressIndicator/ProgressIndicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProgressIndicator/ProgressIndicator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ProgressIndicator/ProgressIndicator.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProgressIndicator/ProgressIndicator.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ScrollView/ScrollView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ScrollView/ScrollView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ScrollView/ScrollView.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ScrollView/ScrollView.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Segment/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Segment/Segment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Segment/Segment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Segment/Segment.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Stack/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stack/Stack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Stack/Stack.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stack/Stack.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Tabs/Tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tabs/Tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Tabs/Tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tabs/Tabs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Tag/Tag.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tag/Tag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Tag/Tag.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tag/Tag.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Text/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Text/Text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TextField/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TextField/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TextField/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TitleBar/TitleBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TitleBar/TitleBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TitleBar/TitleBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TitleBar/TitleBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/View.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/createApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createApp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/createView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/utils.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +92,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -69,11 +136,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Components" />
+      <recent name="$PROJECT_DIR$/src/theme" />
       <recent name="$PROJECT_DIR$/src/services" />
+      <recent name="$PROJECT_DIR$/src/Components" />
       <recent name="$PROJECT_DIR$/src/ressources" />
       <recent name="$PROJECT_DIR$/test_project" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Controllers" />
@@ -143,7 +210,7 @@
       <workItem from="1575234081949" duration="1935000" />
       <workItem from="1575386786780" duration="3422000" />
       <workItem from="1575563875138" duration="854000" />
-      <workItem from="1576150179359" duration="7434000" />
+      <workItem from="1576150179359" duration="22191000" />
     </task>
     <servers />
   </component>
@@ -188,6 +255,11 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
+    <state x="754" y="-980" width="1720" height="880" key="DiffContextDialog" timestamp="1576176173219">
+      <screen x="654" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="754" y="-980" width="1720" height="880" key="DiffContextDialog/0.0.1440.900/654.-1080.1920.1080@654.-1080.1920.1080" timestamp="1576176147345" />
+    <state x="754" y="-980" width="1720" height="880" key="DiffContextDialog/0.23.1440.831/654.-1057.1920.1057@654.-1057.1920.1057" timestamp="1576176173219" />
     <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl" timestamp="1575237059499">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -196,6 +268,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1575234278966" />
+    <state x="1275" y="-924" width="678" height="768" key="find.popup" timestamp="1576228237942">
+      <screen x="654" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="1275" y="-924" width="678" height="768" key="find.popup/0.0.1440.900/654.-1080.1920.1080@654.-1080.1920.1080" timestamp="1576228237942" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
