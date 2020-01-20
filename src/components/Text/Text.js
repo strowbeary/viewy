@@ -21,22 +21,7 @@ export const Text = (value, style = TEXT_STYLE.body1) => ({
     ...View()
         .addClass("text")
         .addClass(style),
-    uppercase() {
-        this.addClass("uppercase");
-        return this;
-    },
-    bold() {
-        this.addClass("bold");
-        return this;
-    },
-    underline() {
-        this.addClass("underline");
-        return this;
-    },
-    italic() {
-        this.addClass("italic");
-        return this;
-    },
+
     size(value) {
         this.viewStyle.fontSize = value + "px";
         return this;

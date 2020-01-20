@@ -13,11 +13,12 @@ export const Tabs = (...tabs) => {
             return [
                 HStack(
                     ...tabs.map((view, i) => {
-                        const tab = Text(view.viewName, TEXT_STYLE.headline)
+                        const tab = Text(view.viewName, TEXT_STYLE.body1)
                             .addClass("tab")
                             .onClick(() => {
                                 setTab(i)
-                            });
+                            })
+                            .removeClass("clickable");
                         if (currentTab === i) {
                             tab.addClass("selected");
                         }

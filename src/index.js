@@ -24,9 +24,6 @@ export * from "./components/Tabs/Tabs";
 
 export * from "./components/Dialog/Dialog";
 export * from "./components/View";
-export * from "./components/NavigationLink/NavigationLink";
-export * from "./components/NavigationView/NavigationView";
-export * from "./components/RouterMountPoint/RouterMountPoint";
 
 export * from "./ressources/colors";
 export * from "./ressources/SizingScale";

@@ -1,13 +1,12 @@
 
 .navigation_bar {
     border-bottom: 1px solid var(--color-border);
-    background: var(--surface-dark);
+    background: var(--background);
     padding: 16px;
     position: sticky;
     top: 0;
     z-index: 10;
     box-sizing: border-box;
-    backdrop-filter: var(--blurred-background);
 
 
     .button_back {
