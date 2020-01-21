@@ -3,19 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavigationLink/NavigationLink.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavigationView/NavigationView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavigationView/NavigationView.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RouterMountPoint/RouterMountPoint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tabs/Tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tabs/Tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tabs/Tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tabs/Tabs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TitleBar/TitleBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TitleBar/TitleBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/createView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/navigation.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +137,8 @@
       <workItem from="1576150179359" duration="22884000" />
       <workItem from="1576674321127" duration="361000" />
       <workItem from="1577974669674" duration="353000" />
-      <workItem from="1579513600587" duration="4010000" />
+      <workItem from="1579513600587" duration="4641000" />
+      <workItem from="1579608265908" duration="1730000" />
     </task>
     <servers />
   </component>

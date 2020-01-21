@@ -22,7 +22,7 @@ body {
     @media (prefers-color-scheme: light) {
         --blurred-background: blur(30px);
         /* main colors */
-        --color-primary: #236fff;
+        --color-primary: #1d5dea;
         --color-primary-light: #4d8bff;
         --color-primary-lighter: #669cff;
         --surface-blue: #0a84ff22;
@@ -33,10 +33,11 @@ body {
         --surface-dark: rgba(0, 0, 0, 0.05);
         --color-text: #1d1d20;
         --color-text-secondary: #5d5d5d;
-        --color-border: rgba(0, 0, 0, 0.05);
-        --color-border-hover: rgba(0, 0, 0, 0.07);
-        --color-hover: rgba(0, 0, 0, 0.03);
-        --color-active: rgba(0, 0, 0, 0.05);
+        --color-border: rgba(0, 0, 0, 0.07);
+        --color-border-hover: rgba(0, 0, 0, 0.09);
+        --color-hover: rgba(0, 0, 0, 0.05);
+        --color-active: rgba(0, 0, 0, 0.07);
+        --color-focus: #1d5dea99;
         --color-shadow: rgba(0, 0, 0, 0.1);
         --color-success: #88c459;
         --color-error: #f5414f;
