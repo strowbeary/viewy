@@ -1,10 +1,10 @@
 import {View} from "../View";
-import "./Segment.scss"
+import "./Picker.scss"
 import {TEXT_STYLE, Text} from "../Text/Text";
 
-export const Segment = (action = () => {}, selectedItemValue, ...items) => ({
+export const Picker = (action = () => {}, selectedItemValue, ...items) => ({
     ...View()
-        .addClass("segment"),
+        .addClass("picker"),
     padding () {
         throw Error("padding can't be set on Segment view");
     },

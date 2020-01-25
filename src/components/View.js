@@ -9,6 +9,8 @@ export const View = (...children) => ({
     viewStyle: {},
     tag: [],
     viewName: "",
+    renderedTagName: "div",
+    customAttributes: [],
     eventListener: () => {},
     get isEmptyView() {
         return false
@@ -24,6 +26,22 @@ export const View = (...children) => ({
     padding(top = 0, right, bottom, left) {
         const [t, r, b, l] = box_arguments_behavior([top, right, bottom, left]);
         this.viewStyle.padding = `${t}px ${r}px ${b}px ${l}px`;
+        return this;
+    },
+    paddingTop(value) {
+        this.viewStyle.paddingTop = value + "px";
+        return this;
+    },
+    paddingRight(value) {
+        this.viewStyle.paddingRight = value + "px";
+        return this;
+    },
+    paddingBottom(value) {
+        this.viewStyle.paddingBottom= value + "px";
+        return this;
+    },
+    paddingLeft(value) {
+        this.viewStyle.paddingLeft = value + "px";
         return this;
     },
     margin(top = 0, right, bottom, left) {
@@ -83,8 +101,22 @@ export const View = (...children) => ({
         this.viewStyle.justifySelf = `${value}`;
         return this;
     },
+    backgroundColor(value) {
+        this.viewStyle.backgroundColor = `${value}`;
+        return this;
+    },
     height(value) {
         this.viewStyle.height = value;
+        return this;
+    },
+    cornerRadius(top_left, top_right, bottom_right, bottom_left) {
+        const [tl, tr, br, bl] = box_arguments_behavior([top_left, top_right, bottom_right, bottom_left]);
+        this.viewStyle.borderRadius = `${tl}px ${tr}px ${br}px ${bl}px`;
+        return this;
+    },
+    sticky() {
+        this.viewStyle.position = 'sticky';
+        this.viewStyle.top = 0;
         return this;
     },
     onClick(eventListener) {
@@ -96,14 +128,25 @@ export const View = (...children) => ({
         this.viewName = viewName;
         return this;
     },
+    tagName(tagName) {
+        this.renderedTagName = tagName;
+        return this;
+    },
+    setAttribute(name, value) {
+        this.customAttributes
+            .push(name, value);
+        return this;
+    },
     render () {
         const el = elementOpen(
-            "div", null, null,
+            this.renderedTagName, null, null,
             "style", this.viewStyle,
             "class", bind_class(this.classList, 'view'),
-            'onclick', this.eventListener);
+            'onclick', this.eventListener,
+            ...this.customAttributes);
         this.children.forEach(child => child.render());
-        elementClose("div");
+        elementClose(
+            this.renderedTagName);
         return el;
     }
 });

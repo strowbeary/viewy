@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Toggle/Toggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Toggle/Toggle.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card/Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Image/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/Image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/List/List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/List.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Segment/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Segment/Segment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Stack/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stack/Stack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tabs/Tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tabs/Tabs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/createApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +153,11 @@
       <workItem from="1576674321127" duration="361000" />
       <workItem from="1577974669674" duration="353000" />
       <workItem from="1579513600587" duration="4641000" />
-      <workItem from="1579608265908" duration="1730000" />
+      <workItem from="1579608265908" duration="8333000" />
+      <workItem from="1579781156552" duration="1493000" />
+      <workItem from="1579857899361" duration="1987000" />
+      <workItem from="1579861036233" duration="2379000" />
+      <workItem from="1579875279309" duration="3870000" />
     </task>
     <servers />
   </component>

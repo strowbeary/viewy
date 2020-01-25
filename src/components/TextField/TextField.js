@@ -26,6 +26,7 @@ export const TextField = (name, value, type = "text", placeholder = "") => ({
             "class", bind_class(this.classList, 'view'),
             "name", name,
             "type", type,
+            "id", `input-${name}`,
             "placeholder", placeholder,
             "onkeyup", this.onChangeHandler,
             "oninput", e => {

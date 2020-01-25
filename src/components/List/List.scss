@@ -3,5 +3,8 @@
     .list_row {
         position: relative;
         border-bottom: 1px solid var(--color-border);
+        &:last-of-type {
+            border: none;
+        }
     }
 }

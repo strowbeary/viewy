@@ -5,7 +5,7 @@ export * from "./components/Button/Button";
 export * from "./components/Icon/Icon";
 export * from "./components/Image/Image";
 export * from "./components/TextField/LabelTextField";
-export * from "./components/Segment/Segment";
+export * from "./components/Picker/Picker";
 export * from "./components/Text/Text";
 export * from "./components/TextField/TextField";
 

@@ -11,6 +11,7 @@
     overflow-y: auto;
     color: var(--color-text);
     font-weight: var(--fw-normal);
+    outline: none   ;
     &.type-textarea {
         padding: sp(12);
     }

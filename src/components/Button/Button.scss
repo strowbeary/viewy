@@ -26,6 +26,10 @@ button {
         &:active .text {
             color: var(--color-primary-lighter);
         }
+        &:focus {
+            outline: 3px solid var(--color-focus);
+            -moz-outline-radius: 6px;
+        }
     }
 
     &.flat {
@@ -37,6 +41,10 @@ button {
 
         &:active {
             background: var(--color-active);
+        }
+        &:focus {
+            outline: 3px solid var(--color-focus);
+            -moz-outline-radius: 6px;
         }
     }
 
@@ -52,6 +60,7 @@ button {
             background: var(--color-active);
             border: 1px solid var(--color-border-hover);
         }
+
         &:focus {
             outline: 3px solid var(--color-focus);
             -moz-outline-radius: 6px;
@@ -69,6 +78,10 @@ button {
         }
         &:active {
             background: var(--color-primary-lighter);
+        }
+        &:focus {
+            outline: 3px solid var(--color-focus);
+            -moz-outline-radius: 6px;
         }
     }
 }

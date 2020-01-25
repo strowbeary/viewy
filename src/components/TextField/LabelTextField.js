@@ -29,7 +29,8 @@ export const LabelTextField = (label, name, value, type, placeholder) => ({
     get children() {
         return [
             VStack(
-                Text(label, TEXT_STYLE.label),
+                Text(label, TEXT_STYLE.label, "label")
+                    .setAttribute("for", `input-${name}`),
                 this.textField.marginTop(4),
                 this.helperMessage ? Text(this.helperMessage, TEXT_STYLE.caption)
                     .color("var(--color-text-secondary)")

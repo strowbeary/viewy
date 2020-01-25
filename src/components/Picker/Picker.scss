@@ -1,4 +1,6 @@
-.segment {
+@import "../../theme/utils";
+@import "../../theme/tokens";
+.picker {
     cursor: pointer;
     user-select: none;
     display: flex;
@@ -13,7 +15,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 8px 32px;
+        padding: sp(6) sp(24);
         border: 1px solid var(--color-border);
         border-left: none;
         border-right: none;
@@ -22,11 +24,11 @@
         }
         &:last-of-type {
             border-right: 1px solid var(--color-border);
-            border-radius: 0 6px 6px 0;
+            border-radius: 0 sp(6) sp(6) 0;
         }
         &:first-of-type {
             border-left: 1px solid var(--color-border);
-            border-radius: 6px 0 0 6px;
+            border-radius: sp(6) 0 0 sp(6);
         }
 
         &:hover {

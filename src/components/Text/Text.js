@@ -17,11 +17,11 @@ export const TEXT_STYLE = {
     caption: "caption"
 };
 
-export const Text = (value, style = TEXT_STYLE.body1) => ({
+export const Text = (value, style = TEXT_STYLE.body1, tagName = "span") => ({
     ...View()
         .addClass("text")
-        .addClass(style),
-
+        .addClass(style)
+        .tagName(tagName),
     size(value) {
         this.viewStyle.fontSize = value + "px";
         return this;

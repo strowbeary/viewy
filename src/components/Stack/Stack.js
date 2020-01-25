@@ -1,20 +1,26 @@
 import {View} from "../View";
 import "./Stack.scss";
+
 export const Stack = (children) => ({
     ...View().addClass("stack"),
-    alignItems(alignment) {
+    alignItems (alignment) {
         this.viewStyle.alignItems = alignment;
         return this;
     },
-    justifyContent(justification) {
+    justifyContent (justification) {
         this.viewStyle.justifyContent = justification;
         return this;
     },
-    gap(h, v) {
+    gap (h, v) {
         if (typeof h === "number" && typeof v === "undefined") {
             v = h;
         }
-        this.viewStyle.gridGap = `${h}px ${v}px`;
+        this.viewStyle.marginLeft = `-${h}px`;
+        this.viewStyle.marginBottom = `-${v}px`;
+        this.children = this.children.map(c => View(c)
+            .paddingLeft(h)
+            .paddingBottom(v)
+        );
         return this;
     },
     children
