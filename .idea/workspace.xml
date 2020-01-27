@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Toggle/Toggle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Toggle/Toggle.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Image/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/Image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/List/List.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/List.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Segment/Segment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Segment/Segment.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Stack/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stack/Stack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tabs/Tabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tabs/Tabs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/createApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Picker/Picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Picker/Picker.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,15 +147,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/../components-library/node_modules/@vue/cli-plugin-unit-jest/generator/template/tests/unit/example.spec.js" />
-        <option value="$PROJECT_DIR$/../components-library/node_modules/@storybook/addon-storyshots/dist/frameworks/angular/helpers.js" />
-        <option value="$PROJECT_DIR$/../components-library/node_modules/@storybook/addon-storyshots/dist/frameworks/angular/app.token.js" />
-        <option value="$PROJECT_DIR$/../components-library/node_modules/@storybook/addon-storyshots/dist/frameworks/angular/app.component.js" />
-        <option value="$PROJECT_DIR$/../components-library/node_modules/@storybook/addon-storyshots/dist/frameworks/angular/types.js" />
-      </list>
-    </option>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
