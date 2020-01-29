@@ -7,6 +7,7 @@ import {S} from "../../ressources/SizingScale";
 export const Picker = (label, name, action = () => {
 }, selectedItemValue, ...items) => {
     let pickerStyle = "segmented";
+    let disabled = false;
 
     function SegmentedPicker () {
         return items.map(({value, label: optionLabel}) => ({
@@ -21,19 +22,22 @@ export const Picker = (label, name, action = () => {
     }
 
     function DropdownPicker () {
+        const select = View(
+            ...items.map(({value, label: optionLabel}) => {
+                const option = Text(optionLabel, TEXT_STYLE.label)
+                    .tagName("option")
+                    .onClick(() => action(value));
+                if(value === selectedItemValue) option.addClass("selected");
+                return option;
+            })
+        )
+            .tagName("select");
+        if(disabled) select.setAttribute("disabled", "disabled");
+
         return VStack(
             Text(label, TEXT_STYLE.label),
             View(
-                View(
-                    ...items.map(({value, label: optionLabel}) => {
-                        const option = Text(optionLabel, TEXT_STYLE.label)
-                            .tagName("option")
-                            .onClick(() => action(value));
-                        if(value === selectedItemValue) option.addClass("selected");
-                        return option;
-                    })
-                )
-                    .tagName("select")
+                select,
             )
                 .addClass("dropdown")
         )
@@ -52,6 +56,9 @@ export const Picker = (label, name, action = () => {
                     .setAttribute("onchange", () => action(value));
                 if (value === selectedItemValue) {
                     input.setAttribute("checked", true);
+                }
+                if (disabled) {
+                    input.setAttribute("disabled", "disabled");
                 }
 
                 const radio = HStack(
@@ -87,8 +94,9 @@ export const Picker = (label, name, action = () => {
             pickerStyle = "radioGroup";
             return this;
         },
-        disable (disabled) {
-            if (disabled) this.setAttribute("disabled", "disabled");
+        disabled (isDisabled) {
+            disabled = isDisabled;
+            if(isDisabled) this.addClass("disabled");
             return this;
         },
         get children () {

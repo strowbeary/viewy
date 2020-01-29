@@ -2,11 +2,19 @@
 @import "../../theme/tokens";
 .picker {
     cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     display: flex;
     -webkit-touch-action: none;
     touch-action: none;
     width: max-content;
+
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
 
     .item {
         flex-grow: 1;
@@ -59,8 +67,8 @@
         input[type="radio"] {
             cursor: pointer;
             margin: 0;
-            appearance: none;
             -moz-appearance: none;
+            appearance: none;
             background: none;
             width: sp(20);
             height: sp(20);
@@ -104,14 +112,14 @@
             font-size: sp(16);
             font-family: Inter, sans-serif;
             color: var(--color-text);
-            font-weight: var(--fw-normal);
+            font-weight: $fw-normal;
             outline: none;
             option {
                 -moz-appearance: none;
                 appearance: none;
                 background: var(--surface-dark);
                 color: black;
-                font-weight: var(--fw-normal);
+                font-weight: $fw-normal;
                 font-size: sp(16);
                 &:hover {
                     color: white;

@@ -1,4 +1,5 @@
 @import "../../theme/utils";
+@import "../../theme/tokens";
 .text_field {
     padding: sp(8) sp(12);
     background: var(--surface);
@@ -10,7 +11,7 @@
     overflow: hidden;
     overflow-y: auto;
     color: var(--color-text);
-    font-weight: var(--fw-normal);
+    font-weight: $fw-normal;
     outline: none;
     &.type-textarea {
         padding: sp(12);
