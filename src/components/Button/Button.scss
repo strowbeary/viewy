@@ -26,9 +26,8 @@ button {
         &:active .text {
             color: var(--color-primary-lighter);
         }
-        &:focus {
-            outline: 3px solid var(--color-focus);
-            -moz-outline-radius: 6px;
+        &:focus-visible {
+            box-shadow: 0 0 0 3px var(--color-focus);
         }
     }
 
@@ -42,9 +41,8 @@ button {
         &:active {
             background: var(--color-active);
         }
-        &:focus {
-            outline: 3px solid var(--color-focus);
-            -moz-outline-radius: 6px;
+        &:focus-visible {
+            box-shadow: 0 0 0 3px var(--color-focus);
         }
     }
 
@@ -61,9 +59,8 @@ button {
             border: 1px solid var(--color-border-hover);
         }
 
-        &:focus {
-            outline: 3px solid var(--color-focus);
-            -moz-outline-radius: 6px;
+        &:focus-visible {
+            box-shadow: 0 0 0 3px var(--color-focus);
         }
     }
     &.filled{
@@ -79,9 +76,8 @@ button {
         &:active {
             background: var(--color-primary-lighter);
         }
-        &:focus {
-            outline: 3px solid var(--color-focus);
-            -moz-outline-radius: 6px;
+        &:focus-visible {
+            box-shadow: 0 0 0 3px var(--color-focus);
         }
     }
 }

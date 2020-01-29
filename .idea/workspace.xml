@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialog/Dialog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog/Dialog.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Picker/Picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Picker/Picker.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/View.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,6 +146,7 @@
       <workItem from="1579857899361" duration="1987000" />
       <workItem from="1579861036233" duration="2379000" />
       <workItem from="1579875279309" duration="3870000" />
+      <workItem from="1580222103500" duration="3806000" />
     </task>
     <servers />
   </component>
@@ -186,6 +191,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1575237059499" />
+    <state x="415" y="-826" key="MultipleFileMergeDialog" timestamp="1580137115346">
+      <screen x="-253" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="415" y="-826" key="MultipleFileMergeDialog/0.0.1440.900/-253.-1080.1920.1080@-253.-1080.1920.1080" timestamp="1580137115346" />
     <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1575234278966">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -194,10 +203,15 @@
       <screen x="-253" y="-1080" width="1920" height="1080" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1440.900/-253.-1080.1920.1080@-253.-1080.1920.1080" timestamp="1579528933919" />
-    <state x="1275" y="-924" width="678" height="768" key="find.popup" timestamp="1576228237942">
-      <screen x="654" y="-1080" width="1920" height="1080" />
+    <state x="368" y="-924" width="678" height="768" key="find.popup" timestamp="1580295243450">
+      <screen x="-253" y="-1080" width="1920" height="1080" />
     </state>
+    <state x="368" y="-924" width="678" height="768" key="find.popup/0.0.1440.900/-253.-1080.1920.1080@-253.-1080.1920.1080" timestamp="1580295243450" />
     <state x="1275" y="-924" width="678" height="768" key="find.popup/0.0.1440.900/654.-1080.1920.1080@654.-1080.1920.1080" timestamp="1576228237942" />
+    <state x="372" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1580295237667">
+      <screen x="-253" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="372" y="-839" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-253.-1080.1920.1080@-253.-1080.1920.1080" timestamp="1580295237667" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

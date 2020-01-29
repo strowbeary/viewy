@@ -5,6 +5,7 @@
     user-select: none;
     display: flex;
     -webkit-touch-action: none;
+    touch-action: none;
     width: max-content;
 
     .item {
@@ -60,24 +61,80 @@
             margin: 0;
             appearance: none;
             -moz-appearance: none;
-            background: white;
-            width: sp(16);
-            height: sp(16);
-            border-radius: 8px;
+            background: none;
+            width: sp(20);
+            height: sp(20);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
+            border: 2px solid var(--color-border);
+            &:hover {
+                border: 2px solid var(--color-border-hover);
+            }
+            &:focus {
+                box-shadow: 0 0 0 2px var(--color-focus);
+            }
             &:checked {
                 background: var(--color-primary);
                 &::after {
                     display: block;
                     content: "";
-                    width: sp(8);
-                    height: sp(8);
+                    width: sp(6);
+                    height: sp(6);
                     border-radius: 4px;
                     background: white;
                 }
             }
+        }
+    }
+    .dropdown {
+        position: relative;
+        background: var(--surface);
+        border-radius: sp(8);
+        border: sp(2) solid transparent;
+        overflow: hidden;
+        overflow-y: auto;
+        select {
+            -moz-appearance: none;
+            appearance: none;
+            background: none;
+            border: none;
+            padding: sp(8) sp(24) sp(8) sp(12);
+            font-size: sp(16);
+            font-family: Inter, sans-serif;
+            color: var(--color-text);
+            font-weight: var(--fw-normal);
+            outline: none;
+            option {
+                -moz-appearance: none;
+                appearance: none;
+                background: var(--surface-dark);
+                color: black;
+                font-weight: var(--fw-normal);
+                font-size: sp(16);
+                &:hover {
+                    color: white;
+                }
+                &.selected {
+                    color: white;
+                }
+            }
+        }
+        &::after {
+            /* Le pointeur du select */
+            content: '';
+            position: absolute;
+            top: 50%;
+            margin-top: -3px;
+            right: .75em;
+            display: block;
+            width: 0; height: 0;
+            border-color: transparent;
+            border-top-color: #444;
+            border-width: 6px;
+            border-style: solid;
+            pointer-events: none;
         }
     }
 }

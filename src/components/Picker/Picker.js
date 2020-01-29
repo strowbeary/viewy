@@ -1,33 +1,54 @@
 import {View} from "../View";
 import "./Picker.scss"
-import {TEXT_STYLE, Text} from "../Text/Text";
-import {VStack, HStack} from "../Stack/Stack";
+import {Text, TEXT_STYLE} from "../Text/Text";
+import {HStack, VStack} from "../Stack/Stack";
 import {S} from "../../ressources/SizingScale";
 
-export const Picker = (name, action = () => {
+export const Picker = (label, name, action = () => {
 }, selectedItemValue, ...items) => {
     let pickerStyle = "segmented";
 
     function SegmentedPicker () {
-        return items.map(({value, label}, i) => ({
+        return items.map(({value, label: optionLabel}) => ({
             ...View()
                 .onClick(() => action(value)),
             classList: {
                 item: true,
                 selected: value === selectedItemValue
             },
-            children: [Text(label, TEXT_STYLE.button)],
+            children: [Text(optionLabel, TEXT_STYLE.button)],
         }))
+    }
+
+    function DropdownPicker () {
+        return VStack(
+            Text(label, TEXT_STYLE.label),
+            View(
+                View(
+                    ...items.map(({value, label: optionLabel}) => {
+                        const option = Text(optionLabel, TEXT_STYLE.label)
+                            .tagName("option")
+                            .onClick(() => action(value));
+                        if(value === selectedItemValue) option.addClass("selected");
+                        return option;
+                    })
+                )
+                    .tagName("select")
+            )
+                .addClass("dropdown")
+        )
+            .gap(S(2));;
     }
 
     function RadioGroupPicker () {
         return VStack(
-            ...items.map(({value, label}, i) => {
+            Text(label, TEXT_STYLE.label),
+            ...items.map(({value, label: optionLabel}, i) => {
                 const input = View()
                     .tagName("input")
                     .setAttribute("type", "radio")
                     .setAttribute("name", name)
-                    .setAttribute("id", `picker-radio-${name}-${label}`)
+                    .setAttribute("id", `picker-radio-${name}-${optionLabel}`)
                     .setAttribute("onchange", () => action(value));
                 if (value === selectedItemValue) {
                     input.setAttribute("checked", true);
@@ -35,12 +56,12 @@ export const Picker = (name, action = () => {
 
                 const radio = HStack(
                     input,
-                    Text(label, TEXT_STYLE.label, "label")
-                        .setAttribute("for", `picker-radio-${name}-${label}`)
+                    Text(optionLabel, TEXT_STYLE.body2, "label")
+                        .setAttribute("for", `picker-radio-${name}-${optionLabel}`)
                 )
                     .addClass("radio")
                     .alignItems("center")
-                    .gap(S(1));
+                    .gap(S(2));
 
                 return radio;
             })
@@ -54,18 +75,28 @@ export const Picker = (name, action = () => {
         padding () {
             throw Error("padding can't be set on Segment view");
         },
-        segmented () {
+        segmentedStyle () {
             pickerStyle = "segmented";
             return this;
         },
-        radioGroup () {
+        dropdownStyle () {
+            pickerStyle = "dropdown";
+            return this;
+        },
+        radioGroupStyle () {
             pickerStyle = "radioGroup";
+            return this;
+        },
+        disable (disabled) {
+            if (disabled) this.setAttribute("disabled", "disabled");
             return this;
         },
         get children () {
             switch (pickerStyle) {
                 case "radioGroup":
                     return [RadioGroupPicker()];
+                case "dropdown":
+                    return [DropdownPicker()];
                 default:
                 case "segmented":
                     return SegmentedPicker();
