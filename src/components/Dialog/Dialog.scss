@@ -1,4 +1,4 @@
-#modal-wrapper {
+.dialog {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -8,16 +8,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--surface-dark);
-    .modal-view {
+    background: var(--backdrop);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms;
+    &.visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+    &-window {
         pointer-events: all;
         max-width: 350px;
         margin: auto;
         background: var(--background-raised);
         border-radius: 16px;
         overflow: hidden;
-        .footer {
-            padding: 24px;
-        }
+        box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08);
     }
 }

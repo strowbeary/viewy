@@ -17,8 +17,10 @@ body {
         --surface-blue: #0a84ff22;
         --color-border-blue: #0a84ff33;
         --background: white;
+        --background-raised: white;
         --surface: rgba(0, 0, 0, 0.05);
         --surface-dark: rgba(0, 0, 0, 0.05);
+        --backdrop: rgba(0, 0, 0, 0.5);
         --color-text: #1d1d20;
         --color-text-secondary: #5d5d5d;
         --color-border: rgba(0, 0, 0, 0.1);
@@ -43,6 +45,7 @@ body {
         --background-raised: #4f4e53;
         --surface: rgba(255, 255, 255, 0.05);
         --surface-dark: rgba(0, 0, 0, 0.3);
+        --backdrop: rgba(0, 0, 0, 0.5);
         --color-text: #f0f0ff;
         --color-text-secondary: #b1b1bc;
         --color-border: rgba(255, 255, 255, 0.05);

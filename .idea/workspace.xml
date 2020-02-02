@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Picker/Picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Picker/Picker.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialog/Dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog/Dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialog/Dialog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog/Dialog.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/tokens.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/tokens.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +144,8 @@
       <workItem from="1579857899361" duration="1987000" />
       <workItem from="1579861036233" duration="2379000" />
       <workItem from="1579875279309" duration="3870000" />
-      <workItem from="1580222103500" duration="5044000" />
+      <workItem from="1580222103500" duration="9890000" />
+      <workItem from="1580396773188" duration="1955000" />
     </task>
     <servers />
   </component>
