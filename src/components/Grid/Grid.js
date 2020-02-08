@@ -26,6 +26,18 @@ export const Grid = (...children) => ({
         this.viewStyle.gridTemplateRows = schema;
         return this;
     },
+    autoRows (size) {
+        this.viewStyle.gridAutoRows = size;
+        return this;
+    },
+    autoColumns (size) {
+        this.viewStyle.gridAutoColumns = size;
+        return this;
+    },
+    autoFlow (direction) {
+        this.viewStyle.gridAutoFlow= direction;
+        return this;
+    },
     children
 })
     .removeClass("stack")

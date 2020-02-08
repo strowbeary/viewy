@@ -12,7 +12,7 @@ export const View = (...children) => ({
     renderedTagName: "div",
     customAttributes: [],
     get isEmptyView() {
-        return false
+        return false;
     },
     addClass(className) {
         this.classList[className] = true;

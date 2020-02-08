@@ -38,6 +38,10 @@ export const Text = (value, style = TEXT_STYLE.body1, tagName = "span") => ({
         this.viewStyle.color = color;
         return this;
     },
+    textOverflow(value) {
+        this.viewStyle.textOverflow = value;
+        return this;
+    },
     children: [{
         render() {
             text(value);
