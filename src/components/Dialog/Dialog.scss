@@ -12,17 +12,21 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 250ms;
-    &.visible {
-        opacity: 1;
-        pointer-events: all;
-    }
     &-window {
-        pointer-events: all;
+        pointer-events: none;
         max-width: 350px;
         margin: auto;
         background: var(--background-raised);
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    &.visible {
+        opacity: 1;
+        pointer-events: all;
+        .dialog-window {
+            pointer-events: all;
+        }
     }
 }
