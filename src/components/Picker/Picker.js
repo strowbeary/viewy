@@ -1,4 +1,4 @@
-import {View} from "../View";
+import {View} from "../View/View";
 import "./Picker.scss"
 import {Text, TEXT_STYLE} from "../Text/Text";
 import {HStack, VStack} from "../Stack/Stack";
@@ -12,7 +12,7 @@ export const Picker = (label, name, action = () => {
     function SegmentedPicker () {
         return items.map(({value, label: optionLabel}) => ({
             ...View()
-                .onClick(() => action(value)),
+                .on('click',() => action(value)),
             classList: {
                 item: true,
                 selected: value === selectedItemValue
@@ -26,7 +26,7 @@ export const Picker = (label, name, action = () => {
             ...items.map(({value, label: optionLabel}) => {
                 const option = Text(optionLabel, TEXT_STYLE.label)
                     .tagName("option")
-                    .onClick(() => action(value));
+                    .on('click',() => action(value));
                 if(value === selectedItemValue) option.addClass("selected");
                 return option;
             })

@@ -1,7 +1,7 @@
-import {box_arguments_behavior} from "../utils/box_arguments_behavior.util";
+import {box_arguments_behavior} from "../../utils/box_arguments_behavior.util";
 import "./View.scss";
 import {elementClose, elementOpen} from "incremental-dom";
-import {bind_class} from "../utils/bind_class.util";
+import {bind_class} from "../../utils/bind_class.util";
 
 export const View = (...children) => ({
     children,
@@ -11,7 +11,6 @@ export const View = (...children) => ({
     viewName: "",
     renderedTagName: "div",
     customAttributes: [],
-    eventListener: () => {},
     get isEmptyView() {
         return false
     },
@@ -119,9 +118,8 @@ export const View = (...children) => ({
         this.viewStyle.top = 0;
         return this;
     },
-    onClick(eventListener) {
-        this.addClass("clickable");
-        this.eventListener = eventListener;
+    on(eventName, callback) {
+        this.customAttributes.push(`on${eventName}`, callback);
         return this;
     },
     name(viewName) {
@@ -142,7 +140,6 @@ export const View = (...children) => ({
             this.renderedTagName, null, null,
             "style", this.viewStyle,
             "class", bind_class(this.classList, 'view'),
-            'onclick', this.eventListener,
             ...this.customAttributes);
         this.children.forEach(child => child.render());
         elementClose(

@@ -5,9 +5,12 @@ export const createApp = (elementId, rootView) => {
         const renderResult = rootView();
         const mountingNode = document.getElementById(elementId);
         mountingNode.style.height = "100%";
-        patch(mountingNode, () => renderResult.render(), {});
+        return patch(mountingNode, () => renderResult.render(), {});
     });
 
-    window.addEventListener("load", () => render());
+    window.addEventListener("load", () => {
+        const el = render();
+        console.log(new XMLSerializer().serializeToString(document));
+    });
     return () => render();
 };

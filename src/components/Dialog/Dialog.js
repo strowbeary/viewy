@@ -1,12 +1,12 @@
 import "./Dialog.scss";
-import {View} from "../View";
+import {View} from "../View/View";
 
 export const Dialog = (...children) => ({
     ...View()
         .addClass("dialog"),
     onClose(cb) {
         this
-            .onClick(cb)
+            .on('click', cb)
             .removeClass("clickable");
         return this;
     },
@@ -19,7 +19,7 @@ export const Dialog = (...children) => ({
             View(
                 ...children
             )
-                .onClick(e => e.stopPropagation())
+                .on('click',e => e.stopPropagation())
                 .removeClass("clickable")
                 .addClass("dialog-window")
         ];

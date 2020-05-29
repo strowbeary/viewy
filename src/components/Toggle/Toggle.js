@@ -1,4 +1,4 @@
-import {View} from "../View";
+import {View} from "../View/View";
 import "./Toggle.scss"
 import {TEXT_STYLE, Text} from "../Text/Text";
 

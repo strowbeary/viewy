@@ -1,6 +1,6 @@
 import {Grid} from "../Grid/Grid";
 import {Text, TEXT_STYLE} from "../Text/Text";
-import {View} from "../View";
+import {View} from "../View/View";
 import "./TitleBar.scss"
 import {EmptyView} from "../EmptyView";
 

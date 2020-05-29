@@ -1,10 +1,8 @@
 import {HStack, VStack} from "../Stack/Stack";
 import "./Tabs.scss";
 import {Text, TEXT_STYLE} from "../Text/Text";
-import {useState} from "augmentor";
 
-export const Tabs = (...tabs) => {
-    const [currentTab, setTab] = useState(0);
+export const Tabs = ([currentTab, setCurrentTab], ...tabs) => {
     return {
         ...VStack()
             .addClass("tabs"),
@@ -15,8 +13,8 @@ export const Tabs = (...tabs) => {
                     ...tabs.map((view, i) => {
                         const tab = Text(view.viewName, TEXT_STYLE.body1)
                             .addClass("tab")
-                            .onClick(() => {
-                                setTab(i)
+                            .on('click',() => {
+                                setCurrentTab(i)
                             })
                             .removeClass("clickable");
                         if (currentTab === i) {

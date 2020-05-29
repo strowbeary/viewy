@@ -3,16 +3,12 @@
   "version": "1.0.0",
   "description": "UI kit that use lighter html as template renderer",
   "module": "src/index.js",
-  "main": "lib/index.js",
-  "files": [
-    "src",
-    "lib"
-  ],
   "scripts": {},
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "augmentor": "^1.4.0",
+    "feather-icons": "^4.26.0",
     "incremental-dom": "^0.7.0"
   },
   "devDependencies": {

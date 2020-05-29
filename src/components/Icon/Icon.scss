@@ -1,26 +1,4 @@
 .icon {
     display: contents;
-
-    svg {
-        path {
-            fill: currentColor;
-        }
-    }
-
-    &.size_18 svg {
-        width: 18px;
-        height: 18px;
-    }
-    &.size_24 svg {
-        width: 24px;
-        height: 24px;
-    }
-    &.size_36 svg {
-        width: 36px;
-        height: 36px;
-    }
-    &.size_48 svg {
-        width: 48px;
-        height: 48px;
-    }
+    color: var(--color-text);
 }

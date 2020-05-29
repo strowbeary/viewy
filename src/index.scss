@@ -1,64 +1,20 @@
 @import "theme/utils";
 @import "theme/tokens";
+@import "theme/colors";
 
 html {
     text-rendering: optimizeLegibility;
-} /* =10px */
+}
 body {
     margin: 0;
     font-size: sp(14);
-
     @media (prefers-color-scheme: light) {
-        --blurred-background: blur(30px);
-        /* main colors */
-        --color-primary: #1d5dea;
-        --color-primary-light: #4d8bff;
-        --color-primary-lighter: #669cff;
-        --surface-blue: #0a84ff22;
-        --color-border-blue: #0a84ff33;
-        --background: white;
-        --background-raised: white;
-        --surface: rgba(0, 0, 0, 0.05);
-        --surface-dark: rgba(0, 0, 0, 0.05);
-        --backdrop: rgba(0, 0, 0, 0.5);
-        --color-text: #1d1d20;
-        --color-text-secondary: #5d5d5d;
-        --color-border: rgba(0, 0, 0, 0.1);
-        --color-border-hover: rgba(0, 0, 0, 0.13);
-        --color-hover: rgba(0, 0, 0, 0.04);
-        --color-active: rgba(0, 0, 0, 0.06);
-        --color-focus: #1d5dea99;
-        --color-shadow: rgba(0, 0, 0, 0.1);
-        --color-success: #3DA144;
-        --color-error: #EF5A70;
-        --color-warning: #D86F48;
-        background: var(--background);
+        @include colors(light);
     }
     @media (prefers-color-scheme: dark) {
-        --blurred-background: blur(30px) brightness(50%);
-        --color-primary: #0a84ff;
-        --color-primary-light: #3399ff;
-        --color-primary-lighter: #4da6ff;
-        --surface-blue: #0a84ff11;
-        --color-border-blue: #0a84ff33;
-        --background: #161616;
-        --background-raised: #4f4e53;
-        --surface: rgba(255, 255, 255, 0.05);
-        --surface-dark: rgba(0, 0, 0, 0.3);
-        --backdrop: rgba(0, 0, 0, 0.5);
-        --color-text: #f0f0ff;
-        --color-text-secondary: #b1b1bc;
-        --color-border: rgba(255, 255, 255, 0.05);
-        --color-border-hover: rgba(255, 255, 255, 0.07);
-        --color-hover: rgba(255, 255, 255, 0.03);
-        --color-active: rgba(255, 255, 255, 0.05);
-        --color-focus: #0a84ff66;
-        --color-shadow: rgba(0, 0, 0, 0.1);
-        --color-success: #3DA144;
-        --color-error: #EF5A70;
-        --color-warning: #D86F48;
-        background: var(--background);
+        @include colors(dark);
     }
+    background: var(--background);
 }
 
 .loading_screen, .rootView {

@@ -1,7 +1,7 @@
 import { VStack} from "../Stack/Stack";
 import {Text, TEXT_STYLE} from "../Text/Text";
 import {TextField} from "./TextField";
-import {View} from "../View";
+import {View} from "../View/View";
 import {EmptyView} from "../EmptyView";
 
 export const LabelTextField = (label, name, value, type, placeholder) => ({

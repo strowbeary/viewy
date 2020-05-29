@@ -1,4 +1,4 @@
-import {View} from "./View";
+import {View} from "./View/View";
 
 export const EmptyView = () => ({
     ...View(),

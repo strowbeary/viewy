@@ -1,4 +1,4 @@
-import {View} from "../View";
+import {View} from "../View/View";
 import "./Stack.scss";
 
 export const Stack = (children) => ({

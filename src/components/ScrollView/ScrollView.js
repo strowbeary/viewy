@@ -1,4 +1,4 @@
-import {View} from "../View";
+import {View} from "../View/View";
 import "./ScrollView.scss";
 
 export const ScrollView = (...children) => ({

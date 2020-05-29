@@ -1,4 +1,4 @@
-import {View} from "../View";
+import {View} from "../View/View";
 import "./TextField.scss";
 import {bind_style} from "../../utils/bind_style.util";
 import {bind_class} from "../../utils/bind_class.util";

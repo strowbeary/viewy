@@ -1,20 +1,38 @@
 import "./Icon.scss"
-import {View} from "../View";
+import {icons} from "feather-icons";
+import {elementClose, elementOpen, skip} from "incremental-dom";
+import {bind_class} from "../../utils/bind_class.util";
+import {View} from "../View/View";
 
-export const Icon = (iconPath, size = 24) => ({
-    ...View().addClass("icon"),
-    setSize (size) {
-        switch (size) {
-            case 16:case 24:case 32:case 48:
-                this.size = size;
-                this.addClass("size_" + size);
-                break;
-            default:
-                throw Error(`Size value ${size} is invalid. Authorized values : 16, 24, 32, 48.`);
+export const Icon = (icon = "box", size = 24) => {
+    return {
+        ...View()
+            .addClass("icon"),
+        render () {
+            (async () => {
+                console.log(await import((`feather-icons/dist/icon/${icon}.svg`)))
+            })();
+            const content = icons[icon].toSvg({
+                width: size,
+                height: size,
+                stroke: 'currentColor'
+            });
+
+            const el = elementOpen(
+                this.renderedTagName, null, null,
+                "style", this.viewStyle,
+                "class", bind_class(this.classList, 'view'),
+                ...this.customAttributes
+            );
+
+            if (el.__cachedInnerHtml !== content) {
+                el.__cachedInnerHtml = content;
+                el.innerHTML = content;
+            }
+            skip();
+
+            elementClose(this.renderedTagName);
+            return el;
         }
-        return this;
-    },
-    render() {
-
-    }
-});
+    };
+};
