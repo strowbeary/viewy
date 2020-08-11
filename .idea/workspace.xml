@@ -2,39 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/View/View.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/View/View.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ressources/sizingScale.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/theme/colors.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/popup/popupManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialog/Dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog/Dialog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EmptyView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EmptyView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/Icon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/Icon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/Icon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Image/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/Image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/List/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Picker/Picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProgressIndicator/ProgressIndicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProgressIndicator/ProgressIndicator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProgressIndicator/ProgressIndicator.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProgressIndicator/ProgressIndicator.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ScrollView/ScrollView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ScrollView/ScrollView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Stack/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stack/Stack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tabs/Tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tabs/Tabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TitleBar/TitleBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TitleBar/TitleBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Toggle/Toggle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Toggle/Toggle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/View.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/View.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/createApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +28,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/index.scss" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="ITpfrqki" />
   </component>
@@ -72,7 +44,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -102,18 +73,6 @@
       <recent name="$PROJECT_DIR$/src/Components" />
       <recent name="$PROJECT_DIR$/src/ressources" />
     </key>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -184,6 +143,14 @@
       <workItem from="1583857326343" duration="583000" />
       <workItem from="1584023704562" duration="4943000" />
     </task>
+    <task id="LOCAL-00001" summary="card debug">
+      <created>1597136462145</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597136462145</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,69 +171,33 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/src/assets/icons" />
     </ignored-roots>
+    <MESSAGE value="card debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="card debug" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="75" y="66" width="1290" height="750" key="DiffContextDialog" timestamp="1581519599190">
-      <screen x="0" y="23" width="1440" height="831" />
+    <state x="417" y="98" key="CommitChangelistDialog2" timestamp="1597136461978">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="754" y="-980" width="1720" height="880" key="DiffContextDialog/0.0.1440.900/654.-1080.1920.1080@654.-1080.1920.1080" timestamp="1576176147345" />
-    <state x="754" y="-980" width="1720" height="880" key="DiffContextDialog/0.23.1440.831/654.-1057.1920.1057@654.-1057.1920.1057" timestamp="1576176173219" />
-    <state x="75" y="66" width="1290" height="750" key="DiffContextDialog/0.23.1440.831@0.23.1440.831" timestamp="1581519599190" />
-    <state width="484" height="953" key="GridCell.Tab.0.bottom" timestamp="1584091359368">
-      <screen x="-480" y="-1080" width="1920" height="1080" />
+    <state x="417" y="98" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1597136461978" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1597136464261">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="429" height="682" key="GridCell.Tab.0.bottom/0.23.1440.831/-253.-1080.1920.1080@0.23.1440.831" timestamp="1584023787591" />
-    <state width="484" height="953" key="GridCell.Tab.0.bottom/1440.-1080.1920.1080/0.0.1440.900/-480.-1080.1920.1080@-480.-1080.1920.1080" timestamp="1584091359368" />
-    <state width="484" height="953" key="GridCell.Tab.0.center" timestamp="1584091359365">
-      <screen x="-480" y="-1080" width="1920" height="1080" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1597136464261" />
+    <state x="433" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597136911749">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="429" height="682" key="GridCell.Tab.0.center/0.23.1440.831/-253.-1080.1920.1080@0.23.1440.831" timestamp="1584023787588" />
-    <state width="484" height="953" key="GridCell.Tab.0.center/1440.-1080.1920.1080/0.0.1440.900/-480.-1080.1920.1080@-480.-1080.1920.1080" timestamp="1584091359365" />
-    <state width="484" height="953" key="GridCell.Tab.0.left" timestamp="1584091359364">
-      <screen x="-480" y="-1080" width="1920" height="1080" />
-    </state>
-    <state width="429" height="682" key="GridCell.Tab.0.left/0.23.1440.831/-253.-1080.1920.1080@0.23.1440.831" timestamp="1584023787586" />
-    <state width="484" height="953" key="GridCell.Tab.0.left/1440.-1080.1920.1080/0.0.1440.900/-480.-1080.1920.1080@-480.-1080.1920.1080" timestamp="1584091359364" />
-    <state width="484" height="953" key="GridCell.Tab.0.right" timestamp="1584091359366">
-      <screen x="-480" y="-1080" width="1920" height="1080" />
-    </state>
-    <state width="429" height="682" key="GridCell.Tab.0.right/0.23.1440.831/-253.-1080.1920.1080@0.23.1440.831" timestamp="1584023787589" />
-    <state width="484" height="953" key="GridCell.Tab.0.right/1440.-1080.1920.1080/0.0.1440.900/-480.-1080.1920.1080@-480.-1080.1920.1080" timestamp="1584091359366" />
-    <state x="415" y="-826" key="MultipleFileMergeDialog" timestamp="1580137115346">
-      <screen x="-253" y="-1080" width="1920" height="1080" />
-    </state>
-    <state x="415" y="-826" key="MultipleFileMergeDialog/0.0.1440.900/-253.-1080.1920.1080@-253.-1080.1920.1080" timestamp="1580137115346" />
-    <state width="500" height="400" key="SwitcherDM" timestamp="1581950677849">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900/-253.-1080.1920.1080@-253.-1080.1920.1080" timestamp="1579528933919" />
-    <state width="500" height="400" key="SwitcherDM/0.0.1440.900/-253.-1080.1920.1080@0.0.1440.900" timestamp="1581950677849" />
-    <state x="368" y="-924" width="832" height="768" key="find.popup" timestamp="1582122572231">
-      <screen x="-253" y="-1080" width="1920" height="1080" />
-    </state>
-    <state x="368" y="-924" width="832" height="768" key="find.popup/0.0.1440.900/-253.-1080.1920.1080@-253.-1080.1920.1080" timestamp="1582122572231" />
-    <state x="466" y="130" width="790" height="640" key="find.popup/0.0.1440.900/-253.-1080.1920.1080@0.0.1440.900" timestamp="1581950646770" />
-    <state x="1275" y="-924" width="678" height="768" key="find.popup/0.0.1440.900/654.-1080.1920.1080@654.-1080.1920.1080" timestamp="1576228237942" />
-    <state x="372" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1582122815366">
-      <screen x="-253" y="-1080" width="1920" height="1080" />
-    </state>
-    <state x="372" y="-839" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-253.-1080.1920.1080@-253.-1080.1920.1080" timestamp="1582122815366" />
-    <state x="210" y="-705" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1584090968580">
-      <screen x="-480" y="-1080" width="1920" height="1080" />
-    </state>
-    <state x="210" y="-705" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1440.-1080.1920.1080/0.0.1440.900/-480.-1080.1920.1080@-480.-1080.1920.1080" timestamp="1584090968580" />
+    <state x="433" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597136911749" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
