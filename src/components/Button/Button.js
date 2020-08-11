@@ -1,7 +1,7 @@
 import {View} from "../View/View";
 import {Text, TEXT_STYLE} from "../Text/Text";
 import "./Button.scss";
-import {EmptyView, HStack, Icon} from "../..";
+import {EmptyView, HStack, Icon, S} from "../..";
 
 export const Button = ({
     icon = null,
@@ -16,10 +16,12 @@ export const Button = ({
             action();
         })
         .addClass(type),
-    render() {
-        return HStack(
-            icon ? Icon(icon) : EmptyView(),
-            Text(label, TEXT_STYLE.button),
-        )
+    get children() {
+        return [
+            HStack(
+                icon ? Icon(icon).paddingRight(S(2)) : EmptyView(),
+                Text(label, TEXT_STYLE.button),
+            )
+        ];
     }
 });

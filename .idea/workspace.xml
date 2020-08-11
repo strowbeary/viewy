@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Icon/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/Icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Icon/Icon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/Icon.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597137002068</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add hstack in button">
+      <created>1597137766327</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597137766327</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,21 +202,22 @@
     </ignored-roots>
     <MESSAGE value="card debug" />
     <MESSAGE value="button icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="button icon" />
+    <MESSAGE value="add hstack in button" />
+    <option name="LAST_COMMIT_MESSAGE" value="add hstack in button" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="417" y="98" key="CommitChangelistDialog2" timestamp="1597137001859">
+    <state x="417" y="98" key="CommitChangelistDialog2" timestamp="1597137766174">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="417" y="98" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1597137001859" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1597137169346">
+    <state x="417" y="98" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1597137766174" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1597137768749">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1597137169346" />
-    <state x="433" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597136911749">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1597137768749" />
+    <state x="433" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597137876562">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="433" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597136911749" />
+    <state x="433" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597137876562" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

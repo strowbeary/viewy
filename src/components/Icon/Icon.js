@@ -17,9 +17,12 @@ export const Icon = (icon = "box", size = 24) => {
                 height: size,
                 stroke: 'currentColor'
             });
-
+            this.viewStyle.width = `${size}px`;
+            this.viewStyle.height = `${size}px`;
             const el = elementOpen(
-                this.renderedTagName, null, null,
+                this.renderedTagName,
+                null,
+                null,
                 "style", this.viewStyle,
                 "class", bind_class(this.classList, 'view'),
                 ...this.customAttributes
