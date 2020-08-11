@@ -1,13 +1,14 @@
+@use "../../theme/utils";
 .card {
-    border-radius: sp(8);
-    border: sp(1) solid var(--color-border);
+    border-radius: utils.sp(8);
+    border: utils.sp(1) solid var(--color-border);
     padding: 0;
 
     .card {
         border: none;
         background: var(--surface);
         .card {
-            border: sp(1) solid var(--color-border-hover);
+            border: utils.sp(1) solid var(--color-border-hover);
             background: var(--background);
             box-shadow: 0 4px 8px 0 var(--color-shadow);
         }
