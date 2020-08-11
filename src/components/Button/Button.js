@@ -1,7 +1,7 @@
 import {View} from "../View/View";
 import {Text, TEXT_STYLE} from "../Text/Text";
 import "./Button.scss";
-import {EmptyView, Icon} from "../..";
+import {EmptyView, HStack, Icon} from "../..";
 
 export const Button = ({
     icon = null,
@@ -16,10 +16,10 @@ export const Button = ({
             action();
         })
         .addClass(type),
-    get children() {
-        return [
+    render() {
+        return HStack(
             icon ? Icon(icon) : EmptyView(),
             Text(label, TEXT_STYLE.button),
-        ];
+        )
     }
 });
