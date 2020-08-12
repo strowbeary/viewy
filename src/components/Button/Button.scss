@@ -16,10 +16,6 @@ button {
         color: var(--color-primary);
     }
 
-    .icon {
-        color: var(--color-primary);
-    }
-
     &.link {
         padding: 8px 0;
         border: none;
@@ -38,6 +34,9 @@ button {
     &.flat {
         border: none;
         background: transparent;
+        .icon {
+            color: var(--color-primary);
+        }
         &:hover {
             background: var(--color-hover);
         }
@@ -53,6 +52,9 @@ button {
     &.outlined {
         background: transparent;
         border: 1px solid var(--color-border);
+        .icon {
+            color: var(--color-primary);
+        }
         &:hover {
             background: var(--color-hover);
             border: 1px solid var(--color-border-hover);
@@ -71,6 +73,9 @@ button {
         color: white;
         background: var(--color-primary);
         border: none;
+        .icon {
+            color: white;
+        }
         .text {
             color: white;
         }
@@ -78,7 +83,7 @@ button {
             background: var(--color-primary-light);
         }
         &:active {
-            background: var(--color-primary-lighter);
+            background: var(--color-primary-light);
         }
         &:focus-visible {
             box-shadow: 0 0 0 3px var(--color-focus);

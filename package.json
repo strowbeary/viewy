@@ -12,6 +12,6 @@
     "incremental-dom": "^0.7.0"
   },
   "devDependencies": {
-    "sass": "^1.22.9"
+    "sass": "^1.26.10"
   }
 }

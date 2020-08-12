@@ -9,13 +9,11 @@ export const Icon = (icon = "box", size = 24) => {
         ...View()
             .addClass("icon"),
         render () {
-            (async () => {
-                console.log(await import((`feather-icons/dist/icon/${icon}.svg`)))
-            })();
             const content = icons[icon].toSvg({
                 width: size,
                 height: size,
-                stroke: 'currentColor'
+                stroke: 'currentColor',
+                'stroke-width': 3
             });
             this.viewStyle.width = `${size}px`;
             this.viewStyle.height = `${size}px`;

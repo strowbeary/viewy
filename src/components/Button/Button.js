@@ -19,7 +19,10 @@ export const Button = ({
     get children() {
         return [
             HStack(
-                icon ? Icon(icon).paddingRight(S(2)) : EmptyView(),
+                icon
+                    ? Icon(icon, 16)
+                        .marginRight(S(2))
+                    : EmptyView(),
                 Text(label, TEXT_STYLE.button),
             )
         ];

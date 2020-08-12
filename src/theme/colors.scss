@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @mixin colors($variant) {
     $primary-color: #1d5dea;
     $secondary-color: #e61e60;
@@ -6,10 +8,10 @@
     @if $variant == light {
         --blurred-background: blur(30px);
         --color-primary: #1d5dea;
-        --color-primary-light: lighten($primary-color, 0.3);
-        --color-primary-lighter: lighten($primary-color, 0.6);
-        --surface-blue: transparentize($primary-color, 0.85);
-        --color-border-blue: transparentize($primary-color, 0.75);
+        --color-primary-light: color.adjust($primary-color, $lightness: +30%);
+        --color-primary-lighter: color.adjust($primary-color, $lightness: +60%);
+        --surface-blue: color.adjust($primary-color, $alpha: -15%);
+        --color-border-blue: color.adjust($primary-color, $alpha: -25%);
         --background: white;
         --background-raised: white;
         --surface: transparentize($surface, 0.8);
