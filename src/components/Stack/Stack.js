@@ -11,6 +11,10 @@ export const Stack = (children) => ({
         this.viewStyle.justifyContent = justification;
         return this;
     },
+    reverse() {
+        this.addClass("reversed");
+        return this;
+    },
     gap (h, v) {
         if (typeof h === "number" && typeof v === "undefined") {
             v = h;

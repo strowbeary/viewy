@@ -34,6 +34,7 @@ export const TextField = (name, value, type = "text", placeholder = "") => ({
                     autoSize(e.target)
                 }
             },
+            ...this.customAttributes
         );
         el.value = value;
         if(type === "textarea" && this.autoSizing) {

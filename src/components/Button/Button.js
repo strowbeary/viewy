@@ -8,6 +8,7 @@ export const Button = ({
     label = "Button",
     action = () => {},
     type = "outlined",
+    reversed = false
 }) => ({
     ...View()
         .tagName("button")
@@ -17,14 +18,15 @@ export const Button = ({
         })
         .addClass(type),
     get children() {
+        const content = HStack(
+            icon
+                ? Icon(icon, 16)
+                    .marginRight(S(2))
+                : EmptyView(),
+            Text(label, TEXT_STYLE.button),
+        );
         return [
-            HStack(
-                icon
-                    ? Icon(icon, 16)
-                        .marginRight(S(2))
-                    : EmptyView(),
-                Text(label, TEXT_STYLE.button),
-            )
+            reversed ? content.reverse() : content
         ];
     }
 });

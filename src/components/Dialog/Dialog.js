@@ -11,7 +11,11 @@ export const Dialog = (...children) => ({
         return this;
     },
     visible(isVisible) {
-        if(isVisible) this.addClass("visible");
+        if(isVisible) {
+            this.addClass("visible");
+        } else {
+            this.removeClass("visible");
+        }
         return this;
     },
     get children() {

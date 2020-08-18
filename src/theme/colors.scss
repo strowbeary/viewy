@@ -2,21 +2,20 @@
 
 @mixin colors($variant) {
     $primary-color: #1d5dea;
-    $secondary-color: #e61e60;
     $surface: #000000;
 
     @if $variant == light {
         --blurred-background: blur(30px);
-        --color-primary: #1d5dea;
-        --color-primary-light: color.adjust($primary-color, $lightness: +30%);
-        --color-primary-lighter: color.adjust($primary-color, $lightness: +60%);
-        --surface-blue: color.adjust($primary-color, $alpha: -15%);
-        --color-border-blue: color.adjust($primary-color, $alpha: -25%);
+        --color-primary: #{$primary-color};
+        --color-primary-light: #{color.adjust($primary-color, $lightness: -15%)};
+        --color-primary-lighter: #{color.adjust($primary-color, $lightness: -30%)};
+        --surface-blue: #{color.adjust($primary-color, $alpha: -0.85)};
+        --color-border-blue: #{color.adjust($primary-color, $alpha: -0.25)};
         --background: white;
         --background-raised: white;
-        --surface: transparentize($surface, 0.8);
-        --surface-dark: rgba(0, 0, 0, 0.05);
-        --backdrop: rgba(0, 0, 0, 0.5);
+        --surface: #{color.adjust($surface, $alpha: -0.95)};
+        --surface-dark: #{color.adjust($surface, $alpha: -0.8)};
+        --backdrop: #{color.adjust($surface, $alpha: -0.5)};
         --color-text: #1d1d20;
         --color-text-secondary: #5d5d5d;
         --color-border: rgba(0, 0, 0, 0.1);
@@ -28,6 +27,7 @@
         --color-success: #3DA144;
         --color-error: #EF5A70;
         --color-warning: #D86F48;
+        --color-text-disabled: #868694;
     }
     @else if $variant == dark {
         --blurred-background: blur(30px) brightness(50%);
@@ -52,6 +52,7 @@
         --color-success: #3DA144;
         --color-error: #EF5A70;
         --color-warning: #D86F48;
+        --color-text-disabled: #6e6e73;
     }
 
 }

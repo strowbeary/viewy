@@ -26,6 +26,10 @@ export const LabelTextField = (label, name, value, type, placeholder) => ({
         this.textField.autoSize();
         return this;
     },
+    setTextFieldAttr(name, value) {
+        this.textField.setAttribute(name, value);
+        return this;
+    },
     get children() {
         return [
             VStack(

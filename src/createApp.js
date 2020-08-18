@@ -10,7 +10,6 @@ export const createApp = (elementId, rootView) => {
 
     window.addEventListener("load", () => {
         const el = render();
-        console.log(new XMLSerializer().serializeToString(document));
     });
     return () => render();
 };

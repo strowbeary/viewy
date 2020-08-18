@@ -3,10 +3,16 @@
 
     &.vertical {
         flex-direction: column;
+        &.reversed {
+            flex-flow: column-reverse;
+        }
     }
 
     &.horizontal {
         flex-direction: row;
         align-items: center;
+        &.reversed {
+            flex-flow: row-reverse;
+        }
     }
 }

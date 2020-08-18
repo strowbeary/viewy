@@ -16,18 +16,28 @@ button {
         color: var(--color-primary);
     }
 
+    .icon {
+        color: var(--color-primary);
+    }
+
     &.link {
         padding: 8px 0;
         border: none;
         background: transparent;
-        &:hover .text {
+        &:hover .text, &:hover .icon {
             color: var(--color-primary-lighter);
         }
-        &:active .text {
+        &:active .text, &:active .icon {
             color: var(--color-primary-lighter);
         }
         &:focus-visible {
             box-shadow: 0 0 0 3px var(--color-focus);
+        }
+
+        &:disabled .text, &:disabled .icon {
+            pointer-events: none;
+            background: none;
+            color: var(--color-text-disabled);
         }
     }
 
@@ -46,6 +56,12 @@ button {
         }
         &:focus-visible {
             box-shadow: 0 0 0 3px var(--color-focus);
+        }
+
+        &:disabled {
+            pointer-events: none;
+            background: none;
+            color: var(--color-text-disabled);
         }
     }
 
@@ -68,6 +84,13 @@ button {
         &:focus-visible {
             box-shadow: 0 0 0 3px var(--color-focus);
         }
+
+        &:disabled {
+            pointer-events: none;
+            background: none;
+            color: var(--color-text-disabled);
+            border: 1px solid var(--color-shadow);
+        }
     }
     &.filled{
         color: white;
@@ -83,10 +106,16 @@ button {
             background: var(--color-primary-light);
         }
         &:active {
-            background: var(--color-primary-light);
+            background: var(--color-primary-lighter);
         }
         &:focus-visible {
             box-shadow: 0 0 0 3px var(--color-focus);
+        }
+        &:disabled {
+            pointer-events: none;
+            background: none;
+            color: white;
+            background: var(--color-shadow);
         }
     }
 }
