@@ -21,10 +21,10 @@ export const Button = ({
         const content = HStack(
             icon
                 ? Icon(icon, 16)
-                    .marginRight(S(2))
                 : EmptyView(),
             Text(label, TEXT_STYLE.button),
-        );
+        )
+            .gap(S(2));
         return [
             reversed ? content.reverse() : content
         ];

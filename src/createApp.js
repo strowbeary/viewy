@@ -4,7 +4,7 @@ export const createApp = (elementId, rootView) => {
     const render = augmentor(function () {
         const renderResult = rootView();
         const mountingNode = document.getElementById(elementId);
-        mountingNode.style.height = "100%";
+        mountingNode.style.height = "100vh";
         return patch(mountingNode, () => renderResult.render(), {});
     });
 
