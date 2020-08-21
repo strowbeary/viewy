@@ -15,7 +15,7 @@ export const Icon = (icon = "box", size = 24) => {
                 const res = await fetch((iconPaths[icon]));
                 const svg = await res.text();
                 setContent(svg);
-            })()
+            })();
             this.viewStyle.width = `${size / 16}rem`;
             this.viewStyle.height = `${size / 16}rem`;
             const el = elementOpen(
