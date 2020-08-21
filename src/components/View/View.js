@@ -72,6 +72,18 @@ export const View = (...children) => ({
         this.viewStyle.borderLeft = `${width}px ${style} ${color}`;
         return this;
     },
+    borderTop(width, style, color = "var(--color-border)") {
+        this.viewStyle.borderTop = `${width}px ${style} ${color}`;
+        return this;
+    },
+    borderBottom(width, style, color = "var(--color-border)") {
+        this.viewStyle.borderBottom = `${width}px ${style} ${color}`;
+        return this;
+    },
+    border(width, style, color = "var(--color-border)") {
+        this.viewStyle.border = `${width}px ${style} ${color}`;
+        return this;
+    },
     minWidth(value) {
         this.viewStyle.minWidth = value;
         return this;

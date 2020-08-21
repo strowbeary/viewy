@@ -10,6 +10,7 @@
         --color-primary-light: #{color.adjust($primary-color, $lightness: -15%)};
         --color-primary-lighter: #{color.adjust($primary-color, $lightness: -30%)};
         --surface-blue: #{color.adjust($primary-color, $alpha: -0.85)};
+        --surface-red: #{color.adjust(#EF5A70, $alpha: -0.9)};
         --color-border-blue: #{color.adjust($primary-color, $alpha: -0.25)};
         --background: white;
         --background-raised: white;
@@ -35,6 +36,7 @@
         --color-primary-light: #3399ff;
         --color-primary-lighter: #4da6ff;
         --surface-blue: #0a84ff11;
+        --surface-red: #{color.adjust(#EF5A70, $alpha: -0.9)};
         --color-border-blue: #0a84ff33;
         --background: #161616;
         --background-raised: #4f4e53;

@@ -17,6 +17,12 @@ export const Button = ({
             action();
         })
         .addClass(type),
+    disabled(isDisabled) {
+        if (isDisabled) {
+            this.setAttribute("disabled", "disabled");
+        }
+        return this;
+    },
     get children() {
         const content = HStack(
             icon

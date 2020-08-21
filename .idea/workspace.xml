@@ -33,10 +33,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/createApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/View/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/colors.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +106,7 @@
       <recent name="$PROJECT_DIR$/src/utils" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -175,6 +175,7 @@
       <workItem from="1582732877510" duration="832000" />
       <workItem from="1583857326343" duration="583000" />
       <workItem from="1584023704562" duration="4943000" />
+      <workItem from="1597953132712" duration="2557000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
@@ -204,11 +205,18 @@
       <option name="project" value="LOCAL" />
       <updated>1597217646333</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixes">
+      <created>1597856244392</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597856244392</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -240,17 +248,18 @@
     <MESSAGE value="button icon" />
     <MESSAGE value="add hstack in button" />
     <MESSAGE value="fixed colors.scss" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed colors.scss" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="417" y="24" key="CommitChangelistDialog2" timestamp="1597217646103">
+    <state x="417" y="24" key="CommitChangelistDialog2" timestamp="1597856244227">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="417" y="24" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1597217646103" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1597217653317">
+    <state x="417" y="24" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1597856244227" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1597856246439">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1597217653317" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1597856246439" />
     <state x="433" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597161254898">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
