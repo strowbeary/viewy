@@ -1,6 +1,7 @@
 import {View} from "../View/View";
 import "./Text.scss"
 import {text} from "incremental-dom";
+
 export const TEXT_STYLE = {
     largeTitle: "large-title",
     h1: "h1",
@@ -22,28 +23,32 @@ export const Text = (value, style = TEXT_STYLE.body1, tagName = "span") => ({
         .addClass("text")
         .addClass(style)
         .tagName(tagName),
-    size(value) {
+    size (value) {
         this.viewStyle.fontSize = value + "px";
         return this;
     },
-    font(fontStack) {
+    font (fontStack) {
         this.viewStyle.fontFamily = fontStack;
         return this;
     },
-    textAlign(alignment) {
+    textAlign (alignment) {
         this.viewStyle.textAlign = alignment;
         return this;
     },
-    color(color) {
+    color (color) {
         this.viewStyle.color = color;
         return this;
     },
-    textOverflow(value) {
+    textOverflow (value) {
         this.viewStyle.textOverflow = value;
         return this;
     },
+    lineHeight (value) {
+        this.viewStyle.lineHeight = value;
+        return this;
+    },
     children: [{
-        render() {
+        render () {
             text(value);
         }
     }]
