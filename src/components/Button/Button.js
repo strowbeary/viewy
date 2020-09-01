@@ -1,7 +1,14 @@
-import {View} from "../View/View";
-import {Text, TEXT_STYLE} from "../Text/Text";
+import {View} from "../..";
+import {Text, TEXT_STYLE} from "../..";
 import "./Button.scss";
-import {EmptyView, HStack, Icon, S} from "../..";
+import {HStack, Icon, S} from "../..";
+
+export const BUTTON_STYLE = {
+    link: "link",
+    flat: "flat",
+    outlined: "outlined",
+    filled: "filled",
+};
 
 export const Button = ({
     icon = null,
@@ -24,15 +31,19 @@ export const Button = ({
         return this;
     },
     get children() {
-        const content = HStack(
-            icon
-                ? Icon(icon, 16)
-                : EmptyView(),
-            Text(label, TEXT_STYLE.button),
-        )
-            .gap(S(2));
+        let content = Text(label, TEXT_STYLE.button);
+        if (icon) {
+            content = HStack(Icon(icon, 16), content)
+                .gap(S(2))
+            if (reversed) {
+                content.reverse()
+            }
+        }
+        if(icon && label === "") {
+            content = Icon(icon, 16);
+        }
         return [
-            reversed ? content.reverse() : content
+            content
         ];
     }
 });

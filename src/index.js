@@ -1,5 +1,6 @@
 import "./index.scss";
 
+export * from "augmentor";
 export * from "./components/Tag/Tag";
 export * from "./components/Button/Button";
 export * from "./components/Icon/Icon";
@@ -27,5 +28,4 @@ export * from "./components/View/View";
 
 export * from "./ressources/colors";
 export * from "./ressources/SizingScale";
-export * from "augmentor";
 export * from "./createApp";

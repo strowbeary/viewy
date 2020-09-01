@@ -153,7 +153,7 @@ export const View = (...children) => ({
             "style", this.viewStyle,
             "class", bind_class(this.classList, 'view'),
             ...this.customAttributes);
-        this.children.forEach(child => child.render());
+        this.children.forEach(child => child.render(el));
         elementClose(
             this.renderedTagName);
         return el;

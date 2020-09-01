@@ -31,9 +31,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="">
+    <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Grid/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Grid/Grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/View/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/createApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,20 +94,21 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/Controllers" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/utils" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/View" />
       <recent name="$PROJECT_DIR$/src/theme" />
       <recent name="$PROJECT_DIR$/src/services" />
       <recent name="$PROJECT_DIR$/src/Components" />
       <recent name="$PROJECT_DIR$/src/ressources" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/assets" />
-      <recent name="$PROJECT_DIR$/src/Controllers" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/utils" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -177,6 +183,12 @@
       <workItem from="1597918273252" duration="2820000" />
       <workItem from="1598016604473" duration="1575000" />
       <workItem from="1598097466219" duration="2801000" />
+      <workItem from="1598368456329" duration="698000" />
+      <workItem from="1598472822174" duration="3584000" />
+      <workItem from="1598517442339" duration="1833000" />
+      <workItem from="1598777273366" duration="4257000" />
+      <workItem from="1598800260754" duration="6003000" />
+      <workItem from="1598947391650" duration="769000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
@@ -234,7 +246,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -250,7 +274,8 @@
     <MESSAGE value="add hstack in button" />
     <MESSAGE value="fixed colors.scss" />
     <MESSAGE value="fixed ProgressIndicator" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed ProgressIndicator" />
+    <MESSAGE value="created component concept" />
+    <option name="LAST_COMMIT_MESSAGE" value="created component concept" />
   </component>
   <component name="WindowStateProjectService">
     <state x="477" y="27" width="909" height="1002" key="CommitChangelistDialog2" timestamp="1598016890564">
@@ -271,10 +296,19 @@
     </state>
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1597217653317" />
     <state x="503" y="280" width="800" height="543" key="Vcs.Push.Dialog.v2/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598016893890" />
-    <state x="433" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597161254898">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="100" y="127" width="1720" height="802" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598802722869">
+      <screen x="0" y="27" width="1920" height="1002" />
+    </state>
+    <state x="100" y="127" width="1720" height="802" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598802722869" />
+    <state x="495" y="159" width="762" height="712" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598800560568">
+      <screen x="0" y="27" width="1920" height="1002" />
     </state>
     <state x="433" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597161254898" />
+    <state x="495" y="159" width="762" height="712" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598800560568" />
+    <state x="656" y="112" width="607" height="831" key="find.popup" timestamp="1598801686221">
+      <screen x="0" y="27" width="1920" height="1002" />
+    </state>
+    <state x="656" y="112" width="607" height="831" key="find.popup/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598801686221" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

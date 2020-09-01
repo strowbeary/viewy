@@ -1,4 +1,4 @@
-import {Stack} from "../Stack/Stack";
+import {Stack} from "../..";
 import "./Grid.scss";
 export const Grid = (...children) => ({
     ...Stack(),
@@ -10,12 +10,12 @@ export const Grid = (...children) => ({
         return this;
     },
     areas (schema) {
+        this.viewStyle.gridTemplateAreas = schema;
         this.children = Array.from(Object.keys(this.children[0]))
             .map(area => {
                 this.children[0][area].viewStyle.gridArea = area;
                 return this.children[0][area];
             });
-        this.viewStyle.gridTemplateAreas = schema;
         return this;
     },
     columns (schema) {
