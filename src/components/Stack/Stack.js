@@ -19,12 +19,7 @@ export const Stack = (children) => ({
         if (typeof h === "number" && typeof v === "undefined") {
             v = h;
         }
-        this.viewStyle.marginLeft = `-${h}px`;
-        this.viewStyle.marginBottom = `-${v}px`;
-        this.children = this.children.map(c => View(c)
-            .paddingLeft(h)
-            .paddingBottom(v)
-        );
+        this.viewStyle.gridGap = `${h}px ${v}px`;
         return this;
     },
     children

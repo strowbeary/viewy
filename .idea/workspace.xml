@@ -32,13 +32,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Grid/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Grid/Grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialog/Dialog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog/Dialog.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Stack/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stack/Stack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/View/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/createApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,6 +186,7 @@
       <workItem from="1598777273366" duration="4257000" />
       <workItem from="1598800260754" duration="6003000" />
       <workItem from="1598947391650" duration="769000" />
+      <workItem from="1599036805863" duration="1504000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
@@ -291,6 +289,10 @@
       <screen x="0" y="27" width="1920" height="1002" />
     </state>
     <state x="187" y="112" width="1536" height="838" key="MergeDialog/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598016843723" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1599072783657">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1599072783657" />
     <state x="503" y="280" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1598016893890">
       <screen x="0" y="27" width="1920" height="1002" />
     </state>
