@@ -10,6 +10,10 @@ export const Icon = (icon = "box", size = 24) => {
     return {
         ...View()
             .addClass("icon"),
+        color (color) {
+            this.viewStyle.color = color;
+            return this;
+        },
         render () {
             (async () => {
                 const res = await fetch((iconPaths[icon]));
@@ -31,7 +35,7 @@ export const Icon = (icon = "box", size = 24) => {
                 el.__cachedInnerHtml = content;
                 el.innerHTML = content;
             }
-            if(el.firstChild) {
+            if (el.firstChild) {
                 el.firstChild.setAttribute("width", `100%`);
                 el.firstChild.setAttribute("height", `100%`);
                 el.firstChild.setAttribute("stroke-width", 3);

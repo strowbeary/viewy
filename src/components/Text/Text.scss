@@ -10,6 +10,9 @@
         line-height: sp(56);
         font-weight: $fw-bold;
         letter-spacing: sp(-0.022);
+        &::first-letter {
+            text-transform: uppercase;
+        }
     }
 
     &.h1 {
