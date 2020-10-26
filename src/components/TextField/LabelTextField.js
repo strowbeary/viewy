@@ -9,6 +9,10 @@ export const LabelTextField = (label, name, value, type, placeholder) => ({
     textField: TextField(name, value, type, placeholder),
     value: "",
     helperMessage: null,
+    addTextFieldModifier(cb) {
+        this.textField = cb(this.textField);
+        return this;
+    },
     setValue(value) {
         this.value = value;
         return this;

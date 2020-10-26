@@ -85,6 +85,10 @@ export const View = (...children) => ({
         this.viewStyle.border = `${width}px ${style} ${color}`;
         return this;
     },
+    borderColor (color = "var(--color-border)") {
+        this.viewStyle.borderColor = color;
+        return this;
+    },
     minWidth (value) {
         this.viewStyle.minWidth = value;
         return this;
@@ -154,6 +158,10 @@ export const View = (...children) => ({
     },
     gridColumn(column) {
         this.viewStyle.gridColumn = column;
+        return this;
+    },
+    gridRow(column) {
+        this.viewStyle.gridRow = column;
         return this;
     },
     render () {

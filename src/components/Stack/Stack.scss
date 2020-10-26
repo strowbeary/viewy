@@ -1,5 +1,6 @@
 .stack {
     display: flex;
+    gap: var(--hgap) var(--vgap);
 
     &.vertical {
         flex-direction: column;

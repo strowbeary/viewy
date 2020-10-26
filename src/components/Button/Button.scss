@@ -1,8 +1,10 @@
+@import "../../theme/utils.scss";
+
 button {
     font-size: 1.6rem;
     border: none;
     border-radius: 6px;
-    padding: 8px 16px;
+    padding: sp(8) sp(16);
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -107,6 +109,33 @@ button {
         }
         &:active {
             background: var(--color-primary-lighter);
+        }
+        &:focus-visible {
+            box-shadow: 0 0 0 3px var(--color-focus);
+        }
+        &:disabled {
+            pointer-events: none;
+            background: none;
+            color: white;
+            background: var(--color-shadow);
+        }
+    }
+
+    &.destructive{
+        color: white;
+        background: var(--color-destructive);
+        border: none;
+        .icon {
+            color: white;
+        }
+        .text {
+            color: white;
+        }
+        &:hover {
+            background: var(--color-destructive-light);
+        }
+        &:active {
+            background: var(--color-destructive-lighter);
         }
         &:focus-visible {
             box-shadow: 0 0 0 3px var(--color-focus);

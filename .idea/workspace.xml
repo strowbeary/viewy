@@ -32,9 +32,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_09_2020_22_52_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_01_09_2020_22_52__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Icon/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Icon/Icon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Picker/Picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Picker/Picker.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Stack/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stack/Stack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Stack/Stack.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stack/Stack.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/View/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/createApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/colors.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,6 +200,9 @@
       <workItem from="1598947391650" duration="769000" />
       <workItem from="1599036805863" duration="1504000" />
       <workItem from="1599467128851" duration="2439000" />
+      <workItem from="1601396809535" duration="511000" />
+      <workItem from="1602689679080" duration="1070000" />
+      <workItem from="1603565407109" duration="10490000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
@@ -307,9 +323,10 @@
     </state>
     <state x="433" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597161254898" />
     <state x="495" y="159" width="762" height="712" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598800560568" />
-    <state x="656" y="112" width="607" height="831" key="find.popup" timestamp="1598801686221">
-      <screen x="0" y="27" width="1920" height="1002" />
+    <state x="574" y="89" width="568" height="871" key="find.popup" timestamp="1603661793033">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="574" y="89" width="568" height="871" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1603661793033" />
     <state x="656" y="112" width="607" height="831" key="find.popup/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598801686221" />
   </component>
   <component name="XDebuggerManager">

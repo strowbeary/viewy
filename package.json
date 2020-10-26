@@ -9,7 +9,8 @@
   "dependencies": {
     "augmentor": "^2.2.0",
     "feather-icons": "^4.26.0",
-    "incremental-dom": "^0.7.0"
+    "incremental-dom": "^0.7.0",
+    "uikit": "file:../../.fnm/node-versions/v15.0.1/installation/lib/node_modules/uikit"
   },
   "devDependencies": {
     "sass": "^1.26.10"

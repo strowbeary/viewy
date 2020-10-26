@@ -24,11 +24,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: sp(6) sp(24);
+        padding: sp(8) sp(12);
         border: 1px solid var(--color-border);
         border-left: none;
         border-right: none;
-        .text {
+        .text, .icon {
             color: var(--color-primary);
         }
         &:last-of-type {
@@ -53,7 +53,7 @@
         &.selected {
             border-color: var(--color-primary);
             background: var(--color-primary);
-            .text {
+            .text, .icon {
                 color: white;
             }
         }

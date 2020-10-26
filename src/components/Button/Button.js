@@ -8,6 +8,7 @@ export const BUTTON_STYLE = {
     flat: "flat",
     outlined: "outlined",
     filled: "filled",
+    destructive: "destructive"
 };
 
 export const Button = ({
@@ -34,6 +35,7 @@ export const Button = ({
         let content = Text(label, TEXT_STYLE.button);
         if (icon) {
             content = HStack(Icon(icon, 16), content)
+                .justifyContent("center")
                 .gap(S(2))
             if (reversed) {
                 content.reverse()

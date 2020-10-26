@@ -1,6 +1,7 @@
 import {patch, skip} from "incremental-dom";
 import {augmentor} from "augmentor";
 import {View} from "./components/View/View";
+
 export const createApp = (elementId, rootView) => {
     const render = augmentor(() => {
         const renderable = rootView();
@@ -21,13 +22,16 @@ export const createApp = (elementId, rootView) => {
 export const forceUpdate = () => window.dispatchEvent(new CustomEvent("forceUpdate"));
 
 export const component = (view) => {
+    const componentRender = augmentor((parentEl, isRoot = false, attrs) => {
+        if (!isRoot) {
+            skip();
+        }
+        return patch(parentEl, () => view(...attrs).render(), {});
+    });
     return (...attrs) => ({
         ...View(),
-        render: augmentor((parentEl, isRoot = false) => {
-            if(!isRoot) {
-                skip();
-            }
-            return patch(parentEl, () => view(...attrs).render(), {});
-        })
+        render(...params) {
+            componentRender(...params, attrs)
+        }
     });
 };

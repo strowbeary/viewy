@@ -1,48 +1,37 @@
 import "./Icon.scss"
-import iconPaths from "../../../node_modules/feather-icons/dist/icons/*.svg";
-import {elementClose, elementOpen, skip} from "incremental-dom";
+import icons from "feather-icons/dist/icons.json";
+import {elementVoid} from "incremental-dom";
 import {bind_class} from "../../utils/bind_class.util";
 import {View} from "../View/View";
-import {useState} from "augmentor";
-
-export const Icon = (icon = "box", size = 24) => {
-    const [content, setContent] = useState("");
+export const Icon = (icon, size = 24) => {
     return {
         ...View()
             .addClass("icon"),
-        color (color) {
+        color(color) {
             this.viewStyle.color = color;
             return this;
         },
-        render () {
-            (async () => {
-                const res = await fetch((iconPaths[icon]));
-                const svg = await res.text();
-                setContent(svg);
-            })();
+        render() {
             this.viewStyle.width = `${size / 16}rem`;
             this.viewStyle.height = `${size / 16}rem`;
-            const el = elementOpen(
-                this.renderedTagName,
+            const el = elementVoid(
+                'svg',
                 null,
                 null,
                 "style", this.viewStyle,
                 "class", bind_class(this.classList, 'view'),
+                "viewBox", "0 0 24 24",
+                "fill", "none",
+                "stroke", "currentColor",
+                'stroke-width', 3,
+                "stroke-linecap", "round",
+                "stroke-linejoin", "round",
+                "width", `${size}px`,
+                "height", `${size}px`,
                 ...this.customAttributes
             );
 
-            if (el.__cachedInnerHtml !== content) {
-                el.__cachedInnerHtml = content;
-                el.innerHTML = content;
-            }
-            if (el.firstChild) {
-                el.firstChild.setAttribute("width", `100%`);
-                el.firstChild.setAttribute("height", `100%`);
-                el.firstChild.setAttribute("stroke-width", 3);
-            }
-            skip();
-
-            elementClose(this.renderedTagName);
+            el.innerHTML = icons[icon];
             return el;
         }
     };

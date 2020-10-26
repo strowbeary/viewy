@@ -1,6 +1,7 @@
 import {View} from "../View/View";
 import "./Picker.scss"
 import {Text, TEXT_STYLE} from "../Text/Text";
+import {Icon} from "../Icon/Icon";
 import {HStack, VStack} from "../Stack/Stack";
 import {S} from "../../ressources/SizingScale";
 
@@ -10,15 +11,20 @@ export const Picker = (label, name, action = () => {
     let disabled = false;
 
     function SegmentedPicker () {
-        return items.map(({value, label: optionLabel}) => ({
-            ...View()
-                .on('click',() => action(value)),
-            classList: {
-                item: true,
-                selected: value === selectedItemValue
-            },
-            children: [Text(optionLabel, TEXT_STYLE.button)],
-        }))
+        return items.map(({value, label: optionLabel, icon}) => {
+            const children = []
+            if(icon) children.push(Icon(icon, 16));
+            if(optionLabel) children.push(Text(optionLabel, TEXT_STYLE.button));
+            return {
+                ...View()
+                    .on('click',() => action(value)),
+                classList: {
+                    item: true,
+                    selected: value === selectedItemValue
+                },
+                children,
+            }
+        })
     }
 
     function DropdownPicker () {

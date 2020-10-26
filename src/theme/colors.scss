@@ -3,6 +3,7 @@
 @mixin colors($variant) {
     $primary-color: #1d5dea;
     $surface: #000000;
+    $color-destructive: #f14a61;
 
     @if $variant == light {
         --blurred-background: blur(30px);
@@ -26,7 +27,9 @@
         --color-focus: #1d5dea99;
         --color-shadow: rgba(0, 0, 0, 0.1);
         --color-success: #3DA144;
-        --color-error: #EF5A70;
+        --color-destructive: #{$color-destructive};
+        --color-destructive-light: #{color.adjust($color-destructive, $lightness: 10%)};;
+        --color-destructive-lighter: #{color.adjust($color-destructive, $lightness: 20%)};;
         --color-warning: #D86F48;
         --color-text-disabled: #868694;
     }
@@ -52,7 +55,9 @@
         --color-focus: #0a84ff66;
         --color-shadow: rgba(0, 0, 0, 0.1);
         --color-success: #3DA144;
-        --color-error: #EF5A70;
+        --color-destructive: #{$color-destructive};
+        --color-destructive-light: #{color.adjust($color-destructive, $lightness: -10%)};;
+        --color-destructive-lighter: #{color.adjust($color-destructive, $lightness: -20%)};;
         --color-warning: #D86F48;
         --color-text-disabled: #6e6e73;
     }
