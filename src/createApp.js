@@ -7,6 +7,7 @@ export const createApp = (elementId, rootView) => {
         const renderable = rootView();
         const mountingNode = document.getElementById(elementId);
         mountingNode.style.height = "100vh";
+        mountingNode.style.background = "var(--background)";
         renderable.render(mountingNode, true);
     });
 
