@@ -4,12 +4,14 @@ import {bind_style} from "../../utils/bind_style.util";
 import {bind_class} from "../../utils/bind_class.util";
 import {elementVoid} from "incremental-dom";
 import {autoSize} from "../../utils/autoResizeTextarea.util";
-export const TextField = (name, model, type = "text", placeholder = "") => ({
+export const TextField = (name, value, type = "text", placeholder = "") => ({
     ...View()
         .addClass("text_field")
         .addClass('type-' + type),
-    onChangeHandler: e => {
-        model = e.target.value;
+    onChangeHandler: () => {},
+    onChange(cb) {
+        this.onChangeHandler = cb;
+        return this;
     },
     autoSizing: false,
     autoSize() {
@@ -35,7 +37,7 @@ export const TextField = (name, model, type = "text", placeholder = "") => ({
             },
             ...this.customAttributes
         );
-        el.value = model;
+        el.value = value;
         if(type === "textarea" && this.autoSizing) {
             autoSize(el)
         }
