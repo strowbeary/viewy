@@ -1,7 +1,6 @@
-import {patch, skip} from "incremental-dom";
+import {patch, skip, currentElement} from "incremental-dom";
 import {augmentor} from "augmentor";
 import {View} from "./components/View/View";
-import {currentElement} from "incremental-dom/src/core";
 
 export const createApp = (elementId, rootComponent) => {
     const mountingNode = document.getElementById(elementId);
