@@ -1,12 +1,10 @@
 import {VStack} from "../Stack/Stack";
-import {Loader} from "../ProgressIndicator/Loader";
-import {Text, TEXT_STYLE} from "../Text/Text";
+import {ProgressIndicator} from "../ProgressIndicator/ProgressIndicator";
 
 export default () => VStack(
-    Loader(),
-    Text("Your app is starting", TEXT_STYLE.footnote)
-        .marginTop(16)
+    ProgressIndicator()
 )
+    .width("100%")
+    .height("100%")
     .alignItems("center")
     .justifyContent("center")
-    .addClass("loading_screen")

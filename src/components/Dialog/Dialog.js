@@ -1,9 +1,11 @@
 import "./Dialog.scss";
 import {View} from "../View/View";
+import {EmptyView} from "../EmptyView";
 
 export const Dialog = (...children) => ({
     ...View()
         .addClass("dialog"),
+    isVisible: false,
     onClose(cb) {
         this
             .on('click', cb)
@@ -11,6 +13,7 @@ export const Dialog = (...children) => ({
         return this;
     },
     visible(isVisible) {
+        this.isVisible = isVisible;
         if(isVisible) {
             this.addClass("visible");
         } else {
@@ -19,10 +22,9 @@ export const Dialog = (...children) => ({
         return this;
     },
     get children() {
+        const dialogWindow = this.isVisible ? View(...children) : View();
         return [
-            View(
-                ...children
-            )
+            dialogWindow
                 .on('click',e => e.stopPropagation())
                 .removeClass("clickable")
                 .addClass("dialog-window")

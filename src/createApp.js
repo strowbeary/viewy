@@ -22,13 +22,14 @@ export const forceUpdate = () => window.dispatchEvent(new CustomEvent("forceUpda
 
 
 
-export function component({data = async () => ({}), view}) {
-    const eventTarget = new EventTarget();
-    let initializedData = null
+export function component({name, data = async () => ({}), view = () => {}}) {
+    let eventTarget = new EventTarget();
+    let initializedData = null;
+    let loading = true;
 
     function render(mountingNode, props) {
         patch(mountingNode, () => {
-            if(initializedData) {
+            if(initializedData && !loading) {
                 view.call(initializedData, ...props).render()
             } else {
                 LoadingScreen().render()
@@ -37,7 +38,7 @@ export function component({data = async () => ({}), view}) {
     }
 
     function reactify(data, onUpdate) {
-        const proxy = new Proxy(data, {
+        return new Proxy(data, {
             get(obj, prop) {
                 return obj[prop];
             },
@@ -47,15 +48,19 @@ export function component({data = async () => ({}), view}) {
                 return true;
             }
         });
-        return proxy;
     }
 
     function mount(props) {
+        eventTarget = new EventTarget();
         const mountingNode = currentElement();
+        console.log("MOUNT", name, mountingNode);
         eventTarget.addEventListener("update", () => render(mountingNode, props));
+        render(mountingNode, props)
+        loading = true;
         data().then(dataObj => {
             initializedData = reactify(dataObj, () => eventTarget.dispatchEvent(new CustomEvent("update")));
-            eventTarget.dispatchEvent(new CustomEvent("update", ));
+            eventTarget.dispatchEvent(new CustomEvent("update"));
+            loading = false;
         });
     }
 
