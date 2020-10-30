@@ -1,16 +1,13 @@
 import {patch, skip} from "incremental-dom";
 import {augmentor} from "augmentor";
 import {View} from "./components/View/View";
+import {currentElement} from "incremental-dom/src/core";
 
-export const createApp = (elementId, rootView) => {
-    const render = augmentor(() => {
-        const renderable = rootView();
-        const mountingNode = document.getElementById(elementId);
-        mountingNode.style.height = "100vh";
-        mountingNode.style.background = "var(--background)";
-        renderable.render(mountingNode, true);
-    });
-
+export const createApp = (elementId, rootComponent) => {
+    const mountingNode = document.getElementById(elementId);
+    mountingNode.style.height = "100vh";
+    mountingNode.style.background = "var(--background)";
+    const render = () => rootComponent().render();
     window.addEventListener("load", () => {
         render()
     });
@@ -22,17 +19,17 @@ export const createApp = (elementId, rootView) => {
 
 export const forceUpdate = () => window.dispatchEvent(new CustomEvent("forceUpdate"));
 
-export const component = (view) => {
-    const componentRender = augmentor((parentEl, isRoot = false, attrs) => {
-        if (!isRoot) {
-            skip();
-        }
-        return patch(parentEl, () => view(...attrs).render(), {});
-    });
-    return (...attrs) => ({
+export function component({data = () => async () => ({}), render}) {
+    return (params) => ({
         ...View(),
-        render(...params) {
-            componentRender(...params, attrs)
+        render() {
+            skip();
+            data().then(dataObj => augmentor(() => {
+                patch(currentElement(), () => render.call({
+                    ...params,
+                    ...dataObj
+                }))
+            }))
         }
-    });
-};
+    })
+}

@@ -35,7 +35,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialog/Dialog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog/Dialog.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/View/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/View.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/createApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createApp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,6 +92,9 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReadonlyStatusHandler">
+    <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -194,7 +196,9 @@
       <workItem from="1603565407109" duration="10586000" />
       <workItem from="1603738332245" duration="725000" />
       <workItem from="1603789771452" duration="4255000" />
-      <workItem from="1603881013695" duration="1876000" />
+      <workItem from="1603881013695" duration="2636000" />
+      <workItem from="1603994137332" duration="1705000" />
+      <workItem from="1604005334013" duration="4600000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
@@ -297,9 +301,10 @@
       <screen x="0" y="27" width="1920" height="1002" />
     </state>
     <state x="187" y="112" width="1536" height="838" key="MergeDialog/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598016843723" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1599072783657">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="572" height="509" key="SwitcherDM" timestamp="1604048705022">
+      <screen x="-1920" y="-964" width="1920" height="1200" />
     </state>
+    <state width="572" height="509" key="SwitcherDM/-1920.-964.1920.1200/0.0.1680.1050@-1920.-964.1920.1200" timestamp="1604048705022" />
     <state width="500" height="445" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1599072783657" />
     <state x="503" y="280" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1598016893890">
       <screen x="0" y="27" width="1920" height="1002" />
@@ -320,6 +325,10 @@
     </state>
     <state x="574" y="89" width="568" height="871" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1603661793033" />
     <state x="656" y="112" width="607" height="831" key="find.popup/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598801686221" />
+    <state x="-1230" y="-481" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1604047376739">
+      <screen x="-1920" y="-964" width="1920" height="1200" />
+    </state>
+    <state x="-1230" y="-481" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/-1920.-964.1920.1200/0.0.1680.1050@-1920.-964.1920.1200" timestamp="1604047376739" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
