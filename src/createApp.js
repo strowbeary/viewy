@@ -1,5 +1,6 @@
 import {patch, skip, currentElement} from "incremental-dom";
 import {augmentor} from "augmentor";
+import LoadingScreen from "./components/Presentation/LoadingScreen";
 
 export const createApp = (elementId, rootComponent) => {
     const render = () => {
@@ -19,35 +20,42 @@ export const createApp = (elementId, rootComponent) => {
 
 export const forceUpdate = () => window.dispatchEvent(new CustomEvent("forceUpdate"));
 
-function reactify(data, onUpdate) {
-    return new Proxy(data, {
-        get(obj, prop) {
-            return obj[prop];
-        },
-        set(obj, prop, value) {
-            obj[prop] = value;
-            onUpdate();
-            return true;
-        }
-    })
-}
+
 
 export function component({data = async () => ({}), view}) {
     const eventTarget = new EventTarget();
+    let initializedData = null
 
-    function render(mountingNode, data, props) {
-        patch(mountingNode, () => view.call(data, ...props).render());
+    function render(mountingNode, props) {
+        patch(mountingNode, () => {
+            if(initializedData) {
+                view.call(initializedData, ...props).render()
+            } else {
+                LoadingScreen().render()
+            }
+        });
+    }
+
+    function reactify(data, onUpdate) {
+        const proxy = new Proxy(data, {
+            get(obj, prop) {
+                return obj[prop];
+            },
+            set(obj, prop, value) {
+                obj[prop] = value;
+                onUpdate();
+                return true;
+            }
+        });
+        return proxy;
     }
 
     function mount(props) {
         const mountingNode = currentElement();
+        eventTarget.addEventListener("update", () => render(mountingNode, props));
         data().then(dataObj => {
-            const state = reactify({
-                ...dataObj,
-                ...props
-            }, () => eventTarget.dispatchEvent(new CustomEvent("update")));
-            eventTarget.addEventListener("update", () => render(mountingNode, state, props));
-            eventTarget.dispatchEvent(new CustomEvent("update"));
+            initializedData = reactify(dataObj, () => eventTarget.dispatchEvent(new CustomEvent("update")));
+            eventTarget.dispatchEvent(new CustomEvent("update", ));
         });
     }
 
