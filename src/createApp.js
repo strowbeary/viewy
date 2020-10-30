@@ -1,12 +1,13 @@
 import {patch, skip, currentElement} from "incremental-dom";
 import {augmentor} from "augmentor";
-import {View} from "./components/View/View";
 
 export const createApp = (elementId, rootComponent) => {
-    const mountingNode = document.getElementById(elementId);
-    mountingNode.style.height = "100vh";
-    mountingNode.style.background = "var(--background)";
-    const render = () => rootComponent().render();
+    const render = () => {
+        const mountingNode = document.getElementById(elementId);
+        mountingNode.style.height = "100vh";
+        mountingNode.style.background = "var(--background)";
+        patch(mountingNode, () => rootComponent().render());
+    }
     window.addEventListener("load", () => {
         render()
     });
@@ -18,17 +19,43 @@ export const createApp = (elementId, rootComponent) => {
 
 export const forceUpdate = () => window.dispatchEvent(new CustomEvent("forceUpdate"));
 
-export function component({data = () => async () => ({}), render}) {
-    return (params) => ({
-        ...View(),
+function reactify(data, onUpdate) {
+    return new Proxy(data, {
+        get(obj, prop) {
+            return obj[prop];
+        },
+        set(obj, prop, value) {
+            obj[prop] = value;
+            onUpdate();
+            return true;
+        }
+    })
+}
+
+export function component({data = async () => ({}), view}) {
+    const eventTarget = new EventTarget();
+
+    function render(mountingNode, data, props) {
+        patch(mountingNode, () => view.call(data, ...props).render());
+    }
+
+    function mount(props) {
+        const mountingNode = currentElement();
+        data().then(dataObj => {
+            const state = reactify({
+                ...dataObj,
+                ...props
+            }, () => eventTarget.dispatchEvent(new CustomEvent("update")));
+            eventTarget.addEventListener("update", () => render(mountingNode, state, props));
+            eventTarget.dispatchEvent(new CustomEvent("update"));
+        });
+    }
+
+
+    return (...props) => ({
         render() {
             skip();
-            data().then(dataObj => augmentor(() => {
-                patch(currentElement(), () => render.call({
-                    ...params,
-                    ...dataObj
-                }))
-            }))
+            mount(props);
         }
     })
 }

@@ -12,18 +12,13 @@ export const BUTTON_STYLE = {
 };
 
 export const Button = ({
-    icon = null,
-    label = "Button",
-    action = () => {},
-    type = "outlined",
-    reversed = false
+   icon = null,
+   label = "Button",
+   type = "outlined",
+   reversed = false
 }) => ({
     ...View()
         .tagName("button")
-        .on("click", e => {
-            e.stopPropagation();
-            action();
-        })
         .addClass(type),
     disabled(isDisabled) {
         if (isDisabled) {
@@ -41,7 +36,7 @@ export const Button = ({
                 content.reverse()
             }
         }
-        if(icon && label === "") {
+        if (icon && label === "") {
             content = Icon(icon, 16);
         }
         return [

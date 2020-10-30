@@ -4,10 +4,9 @@ import {TextField} from "./TextField";
 import {View} from "../View/View";
 import {EmptyView} from "../EmptyView";
 
-export const LabelTextField = (label, name, value, type, placeholder) => ({
+export const LabelTextField = (label, name, model, type, placeholder) => ({
     ...View(),
-    textField: TextField(name, value, type, placeholder),
-    value: "",
+    textField: TextField(name, model, type, placeholder),
     helperMessage: null,
     addTextFieldModifier(cb) {
         this.textField = cb(this.textField);
@@ -19,11 +18,6 @@ export const LabelTextField = (label, name, value, type, placeholder) => ({
     },
     setHelperMessage(msg) {
         this.helperMessage = msg;
-        return this;
-    },
-    onChangeHandler: () => {},
-    onChange(cb) {
-        this.textField.onChangeHandler = cb;
         return this;
     },
     autoSize() {
