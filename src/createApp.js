@@ -28,13 +28,17 @@ export function component({name, data = async () => ({}), view = () => {}}) {
     let loading = true;
 
     function render(mountingNode, props) {
-        patch(mountingNode, () => {
-            if(initializedData && !loading) {
-                view.call(initializedData, ...props).render()
-            } else {
-                LoadingScreen().render()
-            }
-        });
+        try {
+            patch(mountingNode, () => {
+                if(initializedData && !loading) {
+                    view.call(initializedData, ...props).render()
+                } else {
+                    LoadingScreen().render()
+                }
+            });
+        } catch (e) {
+            console.error(name, e);
+        }
     }
 
     function reactify(data, onUpdate) {
