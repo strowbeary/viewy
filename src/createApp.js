@@ -1,6 +1,6 @@
 import {patch, skip, currentElement} from "incremental-dom";
-import {augmentor} from "augmentor";
 import LoadingScreen from "./components/Presentation/LoadingScreen";
+import {View} from "./components/View/View";
 
 export const createApp = (elementId, rootComponent) => {
     const render = () => {
@@ -10,7 +10,7 @@ export const createApp = (elementId, rootComponent) => {
         patch(mountingNode, () => rootComponent().render());
     }
     window.addEventListener("load", () => {
-        render()
+        render();
     });
     window.addEventListener("forceUpdate", () => {
         render();
@@ -55,24 +55,25 @@ export function component({name, data = async () => ({}), view = () => {}}) {
     }
 
     function mount(props) {
+        skip();
         eventTarget = new EventTarget();
         const mountingNode = currentElement();
-        console.log("MOUNT", name, mountingNode);
         eventTarget.addEventListener("update", () => render(mountingNode, props));
+
         render(mountingNode, props)
         loading = true;
-        data().then(dataObj => {
+        data(...props).then(dataObj => {
+            loading = false;
             initializedData = reactify(dataObj, () => eventTarget.dispatchEvent(new CustomEvent("update")));
             eventTarget.dispatchEvent(new CustomEvent("update"));
-            loading = false;
         });
     }
 
 
-    return (...props) => ({
+    return (...props) => View({
         render() {
-            skip();
             mount(props);
         }
     })
+        .addClass(`component-${name}`)
 }
