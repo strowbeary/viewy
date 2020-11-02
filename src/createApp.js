@@ -21,8 +21,16 @@ export const createApp = (elementId, rootComponent) => {
 export const forceUpdate = () => window.dispatchEvent(new CustomEvent("forceUpdate"));
 
 
-
-export function component({name, data = async () => ({}), view = () => {}}) {
+export function component({
+                              name,
+                              initState = async () => ({}),
+                              beforeUpdate = async () => {
+                              },
+                              mounted = async () => {
+                              },
+                              view = () => {
+                              }
+                          }) {
     let eventTarget = new EventTarget();
     let initializedData = null;
     let loading = true;
@@ -30,8 +38,9 @@ export function component({name, data = async () => ({}), view = () => {}}) {
     function render(mountingNode, props) {
         try {
             patch(mountingNode, () => {
-                if(initializedData && !loading) {
-                    view.call(initializedData, ...props).render()
+                if (initializedData && !loading) {
+                    view.call(initializedData, ...props).render();
+                    mounted.call(initializedData, ...props);
                 } else {
                     LoadingScreen().render()
                 }
@@ -58,11 +67,17 @@ export function component({name, data = async () => ({}), view = () => {}}) {
         skip();
         eventTarget = new EventTarget();
         const mountingNode = currentElement();
-        eventTarget.addEventListener("update", () => render(mountingNode, props));
+        eventTarget.addEventListener("update", () => {
+            beforeUpdate
+                .call(initializedData, ...props)
+                .then(() => {
+                    render(mountingNode, props);
+                });
+        });
 
         render(mountingNode, props)
         loading = true;
-        data(...props).then(dataObj => {
+        initState(...props).then(dataObj => {
             loading = false;
             initializedData = reactify(dataObj, () => eventTarget.dispatchEvent(new CustomEvent("update")));
             eventTarget.dispatchEvent(new CustomEvent("update"));
@@ -75,5 +90,6 @@ export function component({name, data = async () => ({}), view = () => {}}) {
             mount(props);
         }
     })
+        .height("100%")
         .addClass(`component-${name}`)
 }
