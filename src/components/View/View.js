@@ -15,6 +15,10 @@ export const View = (...children) => ({
     get isEmptyView () {
         return false;
     },
+    color (color) {
+        this.viewStyle.color = color;
+        return this;
+    },
     addClass (className) {
         this.classList[className] = true;
         return this;

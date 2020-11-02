@@ -29,5 +29,7 @@ export const Svg = (spriteId) => {
             .tagName("use")
     )
         .tagName("svg")
+        .width("auto")
+        .height("auto")
 }
 
