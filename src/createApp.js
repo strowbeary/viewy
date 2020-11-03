@@ -21,16 +21,16 @@ export const createApp = (elementId, rootComponent) => {
 export const forceUpdate = () => window.dispatchEvent(new CustomEvent("forceUpdate"));
 
 
-export function component({
-                              name,
-                              initState = async () => ({}),
-                              beforeUpdate = async () => {
-                              },
-                              mounted = async () => {
-                              },
-                              view = () => {
-                              }
-                          }) {
+export function component(
+    {
+        name,
+        initState = async () => ({}),
+        beforeMount = async () => ({}),
+        beforeUpdate = async () => {},
+        mounted = async () => {},
+        view = () => {}
+    }
+) {
     let eventTarget = new EventTarget();
     let initializedData = null;
     let loading = true;
@@ -71,16 +71,18 @@ export function component({
             beforeUpdate
                 .call(initializedData, ...props)
                 .then(() => {
+                    loading = false;
                     render(mountingNode, props);
                 });
         });
 
         render(mountingNode, props)
         loading = true;
-        initState(...props).then(dataObj => {
-            loading = false;
+        initState.call(...props).then(dataObj => {
             initializedData = reactify(dataObj, () => eventTarget.dispatchEvent(new CustomEvent("update")));
-            eventTarget.dispatchEvent(new CustomEvent("update"));
+            beforeMount.call(initializedData, ...props).then(() => {
+                eventTarget.dispatchEvent(new CustomEvent("update"));
+            });
         });
     }
 
