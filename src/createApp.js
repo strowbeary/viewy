@@ -92,6 +92,6 @@ export function component(
             mount(props);
         }
     })
-        .height("100%")
         .addClass(`component-${name}`)
+        .addClass(`component`)
 }
