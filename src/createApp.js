@@ -27,7 +27,7 @@ export function component(
         initState = async () => ({}),
         beforeMount = async () => ({}),
         beforeUpdate = async () => {},
-        mounted = async () => {},
+        mounted = () => {},
         view = () => {}
     }
 ) {
@@ -78,7 +78,7 @@ export function component(
 
         render(mountingNode, props)
         loading = true;
-        initState.call(...props).then(dataObj => {
+        initState.call({}, ...props).then(dataObj => {
             initializedData = reactify(dataObj, () => eventTarget.dispatchEvent(new CustomEvent("update")));
             beforeMount.call(initializedData, ...props).then(() => {
                 eventTarget.dispatchEvent(new CustomEvent("update"));
