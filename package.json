@@ -8,10 +8,10 @@
   "license": "MIT",
   "dependencies": {
     "augmentor": "^2.2.0",
-    "feather-icons": "^4.26.0",
+    "feather-icons": "^4.28.0",
     "incremental-dom": "^0.7.0"
   },
   "devDependencies": {
-    "sass": "^1.28.0"
+    "sass": "^1.29.0"
   }
 }
