@@ -32,7 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +200,7 @@
       <workItem from="1604165924772" duration="2232000" />
       <workItem from="1604306106576" duration="5044000" />
       <workItem from="1604396735272" duration="2606000" />
-      <workItem from="1604500687112" duration="24000" />
+      <workItem from="1604500687112" duration="1546000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
