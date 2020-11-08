@@ -22,3 +22,14 @@ export const Image = (src, alt = "") => ({
     }
 });
 
+export const Svg = (spriteId) => {
+    return View(
+        View()
+            .setAttribute("xlink:href", spriteId)
+            .tagName("use")
+    )
+        .tagName("svg")
+        .width("auto")
+        .height("auto")
+}
+

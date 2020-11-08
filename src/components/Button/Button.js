@@ -13,7 +13,7 @@ export const BUTTON_STYLE = {
 
 export const Button = ({
    icon = null,
-   label = "Button",
+   label = "",
    type = "outlined",
    reversed = false
 }) => ({

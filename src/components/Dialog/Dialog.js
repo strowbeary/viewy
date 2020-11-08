@@ -31,7 +31,3 @@ export const Dialog = (...children) => ({
         ];
     }
 });
-
-export const DialogHeader= (title, type = "normal") => ({
-    ...View()
-});

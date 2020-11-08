@@ -35,10 +35,6 @@ export const Text = (value, style = TEXT_STYLE.body1, tagName = "span") => ({
         this.viewStyle.textAlign = alignment;
         return this;
     },
-    color (color) {
-        this.viewStyle.color = color;
-        return this;
-    },
     textOverflow (value) {
         this.viewStyle.textOverflow = value;
         return this;
