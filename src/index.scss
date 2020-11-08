@@ -1,9 +1,15 @@
+@import url('https://rsms.me/inter/inter.css');
+
 @import "theme/utils";
 @import "theme/tokens";
 @import "theme/colors";
 
 html {
     text-rendering: optimizeLegibility;
+    font-family: 'Inter', sans-serif;
+    @supports (font-variation-settings: normal) {
+        font-family: 'Inter var', sans-serif;
+    }
 }
 body {
     margin: 0;

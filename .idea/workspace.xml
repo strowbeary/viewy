@@ -33,6 +33,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +84,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -198,6 +199,10 @@
       <workItem from="1604005334013" duration="17382000" />
       <workItem from="1604065069458" duration="7304000" />
       <workItem from="1604165924772" duration="955000" />
+      <workItem from="1604266469870" duration="540000" />
+      <workItem from="1604424657815" duration="51000" />
+      <workItem from="1604433366231" duration="1314000" />
+      <workItem from="1604868010169" duration="104000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
@@ -310,6 +315,10 @@
     </state>
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1597217653317" />
     <state x="503" y="280" width="800" height="543" key="Vcs.Push.Dialog.v2/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598016893890" />
+    <state x="650" y="377" width="542" height="314" key="cloudConfig.PluginsDialog" timestamp="1604433810446">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="650" y="377" width="542" height="314" key="cloudConfig.PluginsDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604433810446" />
     <state x="100" y="127" width="1720" height="802" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598802722869">
       <screen x="0" y="27" width="1920" height="1002" />
     </state>
