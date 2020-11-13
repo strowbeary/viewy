@@ -33,8 +33,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,6 +204,9 @@
       <workItem from="1604306106576" duration="5044000" />
       <workItem from="1604396735272" duration="2606000" />
       <workItem from="1604500687112" duration="2451000" />
+      <workItem from="1604868351584" duration="20000" />
+      <workItem from="1604868387888" duration="897000" />
+      <workItem from="1605288682726" duration="608000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
@@ -301,6 +305,22 @@
       <screen x="0" y="27" width="1920" height="1002" />
     </state>
     <state x="159" y="112" width="1536" height="838" key="DiffContextDialog/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598016866733" />
+    <state width="1367" height="251" key="GridCell.Tab.0.bottom" timestamp="1604868254357">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1367" height="251" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604868254357" />
+    <state width="1367" height="251" key="GridCell.Tab.0.center" timestamp="1604868254357">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1367" height="251" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604868254357" />
+    <state width="1367" height="251" key="GridCell.Tab.0.left" timestamp="1604868254357">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1367" height="251" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604868254357" />
+    <state width="1367" height="251" key="GridCell.Tab.0.right" timestamp="1604868254357">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1367" height="251" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1604868254357" />
     <state x="187" y="112" width="1536" height="838" key="MergeDialog" timestamp="1598016843723">
       <screen x="0" y="27" width="1920" height="1002" />
     </state>
