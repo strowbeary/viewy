@@ -7,10 +7,11 @@
     .card {
         border: none;
         background: var(--surface);
-        .card {
-            border: utils.sp(1) solid var(--color-border-hover);
-            background: var(--background);
-            box-shadow: 0 4px 8px 0 var(--color-shadow);
-        }
+
+    }
+    &.raised {
+        border: utils.sp(1) solid var(--color-border-hover);
+        background: var(--background);
+        box-shadow: 0 4px 8px 0 var(--color-shadow);
     }
 }

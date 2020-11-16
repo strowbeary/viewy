@@ -31,11 +31,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +198,9 @@
       <workItem from="1604165924772" duration="2232000" />
       <workItem from="1604306106576" duration="5044000" />
       <workItem from="1604396735272" duration="2606000" />
-      <workItem from="1604500687112" duration="2451000" />
+      <workItem from="1604500687112" duration="2926000" />
+      <workItem from="1605194222875" duration="2178000" />
+      <workItem from="1605277923075" duration="1623000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
@@ -292,6 +290,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="created component concept" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1216" y="314" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605280830091">
+      <screen x="-1920" y="-86" width="1920" height="1200" />
+    </state>
+    <state x="-1216" y="314" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.0.1920.1080/-1920.-86.1920.1200@-1920.-86.1920.1200" timestamp="1605280830091" />
     <state x="477" y="27" width="909" height="1002" key="CommitChangelistDialog2" timestamp="1598016890564">
       <screen x="0" y="27" width="1920" height="1002" />
     </state>

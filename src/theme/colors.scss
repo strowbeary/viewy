@@ -14,7 +14,7 @@
         --surface-red: #{color.adjust(#EF5A70, $alpha: -0.9)};
         --color-border-blue: #{color.adjust($primary-color, $alpha: -0.25)};
         --background: white;
-        --background-raised: white;
+        --background-raised: #f0f2f5;
         --surface: #{color.adjust($surface, $alpha: -0.95)};
         --surface-dark: #{color.adjust($surface, $alpha: -0.8)};
         --backdrop: #{color.adjust($surface, $alpha: -0.5)};
