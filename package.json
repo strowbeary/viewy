@@ -7,7 +7,6 @@
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "augmentor": "^2.2.0",
     "feather-icons": "^4.28.0",
     "incremental-dom": "^0.7.0"
   },

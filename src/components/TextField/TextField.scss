@@ -1,11 +1,11 @@
 @import "../../theme/utils";
 @import "../../theme/tokens";
 .text_field {
-    padding: sp(8) sp(12);
-    background: var(--surface);
+    padding: sp(9) sp(13);
+    background: var(--background);
     border-radius: sp(8);
     font-size: sp(16);
-    border: sp(2) solid transparent;
+    border: sp(1) solid var(--color-border);
     resize: vertical;
     font-family: Inter, sans-serif;
     overflow: hidden;
@@ -13,10 +13,15 @@
     color: var(--color-text);
     font-weight: $fw-normal;
     outline: none;
+    transition: border-color 150ms;
+    &:hover {
+        border-color: var(--color-border-hover);
+    }
     &.type-textarea {
         padding: sp(12);
     }
     &:focus {
+        padding: sp(8) sp(12);
         border: sp(2) solid var(--color-primary);
     }
 }

@@ -32,8 +32,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2020_20_02_[Default_Changelist]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/colors.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -347,11 +352,11 @@
     </state>
     <state x="433" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597161254898" />
     <state x="495" y="159" width="762" height="712" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598800560568" />
-    <state x="-1264" y="-862" width="650" height="996" key="find.popup" timestamp="1604067128756">
-      <screen x="-1920" y="-964" width="1920" height="1200" />
+    <state x="574" y="89" width="568" height="871" key="find.popup" timestamp="1605536274278">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1264" y="-862" width="650" height="996" key="find.popup/-1920.-964.1920.1200/0.0.1680.1050@-1920.-964.1920.1200" timestamp="1604067128756" />
-    <state x="574" y="89" width="568" height="871" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1603661793033" />
+    <state x="574" y="89" width="568" height="871" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1605536274278" />
     <state x="656" y="112" width="607" height="831" key="find.popup/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598801686221" />
     <state x="-1230" y="-481" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1604047376739">
       <screen x="-1920" y="-964" width="1920" height="1200" />

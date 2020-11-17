@@ -20,8 +20,8 @@
         --backdrop: #{color.adjust($surface, $alpha: -0.5)};
         --color-text: #1d1d20;
         --color-text-secondary: #5d5d5d;
-        --color-border: rgba(0, 0, 0, 0.1);
-        --color-border-hover: rgba(0, 0, 0, 0.13);
+        --color-border: #e2e2e2;
+        --color-border-hover: #cfcfcf;
         --color-hover: rgba(0, 0, 0, 0.04);
         --color-active: rgba(0, 0, 0, 0.06);
         --color-focus: #1d5dea99;
@@ -42,7 +42,7 @@
         --surface-red: #{color.adjust(#EF5A70, $alpha: -0.9)};
         --color-border-blue: #0a84ff33;
         --background: #161616;
-        --background-raised: #4f4e53;
+        --background-raised: #252526;
         --surface: rgba(255, 255, 255, 0.05);
         --surface-dark: rgba(0, 0, 0, 0.3);
         --backdrop: rgba(0, 0, 0, 0.5);
