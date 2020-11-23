@@ -32,13 +32,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_11_2020_20_02_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/View/popover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/View/popover.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/View/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/createApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +51,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -211,6 +213,8 @@
       <workItem from="1604868387888" duration="897000" />
       <workItem from="1605288682726" duration="608000" />
       <workItem from="1605359086529" duration="883000" />
+      <workItem from="1605634579297" duration="708000" />
+      <workItem from="1606053437678" duration="10418000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>

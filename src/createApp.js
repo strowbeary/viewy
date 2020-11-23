@@ -28,7 +28,8 @@ export function component(
         beforeMount = async () => ({}),
         beforeUpdate = async () => {},
         mounted = () => {},
-        view = () => {}
+        view = () => {},
+        overrideMountingElement = null
     }
 ) {
     let eventTarget = new EventTarget();
@@ -39,8 +40,8 @@ export function component(
         try {
             patch(mountingNode, () => {
                 if (initializedData && !loading) {
-                    view.call(initializedData, ...props).render();
-                    mounted.call(initializedData, ...props);
+                    const mountedEl = view.call(initializedData, ...props).render();
+                    mounted.call(initializedData, mountedEl, ...props);
                 } else {
                     LoadingScreen().render()
                 }
@@ -66,7 +67,7 @@ export function component(
     function mount(props) {
         skip();
         eventTarget = new EventTarget();
-        const mountingNode = currentElement();
+        const mountingNode = overrideMountingElement ? overrideMountingElement() : currentElement();
         eventTarget.addEventListener("update", () => {
             beforeUpdate
                 .call(initializedData, ...props)

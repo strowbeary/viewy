@@ -2,6 +2,8 @@ import {box_arguments_behavior} from "../../utils/box_arguments_behavior.util";
 import "./View.scss";
 import {elementClose, elementOpen} from "incremental-dom";
 import {bind_class} from "../../utils/bind_class.util";
+import popover from "./popover";
+import {EmptyView} from "../EmptyView";
 
 export const View = (...children) => ({
     children,
@@ -12,6 +14,7 @@ export const View = (...children) => ({
     key: null,
     renderedTagName: "div",
     customAttributes: [],
+    popoverConfig: null,
     get isEmptyView () {
         return false;
     },
@@ -168,6 +171,10 @@ export const View = (...children) => ({
         this.viewStyle.gridRow = column;
         return this;
     },
+    popover({ isVisible, placement, view = () => EmptyView()}) {
+        this.popoverConfig= { isVisible, placement, view}
+        return this;
+    },
     render () {
         const el = elementOpen(
             this.renderedTagName, this.key, null,
@@ -177,6 +184,7 @@ export const View = (...children) => ({
         this.children.forEach(child => child.render(el));
         elementClose(
             this.renderedTagName);
+        if(this.popoverConfig) popover(el, this.popoverConfig).render();
         return el;
     }
 });

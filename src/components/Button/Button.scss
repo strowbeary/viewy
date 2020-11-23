@@ -13,6 +13,7 @@ button {
     width: max-content;
     box-sizing: border-box;
     transition: background 150ms, color 150ms, border 150ms;
+    font-family: inherit;
 
     .text {
         color: var(--color-primary);

@@ -1,0 +1,48 @@
+@import "../../theme/utils.scss";
+
+.popover {
+    z-index: 1000000;
+    background: var(--background);
+    border: sp(1) solid var(--color-border);
+    box-shadow: 0 4px 8px 0 var(--color-shadow);
+    padding: sp(14);
+    border-radius: sp(8);
+    .arrow,
+    .arrow::before {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        z-index: -1;
+    }
+
+    .arrow::before {
+        background: var(--background);
+        content: '';
+        transform: rotate(45deg);
+    }
+    &[data-popper-placement^='top'] > .arrow {
+        bottom: -4.5px;
+        &::before {
+            border-right: sp(1) solid var(--color-border);
+            border-bottom: sp(1) solid var(--color-border);
+        }
+    }
+
+    &[data-popper-placement^='bottom'] > .arrow {
+        top: -4.5px;
+        &::before {
+            border-left: sp(1) solid var(--color-border);
+            border-top: sp(1) solid var(--color-border);
+        }
+    }
+
+    &[data-popper-placement^='left'] > .arrow {
+        right: -4px;
+    }
+
+    &[data-popper-placement^='right'] > .arrow {
+        left: -4px;
+    }
+
+
+}
