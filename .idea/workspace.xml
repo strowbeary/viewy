@@ -32,15 +32,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
-      <change afterPath="$PROJECT_DIR$/src/components/View/popover.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/View/popover.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/View/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/createApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Image/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/Image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Image/Image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/Image.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/View/View.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/View.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/View/popover.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/popover.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/View/popover.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/popover.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +214,7 @@
       <workItem from="1605359086529" duration="883000" />
       <workItem from="1605634579297" duration="708000" />
       <workItem from="1606053437678" duration="10418000" />
+      <workItem from="1606209526446" duration="7444000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
@@ -311,7 +311,6 @@
     <state x="477" y="27" width="909" height="1002" key="CommitChangelistDialog2" timestamp="1598016890564">
       <screen x="0" y="27" width="1920" height="1002" />
     </state>
-    <state x="417" y="24" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1597217646103" />
     <state x="477" y="27" width="909" height="1002" key="CommitChangelistDialog2/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598016890564" />
     <state x="159" y="112" width="1536" height="838" key="DiffContextDialog" timestamp="1598016866733">
       <screen x="0" y="27" width="1920" height="1002" />
@@ -345,7 +344,6 @@
     <state x="503" y="280" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1598016893890">
       <screen x="0" y="27" width="1920" height="1002" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1597217653317" />
     <state x="503" y="280" width="800" height="543" key="Vcs.Push.Dialog.v2/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598016893890" />
     <state x="100" y="127" width="1720" height="802" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598802722869">
       <screen x="0" y="27" width="1920" height="1002" />
@@ -354,14 +352,18 @@
     <state x="495" y="159" width="762" height="712" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598800560568">
       <screen x="0" y="27" width="1920" height="1002" />
     </state>
-    <state x="433" y="138" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597161254898" />
     <state x="495" y="159" width="762" height="712" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598800560568" />
-    <state x="574" y="89" width="568" height="871" key="find.popup" timestamp="1605536274278">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="656" y="92" width="650" height="896" key="find.popup" timestamp="1606222151850">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1264" y="-862" width="650" height="996" key="find.popup/-1920.-964.1920.1200/0.0.1680.1050@-1920.-964.1920.1200" timestamp="1604067128756" />
     <state x="574" y="89" width="568" height="871" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1605536274278" />
+    <state x="656" y="92" width="650" height="896" key="find.popup/0.0.1920.1080/1920.0.1920.1080/-1920.-120.1920.1200@0.0.1920.1080" timestamp="1606222151850" />
     <state x="656" y="112" width="607" height="831" key="find.popup/0.27.1920.1002/1920.0.1920.1080@0.27.1920.1002" timestamp="1598801686221" />
+    <state x="625" y="262" key="search.everywhere.popup" timestamp="1606232799536">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="625" y="262" key="search.everywhere.popup/0.0.1920.1080/1920.25.1920.1055/-1920.-95.1920.1175@0.0.1920.1080" timestamp="1606232799536" />
     <state x="-1230" y="-481" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1604047376739">
       <screen x="-1920" y="-964" width="1920" height="1200" />
     </state>

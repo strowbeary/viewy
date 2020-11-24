@@ -4,43 +4,20 @@ import {bind_style} from "../../utils/bind_style.util";
 import {bind_class} from "../../utils/bind_class.util";
 import {elementVoid} from "incremental-dom";
 import {autoSize} from "../../utils/autoResizeTextarea.util";
-export const TextField = (name, value, type = "text", placeholder = "") => ({
-    ...View()
+export const TextField = ({ name, value, type = "text", placeholder = "", autoSizing = false }) => {
+    const baseView = View()
         .addClass("text_field")
-        .addClass('type-' + type),
-    onChangeHandler: () => {},
-    onChange(cb) {
-        this.onChangeHandler = cb;
-        return this;
-    },
-    autoSizing: false,
-    autoSize() {
-        this.viewStyle.resize = "none";
-        this.autoSizing = true;
-        return this;
-    },
-    render () {
-        const el = elementVoid(
-            type !== "textarea" ? 'input' : 'textarea', null, null,
-            "style", bind_style(this.viewStyle),
-            "class", bind_class(this.classList, 'view'),
-            "name", name,
-            "type", type,
-            "id", `input-${name}`,
-            "placeholder", placeholder,
-            "onkeyup", this.onChangeHandler,
-            "onchange", this.onChangeHandler,
-            "oninput", e => {
-                if(type === "textarea" && this.autoSizing) {
-                    autoSize(e.target)
-                }
-            },
-            ...this.customAttributes
-        );
-        el.value = value;
-        if(type === "textarea" && this.autoSizing) {
-            autoSize(el)
-        }
-        return el;
-    }
-});
+        .addClass('type-' + type)
+        .tagName(type !== "textarea" ? 'input' : 'textarea')
+        .setAttribute("name", name)
+        .setAttribute("placeholder", placeholder)
+        .setAttribute("value", value)
+        .on("input", e => {
+            if(type === "textarea" && autoSizing) {
+                autoSize(e.target)
+            }
+        });
+    if(type !== "textarea") baseView.setAttribute("type", type);
+    if(autoSizing) baseView.viewStyle.resize = "none";
+    return baseView;
+};

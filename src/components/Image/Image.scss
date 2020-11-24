@@ -1,4 +1,10 @@
+@use "../../theme/utils";
+
 .image {
     object-fit: cover;
     object-position: center;
+}
+
+.svg {
+    color: var(--color-text);
 }
