@@ -44,7 +44,12 @@ export const Text = (value, style = TEXT_STYLE.body1, tagName = "span") => ({
         return this;
     },
     bold(isBold) {
-        if(isBold) this.addClass("bold");
+        if(isBold) {
+            this.viewStyle.fontweight = "bold";
+        }
+        else {
+            this.viewStyle.fontweight = "normal";
+        }
       return this;
     },
     children: [{
