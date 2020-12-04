@@ -43,6 +43,10 @@ export const Text = (value, style = TEXT_STYLE.body1, tagName = "span") => ({
         this.viewStyle.lineHeight = value;
         return this;
     },
+    bold(isBold) {
+        if(isBold) this.addClass("bold");
+      return this;
+    },
     children: [{
         render () {
             text(value);
