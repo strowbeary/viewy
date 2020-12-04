@@ -11,22 +11,29 @@ export const BUTTON_STYLE = {
     destructive: "destructive"
 };
 
+export const BUTTON_TYPE = {
+    submit: "submit",
+    reset: "reset",
+    button: "button"
+}
+
 export const Button = ({
-   icon = null,
-   label = "",
-   type = "outlined",
-   reversed = false
+    icon = null,
+    label = "",
+    style = BUTTON_STYLE.outlined,
+    type = "",
+    reversed = false
 }) => ({
     ...View()
         .tagName("button")
-        .addClass(type),
-    disabled(isDisabled) {
+        .addClass(style),
+    disabled (isDisabled) {
         if (isDisabled) {
             this.setAttribute("disabled", "disabled");
         }
         return this;
     },
-    get children() {
+    get children () {
         let content = Text(label, TEXT_STYLE.button);
         if (icon) {
             content = HStack(Icon(icon, 16), content)
