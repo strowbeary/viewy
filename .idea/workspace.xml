@@ -33,7 +33,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +210,7 @@
       <workItem from="1606209526446" duration="7778000" />
       <workItem from="1606811604138" duration="391000" />
       <workItem from="1607070148916" duration="135000" />
-      <workItem from="1607071100728" duration="594000" />
+      <workItem from="1607071100728" duration="975000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
