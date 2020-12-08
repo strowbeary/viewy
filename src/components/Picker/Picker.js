@@ -5,8 +5,13 @@ import {Icon} from "../Icon/Icon";
 import {HStack, VStack} from "../Stack/Stack";
 import {S} from "../../ressources/SizingScale";
 
-export const Picker = (label, name, action = () => {
-}, selectedItemValue, ...items) => {
+export const Picker = ({
+   label,
+   name,
+   action = () => {},
+   selectedItemValue,
+   items = []
+}) => {
     let pickerStyle = "segmented";
     let disabled = false;
 
