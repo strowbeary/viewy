@@ -9,7 +9,7 @@ export const Picker = ({
    label,
    name,
    action = () => {},
-   selectedItemValue,
+   value: selectedItemValue,
    items = []
 }) => {
     let pickerStyle = "segmented";
