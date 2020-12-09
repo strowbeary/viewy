@@ -1,6 +1,6 @@
 {
   "name": "viewy",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "This module combine the advantages of a design system and of a ui library",
   "module": "src/index.js",
   "scripts": {},
