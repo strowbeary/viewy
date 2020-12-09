@@ -6,30 +6,29 @@ import {HStack, VStack} from "../Stack/Stack";
 import {S} from "../../ressources/SizingScale";
 
 export const Picker = ({
-   label,
-   name,
-   action = () => {},
-   value: selectedItemValue,
-   items = []
-}) => {
+                           label,
+                           name,
+                           action = () => {
+                           },
+                           value: selectedItemValue,
+                           items = []
+                       }) => {
     let pickerStyle = "segmented";
     let disabled = false;
 
     function SegmentedPicker () {
-        return items.map(({value, label: optionLabel, icon}) => {
-            const children = []
-            if(icon) children.push(Icon(icon, 16));
-            if(optionLabel) children.push(Text(optionLabel, TEXT_STYLE.button));
-            return {
-                ...View()
-                    .on('click',() => action(value)),
-                classList: {
-                    item: true,
-                    selected: value === selectedItemValue
-                },
-                children,
-            }
-        })
+        return VStack(
+            Text(label, TEXT_STYLE.label),
+            ...items.map(({value, label: optionLabel, icon}) => {
+                const children = [];
+                if (icon) children.push(Icon(icon, 16).marginRight(S(2)));
+                if (optionLabel) children.push(Text(optionLabel, TEXT_STYLE.button));
+                return View(...children)
+                    .addClass("item")
+                    .on('click', () => action(value));
+            })
+        )
+            .gap(S(2));
     }
 
     function DropdownPicker () {
@@ -37,13 +36,13 @@ export const Picker = ({
             ...items.map(({value, label: optionLabel}) => {
                 const option = Text(optionLabel, TEXT_STYLE.label)
                     .tagName("option")
-                    .on('click',() => action(value));
-                if(value === selectedItemValue) option.addClass("selected");
+                    .on('click', () => action(value));
+                if (value === selectedItemValue) option.addClass("selected");
                 return option;
             })
         )
             .tagName("select");
-        if(disabled) select.setAttribute("disabled", "disabled");
+        if (disabled) select.setAttribute("disabled", "disabled");
 
         return VStack(
             Text(label, TEXT_STYLE.label),
@@ -52,7 +51,7 @@ export const Picker = ({
             )
                 .addClass("dropdown")
         )
-            .gap(S(2));;
+            .gap(S(2));
     }
 
     function RadioGroupPicker () {
@@ -107,7 +106,7 @@ export const Picker = ({
         },
         disabled (isDisabled) {
             disabled = isDisabled;
-            if(isDisabled) this.addClass("disabled");
+            if (isDisabled) this.addClass("disabled");
             return this;
         },
         get children () {

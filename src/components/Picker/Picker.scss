@@ -85,6 +85,7 @@
             }
             &:checked {
                 background: var(--color-primary);
+                border: 2px solid var(--color-primary);
                 &::after {
                     display: block;
                     content: "";
