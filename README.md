@@ -6,22 +6,27 @@ A UI toolkit that combine the advantages of a design system and an ui library.
 - For small and more complex projects
 
 ## Example
-### Bootstrapping app
+### Create an app
+createApp function will mount your app.
+with:
 ```javascript
+import { createApp, View } from "viewy";
 createApp(
     "app", // Mounting node id
     () => View() // Root view
 );
 ```
+you get:
 ```html
 <div id="app">
     <div class="view"></div>
 </div>
 ```
 
-### Component
+### Declare and use a component
 ```javascript
 // MyComponent.js
+import { component } from "viewy";
 export default component({
     name: "my-component",
     async initState() {
