@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/UIKit.iml" filepath="$PROJECT_DIR$/.idea/UIKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/viewy.iml" filepath="$PROJECT_DIR$/.idea/viewy.iml" />
     </modules>
   </component>
 </project>
