@@ -1,0 +1,64 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: "Restore cache"
+      image: drillster/drone-volume-cache
+      volumes:
+        - name: cache
+          path: /cache
+      settings:
+        restore: true
+        mount:
+          - ./node_modules
+  - name: "Build doc"
+    image: node:14
+    commands:
+      - "npm install"
+      - "npm run doc:gen"
+  - name: "Rebuild cache"
+        image: drillster/drone-volume-cache
+        volumes:
+          - name: cache
+            path: /cache
+        settings:
+          rebuild: true
+          mount:
+            - ./node_modules
+  - name: "Build & push to local docker registery"
+    image: plugins/docker
+    settings:
+      tags: ["latest"]
+      debug: true
+      dockerfile: ./Dockerfile
+      registry: registery.remicaillot.fr
+      repo: registery.remicaillot.fr/viewy-doc
+    when:
+      event:
+        - promote
+      target:
+        - production
+  - name: "Deploy"
+    image: appleboy/drone-ssh
+    settings:
+      host: remicaillot.fr
+      username: strowbeary
+      port: 2222
+      key:
+        from_secret: deploy_ssh_key
+      script:
+        - "cd /home/strowbeary/viewy-doc/"
+        - "docker-compose pull"
+        - "docker-compose up -d"
+    when:
+      event:
+        - promote
+      target:
+        - production
+
+volumes:
+  - name: cache
+    host:
+      path: /tmp/cache
