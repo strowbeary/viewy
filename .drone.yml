@@ -13,7 +13,7 @@ steps:
         restore: true
         mount:
           - ./node_modules
-  - name: "Build doc"
+  - name: "Build"
     image: node:14
     commands:
       - "npm install"
