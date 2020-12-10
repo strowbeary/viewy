@@ -1,4 +1,6 @@
 # Viewy
+[![Build Status](https://ci.remicaillot.fr/api/badges/webcraftman/uikit/status.svg)](https://ci.remicaillot.fr/webcraftman/uikit)
+
 A UI toolkit that combine the advantages of a design system and an ui library.
 
 - Customizable theme via config file (planned)
