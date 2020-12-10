@@ -4,11 +4,10 @@ import {TextField} from "./TextField";
 import {View} from "../View/View";
 import {EmptyView} from "../EmptyView";
 
-export const LabelTextField = ({label, name, value, type, placeholder, autoSizing}) => ({
+export const LabelTextField = ({label, name, type, placeholder, autoSizing}) => ({
     ...View(),
     textField: TextField({
         name,
-        value,
         type,
         placeholder,
         autoSizing
@@ -25,6 +24,14 @@ export const LabelTextField = ({label, name, value, type, placeholder, autoSizin
     on(eventName, cb) {
         this.textField.on(eventName, cb);
         return this;
+    },
+    value(value){
+      this.textField.value(value);
+      return this;
+    },
+    model(value) {
+      this.textField.model(value);
+      return this;
     },
     setTextFieldAttr(name, value) {
         this.textField.setAttribute(name, value);

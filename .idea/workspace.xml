@@ -32,14 +32,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
-      <change beforePath="$PROJECT_DIR$/.idea/UIKit.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Form/Form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/View/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Picker/Picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Picker/Picker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/LabelTextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextField/TextField.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextField/TextField.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ressources/SizingScale.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ressources/SizingScale.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/colors.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +52,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -108,11 +110,11 @@
       <recent name="$PROJECT_DIR$/src/utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components/View" />
       <recent name="$PROJECT_DIR$/src/theme" />
       <recent name="$PROJECT_DIR$/src/services" />
       <recent name="$PROJECT_DIR$/src/Components" />
-      <recent name="$PROJECT_DIR$/src/ressources" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
@@ -151,8 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.doc:gen" />
         <item itemvalue="npm.doc:serve" />
+        <item itemvalue="npm.doc:gen" />
         <item itemvalue="npm.doc:help" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
@@ -265,6 +267,7 @@
       <workItem from="1607342413281" duration="655000" />
       <workItem from="1607430485906" duration="2863000" />
       <workItem from="1607509306689" duration="673000" />
+      <workItem from="1607599756896" duration="751000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>

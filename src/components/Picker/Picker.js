@@ -23,9 +23,12 @@ export const Picker = ({
                 const children = [];
                 if (icon) children.push(Icon(icon, 16).marginRight(S(2)));
                 if (optionLabel) children.push(Text(optionLabel, TEXT_STYLE.button));
-                return View(...children)
+
+                const baseView = View(...children)
                     .addClass("item")
                     .on('click', () => action(value));
+                console.log(baseView);
+                return baseView;
             })
         )
             .gap(S(2));

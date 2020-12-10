@@ -2,29 +2,42 @@ import {View} from "../View/View";
 import "./TextField.scss";
 import {text} from "incremental-dom";
 import {autoSize} from "../../utils/autoResizeTextarea.util";
-export const TextField = ({ name, value, type = "text", placeholder = "", autoSizing = false }) => {
-    const baseView = View()
-        .addClass("text_field")
-        .addClass('type-' + type)
-        .tagName(type !== "textarea" ? 'input' : 'textarea')
-        .setAttribute("name", name)
-        .setAttribute("placeholder", placeholder)
-        .on("input", e => {
-            if(type === "textarea" && autoSizing) {
-                autoSize(e.target)
+
+export const TextField = ({name, type = "text", placeholder = "", autoSizing = false}) => {
+    const baseView = {
+        ...View()
+            .addClass("text-field")
+            .addClass('type-' + type)
+            .tagName(type !== "textarea" ? 'input' : 'textarea')
+            .setAttribute("name", name)
+            .setAttribute("placeholder", placeholder)
+            .on("input", e => {
+                if (type === "textarea" && autoSizing) {
+                    autoSize(e.target)
+                }
+            }),
+        value (value) {
+            if (type !== "textarea") {
+                this.setAttribute("type", type);
+                this.setAttribute("value", value);
+            } else {
+                this.children.push({
+                    render () {
+                        text(value)
+                    }
+                })
             }
-        });
-    if(type !== "textarea") {
-        baseView.setAttribute("type", type);
-        baseView.setAttribute("value", value);
-    }
-    else {
-        baseView.children.push({
-            render() {
-                text(value)
-            }
-        })
-    }
-    if(autoSizing) baseView.viewStyle.resize = "none";
+            return this;
+        },
+        model ([state, key]) {
+            this
+                .value(state[key])
+                .on("input", e => state[key] = e.target.value)
+                .on("change", e => state[key] = e.target.value);
+            return this;
+        }
+    };
+
+    if (autoSizing) baseView.viewStyle.resize = "none";
     return baseView;
 };
