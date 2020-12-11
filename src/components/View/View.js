@@ -12,7 +12,9 @@ import {EmptyView} from "../EmptyView";
  */
 export const View = (...children) => ({
     children,
-    classList: {},
+    classList: {
+        view: true
+    },
     viewStyle: {},
     tag: [],
     viewName: "",
@@ -308,6 +310,11 @@ export const View = (...children) => ({
         this.viewName = viewName;
         return this;
     },
+    /**
+     * Change used HTML element tag name (default id <div>)
+     * @param {String} tagName any valid html tag name
+     * @returns {View}
+     */
     tagName (tagName) {
         this.renderedTagName = tagName;
         return this;
@@ -337,7 +344,7 @@ export const View = (...children) => ({
         const el = elementOpen(
             this.renderedTagName, this.key, null,
             "style", this.viewStyle,
-            "class", bind_class(this.classList, 'view'),
+            "class", bind_class(this.classList),
             ...this.customAttributes);
         this.children.forEach(child => child.render(el));
         elementClose(

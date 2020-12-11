@@ -24,6 +24,7 @@ export * from "./components/Tabs/Tabs";
 
 export * from "./components/Dialog/Dialog";
 export * from "./components/View/View";
+export * from "./components/Table/Table";
 
 export * from "./ressources/colors";
 export * from "./ressources/SizingScale";
