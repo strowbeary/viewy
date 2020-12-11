@@ -9,6 +9,7 @@
     "doc:help": "documentation --help"
   },
   "author": "Rémi Caillot <remicaillot5@gmail.com>",
+  "repository": "https://git.remicaillot.fr/webcraftman/uikit",
   "license": "MIT",
   "dependencies": {
     "@popperjs/core": "^2.5.4",

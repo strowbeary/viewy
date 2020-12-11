@@ -32,13 +32,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
-      <change afterPath="$PROJECT_DIR$/src/components/Table/Table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Table/Table.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.drone.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.drone.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/viewy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/viewy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/View/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ressources/SizingScale.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ressources/SizingScale.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +47,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -115,7 +113,7 @@
       <recent name="$PROJECT_DIR$/src/Components" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.doc:serve">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/viewy/doc/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -265,9 +263,7 @@
       <workItem from="1607342413281" duration="655000" />
       <workItem from="1607430485906" duration="2863000" />
       <workItem from="1607509306689" duration="673000" />
-      <workItem from="1607599756896" duration="4317000" />
-      <workItem from="1607676748774" duration="475000" />
-      <workItem from="1607680524465" duration="3981000" />
+      <workItem from="1607599756896" duration="3232000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
