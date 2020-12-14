@@ -19,17 +19,15 @@ export const Picker = ({
     function SegmentedPicker () {
         return VStack(
             Text(label, TEXT_STYLE.label),
-            ...items.map(({value, label: optionLabel, icon}) => {
-                const children = [];
-                if (icon) children.push(Icon(icon, 16).marginRight(S(2)));
-                if (optionLabel) children.push(Text(optionLabel, TEXT_STYLE.button));
-
-                const baseView = View(...children)
+            HStack(...items.map(({value, label: optionLabel, icon}) => {
+                const baseView = View()
                     .addClass("item")
                     .on('click', () => action(value));
-                console.log(baseView);
+                if (icon) baseView.children.push(Icon(icon, 16).marginRight(S(2)));
+                if (optionLabel) baseView.children.push(Text(optionLabel, TEXT_STYLE.button));
+                if (value === selectedItemValue) baseView.addClass("selected");
                 return baseView;
-            })
+            }))
         )
             .gap(S(2));
     }
@@ -120,7 +118,7 @@ export const Picker = ({
                     return [DropdownPicker()];
                 default:
                 case "segmented":
-                    return SegmentedPicker();
+                    return [SegmentedPicker()];
             }
         }
     }
