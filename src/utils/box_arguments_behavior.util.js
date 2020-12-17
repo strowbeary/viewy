@@ -1,7 +1,7 @@
 export function box_arguments_behavior([top, right, bottom, left]) {
     if (
-        typeof top === "number" &&
-        typeof right === "number" &&
+        typeof top === "string" &&
+        typeof right === "string" &&
         typeof bottom === "undefined" &&
         typeof left === "undefined"
     ) {
