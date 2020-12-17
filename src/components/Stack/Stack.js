@@ -19,7 +19,7 @@ export const Stack = (children) => ({
         if (typeof h === "number" && typeof v === "undefined") {
             v = h;
         }
-        this.viewStyle.gap = `${h}px ${v}px`;
+        this.viewStyle.gap = `${h} ${v}`;
         return this;
     },
     children

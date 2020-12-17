@@ -6,7 +6,7 @@ export const Grid = (...children) => ({
         if (typeof h === "number" && typeof v === "undefined") {
             v = h;
         }
-        this.viewStyle.gridGap = `${h}px ${v}px`;
+        this.viewStyle.gridGap = `${h} ${v}`;
         return this;
     },
     areas (schema) {

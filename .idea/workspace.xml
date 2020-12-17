@@ -32,8 +32,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2af0fabd-821d-4910-9e2b-9994a35f690d" name="Default Changelist" comment="created component concept">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/View/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/View/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Grid/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Grid/Grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Stack/Stack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Stack/Stack.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +263,7 @@
       <workItem from="1607599756896" duration="3232000" />
       <workItem from="1607958486090" duration="900000" />
       <workItem from="1608041040167" duration="414000" />
-      <workItem from="1608195481631" duration="2179000" />
+      <workItem from="1608195481631" duration="2432000" />
     </task>
     <task id="LOCAL-00001" summary="card debug">
       <created>1597136462145</created>
