@@ -62,7 +62,7 @@ export const View = (...children) => ({
      */
     padding (top = 0, right, bottom, left) {
         const [t, r, b, l] = box_arguments_behavior([top, right, bottom, left]);
-        this.viewStyle.padding = `${t}px ${r}px ${b}px ${l}px`;
+        this.viewStyle.padding = `${t} ${r} ${b} ${l}`;
         return this;
     },
     /**
@@ -71,7 +71,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     paddingTop (value) {
-        this.viewStyle.paddingTop = value + "px";
+        this.viewStyle.paddingTop = value;
         return this;
     },
     /**
@@ -80,7 +80,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     paddingRight (value) {
-        this.viewStyle.paddingRight = value + "px";
+        this.viewStyle.paddingRight = value;
         return this;
     },
     /**
@@ -89,7 +89,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     paddingBottom (value) {
-        this.viewStyle.paddingBottom = value + "px";
+        this.viewStyle.paddingBottom = value;
         return this;
     },
     /**
@@ -98,7 +98,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     paddingLeft (value) {
-        this.viewStyle.paddingLeft = value + "px";
+        this.viewStyle.paddingLeft = value;
         return this;
     },
     /**
@@ -111,7 +111,7 @@ export const View = (...children) => ({
      */
     margin (top = 0, right, bottom, left) {
         const [t, r, b, l] = box_arguments_behavior([top, right, bottom, left]);
-        this.viewStyle.margin = `${t}px ${r}px ${b}px ${l}px`;
+        this.viewStyle.margin = `${t} ${r} ${b} ${l}`;
         return this;
     },
     /**
@@ -120,7 +120,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     marginTop (value) {
-        this.viewStyle.marginTop = value + "px";
+        this.viewStyle.marginTop = value;
         return this;
     },
     /**
@@ -129,7 +129,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     marginRight (value) {
-        this.viewStyle.marginRight = value + "px";
+        this.viewStyle.marginRight = value;
         return this;
     },
     /**
@@ -138,7 +138,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     marginBottom (value) {
-        this.viewStyle.marginBottom = value + "px";
+        this.viewStyle.marginBottom = value;
         return this;
     },
     /**
@@ -147,7 +147,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     marginLeft (value) {
-        this.viewStyle.marginLeft = value + "px";
+        this.viewStyle.marginLeft = value;
         return this;
     },
     /**
@@ -158,7 +158,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     borderRight (width, style, color = "var(--color-border)") {
-        this.viewStyle.borderRight = `${width}px ${style} ${color}`;
+        this.viewStyle.borderRight = `${width} ${style} ${color}`;
         return this;
     },
     /**
@@ -169,7 +169,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     borderLeft (width, style, color = "var(--color-border)") {
-        this.viewStyle.borderLeft = `${width}px ${style} ${color}`;
+        this.viewStyle.borderLeft = `${width} ${style} ${color}`;
         return this;
     },
     /**
@@ -180,7 +180,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     borderTop (width, style, color = "var(--color-border)") {
-        this.viewStyle.borderTop = `${width}px ${style} ${color}`;
+        this.viewStyle.borderTop = `${width} ${style} ${color}`;
         return this;
     },
     /**
@@ -191,7 +191,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     borderBottom (width, style, color = "var(--color-border)") {
-        this.viewStyle.borderBottom = `${width}px ${style} ${color}`;
+        this.viewStyle.borderBottom = `${width} ${style} ${color}`;
         return this;
     },
     /**
@@ -202,7 +202,7 @@ export const View = (...children) => ({
      * @returns {View}
      */
     border (width, style, color = "var(--color-border)") {
-        this.viewStyle.border = `${width}px ${style} ${color}`;
+        this.viewStyle.border = `${width} ${style} ${color}`;
         return this;
     },
     /**
@@ -294,7 +294,7 @@ export const View = (...children) => ({
     },
     cornerRadius (top_left, top_right, bottom_right, bottom_left) {
         const [tl, tr, br, bl] = box_arguments_behavior([top_left, top_right, bottom_right, bottom_left]);
-        this.viewStyle.borderRadius = `${tl}px ${tr}px ${br}px ${bl}px`;
+        this.viewStyle.borderRadius = `${tl} ${tr} ${br} ${bl}`;
         return this;
     },
     sticky () {
