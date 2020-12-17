@@ -3,6 +3,7 @@ import icons from "feather-icons/dist/icons.json";
 import {elementVoid} from "incremental-dom";
 import {bind_class} from "../../utils/bind_class.util";
 import {View} from "../View/View";
+import {sp} from "../../ressources/SizingScale";
 export const Icon = (icon, size = 24) => {
     return {
         ...View()
@@ -12,8 +13,8 @@ export const Icon = (icon, size = 24) => {
             return this;
         },
         render() {
-            this.viewStyle.width = `${size / 16}rem`;
-            this.viewStyle.height = `${size / 16}rem`;
+            this.viewStyle.width = sp(size);
+            this.viewStyle.height = sp(size);
             const el = elementVoid(
                 'svg',
                 null,
