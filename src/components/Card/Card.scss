@@ -1,7 +1,8 @@
-@use "../../theme/utils";
+@import "../../theme/utils.scss";
+
 .card {
-    border-radius: utils.sp(8);
-    border: utils.sp(1) solid var(--color-border);
+    border-radius: sp(8);
+    border: sp(1) solid var(--color-border);
     padding: 0;
 
     .card {
@@ -10,8 +11,8 @@
 
     }
     &.raised {
-        border: utils.sp(1) solid var(--color-border-hover);
+        border: sp(1) solid var(--color-border-hover);
         background: var(--background);
-        box-shadow: 0 4px 8px 0 var(--color-shadow);
+        box-shadow: 0 sp(4) sp(8) 0 var(--color-shadow);
     }
 }

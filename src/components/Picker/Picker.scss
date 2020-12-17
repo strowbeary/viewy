@@ -25,18 +25,18 @@
         align-items: center;
         justify-content: center;
         padding: sp(8) sp(12);
-        border: 1px solid var(--color-border);
+        border: sp(1) solid var(--color-border);
         border-left: none;
         border-right: none;
         .text, .icon {
             color: var(--color-primary);
         }
         &:last-of-type {
-            border-right: 1px solid var(--color-border);
+            border-right: sp(1) solid var(--color-border);
             border-radius: 0 sp(6) sp(6) 0;
         }
         &:first-of-type {
-            border-left: 1px solid var(--color-border);
+            border-left: sp(1) solid var(--color-border);
             border-radius: sp(6) 0 0 sp(6);
         }
 
@@ -72,26 +72,26 @@
             background: none;
             width: sp(20);
             height: sp(20);
-            border-radius: 10px;
+            border-radius: sp(10);
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid var(--color-border);
+            border: sp(2) solid var(--color-border);
             &:hover {
-                border: 2px solid var(--color-border-hover);
+                border: sp(2) solid var(--color-border-hover);
             }
             &:focus {
-                box-shadow: 0 0 0 2px var(--color-focus);
+                box-shadow: 0 0 0 sp(2) var(--color-focus);
             }
             &:checked {
                 background: var(--color-primary);
-                border: 2px solid var(--color-primary);
+                border: sp(2) solid var(--color-primary);
                 &::after {
                     display: block;
                     content: "";
                     width: sp(6);
                     height: sp(6);
-                    border-radius: 4px;
+                    border-radius: sp(4);
                     background: white;
                 }
             }
@@ -135,13 +135,13 @@
             content: '';
             position: absolute;
             top: 50%;
-            margin-top: -3px;
-            right: .75em;
+            margin-top: sp(-3);
+            right: sp(12);
             display: block;
             width: 0; height: 0;
             border-color: transparent;
             border-top-color: #444;
-            border-width: 6px;
+            border-width: sp(6);
             border-style: solid;
             pointer-events: none;
         }

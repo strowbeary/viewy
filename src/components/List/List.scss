@@ -1,8 +1,10 @@
+@import "../../theme/utils.scss";
+
 .list {
     overflow: auto;
     .list_row {
         position: relative;
-        border-bottom: 1px solid var(--color-border);
+        border-bottom: sp(1) solid var(--color-border);
         &:last-of-type {
             border: none;
         }

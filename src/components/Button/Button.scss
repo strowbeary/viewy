@@ -3,7 +3,7 @@
 button {
     font-size: 1.6rem;
     border: none;
-    border-radius: 6px;
+    border-radius: sp(6);
     padding: sp(8) sp(16);
     cursor: pointer;
     display: flex;
@@ -24,7 +24,7 @@ button {
     }
 
     &.link {
-        padding: 8px 0;
+        padding: sp(8) 0;
         border: none;
         background: transparent;
         &:hover .text, &:hover .icon {
@@ -34,7 +34,7 @@ button {
             color: var(--color-primary-lighter);
         }
         &:focus-visible {
-            box-shadow: 0 0 0 3px var(--color-focus);
+            box-shadow: 0 0 0 sp(3) var(--color-focus);
         }
 
         &:disabled .text, &:disabled .icon {
@@ -58,7 +58,7 @@ button {
             background: var(--color-active);
         }
         &:focus-visible {
-            box-shadow: 0 0 0 3px var(--color-focus);
+            box-shadow: 0 0 0 sp(3) var(--color-focus);
         }
 
         &:disabled {
@@ -70,29 +70,29 @@ button {
 
     &.outlined {
         background: transparent;
-        border: 1px solid var(--color-border);
+        border: sp(1) solid var(--color-border);
         .icon {
             color: var(--color-primary);
         }
         &:hover {
             background: var(--color-hover);
-            border: 1px solid var(--color-border-hover);
+            border: sp(1) solid var(--color-border-hover);
         }
 
         &:active {
             background: var(--color-active);
-            border: 1px solid var(--color-border-hover);
+            border: sp(1) solid var(--color-border-hover);
         }
 
         &:focus-visible {
-            box-shadow: 0 0 0 3px var(--color-focus);
+            box-shadow: 0 0 0 sp(3) var(--color-focus);
         }
 
         &:disabled {
             pointer-events: none;
             background: none;
             color: var(--color-text-disabled);
-            border: 1px solid var(--color-shadow);
+            border: sp(1) solid var(--color-shadow);
         }
     }
     &.filled{
@@ -112,7 +112,7 @@ button {
             background: var(--color-primary-lighter);
         }
         &:focus-visible {
-            box-shadow: 0 0 0 3px var(--color-focus);
+            box-shadow: 0 0 0 sp(3) var(--color-focus);
         }
         &:disabled {
             pointer-events: none;
@@ -139,7 +139,7 @@ button {
             background: var(--color-destructive-lighter);
         }
         &:focus-visible {
-            box-shadow: 0 0 0 3px var(--color-focus);
+            box-shadow: 0 0 0 sp(3) var(--color-focus);
         }
         &:disabled {
             pointer-events: none;

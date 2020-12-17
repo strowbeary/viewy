@@ -1,8 +1,9 @@
+@import "../../theme/utils.scss";
 
 .navigation_bar {
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: sp(1) solid var(--color-border);
     background: var(--background);
-    padding: 16px;
+    padding: sp(16);
     position: sticky;
     top: 0;
     z-index: 10;
@@ -13,22 +14,22 @@
         padding: 0;
 
         .icon svg {
-            margin-right: -8px;
-            margin-left: -8px;
+            margin-right: sp(-8);
+            margin-left: sp(-8);
         }
 
         &.supplemented::after {
             content: "";
             background: var(--color-text-secondary);
-            width: 4px;
-            height: 4px;
-            margin-left: 16px;
-            margin-right: 16px;
-            border-radius: 4px;
+            width: sp(4);
+            height: sp(4);
+            margin-left: sp(16);
+            margin-right: sp(16);
+            border-radius: sp(4);
         }
     }
     .titlebar_title {
-        margin-top: 8px;
+        margin-top: sp(8);
     }
 }
 
