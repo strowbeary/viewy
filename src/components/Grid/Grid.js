@@ -3,7 +3,7 @@ import "./Grid.scss";
 export const Grid = (...children) => ({
     ...Stack(),
     gap(h, v) {
-        if (typeof h === "number" && typeof v === "undefined") {
+        if (typeof h === "string" && typeof v === "undefined") {
             v = h;
         }
         this.viewStyle.gridGap = `${h} ${v}`;
