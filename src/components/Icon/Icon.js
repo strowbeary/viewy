@@ -4,7 +4,7 @@ import {elementVoid} from "incremental-dom";
 import {bind_class} from "../../utils/bind_class.util";
 import {View} from "../View/View";
 import {sp} from "../../ressources/SizingScale";
-export const Icon = (icon, size = 24) => {
+export const Icon = (icon, size = sp(24)) => {
     return {
         ...View()
             .addClass("icon"),
@@ -13,8 +13,8 @@ export const Icon = (icon, size = 24) => {
             return this;
         },
         render() {
-            this.viewStyle.width = sp(size);
-            this.viewStyle.height = sp(size);
+            this.viewStyle.width = size;
+            this.viewStyle.height = size;
             const el = elementVoid(
                 'svg',
                 null,
@@ -27,8 +27,8 @@ export const Icon = (icon, size = 24) => {
                 'stroke-width', 3,
                 "stroke-linecap", "round",
                 "stroke-linejoin", "round",
-                "width", `${size}px`,
-                "height", `${size}px`,
+                "width", `${size}`,
+                "height", `${size}`,
                 ...this.customAttributes
             );
 
