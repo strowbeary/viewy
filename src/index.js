@@ -28,4 +28,6 @@ export * from "./components/Table/Table";
 
 export * from "./ressources/colors";
 export * from "./ressources/SizingScale";
+export * from "./createComponent";
+export * from "./createRouter";
 export * from "./createApp";
