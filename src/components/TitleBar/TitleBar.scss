@@ -1,6 +1,6 @@
 @import "../../theme/utils.scss";
 
-.navigation_bar {
+.navigation-bar {
     border-bottom: sp(1) solid var(--color-border);
     background: var(--background);
     padding: sp(16);
@@ -8,28 +8,5 @@
     top: 0;
     z-index: 10;
     box-sizing: border-box;
-
-
-    .button_back {
-        padding: 0;
-
-        .icon svg {
-            margin-right: sp(-8);
-            margin-left: sp(-8);
-        }
-
-        &.supplemented::after {
-            content: "";
-            background: var(--color-text-secondary);
-            width: sp(4);
-            height: sp(4);
-            margin-left: sp(16);
-            margin-right: sp(16);
-            border-radius: sp(4);
-        }
-    }
-    .titlebar_title {
-        margin-top: sp(8);
-    }
 }
 
