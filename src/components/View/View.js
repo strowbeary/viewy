@@ -336,6 +336,10 @@ export const View = (...children) => ({
         this.viewStyle.gridRow = column;
         return this;
     },
+    flexGrow (value) {
+        this.viewStyle.flexGrow = value;
+        return this;
+    },
     popover ({isVisible, placement, view = () => EmptyView()}) {
         this.popoverConfig = {isVisible, placement, view}
         return this;

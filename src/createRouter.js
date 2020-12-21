@@ -1,4 +1,4 @@
-import {component} from "./createComponent";
+import {component} from "./component";
 
 export const createRouter = ({ layouts = {default(currentView) { return currentView}}, routes = []}) => {
     const eventTarget = new EventTarget();

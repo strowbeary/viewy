@@ -1,4 +1,4 @@
-import {component} from "../../createApp";
+import {component} from "../../component";
 import "./popover.scss";
 import {createPopper} from "@popperjs/core";
 import {View} from "./View";
