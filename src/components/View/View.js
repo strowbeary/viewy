@@ -297,9 +297,9 @@ export const View = (...children) => ({
         this.viewStyle.borderRadius = `${tl} ${tr} ${br} ${bl}`;
         return this;
     },
-    sticky () {
+    sticky (top = 0) {
         this.viewStyle.position = 'sticky';
-        this.viewStyle.top = 0;
+        this.viewStyle.top = top;
         return this;
     },
     on (eventName, callback) {

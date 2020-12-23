@@ -11,7 +11,7 @@ export const Stack = (children) => ({
         this.viewStyle.justifyContent = justification;
         return this;
     },
-    reverse() {
+    reverse () {
         this.addClass("reversed");
         return this;
     },
@@ -20,6 +20,10 @@ export const Stack = (children) => ({
             v = h;
         }
         this.viewStyle.gap = `${h} ${v}`;
+        return this;
+    },
+    wrap () {
+        this.viewStyle.flexWrap = "wrap";
         return this;
     },
     children

@@ -45,10 +45,10 @@ export const Text = (value, style = TEXT_STYLE.body1, tagName = "span") => ({
     },
     bold(isBold) {
         if(isBold) {
-            this.viewStyle.fontweight = "bold";
+            this.viewStyle.fontWeight = "bold";
         }
         else {
-            this.viewStyle.fontweight = "normal";
+            this.viewStyle.fontWeight = "normal";
         }
       return this;
     },

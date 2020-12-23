@@ -19,8 +19,10 @@
         margin: auto;
         background: var(--background);
         border-radius: 16px;
-        overflow: hidden;
         box-shadow: 0 sp(12) sp(24) rgba(0, 0, 0, 0.16), 0 sp(2) sp(4) rgba(0, 0, 0, 0.08);
+        max-height: 90vh;
+        max-width: 95vw;
+        overflow: auto;
     }
 
     &.visible {
