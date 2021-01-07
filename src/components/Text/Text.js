@@ -1,6 +1,6 @@
 import {View} from "../View/View";
 import "./Text.scss"
-import {text} from "incremental-dom";
+import { text } from "incremental-dom";
 
 export const TEXT_STYLE = {
     largeTitle: "large-title",

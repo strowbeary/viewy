@@ -11,6 +11,9 @@ export const createRouter = ({ layouts = {default(currentView) { return currentV
     }
 
     return {
+        get currentRoute() {
+            return getMatchingRoute();
+        },
         routerView: component({
             name: "Router",
             async initState() {
