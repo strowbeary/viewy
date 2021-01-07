@@ -13,9 +13,10 @@
         margin-top: sp(16);
     }
     .menu-item {
-        padding: sp(6) sp(8);
+        padding: sp(8) sp(10);
         border-radius: sp(4);
         cursor: pointer;
+        transition: background 150ms, color 150ms;
         .icon {
             stroke-width: 2 !important;
         }
