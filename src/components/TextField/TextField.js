@@ -10,6 +10,7 @@ export const TextField = ({name, type = "text", placeholder = "", autoSizing = f
             .addClass('type-' + type)
             .tagName(type !== "textarea" ? 'input' : 'textarea')
             .setAttribute("name", name)
+            .setAttribute("type", type)
             .setAttribute("placeholder", placeholder)
             .on("input", e => {
                 if (type === "textarea" && autoSizing) {

@@ -13,7 +13,7 @@
         margin-top: sp(16);
     }
     .menu-item {
-        padding: sp(8) sp(10);
+        padding: sp(8) sp(16) sp(8) sp(10);
         border-radius: sp(4);
         cursor: pointer;
         transition: background 150ms, color 150ms;
@@ -26,7 +26,10 @@
                 color: var(--color-primary);
             }
         }
-        &--selected, &--selected:hover {
+        &:active {
+            background: var(--surface-blue);
+        }
+        &--selected, &--selected:hover, &--selected:active {
             background: var(--color-primary);
             .text, .icon {
                 color: white;

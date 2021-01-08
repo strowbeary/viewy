@@ -40,7 +40,7 @@ export const createRouter = ({ layouts = {default(currentView) { return currentV
                 }
             },
             view() {
-                const layoutName = this.currentRoute.layout ?  this.currentRoute.layout : 'default';
+                const layoutName = this.currentRoute.layout ?  this.currentRoute.layout : 'defaultLayout';
                 return layouts[layoutName](this.currentRoute.component(history.state));
             }
         }),
