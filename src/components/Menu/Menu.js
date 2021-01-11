@@ -7,7 +7,7 @@ import {Text, TEXT_STYLE} from "../Text/Text";
 import {sp} from "../../ressources/SizingScale";
 
 
-export const Menu = (...items) => {
+export const Menu = ({ name, items = []}) => {
     function ContextualStyle() {
 
     }
@@ -16,6 +16,7 @@ export const Menu = (...items) => {
 
     }
     return VStack(...items)
+        .setKey(name)
         .addClass("menu")
 }
 

@@ -5,6 +5,7 @@ export const createRouter = ({ layouts = {default(currentView) { return currentV
     const getMatchingRoute = () => routes.find(route => route.path === location.pathname);
 
     function go(routeName, params = {}) {
+        console.log(new Error("GO"));
         const matchingRoute = routes.find(route => route.name === routeName);
         history.pushState(params, "", matchingRoute.path);
         eventTarget.dispatchEvent(new CustomEvent("navigate"))
@@ -40,6 +41,7 @@ export const createRouter = ({ layouts = {default(currentView) { return currentV
                 }
             },
             view() {
+                console.log(this.currentRoute.name);
                 const layoutName = this.currentRoute.layout ?  this.currentRoute.layout : 'defaultLayout';
                 return layouts[layoutName](this.currentRoute.component(history.state));
             }
