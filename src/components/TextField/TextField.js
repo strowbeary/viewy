@@ -6,6 +6,7 @@ import {autoSize} from "../../utils/autoResizeTextarea.util";
 export const TextField = ({name, type = "text", placeholder = "", autoSizing = false}) => {
     const baseView = {
         ...View()
+            .setKey(name)
             .addClass("text-field")
             .addClass('type-' + type)
             .tagName(type !== "textarea" ? 'input' : 'textarea')
