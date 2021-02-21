@@ -5,7 +5,6 @@ export const createRouter = ({ layouts = {default(currentView) { return currentV
     const getMatchingRoute = () => routes.find(route => route.path === location.pathname);
 
     function go(routeName, params = {}) {
-        console.log(new Error("GO"));
         const matchingRoute = routes.find(route => route.name === routeName);
         history.pushState(params, "", matchingRoute.path);
         eventTarget.dispatchEvent(new CustomEvent("navigate"))
