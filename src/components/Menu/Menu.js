@@ -27,9 +27,15 @@ export const MenuSection = ({name, items = []}) => VStack(
 )
     .addClass("menu-section")
 
+export const MENU_ITEM_STYLE = {
+    normal: "normal",
+    destructive: "destructive",
+}
+
 export const MenuItem= ({
     icon= null,
-    label= ""
+    label= "",
+    style = MENU_ITEM_STYLE.normal
 }) => ({
     ...HStack(
         icon ? Icon(icon, sp(16)) : EmptyView(),

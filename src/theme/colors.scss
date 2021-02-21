@@ -30,7 +30,7 @@
         --color-destructive: #{$color-destructive};
         --color-destructive-light: #{color.adjust($color-destructive, $lightness: 10%)};;
         --color-destructive-lighter: #{color.adjust($color-destructive, $lightness: 20%)};;
-        --color-warning: #D86F48;
+        --color-warning: #ff9940;
         --color-text-disabled: #868694;
     }
     @else if $variant == dark {
@@ -58,7 +58,7 @@
         --color-destructive: #{$color-destructive};
         --color-destructive-light: #{color.adjust($color-destructive, $lightness: -10%)};;
         --color-destructive-lighter: #{color.adjust($color-destructive, $lightness: -20%)};;
-        --color-warning: #D86F48;
+        --color-warning: #ffb951;
         --color-text-disabled: #6e6e73;
     }
 
